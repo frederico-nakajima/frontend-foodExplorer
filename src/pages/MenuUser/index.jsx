@@ -21,19 +21,9 @@ export function MenuUser() {
             </div>
             
             <Content>
-
-      
-            <Slider/>
-
-
-
-
-
-
-
-
-
-
+                <Slider/>
+                <Slider/>
+                <Slider/>
             </Content>
             <Footer />
         </Container>
