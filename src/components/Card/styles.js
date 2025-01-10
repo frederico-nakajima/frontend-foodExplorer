@@ -9,9 +9,9 @@ export const CardWrapper = styled.div`
     height:462px;
     padding:24px;
     position:relative;
-    gap:15px;
+    
     border:1px solid ${({ theme }) => theme.COLORS.WHITE};
-    margin-left:100px;
+    
     .favoritar{
         position:absolute;
         top:16px;

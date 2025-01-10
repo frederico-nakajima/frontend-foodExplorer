@@ -29,7 +29,7 @@ export const Banner  = styled.div`
     height:406px;
     border:1px solid ${({ theme }) => theme.COLORS.WHITE};
  
-    >img{
+    >.imgBanner{
     width:632px;
     height:406px;
    
@@ -75,16 +75,9 @@ export const Banner  = styled.div`
 
 export const Content  = styled.div`         
     grid-area:content;
-    
-
-    
-
-`;
-
-export const Carrossel  = styled.div`         
-
-
-
+   width:1235px;
+    margin:0 auto;
     
 
 `;
+

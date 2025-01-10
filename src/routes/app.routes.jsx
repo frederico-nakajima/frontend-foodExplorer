@@ -15,12 +15,12 @@ import {Profile} from '../pages/Profile'
 export function AppRoutes(){
     return(
         <Routes>
-            <Route path='/' element={<Home/>}/>
+            
             <Route path='/add' element={<AddDish/>}/>
             <Route path='/edit' element={<EditDish/>}/>
             <Route path='/meal' element={<Meal/>}/>
             <Route path='/mealuser' element={<MealUser/>}/>
-            <Route path='/menuser' element={<MenuUser/>}/>
+            <Route path='/' element={<MenuUser/>}/>
             <Route path='/profile' element={<Profile/>}/>
             <Route path='/details/:id' element={<Details/>}/>
         </Routes>
