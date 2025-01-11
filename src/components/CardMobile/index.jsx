@@ -1,4 +1,4 @@
-import { CardWrapper,ButtonAlignmentCount } from './styles';
+import { CardWrapper,AlinhamentoCountButton } from './styles';
 import Spaguetti from '../../assets/Spaguetti.png';
 import Plus from '../../assets/Plus.svg';
 import Minus from '../../assets/Minus.svg';
@@ -19,7 +19,7 @@ export function Card(){
                             <p>Massa fresca com camarões e pesto. </p>
                             <span>R$ 79,97</span>
                         </a>
-                            <ButtonAlignmentCount>
+                            <AlinhamentoCountButton>
                                 <div className="count">
                                     <img src={Minus} alt="imagem de um sinal de menos" />
                                     <span>01</span>
@@ -28,7 +28,7 @@ export function Card(){
                                 <div className='button'>
                                     <Button title="incluir" />
                                 </div>
-                            </ButtonAlignmentCount>
+                            </AlinhamentoCountButton>
 
               
             </CardWrapper>
