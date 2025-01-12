@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { DEVICE_BREAKPOINTS } from '../../styles/deviceBreakpoints';
 
 export const Container = styled.footer`
- 
+
   height: 77px;
   width: 428px;
   display: flex;
@@ -10,6 +10,9 @@ export const Container = styled.footer`
   align-items: center;
   border:1px solid ${({theme}) => theme.COLORS.WHITE_200} ;
   background-color:${({theme}) => theme.COLORS.BACKGROUND_600};
+  position:absolute;
+  z-index:9999;
+  
 
   >main{
     display: flex;

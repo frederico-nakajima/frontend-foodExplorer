@@ -1,14 +1,28 @@
-import { Container,Banner,Content,FooterWrapper } from './styles';
+import { Container,Banner,Content,FooterWrapper,SideMenuWrapper } from './styles';
 import { DesktopHeaderIcon } from '../../components/DesktopHeaderIcon';
 import { MobileHeaderIcon } from '../../components/MobileHeaderIcon';
 import { Footer } from '../../components/Footer';
 import Pngegg from '../../assets/pngegg.png';
 import Pngegg02 from '../../assets/pngegg02.png';
 import { Slider } from '../../components/Slider';
+import { SideMenu } from '../../components/SideMenu';
+import {useState } from "react";
 
 export function MenuUser() {
+   
+    
+    const [menuIsOpen,setMenuIsOpen] = useState(false);
+  
+
     return (
         <Container>
+             <SideMenuWrapper>
+            <SideMenu
+                menuIsOpen={menuIsOpen}
+                onCloseMenu={() => setMenuIsOpen(false)}
+            />
+             </SideMenuWrapper>
+
              <div className="desktop-header">
                 <DesktopHeaderIcon />
             </div>

@@ -78,6 +78,19 @@ export const Container = styled.div`
 }  
 `;
 
+export const SideMenuWrapper = styled.div`
+    width: 100%;
+    height: 1454px;
+    position:absolute;
+    z-index:9999;
+
+    @media (min-width: ${DEVICE_BREAKPOINTS.LG}) { 
+        display:none;
+    
+    }
+
+`;
+
 export const Banner  = styled.div`
      .imgBannerDesktop {
         display: none;

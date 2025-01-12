@@ -1,51 +1,40 @@
-import styled from 'styled-components';
+import styled from "styled-components";
+
 
 export const Container = styled.div`
-    width: 100%;
-    display: flex;
+    display: flex;    
+    justify-content: center;
     align-items: center;
+    gap: 14px;
+    background-color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
+    margin:36px 0;
 
-
-    background-color:${({theme}) => theme.COLORS.BACKGROUND_900};
-    color:${({theme}) => theme.COLORS.GRAY_300};
-
+  > input {
+    height: 48px;
+    width: 372px;
+ 
    
-    border-radius: 10px;
-    margin-top:6px; 
+    
+    
+    color: ${({ theme }) => theme.COLORS.GRAY_100};
+    background: transparent;
+    border: 0;
 
-
-    >input{
-        height: 48px;
-        width: 100%;
-        border-radius: 5px;
-        padding: 12px;
-        font-family: "Roboto", serif;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 100%; /* 16px */
-        color:${({theme}) => theme.COLORS.WHITE};
-        background-color:${({theme}) => theme.COLORS.BACKGROUND_800};
-        border:0;
-       border:1px solid ${({theme}) => theme.COLORS.WHITE};
-            
-        &::placeholder {
-            color:${({theme}) => theme.COLORS.GRAY_300};
-            font-family: "Roboto", serif;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 100%; /* 16px */
-        }
-        
-        >svg{
-                margin-left:16px;
-            }
-
-       
-
-        
+    &::placeholder {
+      color: ${({ theme }) => theme.COLORS.GRAY_300};
     }
 
+    
+    }
+    > svg {
+      margin-left: 1rem;
+      width:24px;
+      height:24px;
+      color: ${({ theme }) => theme.COLORS.GRAY_400};
+      }
 
+
+  
+
+}
 `;
