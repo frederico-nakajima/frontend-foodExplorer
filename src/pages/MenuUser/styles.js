@@ -11,6 +11,13 @@ export const Container = styled.div`
         display: block;
     } 
 
+      >.underHeader{
+         width: 100%;
+         height:150px;
+       
+        
+    }
+
     .imgBannerDesktop {
         display: none;
     }
@@ -23,14 +30,14 @@ export const Container = styled.div`
     height: 100vh;
 
     display: grid;
-    grid-template-rows: 94px 460px auto 94px;
+    grid-template-rows: 94px 174px auto 94px;
     grid-template-areas:
     "header"
     "banner"
     "content"
     "footer";
 
-
+   
 
 
 
@@ -100,7 +107,7 @@ export const Banner  = styled.div`
         
         border-radius: 8px;
         background: linear-gradient(180deg, #091E26 0%, #00131C 100%);
-       padding-right: 13px;
+        padding-right: 13px;
    
     
    
@@ -208,5 +215,17 @@ export const Content  = styled.div`
     grid-area:content;
     width:1137px;
     margin:0 auto;
+
+    }
 `;
 
+export const FooterWrapper = styled.footer`
+  margin-top: 25px;
+  
+  @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {   
+    margin-top: 46px; 
+    
+    
+  } 
+
+`;

@@ -7,21 +7,23 @@ import 'swiper/css/navigation';
 import { Card } from "../Card"
 import { StyledSwiper } from './styles';
 
-export function Slider(){
+export function Slider({title}){
 
  return( 
     <StyledSwiper>
+        <h2>{title}</h2>
+
         <Swiper        
                modules={[Navigation]}
                spaceBetween={0}
                navigation
                breakpoints={{
-                 // Configuração para dispositivos móveis
-                 0: { // Breakpoint para dispositivos menores
+                 
+                 0: { 
                    slidesPerView: 1.7,
                  },
                  
-                 1368: { // Altere para o ponto de quebra desejado
+                 1368: { 
                    slidesPerView: 3.5,
                  },
                }}

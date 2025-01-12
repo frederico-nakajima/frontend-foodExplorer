@@ -1,4 +1,4 @@
-import { Container,Banner,Content } from './styles';
+import { Container,Banner,Content,FooterWrapper } from './styles';
 import { DesktopHeaderIcon } from '../../components/DesktopHeaderIcon';
 import { MobileHeaderIcon } from '../../components/MobileHeaderIcon';
 import { Footer } from '../../components/Footer';
@@ -36,11 +36,15 @@ export function MenuUser() {
             </div>
             
             <Content>
-                <Slider/>
-                <Slider/>
-                <Slider/>                
+                <Slider title = 'Refeições'/>
+                <Slider title = 'Sobremesas'/>
+                <Slider title = 'Bebidas'/>                
             </Content>
-            <Footer />
+            
+            <FooterWrapper>
+                <Footer />
+            </FooterWrapper>
+
         </Container>
     );
 } 
