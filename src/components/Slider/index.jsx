@@ -7,20 +7,27 @@ import 'swiper/css/navigation';
 import { Card } from "../Card"
 import { StyledSwiper } from './styles';
 
-export function Slider(){
+export function Slider({title}){
 
  return( 
     <StyledSwiper>
-        <Swiper
-        
-        modules={[Navigation]}
-        spaceBetween={0}
-        slidesPerView={3}
-        navigation
-        
-        
-       
-            
+        <h2>{title}</h2>
+
+        <Swiper        
+               modules={[Navigation]}
+               spaceBetween={0}
+               navigation
+               breakpoints={{
+                 
+                 0: { 
+                   slidesPerView: 1.7,
+                 },
+                 
+                 1368: { 
+                   slidesPerView: 3.5,
+                 },
+               }}
+                      
         >
         <SwiperSlide><Card/></SwiperSlide>
         <SwiperSlide><Card/></SwiperSlide>
