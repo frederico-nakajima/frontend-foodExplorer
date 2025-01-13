@@ -4,7 +4,7 @@ import styled from "styled-components";
 export const Container = styled.aside`
  
   background-color: ${({ theme }) => theme.COLORS.BACKGROUND_1000};
-  width: 100%;
+  width: 101%;
   height: 1454px;
  
  
