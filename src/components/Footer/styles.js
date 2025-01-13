@@ -35,7 +35,7 @@ export const Container = styled.footer`
   @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
     height: 77px;
      width: 100%;
-   
+    position:relative;
     >main{
     display: flex;
     align-items: center;

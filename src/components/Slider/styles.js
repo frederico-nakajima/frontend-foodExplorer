@@ -43,8 +43,11 @@ export const StyledSwiper = styled.div`
   
   .swiper-button-next,
   .swiper-button-prev {
+    display:block;
     background-color: rgba(0, 0, 0, 0.7);
     color: #fff; 
+    width: 10px;
+height: 5px;
   }
    
    
