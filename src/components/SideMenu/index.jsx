@@ -7,10 +7,13 @@ export function SideMenu({menuIsOpen, onCloseMenu}) {
     <Container data-menu-is-open = {menuIsOpen}>
       <HeaderSideMenu>
         <HeaderControls>
+        { 
+          menuIsOpen && 
           <Button onClick={onCloseMenu}>
           <X/>
           </Button>
-          <span>Menu</span>
+        }
+        <span>Menu</span>
         </HeaderControls>
       </HeaderSideMenu>        
 

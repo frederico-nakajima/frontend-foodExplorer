@@ -6,8 +6,15 @@ export const Container = styled.aside`
   background-color: ${({ theme }) => theme.COLORS.BACKGROUND_1000};
   width: 101%;
   height: 1454px;
+  position:absolute;
+  z-index:9999;
  
- 
+  transform:translateX(-100%);
+  transition:transform .3s ease-in-out;
+
+  &[data-menu-is-open="true"] {
+      transform:translateX(0);
+  }
 
 
 `;

@@ -1,4 +1,4 @@
-import { Container,Banner,Content,FooterWrapper,SideMenuWrapper } from './styles';
+import { Container,Banner,Content,FooterWrapper} from './styles';
 import { DesktopHeaderIcon } from '../../components/DesktopHeaderIcon';
 import { MobileHeaderIcon } from '../../components/MobileHeaderIcon';
 import { Footer } from '../../components/Footer';
@@ -16,18 +16,18 @@ export function MenuUser() {
 
     return (
         <Container>
-             <SideMenuWrapper>
+           
             <SideMenu
                 menuIsOpen={menuIsOpen}
                 onCloseMenu={() => setMenuIsOpen(false)}
             />
-             </SideMenuWrapper>
+           
 
              <div className="desktop-header">
                 <DesktopHeaderIcon />
             </div>
             <div className="mobile-header">
-                <MobileHeaderIcon />
+                <MobileHeaderIcon onOpenMenu={()=> setMenuIsOpen(true)} />
             </div>
             <div className='underHeader'>
                 <Banner>

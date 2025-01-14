@@ -4,10 +4,10 @@ import list from '../../assets/list.svg';
 import zero from '../../assets/zero.png';
 import Receipt from '../../assets/Receipt.svg';  
 
-export function MobileHeaderIcon() {
+export function MobileHeaderIcon({onOpenMenu}) {
   return (
     <Container>
-        <img src={list} alt="menu sanduiche" className='list'/> 
+        <img src={list} alt="menu sanduiche" className='list' onClick={onOpenMenu} /> 
         <img src={Polygon} alt="imagem de um polígono" />
         <div>
             <h2>food explorer</h2>
