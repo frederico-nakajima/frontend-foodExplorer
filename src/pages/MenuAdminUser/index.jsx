@@ -8,7 +8,7 @@ import { Slider } from '../../components/Slider';
 import { SideMenu } from '../../components/SideMenu';
 import {useState } from "react";
 
-export function MenuUser() {
+export function MenuAdminUser() {
    
     
     const [menuIsOpen,setMenuIsOpen] = useState(false);

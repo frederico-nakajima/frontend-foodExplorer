@@ -13,7 +13,7 @@ import CaretLeft from '../../assets/CaretLeft.svg';
 
 
 
-export function MealUser() {
+export function DishCommonUser() {
     return (
         <Container>
             <div className="header-mobile">
