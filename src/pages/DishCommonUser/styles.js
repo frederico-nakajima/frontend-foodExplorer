@@ -5,80 +5,92 @@ import  { Link } from 'react-router-dom';
 
 
 export const Container = styled.div`
-    height:1005px;
+    
     margin:0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-   
+  
     
-    .header-mobile {
+    .mobile-header {
       display: flex; 
     }
 
-    .header-desktop {
+    .desktop-header {
       display: none; 
     }  
 
     >main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom:60px;
-    width: 300px;
-        img.pratoComida {
-        width: 264px;
-        height: 264px;
-        margin-bottom:20px;
-     
-       
-       
-        }
-     
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 83px;
+        width: 300px;
+    
+        .pratoComida {
+            width: 264px;
+            height: 264px;
+            margin-bottom:20px;
+        }    
         
         .dish{
         
-            h1{
-            margin-bottom:40px
-            
-            }
             .salada-ingredientes{
-            display: flex;
-            flex-direction: column;
-            align-items: center; 
-            margin-bottom:35px;
-            padding:0 15px;
+                display: flex;
+                flex-direction: column;
+                align-items: center; 
+               gap:24px;
+                padding:0 15px;
+                margin-bottom:24px;
+            
+                h1{
+               
+                text-align: justify;
+                font-size: 27.041px;
+                }
+
+                p{
+                text-align: justify;
+               
+                font-size: 16.225px;
+                }
+                
             }
-        
+
             .tags{
-            display:flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-bottom:40px; 
-            padding:0 15px;
+                display:flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-bottom:40px; 
+                padding:0 15px;
             }
         
-        
-        }
+        }       
     
     }
    
-   
+    .icon {
+        display: block; /* Ícone visível por padrão (Mobile First) */
+              
+    }
        
     // DESKTOP Container
     @media (min-width: ${DEVICE_BREAKPOINTS.LG}) { 
-    width: 1134px;
+    width: 100%;
     height:800px;
-    .header-mobile {
+    .mobile-header {
         display: none; 
     }
 
-    .header-desktop {
+    .desktop-header {
         display: flex;
         gap:10px;
 
-    }  
+    } 
+    .icon {
+        display: none; /* Ícone será ocultado no desktop */
+    }    
 
     display: grid;
     grid-template-rows: 94px 85px auto 94px;
@@ -100,12 +112,12 @@ export const Container = styled.div`
         margin-bottom: 145px;   
 
         
-            > img.pratoComida {
+            >.pratoComida {
                 width: 390px;
                 height: 390px;
             }
 
-            >div.dish {
+            >.dish {
                 
             div.salada-ingredientes{
             display: flex;
@@ -159,33 +171,35 @@ export const AlinhamentoCountButton = styled.div`
     gap:20px;
     
     
-        div.count {
+        .count {
             display: flex;
             align-items: center;
             gap:10px;
             flex-direction: row;
 
-
             img.operadorMatemático {
-            width: 20px; 
-            height: 20px; 
-            
-            }
-            span{
+                width: 20px; 
+                height: 20px; 
                 
+                }
+                span{                    
                 font-family: Roboto;
                 font-size: 20px;
                 font-style: normal;
                 font-weight: 700;
                 line-height: 160%; /* 32px */
+                }
             }
-            }
-            div.button{
-                width: 200px;
           
+            .custom-button{
+               width:200px; 
+                height: 40px;
+              
             }   
-
-    }
+                
+          
+        }
+    
                 
 
         
@@ -213,6 +227,10 @@ export const AlinhamentoCountButton = styled.div`
             }
         }
 
+        .custom-button{
+           
+          
+        }   
        
     }
 `;
@@ -246,14 +264,15 @@ export const HomeLink = styled(Link)`
         }
     
 
-    //DESKTOP Link
+   
     @media (min-width: ${DEVICE_BREAKPOINTS.LG}) { 
     grid-area: link;
     
-   margin-top:50px;
+  margin:50px auto  ;
     display: flex;
     flex-direction:row;
     align-items: center;
+
     gap: 5px;
     width: 1137px;
     

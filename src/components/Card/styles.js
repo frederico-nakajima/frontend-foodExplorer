@@ -153,8 +153,8 @@ export const ButtonAlignmentCount = styled.div`
     justify-content:center;
     align-items: center;
     gap:10px;
-    width:304px;
-    padding-right:135px;
+   
+    
     
     margin-top:10px;
     .count {
@@ -162,7 +162,7 @@ export const ButtonAlignmentCount = styled.div`
         justify-content:center;
         align-items: center;
         gap:10px;
-
+        
         span{
             color: var(--Light-Light-400, #C4C4CC);
             font-family: Roboto;
@@ -171,45 +171,59 @@ export const ButtonAlignmentCount = styled.div`
             font-weight: 700;
             line-height: 160%; /* 32px */
         }
+    }
+
+    .custom-button{
+        display: flex;
+        justify-content:center;
+        align-items: center;
+         width: 170px;
+         height: 32px;
+         
+    }
+
 
         
 
             
-    }
 
   
 
      @media (min-width: ${DEVICE_BREAKPOINTS.LG}) { 
     
-    display: flex;
-    flex-direction:row;
-    justify-content:space-between;
-    align-items: center;
-    gap:10px;
-    width:304px;
-    padding-right:80px;
-    padding-left:20px;
-    margin-top:10px;
-    .count {
         display: flex;
+        flex-direction:row;
+        justify-content:space-between;
         align-items: center;
         gap:10px;
+        width:304px;
+        padding-right:70px;
+        padding-left:20px;
+        margin-top:10px;
+        .count {
+            display: flex;
+            align-items: center;
+            gap:10px;
+            padding-right:0px;
 
-        span{
-            font-size: 20px;          
+            span{
+                font-size: 20px;          
+            }
         }
 
-            
-    }
-
-    .button {
-        display: flex;
-       
-    }    
+        .custom-button {
+        width: 200px;
+        height: 48px;
+        
+        
+        }    
 
     }
 `;
     
+            
+            
+
     
     
     

@@ -3,7 +3,7 @@ import {DEVICE_BREAKPOINTS} from "../../styles/deviceBreakpoints"
 
 
 export const Container = styled.div`
-      .desktop-header {
+    .desktop-header {
         display: none;
     }
 

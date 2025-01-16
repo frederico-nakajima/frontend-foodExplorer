@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { DEVICE_BREAKPOINTS } from '../../styles/deviceBreakpoints';
 
 
 export const Container = styled.aside`
@@ -15,13 +16,16 @@ export const Container = styled.aside`
   &[data-menu-is-open="true"] {
       transform:translateX(0);
   }
-
+  @media (min-width: ${DEVICE_BREAKPOINTS.LG}) { 
+    display:none;
+    
+  }
 
 `;
 
 export const SideMenuContent = styled.div`
 padding:28px;
-
+margin-bottom: 1043px;
 
 `
 

@@ -4,22 +4,31 @@ import { Tag } from '../../components/Tag';
 import Dish from '../../assets/Dish.png';
 import Plus from '../../assets/Plus.svg';
 import Minus from '../../assets/Minus.svg';
-
 import { Button } from '../../components/Button';
 import { Footer } from '../../components/Footer';
-
 import { MobileHeaderIcon } from '../../components/MobileHeaderIcon'
 import CaretLeft from '../../assets/CaretLeft.svg';
+import { SideMenu } from '../../components/SideMenu';
+import {useState } from "react";
+import { Receipt } from "phosphor-react";
+
 
 
 
 export function DishCommonUser() {
+    const [menuIsOpen,setMenuIsOpen] = useState(false);
+    
     return (
         <Container>
-            <div className="header-mobile">
-                <MobileHeaderIcon />
+              <SideMenu
+                menuIsOpen={menuIsOpen}
+                onCloseMenu={() => setMenuIsOpen(false)}
+            />
+
+            <div className="mobile-header">
+                <MobileHeaderIcon  onOpenMenu={()=> setMenuIsOpen(true)}/>
             </div>
-            <div className="header-desktop">
+            <div className="desktop-header">
                 <DesktopHeaderIcon />
             </div>
 
@@ -58,21 +67,23 @@ export function DishCommonUser() {
                             <span>01</span>
                             <img className='operadorMatemático' src={Plus} alt="imagem de um sinal de mais" />
                         </div>
-                        <div className='button'>
-                            <Button title="  incluir ∙ R$ 25,00"/>
-                        </div>
+                        <div  className="custom-button">
+                            <Button className="button" icon={Receipt} title="incluir ∙ R$ 25,00"/>
+                        </div>                      
                     </AlinhamentoCountButton>
                 </div>
-                              
-                            
-
-                
             </main>
+
             <Footer />
+            
         </Container>
     );
 }
                                 
+                              
+                            
+
+                
 
 
 

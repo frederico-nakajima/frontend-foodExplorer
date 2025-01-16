@@ -1,6 +1,7 @@
 import { X } from "@phosphor-icons/react";
 import { Search } from '../../components/Search';
 import { Container, Nav, Title, Header, Button,SideMenuContent,HeaderSideMenu,HeaderControls } from "./styles";
+import { Footer } from '../../components/Footer';
 
 export function SideMenu({menuIsOpen, onCloseMenu}) {
   return (
@@ -26,6 +27,8 @@ export function SideMenu({menuIsOpen, onCloseMenu}) {
         <hr />        
       </Nav> 
     </SideMenuContent>
+      <Footer />
     </Container>
+
   );
 }

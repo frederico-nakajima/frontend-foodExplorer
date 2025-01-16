@@ -1,12 +1,22 @@
 import { Container,Form,Div } from './styles';
 import polygonImage from '../../assets/Polygon.png';
-
+import { useAuth } from "../../hooks/auth";
+import { useState } from 'react';
 import {Link} from 'react-router-dom'
 import { Input } from '../../components/Input'
 import { Button } from '../../components/Button'
 
 
 export function SignIn(){
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+
+
+    const { signIn } = useAuth();
+
+    function handleSignIn(){
+        signIn({ email, password });
+    }
     return(
         <Container>
 
@@ -28,7 +38,8 @@ export function SignIn(){
                     <Input
                     placeholder="Exemplo: exemplo@exemplo.com.br"
                     type="text"
-                    id="email"
+                   
+                    onChange = {e => setEmail(e.target.value)}
                     />
                 </div>
 
@@ -38,12 +49,13 @@ export function SignIn(){
                     <label htmlFor="password">Senha:</label>
                     <Input
                     placeholder="No mínimo 6 caracteres"
-                    type="current-password"
-                    id="password"
+                    type="password"
+                   
+                    onChange = {e => setPassword(e.target.value)}
                     />
                 </div>    
 
-                <Button title="Entrar"/>
+                <Button title="Entrar" onClick = { handleSignIn }/>
                 <Link to="/register">
                     Criar uma conta
                 </Link>

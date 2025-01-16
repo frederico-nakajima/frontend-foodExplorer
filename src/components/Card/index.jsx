@@ -25,7 +25,7 @@ export function Card(){
                                     <span>01</span>
                                     <img src={Plus} alt="imagem de um sinal de mais" />
                                 </div>
-                                <div className='button'>
+                                <div className='custom-button'>
                                     <Button title="incluir" />
                                 </div>
                             </ButtonAlignmentCount>
