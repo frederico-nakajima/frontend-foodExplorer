@@ -49,13 +49,18 @@ export const Nav = styled.nav`
 
  
 
-  > a {
+  >.NewDishLink {
+    display:none;
+  }
+
+  >.SignOut {
     color: ${({ theme }) => theme.COLORS.WHITE};
     font-family: Poppins;
     font-size: 24px;
     font-weight: 300;
     line-height: 140%; 
     padding:10px;
+    margin-top:25px;
   }
 
   >hr{

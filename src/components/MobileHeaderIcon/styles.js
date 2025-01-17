@@ -6,10 +6,10 @@ export const Container = styled.div`
     display:flex;
     justify-content:center;
     align-items:center;
-    gap:10px;
+    gap:11px;
     width:424px;
     heigth:114px;
-    padding:30px 10px 15px 10px;
+    padding:35px 10px 15px 10px;
     border:1px solid ${({theme}) => theme.COLORS.WHITE};
     background-color:${({theme}) => theme.COLORS.BACKGROUND_700};
     margin-left:-5px;
@@ -37,14 +37,16 @@ export const Container = styled.div`
         line-height: normal;
         margin-right:60px;
         }
+
         div.positionZero{
         position:relative;
         width: 38px;
         height: 38px;
         }
-        >div.smallZero{
+
+        >.smallZero{
         position:absolute;
-        top:25px;
+        top:27px;
         right:25px;
         background-color:${({theme}) => theme.COLORS.RED_300};
         display: flex;
@@ -58,4 +60,6 @@ export const Container = styled.div`
        
 
     }
+
+  
 `;

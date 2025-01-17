@@ -1,4 +1,4 @@
-import { Container,  AlinhamentoCountButton,HomeLink } from './styles';
+import { Container,  AlinhamentoCountButton,ReturnLink } from './styles';
 import { DesktopHeaderIcon } from '../../components/DesktopHeaderIcon';
 import { Tag } from '../../components/Tag'; 
 import Dish from '../../assets/Dish.png';
@@ -33,18 +33,18 @@ export function DishCommonUser() {
             </div>
 
            
-            <HomeLink to="/">
+            <ReturnLink to="/">
                 <img src={CaretLeft} alt="imagem de uma seta apontando para esquerda"  />
                 <p>Voltar</p>
-            </HomeLink>
+            </ReturnLink>
            
 
             <main>
             
-                <img className='pratoComida' src={Dish} alt="imagem de um prato de comida de um restaurante" />
+                <img className='restaurantDish' src={Dish} alt="imagem de um prato de comida de um restaurante" />
 
                 <div className='dish'>
-                    <div className="salada-ingredientes">
+                    <div className="salad-ingredients">
                         <h1>Salada Ravanello</h1>
                         <p>
                             Rabanetes, folhas verdes e molho agridoce salpicados
@@ -68,7 +68,7 @@ export function DishCommonUser() {
                             <img className='operadorMatemático' src={Plus} alt="imagem de um sinal de mais" />
                         </div>
                         <div  className="custom-button">
-                            <Button className="button" icon={Receipt} title="incluir ∙ R$ 25,00"/>
+                            <Button icon={Receipt} title="incluir ∙ R$ 25,00"/>
                         </div>                      
                     </AlinhamentoCountButton>
                 </div>

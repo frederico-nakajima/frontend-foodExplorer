@@ -22,7 +22,7 @@ export function SideMenu({menuIsOpen, onCloseMenu}) {
       <Search/>
       <Nav>
         <a href="#" className="NewDishLink">Novo prato</a>
-        <hr />
+        <hr className="NewDishLink" />
         <a href="#" className="SignOut">Sair</a>
         <hr />        
       </Nav> 
