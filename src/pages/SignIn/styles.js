@@ -8,16 +8,16 @@ export const Container = styled.div`
     align-items: center;
     height: 100vh;
     width: 100%;
-    position: relative;
+    
+   
 
     @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
         height: 100vh;  
     }
 `;
 
-export const Div = styled.div`
-    position:relative;
-    left:-25px;
+export const Header = styled.div`
+  
    
     
 
@@ -84,6 +84,16 @@ export const Form = styled.form`
         padding: 0 64px;
     }
 
+    .custom-buttom{
+        display: flex;
+        width: 480px;
+        height:48px;
+        justify-content: center;
+        align-items: center;
+        margin-top:5px;
+        
+    }
+
     @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
         position: absolute;
         top: 142px;
@@ -92,6 +102,7 @@ export const Form = styled.form`
         height: 541px;
         background-color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
         border-radius:16px;
+        gap: 29px;
 
         > h1 {
             display: block;

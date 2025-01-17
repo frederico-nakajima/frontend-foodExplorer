@@ -15,9 +15,8 @@ export const Container = styled.div`
     }
 `;
 
-export const Div = styled.div`
-    position:relative;
-    left:-25px;
+export const Header = styled.div`
+ 
    
     
 
@@ -58,7 +57,8 @@ export const Form = styled.form`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 32px;
+    gap: 20px;
+   
     
 
     > h1 {
@@ -67,22 +67,32 @@ export const Form = styled.form`
 
     > a {
         color: ${({ theme }) => theme.COLORS.WHITE};
-        align-self: center;
-        text-align: center;
         font-family: Poppins;
         font-size: 14px;
         font-weight: 500;
-        line-height: 24px;
+    
     }
 
     > div {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        gap: 10px;
+        gap:8px;
         width: 476px;
         padding: 0 64px;
     }
+
+    .custom-buttom{
+        display: flex;
+        width: 480px;
+        height:48px;
+        justify-content: center;
+        align-items: center;
+        margin-top:5px;
+        
+    }
+
+
 
     @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
         position: absolute;
@@ -92,6 +102,8 @@ export const Form = styled.form`
         height: 650px;
         background-color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
         border-radius:16px;
+        gap: 29px;
+
          > h1 {
             display: block;
             

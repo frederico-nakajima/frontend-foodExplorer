@@ -1,4 +1,4 @@
-import { Container,Form,Div } from './styles';
+import { Container,Form,Header } from './styles';
 import polygonImage from '../../assets/Polygon.png';
 import { useState } from 'react';
 import {Link} from 'react-router-dom'
@@ -37,12 +37,12 @@ export function SignUp(){
     return(
         <Container>
 
-            <Div>
+            <Header>
                 <div className="content">
                     <img src={polygonImage} alt="imagem de um polígono" />
                     <p>food explorer</p>
                 </div>
-            </Div>
+            </Header>
 
 
             <Form>
@@ -80,9 +80,12 @@ export function SignUp(){
                    
                     onChange = {e =>setPassword(e.target.value)}
                     />
-                </div>    
+                </div> 
 
-                <Button title="Criar conta" onClick={handleSignUp}/>
+                <div className='custom-buttom'>
+                    <Button title="Criar conta" onClick={handleSignUp}/>
+                </div>
+
 
                 <Link to="/">
                     Já tenho uma conta

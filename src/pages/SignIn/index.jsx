@@ -1,4 +1,4 @@
-import { Container,Form,Div } from './styles';
+import { Container,Form,Header } from './styles';
 import polygonImage from '../../assets/Polygon.png';
 import { useAuth } from "../../hooks/auth";
 import { useState } from 'react';
@@ -20,12 +20,12 @@ export function SignIn(){
     return(
         <Container>
 
-            <Div>
+            <Header>
                 <div className="content">
                     <img src={polygonImage} alt="imagem de um polígono" />
                     <p>food explorer</p>
                 </div>
-            </Div>
+            </Header>
 
 
             <Form>
@@ -53,9 +53,12 @@ export function SignIn(){
                    
                     onChange = {e => setPassword(e.target.value)}
                     />
-                </div>    
+                </div>
 
-                <Button title="Entrar" onClick = { handleSignIn }/>
+                <div className='custom-buttom'>
+                    <Button title="Entrar" onClick = { handleSignIn }/>
+                </div>
+
                 <Link to="/register">
                     Criar uma conta
                 </Link>
