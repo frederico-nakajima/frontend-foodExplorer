@@ -5,6 +5,13 @@ import  { Link } from 'react-router-dom';
 
 
 export const Container = styled.div`    
+    .mobile-header {
+    display: flex; 
+    }
+    .desktop-header {
+    display: none; 
+    }
+
     margin:0 auto;
     display: flex;
     flex-direction: column;
@@ -12,13 +19,6 @@ export const Container = styled.div`
     height:100vh;
     width: 100%;
     
-    .mobile-header {
-      display: flex; 
-    }
-
-    .desktop-header {
-      display: none; 
-    }  
 
     >main{
         display: flex;
@@ -90,7 +90,7 @@ export const Container = styled.div`
 
         } 
         .icon {
-            display: none; /* Ícone será ocultado no desktop */
+            display: none; 
         }    
 
         display: grid;
@@ -132,10 +132,9 @@ export const Container = styled.div`
                         font-size: 24px;                       
                         line-height: 140%; 
                         margin-bottom: 24px;
-                    }
+                    }                    
+                }
 
-                    
-                } 
                  .tags{                
                     justify-content: flex-start;                
                     margin-bottom:40px;             
@@ -162,17 +161,16 @@ export const AlinhamentoCountButton = styled.div`
             gap:10px;
             flex-direction: row;
 
-            img.operadorMatemático {
+            .operadorMatemático {
                 width: 20px; 
-                height: 20px; 
-                
+                height: 20px;                 
                 }
+
                 span{                    
                 font-family: Roboto;
                 font-size: 20px;
-                font-style: normal;
                 font-weight: 700;
-                line-height: 160%; /* 32px */
+                line-height: 160%; 
                 }
             }
           
@@ -186,26 +184,9 @@ export const AlinhamentoCountButton = styled.div`
 
     
     @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {    
-    display: flex;
-    align-items: center;
-    gap:50px; 
-
-  
-        .count {
-            display: flex;
-            align-items: center;
-            gap:10px;
-
-            span{
-                
-                font-family: Roboto;
-                font-size: 20px;
-                font-style: normal;
-                font-weight: 700;
-                line-height: 160%; /* 32px */
-            }
-        }     
-       
+        align-items: center;
+        gap:50px; 
+          
     }
 `;                
 
