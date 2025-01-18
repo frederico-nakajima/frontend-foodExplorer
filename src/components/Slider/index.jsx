@@ -12,19 +12,19 @@ export function Slider({title}){
         <h2>{title}</h2>
 
         <Swiper        
-               modules={[Navigation]}
-               spaceBetween={0}
-               navigation
-               breakpoints={{
-                 
-                 0: { 
-                   slidesPerView: 1.7,
-                 },
-                 
-                 1368: { 
-                   slidesPerView: 3.5,
-                 },
-               }}
+          modules={[Navigation]}
+          spaceBetween={0}
+          navigation
+          breakpoints={{
+            
+            0: { 
+              slidesPerView: 1.7,
+            },
+            
+            1368: { 
+              slidesPerView: 3.5,
+            },
+          }}
                       
         >
         <SwiperSlide><Card/></SwiperSlide>
