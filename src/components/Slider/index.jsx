@@ -27,12 +27,12 @@ export function Slider({title}){
           }}
                       
         >
-        <SwiperSlide><Card/></SwiperSlide>
-        <SwiperSlide><Card/></SwiperSlide>
-        <SwiperSlide><Card/></SwiperSlide>
-        <SwiperSlide><Card/></SwiperSlide>
-        <SwiperSlide><Card/></SwiperSlide>
-        <SwiperSlide><Card/></SwiperSlide>
+          <SwiperSlide><Card/></SwiperSlide>
+          <SwiperSlide><Card/></SwiperSlide>
+          <SwiperSlide><Card/></SwiperSlide>
+          <SwiperSlide><Card/></SwiperSlide>
+          <SwiperSlide><Card/></SwiperSlide>
+          <SwiperSlide><Card/></SwiperSlide>
         </Swiper>
     </StyledSwiper>
  )

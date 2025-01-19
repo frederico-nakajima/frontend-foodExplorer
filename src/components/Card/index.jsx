@@ -15,10 +15,11 @@ export function Card(){
                 </div>
                 <a href="#">
                     <img src={Spaguetti} alt="Spaguetti Gambe" />
+                </a>
+                
                     <h2>Spaguetti Gambe<i class="fas fa-chevron-right"></i> </h2>
                     <p>Massa fresca com camarões e pesto. </p>
                     <span>R$ 79,97</span>
-                </a>
                 <ButtonAlignmentCount>
                     <div className="count">
                         <img src={Minus} alt="imagem de um sinal de menos" />

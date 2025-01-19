@@ -10,6 +10,11 @@ export const CardWrapper = styled.div`
     padding:24px;
     position:relative;
     border:1px solid ${({ theme }) => theme.COLORS.WHITE};
+    display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        gap:15px;
     
     .favoritar{
         position:absolute;
@@ -29,39 +34,39 @@ export const CardWrapper = styled.div`
             width: 88px;
             height: 88px;
         }
-
-        >h2{
-            display:flex;
-            align-items:center;
-            color: ${({ theme }) => theme.COLORS.WHITE};
-            text-align: center;
-            font-family: Poppins;
-            font-size: 14px;
-            font-weight: 700;
-            line-height: 140%; 
-
-            >i{
-              font-size: 14px;
-               margin-left: 8px;
-            }
-        }
-
-        >p{
-            
-            display:none;
-          
-        }
-
-        >span{
-            color: ${({ theme }) => theme.COLORS.CIANO};
-            text-align: center;
-            font-family: Roboto;
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 160%; 
-        }
-    
     }
+
+    >h2{
+        display:flex;
+        align-items:center;
+        color: ${({ theme }) => theme.COLORS.WHITE};
+        text-align: center;
+        font-family: Poppins;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 140%; 
+
+        >i{
+            font-size: 14px;
+            margin-left: 8px;
+        }
+    }
+
+    >p{
+        
+        display:none;
+        
+    }
+
+    >span{
+        color: ${({ theme }) => theme.COLORS.CIANO};
+        text-align: center;
+        font-family: Roboto;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 160%; 
+    }
+    
 
     @media (min-width: ${DEVICE_BREAKPOINTS.LG}) { 
         width:304px;
@@ -72,32 +77,32 @@ export const CardWrapper = styled.div`
                 width:176px;
                 height:176px;
             }
-            >h2{
-                font-size: 24px;
-                font-weight: 700;
-                
-                >i{
-                    font-size:15px;
-                    margin-left: 8px;
-                }
-            }
-
-            >p{
-                color: ${({ theme }) => theme.COLORS.WHITE};
-                font-family: Roboto;
-                display:flex;
-                text-align: center;
-                font-size: 14px;
-                font-weight: 400;
-                line-height: 160%;
-            }
-
-             >span{
-                font-size: 32px;
-                
-            }
-        
         }
+        >h2{
+            font-size: 24px;
+            font-weight: 700;
+            
+            >i{
+                font-size:15px;
+                margin-left: 8px;
+            }
+        }
+
+        >p{
+            color: ${({ theme }) => theme.COLORS.WHITE};
+            font-family: Roboto;
+            display:flex;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 160%;
+        }
+
+        >span{
+        font-size: 32px;
+            
+        }
+        
 
     }
 `; 
@@ -110,7 +115,8 @@ export const ButtonAlignmentCount = styled.div`
     justify-content:center;
     align-items: center;
     gap:10px;
-    margin-top:10px;
+    
+    margin:0 auto;
 
     .count {
         display: flex;

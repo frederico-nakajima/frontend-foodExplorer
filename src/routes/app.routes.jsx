@@ -3,8 +3,8 @@ import { AddDish } from '../pages/AddDish'
 import { EditDish } from '../pages/EditDish'
 import { DishCommonUser } from '../pages/DishCommonUser'
 import { MenuCommonUser } from '../pages/MenuCommonUser'
-import { DishAdminUser } from '../pages/DishAdminUser'
-import { MenuAdminUser } from '../pages/MenuAdminUser'
+// import { DishAdminUser } from '../pages/DishAdminUser'
+// import { MenuAdminUser } from '../pages/MenuAdminUser'
 
 
 export function AppRoutes(){
@@ -12,8 +12,8 @@ export function AppRoutes(){
         <Routes>            
             <Route path='/' element={<MenuCommonUser/>}/>
             <Route path='/dishuser' element={<DishCommonUser/>}/>
-            <Route path='/dishadmin' element={<DishAdminUser/>}/>
-            <Route path='/admin' element={<MenuAdminUser/>}/>
+            {/* <Route path='/dishadmin' element={<DishAdminUser/>}/>
+            <Route path='/admin' element={<MenuAdminUser/>}/> */}
             <Route path='/add' element={<AddDish/>}/>
             <Route path='/edit' element={<EditDish/>}/>           
         </Routes>
