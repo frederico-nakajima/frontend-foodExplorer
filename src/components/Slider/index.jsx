@@ -13,7 +13,7 @@ export function Slider({title}){
 
         <Swiper        
           modules={[Navigation]}
-          spaceBetween={0}
+          spaceBetween={50}
           navigation
           breakpoints={{
             

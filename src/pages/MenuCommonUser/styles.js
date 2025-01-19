@@ -167,7 +167,7 @@ export const Content  = styled.div`
  
  
     @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {  
-        width:1137px;
+        width:1067px;
         margin:0 auto;
 
     }

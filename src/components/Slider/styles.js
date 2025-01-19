@@ -49,7 +49,7 @@ export const StyledSwiper = styled.div`
         position: absolute;
         top: 0;
         bottom: 0;
-        width: 130px; /* Tamanho do gradiente */
+        width: 130px; 
         pointer-events: none;
         z-index: 2;
       }
