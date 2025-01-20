@@ -23,6 +23,8 @@ export const Container = styled.div`
     >button{
         border: none;
         background: none;
+        position:relative;
+        top:3px;
     }
 
     .button-delete{

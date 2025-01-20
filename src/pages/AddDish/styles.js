@@ -54,12 +54,8 @@ export const Container = styled.div`
         
        
     
-export const Form = styled.form`
-     
-  
-   
-    padding-bottom:100px;
-       
+export const Form = styled.form`  
+    padding-bottom:50px;       
     
     >header{
         .adicionarPrato{
@@ -71,7 +67,7 @@ export const Form = styled.form`
             font-size: 32px;
             font-weight: 500;
             line-height: 140%; 
-            margin-bottom:24px;
+            margin-bottom:34px;
             width: 364px;
         }
     }
@@ -80,58 +76,59 @@ export const Form = styled.form`
         width: 364px;
         height: 300px;
         display: flex;
-        flex-direction: column;
+        flex-direction: column;        
         
-        
+        h2{
+            font-family: Roboto;
+            font-size: 16px;               
+            font-weight: 400;
+            line-height: 100%;            
+            padding-left:-205px;   
+        }
+
         .UploadSimple{
             display:flex;
             flex-direction:column;
-           
-        
+            border:1px solid ${({theme}) => theme.COLORS.WHITE};           
+            align-items:center;            
+            padding-left:25px;            
+            border-radius: 5px;
+            background-color:${({theme}) => theme.COLORS.BACKGROUND_800};   
+            border-radius: 5px;
+            width: 364px;            
+            border:0;
+            margin-left:-5px;
+            margin-top:10px;              
+            outline:none;
 
-            >div{
-                border:1px solid ${({theme}) => theme.COLORS.WHITE};
-                display:flex;
-                align-items:center;
-                width: 364px;
-                padding-left:25px;
-            
-                border-radius: 5px;
-                background-color:${({theme}) => theme.COLORS.BACKGROUND_800};   
-                >input{
-                    border-radius: 5px;
-                    height: 48px;
-                    border:0;
-                    margin-left:5px;
-                    background-color:${({theme}) => theme.COLORS.BACKGROUND_800};
-                    outline:none;
-                    
-                    &::placeholder {
-                        color:${({theme}) => theme.COLORS.GRAY_300};
-                        font-family: "Roboto", serif;
-                        font-size: 16px;
-                        font-weight: 400;
-                        margin-left:5px;
-                        text-align:left;
-                    }
+            label{          
+            height: 46px;
+            display:flex;
+            justify-content: center;
+            align-items:center; 
+
+                >img{
+                    margin-left:-160px;
+                     
                 }
-            }
+                >p{
+                    margin-left:15px;
+                }
+                >input{
+                    display:none; 
+                       
+                }
+            
+            }                
         }
-
         
         .inputs{            
-            width: 364px;
             height: 541px;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            gap:32px;             
-            
-            .nome{
-                width: 364px;
-                
-            }
-            
+            gap:32px;          
+                       
             .dados{
                 display: flex;
                 flex-direction:column;
@@ -139,9 +136,8 @@ export const Form = styled.form`
                 
                 >label{
                     margin-top:-8px;
-                    
-                }
-            
+                   
+                }            
             }
     
             select{
@@ -163,66 +159,74 @@ export const Form = styled.form`
                 padding:0 24px;
                 border:0;
                 margin-top:4px; 
+                outline:none;
             }
-    
         }
+    
+    } 
 
-        .section{
-            width: 364px;
-            
+    .section{
+        width: 364px;            
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom:15px;        
+    
+        >.ingredientes-preco{
             display: flex;
-            flex-direction: column;
+            flex-direction:row;
             justify-content: center;
-            margin-bottom:15px;
-              
-       
-        
-        
-        
-            >.ingredientes-preco{
-                display: flex;
-                flex-direction:row;
-                justify-content: center;
-                
-                >label{
-                    margin-bottom:5px;
-                
+            
+            >section{
+              height:100px;
+              position:relative;
+              left:0px;
+            
+                .tags{
+                    display: flex;
+                    align-items: center;
+                    height: 51px;
+                    gap: 15px;
+                    width: 364px; 
+                    background-color: ${({theme}) => theme.COLORS.BACKGROUND_800};                
+                    border-radius: 8px;
+                    margin-bottom:20px;
+
+                    >label{
+                        margin-bottom:5px;
+                        
+                    }
                 }
             }
-            
         }
-            
-   
-
+                
+    }
         
-
-
-        .buttons{
-            display: flex;
-            justify-content: flex-end;
-            align-items:center;
-            margin-top:13px;
-
-            >button{
-                width: 364px;
-                height: 48px;
-                padding-right:15px;
-                padding-left:15px;
-                border-radius: 5px;
-                color:${({theme}) => theme.COLORS.WHITE} ;
-                background-color: ${({ theme }) => theme.COLORS.RED_200};
-                border:0;
-                text-align: center;
-                font-family: Poppins;
-                font-size: 14px;
-                font-style: normal;
-                font-weight: 500;
-                line-height: 24px; /* 171.429% */
-            }
-
+    .buttons{
+        display: flex;
+        justify-content: flex-end;
+        align-items:center;
+        margin-top:13px;
+        
+        >button{
+            width: 364px;
+            height: 48px;
+            padding-right:15px;
+            padding-left:15px;
+            border-radius: 5px;
+            color:${({theme}) => theme.COLORS.WHITE} ;
+            background-color: ${({ theme }) => theme.COLORS.RED_200};
+            border:0;
+            text-align: center;
+            font-family: Poppins;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 24px;
         }
     
     }
+
+    
 
     @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {    
         header{

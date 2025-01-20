@@ -27,7 +27,7 @@ export const Container = styled.div`
         color:${({theme}) => theme.COLORS.WHITE};
         background-color:${({theme}) => theme.COLORS.BACKGROUND_800};
         border:0;
-     
+         outline:none;
       
             
         &::placeholder {

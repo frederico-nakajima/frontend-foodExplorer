@@ -32,13 +32,16 @@ export function AddDish(){
                 </header>                        
 
                 <div className="imagem-salada-categoria">
+                    <h2>Imagem do prato</h2> 
+                        
                     <div className='UploadSimple'>
-                        <label htmlFor="UploadSimple">Imagem do prato</label>
-                        <div>
+                        <label htmlFor="UploadSimple">
                             <img src={UploadSimple} alt="ícone de upload" />
+                            <p>selecione imagem</p>
                             <input type='file' placeholder="Selecione imagem"  id="UploadSimple"/>
-                        </div>
+                        </label>
                     </div>
+                       
 
                     <div className="inputs">
                         <div className='nome'>
@@ -58,8 +61,8 @@ export function AddDish(){
 
                 <div className="section">
                     <div className="ingredientes-preco">
-                        <label htmlFor="preco">Ingredientes</label>
                         <Section>
+                        <label                              htmlFor="ingredientes">Ingredientes</label>
                             <div className='tags'>
                                 <NoteItem  placeholder="Pão Naan"/>
                                 <NoteItem isnew placeholder="Adicionar"/>
