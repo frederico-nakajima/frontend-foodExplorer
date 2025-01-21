@@ -67,7 +67,7 @@ export const Form = styled.form`
             font-size: 32px;
             font-weight: 500;
             line-height: 140%; 
-            margin-bottom:34px;
+            margin-bottom:45px;
             width: 364px;
         }
     }
@@ -78,66 +78,106 @@ export const Form = styled.form`
         display: flex;
         flex-direction: column;        
         
-        h2{
-            font-family: Roboto;
-            font-size: 16px;               
-            font-weight: 400;
-            line-height: 100%;            
-            padding-left:-205px;   
-        }
-
-        .UploadSimple{
+        .uploadSimple{
             display:flex;
             flex-direction:column;
             border:1px solid ${({theme}) => theme.COLORS.WHITE};           
             align-items:center;            
             padding-left:25px;            
-            border-radius: 5px;
+            border-radius: 8px;
             background-color:${({theme}) => theme.COLORS.BACKGROUND_800};   
-            border-radius: 5px;
+            border-radius: 8px;
             width: 364px;            
             border:0;
             margin-left:-5px;
             margin-top:10px;              
             outline:none;
+            width:364px;
+            height: 48px;
 
-            label{          
-            height: 46px;
-            display:flex;
-            justify-content: center;
-            align-items:center; 
-
-                >img{
-                    margin-left:-160px;
-                     
-                }
-                >p{
-                    margin-left:15px;
-                }
-                >input{
-                    display:none; 
-                       
-                }
             
-            }                
-        }
+            >.image{
+                display:flex;               
+                align-items:center;
+                height: 46px;
+                width:364px;
+                
+                >.prato{          
+                    margin-top:-90px;  
+                    margin-left:-10px;
+                    width:364px;
+                }
+                div{
+                    height: 46px;
+                    width:364px;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: start;
+
+                    >label{
+                        
+                        >img{
+                            top:15px;  
+                            left:-150px;
+                            position:relative;
+                             
+                        }
+                        >.selecione-imagem{
+                            top:-15px; 
+                            left:-110px;
+                            position:relative;
+                        }
+                        >input{
+                            display:none;                            
+                        }
+                    }    
+                
+                }
+                
+            }
+        }                
         
         .inputs{            
             height: 541px;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            gap:32px;          
-                       
+            gap:32px;
+            .nome{
+                display: flex;
+                flex-direction: column;
+                gap:16px;
+                >input{
+                height: 48px;
+                width: 100%;
+                border-radius: 8px;
+                padding: 12px;
+                font-family: "Roboto", serif;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 100%; 
+                color:${({theme}) => theme.COLORS.WHITE};
+                background-color:${({theme}) => theme.COLORS.BACKGROUND_800};
+                border:0;
+               
+            }
+        }
+                      
             .dados{
                 display: flex;
                 flex-direction:column;
                 align-items: flex-start;
+                gap:16px;
                 
                 >label{
                     margin-top:-8px;
                    
-                }            
+                }
+                    
+                >select{
+                    border-radius:8px;
+                }
             }
     
             select{
@@ -147,6 +187,7 @@ export const Form = styled.form`
                 background-color:${({theme}) => theme.COLORS.BACKGROUND_800};
                 appearance: none;
                 -webkit-appearance: none;
+
                 background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1_54)'%3E%3Cpath d='M8 10L12 14L16 10' stroke='%239C98A6' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1_54'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
 
                 background-repeat:no-repeat;
@@ -191,17 +232,40 @@ export const Form = styled.form`
                     background-color: ${({theme}) => theme.COLORS.BACKGROUND_800};                
                     border-radius: 8px;
                     margin-bottom:20px;
-
-                    >label{
-                        margin-bottom:5px;
-                        
-                    }
+                    margin-top:16px;                             
                 }
             }
         }
-                
+
+        .preco{
+            display: flex;
+            flex-direction: column;
+            gap:16px;
+            
+            >input{
+                height: 48px;
+                width: 100%;
+                border-radius: 8px;
+                padding: 12px;
+                font-family: "Roboto", serif;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 100%; /* 16px */
+                color:${({theme}) => theme.COLORS.WHITE};
+                background-color:${({theme}) => theme.COLORS.BACKGROUND_800};
+                border:0;
+            }
+        }
+                   
     }
-        
+     
+    .descricao{
+        display: flex;
+        flex-direction: column;
+        gap:16px;
+    }
+
     .buttons{
         display: flex;
         justify-content: flex-end;
@@ -225,9 +289,7 @@ export const Form = styled.form`
         }
     
     }
-
     
-
     @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {    
         header{
             .novoPrato{
@@ -238,8 +300,36 @@ export const Form = styled.form`
                 display:block;
             }
         }
-                    
-        width: 1137px;
+        
+        .imagem-salada-categoria{
+            width: 1137px;
+            flex-direction: row;
+            gap:50px;
+
+            .UploadSimple{
+                height: 50px;
+            }
+
+            .inputs{
+                flex-direction: row;
+                align-items:center;
+                gap:100px;
+                height: 50px;
+            }
+                
+        }
+
+        .section{
+            width: 1137px;
+            flex-direction: row;
+            gap:100px;
+            position:relative;
+            left:-240px;
+
+            .ingredientes-preco{
+              
+            }
+        }
     }
 
      

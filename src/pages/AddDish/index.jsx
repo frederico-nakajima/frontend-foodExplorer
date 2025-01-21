@@ -32,21 +32,24 @@ export function AddDish(){
                 </header>                        
 
                 <div className="imagem-salada-categoria">
-                    <h2>Imagem do prato</h2> 
-                        
-                    <div className='UploadSimple'>
-                        <label htmlFor="UploadSimple">
-                            <img src={UploadSimple} alt="ícone de upload" />
-                            <p>selecione imagem</p>
-                            <input type='file' placeholder="Selecione imagem"  id="UploadSimple"/>
-                        </label>
+                    <div className='uploadSimple'>
+                        <div className='image'>
+                            <label className='prato'>Imagem do prato </label>
+                            <div>
+                                <label htmlFor="file-upload" >
+                                    <img src={UploadSimple} alt="ícone de upload" />
+                                    <p className='selecione-imagem'>selecione imagem</p>
+                                    <input type='file' id='file-upload'/>
+                                </label>
+                            </div>
+                        </div>
                     </div>
                        
 
                     <div className="inputs">
                         <div className='nome'>
                             <label htmlFor="nome">Nome</label>
-                            <Input placeholder="Ex.: Salada Ceasar" id="nome"/>
+                            <input placeholder="Ex.: Salada Ceasar" id="nome"/>
                         </div>
                         <div className="dados">
                             <label htmlFor="categoria">Categoria</label>
@@ -62,7 +65,7 @@ export function AddDish(){
                 <div className="section">
                     <div className="ingredientes-preco">
                         <Section>
-                        <label                              htmlFor="ingredientes">Ingredientes</label>
+                            <label                              htmlFor="ingredientes">Ingredientes</label>
                             <div className='tags'>
                                 <NoteItem  placeholder="Pão Naan"/>
                                 <NoteItem isnew placeholder="Adicionar"/>
@@ -72,7 +75,7 @@ export function AddDish(){
                     
                     <div className='preco'>
                         <label htmlFor="preco">Preço</label>
-                        <Input placeholder="R$ 00,00" id="preco"/>
+                        <input placeholder="R$ 00,00" id="preco"/>
                     </div>
                 </div>
 
