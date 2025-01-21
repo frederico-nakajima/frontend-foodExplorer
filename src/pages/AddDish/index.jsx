@@ -35,13 +35,11 @@ export function AddDish(){
                     <div className='uploadSimple'>
                         <div className='image'>
                             <label className='prato'>Imagem do prato </label>
-                            <div>
-                                <label htmlFor="file-upload" >
-                                    <img src={UploadSimple} alt="ícone de upload" />
-                                    <p className='selecione-imagem'>selecione imagem</p>
-                                    <input type='file' id='file-upload'/>
-                                </label>
-                            </div>
+                            <img src={UploadSimple} alt="ícone de upload" />
+                            <p className='selecione-imagem'>selecione imagem</p>
+                            <label htmlFor="file-upload" className='file'>
+                                <input type='file' id='file-upload'/>
+                            </label>                            
                         </div>
                     </div>
                        

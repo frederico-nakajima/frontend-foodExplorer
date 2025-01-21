@@ -83,6 +83,7 @@ export const Form = styled.form`
         .uploadSimple{
             display:flex;
             flex-direction:column;
+            justify-content: start;
             border:1px solid ${({theme}) => theme.COLORS.WHITE};           
             align-items:center;            
             padding-left:25px;            
@@ -90,14 +91,12 @@ export const Form = styled.form`
             background-color:${({theme}) => theme.COLORS.BACKGROUND_800};   
             border-radius: 8px;
             width: 364px;            
+            height: 48px;                         
             border:0;
             margin-left:-5px;
             margin-top:10px;              
             outline:none;
-            width:364px;
-            height: 48px;
-
-            
+                       
             >.image{
                 display:flex;               
                 align-items:center;
@@ -110,34 +109,23 @@ export const Form = styled.form`
                     width:364px;
                     margin-top:-105px;
                 }
-                div{
-                    height: 46px;
-                    width:364px;
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
-                    justify-content: start;
-
-                    >label{
-                        
-                        >img{
-                            top:15px;  
-                            left:-150px;
-                            position:relative;
-                             
-                        }
-                        >.selecione-imagem{
-                            top:-15px; 
-                            left:-110px;
-                            position:relative;
-                        }
-                        >input{
-                            display:none;                            
-                        }
-                    }    
-                
+                >img{
+                   
+                    left: -157px;
+                    position:relative;
+                    
                 }
-                
+                >.selecione-imagem{                    
+                    left: -135px;
+                    position:relative;
+                    width: 300px;
+                }
+                >.file{
+                    >input{
+                        display:none;                            
+                    }
+                }    
+                           
             }
         }                
         
@@ -224,7 +212,7 @@ export const Form = styled.form`
             >section{
               height:100px;
               position:relative;
-              left:0px;
+              
             
                 .tags{
                     display: flex;
@@ -307,21 +295,22 @@ export const Form = styled.form`
         .imagem-salada-categoria{
             width: 1137px;
             height: 100px;
-            flex-direction: row;
-            gap: 19px;
-            margin-top:50px;
-
-            .uploadSimple{
+            flex-direction: row; 
+            justify-content:end;          
+            margin-top:65px;
+           
+            >.uploadSimple{
+                margin-right:20px;
+                width: 335px;
                 height: 50px;
                 position:relative;
-                top:8px;
-                .image{
-                    
-                    div{
-                        
+                top:9px;
+                >.image{
+                    >.prato{
+                        margin-left:5px;
                     }
                 }
-
+                
             }
 
             .inputs{
@@ -329,9 +318,12 @@ export const Form = styled.form`
                 align-items:center;
                 gap:20px;
                 height: 50px;
+               
 
                 .nome{
-                width:400px;
+                    width:400px;
+                    position:relative;
+                    top:-1px;
                 }
             }
                 
@@ -340,12 +332,24 @@ export const Form = styled.form`
         .section{
             width: 1137px;
             flex-direction: row;
-            gap:100px;
-            position:relative;
-            left:-240px;
-
-            .ingredientes-preco{
+            justify-content: flex-start;
+            gap:20px;
+            position:relative;           
+            
+            >.ingredientes-preco{
+                >section{
+                    .tags{
+                        width: 917px;
+                        
+                    }
+                
+                }
               
+            }
+
+            >.preco{
+                position:relative;
+                margin-top:2px;
             }
         }
     }
