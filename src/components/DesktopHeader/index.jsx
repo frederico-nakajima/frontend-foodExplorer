@@ -7,8 +7,7 @@ import { ButtonIcon } from '../../components/ButtonIcon'
 
 export function DesktopHeader(){
     return(
-        <Container>
-           
+        <Container>           
            <main>
                <Brand>
                     <img src={polygonImageHeader} alt="imagem de um polígono" />
@@ -21,23 +20,14 @@ export function DesktopHeader(){
                 <Search>
                     <img src={busca} alt="ícone de busca" /> 
                     <input placeholder="Busque por pratos ou ingredientes" />
-                </Search>
-               
+                </Search>               
                 
-                  <ButtonIcon>
+                <ButtonIcon>
                     Novo prato
-                  </ButtonIcon>
-               
+                </ButtonIcon>              
                     
                 <img src={SignOut} alt="ícone de sair do app" />
-           </main>
-               
-                  
-                
-              
-
-           
-                
+           </main>          
         </Container>
     )
 }

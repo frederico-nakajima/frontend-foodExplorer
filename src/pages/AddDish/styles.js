@@ -38,7 +38,8 @@ export const Container = styled.div`
             display: none; 
         }
         .header-desktop {
-            display: block; 
+            display: block;
+           
         } 
 
         width:100%; 
@@ -76,7 +77,8 @@ export const Form = styled.form`
         width: 364px;
         height: 300px;
         display: flex;
-        flex-direction: column;        
+        flex-direction: column;
+                
         
         .uploadSimple{
             display:flex;
@@ -106,6 +108,7 @@ export const Form = styled.form`
                     margin-top:-90px;  
                     margin-left:-10px;
                     width:364px;
+                    margin-top:-105px;
                 }
                 div{
                     height: 46px;
@@ -303,18 +306,33 @@ export const Form = styled.form`
         
         .imagem-salada-categoria{
             width: 1137px;
+            height: 100px;
             flex-direction: row;
-            gap:50px;
+            gap: 19px;
+            margin-top:50px;
 
-            .UploadSimple{
+            .uploadSimple{
                 height: 50px;
+                position:relative;
+                top:8px;
+                .image{
+                    
+                    div{
+                        
+                    }
+                }
+
             }
 
             .inputs{
                 flex-direction: row;
                 align-items:center;
-                gap:100px;
+                gap:20px;
                 height: 50px;
+
+                .nome{
+                width:400px;
+                }
             }
                 
         }
