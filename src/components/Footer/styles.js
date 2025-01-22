@@ -8,11 +8,8 @@ export const Container = styled.footer`
   display: flex;
   justify-content:center;
   align-items: center;
-  border:1px solid ${({theme}) => theme.COLORS.WHITE_200} ;
   background-color:${({theme}) => theme.COLORS.BACKGROUND_600};
-
   
-
   >main{
     display: flex;
     justify-content:center;
@@ -33,12 +30,11 @@ export const Container = styled.footer`
 
   @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
     height: 77px;
-     width: 100%;
+    width: 100%;
     position:relative;
     >main{
     display: flex;
     align-items: center;
-    
     gap:715px;
     
     p{
@@ -46,7 +42,7 @@ export const Container = styled.footer`
       font-size: 14px;
     }
     
-  }
+  
   }   
 `;
       

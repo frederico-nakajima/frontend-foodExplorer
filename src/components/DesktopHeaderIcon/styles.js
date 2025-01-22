@@ -9,22 +9,15 @@ export const Container = styled.header`
     display: flex;
     justify-content:center;
     align-items: center;
-    border:1px solid ${({ theme }) => theme.COLORS.WHITE};
     background-color:${({theme}) => theme.COLORS.BACKGROUND_600};
-   
   
-    
-
   >main{
     display: flex;
     justify-content:center;
     align-items: center;
     gap:32px;
-      width:1134px;
-   
- 
-
-
+    width:1134px;
+  
   }
 
 `;

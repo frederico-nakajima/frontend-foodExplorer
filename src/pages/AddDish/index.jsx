@@ -2,7 +2,6 @@ import { Container,Form } from './styles';
 import { DesktopHeader } from '../../components/DesktopHeader';
 import { MobileHeader } from '../../components/MobileHeader'
 import { Textarea } from '../../components/Textarea'
-import { Input } from '../../components/Input'
 import { NoteItem } from '../../components/NoteItem'
 import { Section } from '../../components/Section'
 import UploadSimple from '../../assets/UploadSimple.svg';
@@ -27,16 +26,16 @@ export function AddDish(){
             
             <Form>                    
                 <header>
-                    <h1 className='adicionarPrato'>Adicionar prato</h1>
-                    <h1 className='novoPrato'>Novo prato</h1>
+                    <h1 className='addDish'>Adicionar prato</h1>
+                    <h1 className='newDish'>Novo prato</h1>
                 </header>                        
 
-                <div className="imagem-salada-categoria">
+                <div className="image-salad-category">
                     <div className='uploadSimple'>
                         <div className='image'>
-                            <label className='prato'>Imagem do prato </label>
+                            <label className='dish'>Imagem do prato </label>
                             <img src={UploadSimple} alt="ícone de upload" className='img-upload-simple'/>
-                            <p className='selecione-imagem'>selecione imagem</p>
+                            <p className='select-image'>selecione imagem</p>
                             <label htmlFor="file-upload" className='file'>
                                 <input type='file' id='file-upload'/>
                             </label>                            
@@ -45,25 +44,25 @@ export function AddDish(){
                        
 
                     <div className="inputs">
-                        <div className='nome'>
-                            <label htmlFor="nome">Nome</label>
-                            <input placeholder="Ex.: Salada Ceasar" id="nome"/>
+                        <div className='name'>
+                            <label htmlFor="name">Nome</label>
+                            <input placeholder="Ex.: Salada Ceasar" id="name"/>
                         </div>
-                        <div className="dados">
-                            <label htmlFor="categoria">Categoria</label>
-                            <select id="categoria">
-                                <option value="live">Refeição</option>
-                                <option value="podcast">Sobremesa</option>
-                                <option value="mentorship">Bebida</option>
+                        <div className="data">
+                            <label htmlFor="category">Categoria</label>
+                            <select id="category">
+                                <option value="meal">Refeição</option>
+                                <option value="Dessert">Sobremesa</option>
+                                <option value="Drink">Bebida</option>
                             </select>
                         </div>
                     </div>
                 </div>
 
                 <div className="section">
-                    <div className="ingredientes-preco">
+                    <div className="ingredients-price">
                         <Section>
-                            <label                              htmlFor="ingredientes">Ingredientes</label>
+                            <label htmlFor="ingredients">Ingredientes</label>
                             <div className='tags'>
                                 <NoteItem  placeholder="Pão Naan"/>
                                 <NoteItem isnew placeholder="Adicionar"/>
@@ -71,15 +70,15 @@ export function AddDish(){
                         </Section>
                     </div>
                     
-                    <div className='preco'>
-                        <label htmlFor="preco">Preço</label>
-                        <input placeholder="R$ 00,00" id="preco"/>
+                    <div className='price'>
+                        <label htmlFor="price">Preço</label>
+                        <input placeholder="R$ 00,00" id="price"/>
                     </div>
                 </div>
 
-                <div className="descricao">
-                    <label htmlFor="descricao">Descrição</label>
-                    <Textarea placeholder="Fale brevemente sobre o prato, seus ingredientes e composição" id="descricao"/>
+                <div className="description">
+                    <label htmlFor="description">Descrição</label>
+                    <Textarea placeholder="Fale brevemente sobre o prato, seus ingredientes e composição" id="description"/>
                 </div>
 
                 <div className="buttons">

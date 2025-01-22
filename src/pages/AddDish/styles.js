@@ -12,7 +12,7 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;    
-    width:428px;
+    width:100%;
     margin:0 auto;    
               
     >a{
@@ -21,8 +21,8 @@ export const Container = styled.div`
         align-items:center;
         color: ${({theme}) => theme.COLORS.WHITE};;
         font-family: Poppins;
-        font-size: 16.5px;
-        font-weight: 500;
+        font-size: 19px;
+        font-weight: 700;
         line-height: 140%;
         padding-bottom:30px;
         >svg{
@@ -39,10 +39,9 @@ export const Container = styled.div`
         }
         .header-desktop {
             display: block;
-           
+            width:100%;
         } 
 
-        width:100%; 
         
         >a{
             margin-top:40px;
@@ -59,10 +58,10 @@ export const Form = styled.form`
     padding-bottom:50px;       
     
     >header{
-        .adicionarPrato{
+        .addDish{
             display:none;
         }
-         .novoPrato{
+         .newDish{
             display:block;
             font-family: Poppins;
             font-size: 32px;
@@ -73,7 +72,7 @@ export const Form = styled.form`
         }
     }
             
-    .imagem-salada-categoria{                
+    .image-salad-category{                
         width: 364px;
         height: 300px;
         display: flex;
@@ -103,7 +102,7 @@ export const Form = styled.form`
                 height: 46px;
                 width:364px;
                 
-                >.prato{          
+                >.dish{          
                     margin-top:-90px;  
                     margin-left:-10px;
                     width:364px;
@@ -115,7 +114,7 @@ export const Form = styled.form`
                     position:relative;
                     
                 }
-                >.selecione-imagem{                    
+                >.select-image{                    
                     left: -135px;
                     position:relative;
                     width: 300px;
@@ -135,7 +134,7 @@ export const Form = styled.form`
             flex-direction: column;
             justify-content: center;
             gap:32px;
-            .nome{
+            .name{
                 display: flex;
                 flex-direction: column;
                 gap:16px;
@@ -155,7 +154,7 @@ export const Form = styled.form`
             }
         }
                       
-            .dados{
+            .data{
                 display: flex;
                 flex-direction:column;
                 align-items: flex-start;
@@ -204,7 +203,7 @@ export const Form = styled.form`
         justify-content: center;
         margin-bottom:15px;        
     
-        >.ingredientes-preco{
+        >.ingredients-price{
             display: flex;
             flex-direction:row;
             justify-content: center;
@@ -228,7 +227,7 @@ export const Form = styled.form`
             }
         }
 
-        .preco{
+        .price{
             display: flex;
             flex-direction: column;
             gap:16px;
@@ -251,7 +250,7 @@ export const Form = styled.form`
                    
     }
      
-    .descricao{
+    .description{
         display: flex;
         flex-direction: column;
         gap:16px;
@@ -282,17 +281,17 @@ export const Form = styled.form`
     }
     
     @media (min-width: ${DEVICE_BREAKPOINTS.LG}) { 
-        width: 1137px;   
+        
         header{
-            .novoPrato{
+            .newDish{
                 display:none;
             }                
-            .adicionarPrato{
+            .addDish{
                 display:block;
             }
         }
         
-        .imagem-salada-categoria{
+        .image-salad-category{
             width: 1137px;
             height: 100px;
             flex-direction: row; 
@@ -306,13 +305,13 @@ export const Form = styled.form`
                 position:relative;
                 top:9px;
                 >.image{
-                    >.prato{
+                    >.dish{
                         margin-left: 48px;
                     }
                     .img-upload-simple{
                         left: -121px;
                     }
-                    >.selecione-imagem{
+                    >.select-image{
                         left: -107px;
                         width: 355px;
                     }
@@ -327,7 +326,7 @@ export const Form = styled.form`
                 height: 50px;
                 width:871px;
 
-                .nome{
+                .name{
                     width:600px;
                     position:relative;
                     top:-1px;
@@ -343,7 +342,7 @@ export const Form = styled.form`
             gap:20px;
             position:relative;           
             
-            >.ingredientes-preco{
+            >.ingredients-price{
                 >section{
                     .tags{
                        width: 834px;
@@ -352,7 +351,7 @@ export const Form = styled.form`
               
             }
 
-            >.preco{
+            >.price{
                 position:relative;
                 margin-top:2px;
                 width:400px;

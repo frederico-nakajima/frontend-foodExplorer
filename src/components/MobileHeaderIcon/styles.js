@@ -9,8 +9,7 @@ export const Container = styled.div`
     gap:11px;
     width:424px;
     heigth:114px;
-    padding:35px 10px 15px 10px;
-    border:1px solid ${({theme}) => theme.COLORS.WHITE};
+    padding:40px 10px 15px 10px;
     background-color:${({theme}) => theme.COLORS.BACKGROUND_700};
     margin-left:-5px;
     margin-bottom:10px;
@@ -46,7 +45,7 @@ export const Container = styled.div`
 
         >.smallZero{
         position:absolute;
-        top:27px;
+        top:33px;
         right:25px;
         background-color:${({theme}) => theme.COLORS.RED_300};
         display: flex;

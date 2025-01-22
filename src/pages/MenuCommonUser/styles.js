@@ -6,7 +6,7 @@ export const Container = styled.div`
     .desktop-header {
         display: none;
     }
-    .mobile-header {
+    .mobile-header-icon {
         display: block;
         grid-area: header;
     } 
@@ -14,6 +14,7 @@ export const Container = styled.div`
     >.underHeader{
         width: 100%;
         height:150px;
+        
             
     }
 
@@ -22,7 +23,12 @@ export const Container = styled.div`
     }
     .imgBannerMobile {
         display: block;
+        margin-top:10px;
     } 
+
+    .textBoxMobile{
+        margin-top:10px;
+    }
 
     width: 100%;
     height: 100vh;
@@ -38,7 +44,7 @@ export const Container = styled.div`
     .desktop-header {
         display: block;
     }
-    .mobile-header {
+    .mobile-header-icon {
         display: none;
     }
 
@@ -115,8 +121,7 @@ export const Banner  = styled.div`
         margin-top: 32px;
         width:1120px;
         height:406px;
-        border:1px solid ${({ theme }) => theme.COLORS.WHITE};
-    
+           
         >.imgBanner{
             width:632px;
             height:406px;

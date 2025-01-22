@@ -26,7 +26,7 @@ export function MenuCommonUser() {
              <div className="desktop-header">
                 <DesktopHeaderIcon />
             </div>
-            <div className="mobile-header">
+            <div className="mobile-header-icon">
                 <MobileHeaderIcon onOpenMenu={()=> setMenuIsOpen(true)} />
             </div>
             <div className='underHeader'>

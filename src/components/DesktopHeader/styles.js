@@ -3,20 +3,19 @@ import styled from 'styled-components';
 
 export const Container = styled.header`
     grid-area: header;
-    padding:24px 5px;
+    padding:24px auto;
     height: 94px;
     width: 100%;
     display: flex;
     justify-content:center;
     align-items: center;
-    border:1px solid ${({ theme }) => theme.COLORS.WHITE};
     background-color:${({theme}) => theme.COLORS.BACKGROUND_600};
     >main{
       display: flex;
       justify-content:center;
       align-items: center;
       gap:32px;
-      width:1134px;
+      
     }
 
 `;
@@ -60,7 +59,6 @@ export const Search  = styled.div`
   display:flex;
   align-items:center;
   justify-content:center;
-  border:1px solid ${({ theme }) => theme.COLORS.WHITE};
   width:700px;
   height: 48px;
   border-radius: 5px;
