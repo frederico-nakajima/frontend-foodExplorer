@@ -281,13 +281,13 @@ export const Form = styled.form`
     
     }
     
-    @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {    
+    @media (min-width: ${DEVICE_BREAKPOINTS.LG}) { 
+        width: 1137px;   
         header{
             .novoPrato{
                 display:none;
             }                
             .adicionarPrato{
-                width: 1137px;
                 display:block;
             }
         }
@@ -301,27 +301,34 @@ export const Form = styled.form`
            
             >.uploadSimple{
                 margin-right:20px;
-                width: 335px;
+                width: 250px;
                 height: 50px;
                 position:relative;
                 top:9px;
                 >.image{
                     >.prato{
-                        margin-left:5px;
+                        margin-left: 48px;
+                    }
+                    .img-upload-simple{
+                        left: -121px;
+                    }
+                    >.selecione-imagem{
+                        left: -107px;
+                        width: 355px;
                     }
                 }
-                
             }
 
             .inputs{
                 flex-direction: row;
                 align-items:center;
+                justify-content:space-between;
                 gap:20px;
                 height: 50px;
-               
+                width:871px;
 
                 .nome{
-                    width:400px;
+                    width:600px;
                     position:relative;
                     top:-1px;
                 }
@@ -339,10 +346,8 @@ export const Form = styled.form`
             >.ingredientes-preco{
                 >section{
                     .tags{
-                        width: 917px;
-                        
-                    }
-                
+                       width: 834px;
+                        }
                 }
               
             }
@@ -350,7 +355,16 @@ export const Form = styled.form`
             >.preco{
                 position:relative;
                 margin-top:2px;
+                width:400px;
             }
+        }
+
+        .buttons{
+            width:177px;
+            position:relative;
+            left:960px;
+
+
         }
     }
 
