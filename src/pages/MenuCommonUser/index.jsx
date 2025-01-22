@@ -9,7 +9,7 @@ import { SideMenu } from '../../components/SideMenu';
 import {useState } from "react";
 
 export function MenuCommonUser() {
-   
+    const buttonIconContent = "Pedidos (0)";
     
     const [menuIsOpen,setMenuIsOpen] = useState(false);
   
@@ -24,7 +24,7 @@ export function MenuCommonUser() {
            
 
              <div className="desktop-header">
-                <DesktopHeaderIcon />
+                <DesktopHeaderIcon buttonIconContent={buttonIconContent}  />
             </div>
             <div className="mobile-header-icon">
                 <MobileHeaderIcon onOpenMenu={()=> setMenuIsOpen(true)} />

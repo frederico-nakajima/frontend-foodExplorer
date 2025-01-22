@@ -5,7 +5,8 @@ import SignOut from '../../assets/SignOut.svg'
 import { ButtonIcon } from '../ButtonIcon'
 import Receipt from '../../assets/Receipt.svg'
 
-export function DesktopHeaderIcon(){
+export function DesktopHeaderIcon({ buttonIconContent }){   
+    
     return(
         <Container>
            
@@ -26,7 +27,7 @@ export function DesktopHeaderIcon(){
                 
                 
                 <ButtonIcon icon={Receipt}>
-                    Pedidos (0)
+                    {buttonIconContent}
                 </ButtonIcon>
 
                 

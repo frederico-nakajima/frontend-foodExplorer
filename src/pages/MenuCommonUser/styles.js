@@ -110,6 +110,12 @@ export const Banner  = styled.div`
     }
 
     @media (min-width: ${DEVICE_BREAKPOINTS.LG}) { 
+        .desktop-header-icon {
+            display: block;
+        }
+        .mobile-header-icon {
+            display: none;
+        } 
         .imgBannerDesktop {
             display: block;
         }
