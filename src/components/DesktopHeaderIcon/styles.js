@@ -2,15 +2,15 @@ import styled from 'styled-components';
 
 
 export const Container = styled.header`
-    grid-area: header;
-    padding:24px 5px;
-    height: 94px;
-    width: 100%;
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    background-color:${({theme}) => theme.COLORS.BACKGROUND_600};
-  
+  grid-area: header;
+  padding:24px 5px;
+  height: 94px;
+  width: 100%;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  background-color:${({theme}) => theme.COLORS.BACKGROUND_600};
+
   >main{
     display: flex;
     justify-content:center;
@@ -23,42 +23,39 @@ export const Container = styled.header`
 `;
 
 export const Brand = styled.div`
+  display:flex;
+  align-items:flex-start;
+  gap:10px;
+
+  >img{
+    width: 30px;
+    height: 30px;
+  }
+  >div{
     display:flex;
-    align-items:flex-start;
+    flex-direction:column;
+    align-items:flex-end;
     
-    gap:10px;
-
-    >img{
-        width: 30px;
-        height: 30px;
+    h2{
+      font-family: "Roboto", serif;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      width:150px;
     }
-    >div{
-        display:flex;
-        flex-direction:column;
-        align-items:flex-end;
-        
-       h2{
-        font-family: "Roboto", serif;
-        font-size: 24px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
-        width:150px;
-        }
-        
+  }
+    
+  p{
+    color:${({theme}) => theme.COLORS.CIANO};
+    font-family: "Roboto",serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 19.2px */
 
+  }
 
-       p{
-        color:${({theme}) => theme.COLORS.CIANO};
-        font-family: "Roboto",serif;
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 160%; /* 19.2px */
-
-       }
-
-    }
 `;
 
 export const Search  = styled.div`

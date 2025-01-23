@@ -10,39 +10,25 @@ export function DesktopHeaderIcon({ buttonIconContent }){
     
     return(
         <Container>
-           
-           <main>
+            <main>
                <Brand>
                     <img src={polygonImageHeader} alt="imagem de um polígono" />
                     <div>
-                        <h2>food explorer</h2>
-                        
+                        <h2>food explorer</h2>                        
                     </div>
                 </Brand>
 
                 <Search>
                     <img src={busca} alt="ícone de busca" /> 
                     <input placeholder="Busque por pratos ou ingredientes" />
-                </Search>
-               
-                
+                </Search>               
                 
                 <ButtonIcon icon={Receipt}>
                     {buttonContent}
                 </ButtonIcon>
-
-                
-               
-                    
+                               
                 <img src={SignOut} alt="ícone de sair do app" />
            </main>
-               
-                  
-                
-          
-
-           
-                
         </Container>
     )
 }

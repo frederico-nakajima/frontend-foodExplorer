@@ -6,7 +6,7 @@ import { Footer } from '../../components/Footer';
 
 export function SideMenu({menuIsOpen, onCloseMenu, isAdmin }) {
   return (
-    <Container data-menu-is-open = {menuIsOpen} isAdmin={isAdmin}>
+    <Container data-menu-is-open = {menuIsOpen} $isAdmin={isAdmin}>
       <HeaderSideMenu>
         <HeaderControls>
         { 

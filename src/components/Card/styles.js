@@ -36,7 +36,7 @@ export const CardWrapper = styled.div`
         }
     }
 
-    >h2{
+    >h6{
         display:flex;
         align-items:center;
         color: ${({ theme }) => theme.COLORS.WHITE};
@@ -78,8 +78,8 @@ export const CardWrapper = styled.div`
                 height:176px;
             }
         }
-        >h2{
-            font-size: 24px;
+        >h6{
+            font-size: 20px;
             font-weight: 700;
             
             >i{

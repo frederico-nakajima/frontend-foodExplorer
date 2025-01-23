@@ -70,8 +70,8 @@ export const StyledSwiper = styled.div`
       display: block;
       background-color: ${({ theme }) => theme.COLORS.BACKGROUND_1000};
       color: ${({ theme }) => theme.COLORS.WHITE};
-      width: 40px;
-      height: 40px;
+      width: 10px;
+      height: 10px;
       
       z-index: 10;
     }

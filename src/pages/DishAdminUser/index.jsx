@@ -1,16 +1,14 @@
-import { Container,  AlinhamentoCountButton,ReturnLink } from './styles';
-import { DesktopHeaderIcon } from '../../components/DesktopHeaderIcon';
+import { Container,  ReturnLink } from './styles';
+import { DesktopHeader } from '../../components/DesktopHeader';
 import { Tag } from '../../components/Tag'; 
 import Dish from '../../assets/Dish.png';
-import Plus from '../../assets/Plus.svg';
-import Minus from '../../assets/Minus.svg';
 import { Button } from '../../components/Button';
 import { Footer } from '../../components/Footer';
-import { MobileHeaderIcon } from '../../components/MobileHeaderIcon'
+import { MobileHeader } from '../../components/MobileHeader'
 import CaretLeft from '../../assets/CaretLeft.svg';
 import { SideMenu } from '../../components/SideMenu';
 import {useState } from "react";
-import { Receipt } from "phosphor-react";
+
 
 
 
@@ -23,14 +21,14 @@ export function DishAdminUser() {
               <SideMenu
                 menuIsOpen={menuIsOpen}
                 onCloseMenu={() => setMenuIsOpen(false)}
-                isAdmin={false} 
+                isAdmin={true} 
             />
 
             <div className="mobile-header">
-                <MobileHeaderIcon  onOpenMenu={()=> setMenuIsOpen(true)}/>
+                <MobileHeader onOpenMenu={()=> setMenuIsOpen(true)}  />
             </div>
             <div className="desktop-header">
-                <DesktopHeaderIcon />
+                <DesktopHeader />
             </div>
 
            
@@ -60,18 +58,12 @@ export function DishAdminUser() {
                         <Tag title="pepino" />
                         <Tag title="rabanete" />
                         <Tag title="tomate" />
-                    </div>
-
-                    <AlinhamentoCountButton>
-                        <div className="count">
-                            <img className='operadorMatemático' src={Minus} alt="imagem de um sinal de menos" />
-                            <span>01</span>
-                            <img className='operadorMatemático' src={Plus} alt="imagem de um sinal de mais" />
-                        </div>
-                        <div  className="custom-button">
-                            <Button icon={Receipt} title="incluir ∙ R$ 25,00"/>
-                        </div>                      
-                    </AlinhamentoCountButton>
+                    </div>                    
+                       
+                    <div  className="custom-button">
+                        <Button title="Editar prato"/>
+                    </div>                      
+                   
                 </div>
             </main>
 

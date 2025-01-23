@@ -8,8 +8,15 @@ export default createGlobalStyle`
         box-sizing: border-box;
     }
     
-    :hoot{
-        font-size: 62.5%
+    :root{
+        font-size: 62.5%;
+        --swiper-navigation-size: 27px;
+
+        @media(max-width:${DEVICE_BREAKPOINTS.LG}) {
+         font-size: 62.5%;
+        
+        
+        }
     }
 
     body{

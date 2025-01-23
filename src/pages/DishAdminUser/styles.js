@@ -16,7 +16,7 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    height:100vh;
+    
     width: 100%;
     
 
@@ -67,14 +67,17 @@ export const Container = styled.div`
                 padding:0 15px;
             }
         
+            .custom-button{
+                width: 300px; 
+                height: 48px;
+                >button{
+                    font-size: 16px;
+                }
+            } 
         }       
-    
     }
    
-    .icon {
-        display: block; 
-              
-    }
+    
        
     
     @media (min-width: ${DEVICE_BREAKPOINTS.LG}) { 
@@ -141,57 +144,18 @@ export const Container = styled.div`
                     gap: 20px;
                 }             
                     
-            }  
+                .custom-button{
+                    width:150px; 
+                    height: 48px;
+                    position:relative;
+                    left:20px;
+                } 
+            }
         }
+            
     }
 `;
-           
-          
-            
-            
-    
-    
-export const AlinhamentoCountButton = styled.div`
-    display: flex;
-    gap:20px;    
-    
-        .count {
-            display: flex;
-            align-items: center;
-            gap:10px;
-            flex-direction: row;
-
-            .operadorMatemático {
-                width: 20px; 
-                height: 20px;                 
-                }
-
-                span{                    
-                font-family: Roboto;
-                font-size: 20px;
-                font-weight: 700;
-                line-height: 160%; 
-                }
-            }
-          
-            .custom-button{
-               width:200px; 
-                height: 40px;
-              
-            } 
-          
-        }   
-
-    
-    @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {    
-        align-items: center;
-        gap:50px; 
-          
-    }
-`;                
-
-        
-
+ 
 export const ReturnLink = styled(Link)`
     height: 60px;
     display:flex;

@@ -3,7 +3,6 @@ import Spaguetti from '../../assets/Spaguetti.png';
 import Plus from '../../assets/Plus.svg';
 import Minus from '../../assets/Minus.svg';
 import Love from '../../assets/love.svg';
-import CaretRight from '../../assets/CaretRight.svg';
 import { Button } from '../../components/Button';
 
 export function Card(){
@@ -15,11 +14,11 @@ export function Card(){
                 </div>
                 <a href="#">
                     <img src={Spaguetti} alt="Spaguetti Gambe" />
-                </a>
-                
-                    <h2>Spaguetti Gambe<i class="fas fa-chevron-right"></i> </h2>
-                    <p>Massa fresca com camarões e pesto. </p>
-                    <span>R$ 79,97</span>
+                </a>                
+                <h6>Spaguetti Gambe<i className="fas fa-chevron-right"></i> </h6>
+                <p>Massa fresca com camarões e pesto. </p>
+                <span>R$ 79,97</span>
+
                 <ButtonAlignmentCount>
                     <div className="count">
                         <img src={Minus} alt="imagem de um sinal de menos" />
