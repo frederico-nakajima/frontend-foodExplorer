@@ -6,6 +6,7 @@ import { ButtonIcon } from '../ButtonIcon'
 import Receipt from '../../assets/Receipt.svg'
 
 export function DesktopHeaderIcon({ buttonIconContent }){   
+    const buttonContent = "Pedidos (0)";
     
     return(
         <Container>
@@ -27,7 +28,7 @@ export function DesktopHeaderIcon({ buttonIconContent }){
                 
                 
                 <ButtonIcon icon={Receipt}>
-                    {buttonIconContent}
+                    {buttonContent}
                 </ButtonIcon>
 
                 

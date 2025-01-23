@@ -80,30 +80,6 @@ export const Button = styled.button`
   }
 `;
 
-export const Search = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 8px 16px;
-
-
-  input {
-    flex: 1;
-    border: none;
-    outline: none;
-    font-size: 14px;
-    background-color: transparent;
-  }
-
-  button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-   
-  }
-`;
-
 export const HeaderSideMenu = styled.div`
  width: 428px;
 height: 114px; 

@@ -1,5 +1,6 @@
 import { X } from "@phosphor-icons/react";
-import { Search } from '../../components/Search';
+import { MagnifyingGlass } from "@phosphor-icons/react";
+import { Search } from '../Search';
 import { Container, Nav, Title, Header, Button,SideMenuContent,HeaderSideMenu,HeaderControls } from "./styles";
 import { Footer } from '../../components/Footer';
 
@@ -19,7 +20,7 @@ export function SideMenu({menuIsOpen, onCloseMenu}) {
       </HeaderSideMenu>        
 
     <SideMenuContent>
-      <Search/>
+      <Search icon={MagnifyingGlass}  placeholder="No mínimo 6 caracteres"/>
       <Nav>
         <a href="#" className="NewDishLink">Novo prato</a>
         <hr className="NewDishLink" />

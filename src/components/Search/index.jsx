@@ -1,20 +1,10 @@
-import { MagnifyingGlass } from "@phosphor-icons/react";
-
-
-import { Input } from '../Input';
-
-
 import { Container} from './styles';
 
-export function Search() {
- 
-
+export function Search({ icon: Icon, ...rest }) {
   return (
     <Container>
-      <Input
-        icon={MagnifyingGlass}
-        placeholder="Busque por pratos ou ingredientes"
-      />
+      {Icon && <Icon />}
+      <input {...rest} />
     </Container>
   );
 };

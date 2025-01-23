@@ -65,18 +65,16 @@ export const Search  = styled.div`
   grid-area: search;
   display:flex;
   align-items:center;
-  justify-content:center;
-  border:1px solid ${({ theme }) => theme.COLORS.WHITE};
+  justify-content:center;  
   width:700px;
-  height: 48px;
- 
+  height: 48px; 
   border-radius: 5px;
   padding: 12px 200px;
   color:${({theme}) => theme.COLORS.WHITE};
   background-color:${({theme}) => theme.COLORS.BACKGROUND_900};
   
   > img {
-  margin-right: 8px;
+    margin-right: 8px;
   }
   > input {
     

@@ -4,15 +4,10 @@ export const Container = styled.div`
     width: 100%;
     display: flex;
     align-items: center;
-
-
     background-color:${({theme}) => theme.COLORS.BACKGROUND_900};
-    color:${({theme}) => theme.COLORS.GRAY_300};
-
-   
+    color:${({theme}) => theme.COLORS.GRAY_300};   
     border-radius: 10px;
-    margin-top:6px; 
-
+    margin-top:6px;
 
     >input{
         height: 48px;
@@ -34,19 +29,12 @@ export const Container = styled.div`
             color:${({theme}) => theme.COLORS.GRAY_300};
             font-family: "Roboto", serif;
             font-size: 16px;
-            font-style: normal;
             font-weight: 400;
-            line-height: 100%; /* 16px */
-        }
-        
+            line-height: 100%;
+        }        
         >svg{
-                margin-left:16px;
-            }
-
-       
-
-        
+            margin-left:16px;
+        }
     }
-
 
 `;
