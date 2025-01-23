@@ -29,8 +29,7 @@ margin-bottom: 1043px;
 
 `
 
-export const Header = styled.header`
-  
+export const Header = styled.header`  
   padding: 32px 24px;
   height:114px;
 `;
@@ -45,12 +44,17 @@ export const Title = styled.h1`
 
 export const Nav = styled.nav`
   display: flex;
-  flex-direction: column;
-
- 
+  flex-direction: column; 
 
   >.NewDishLink {
-    display:none;
+    color: ${({ theme }) => theme.COLORS.WHITE};
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 140%; 
+    padding:10px;
+   
+    
   }
 
   >.SignOut {
@@ -60,15 +64,14 @@ export const Nav = styled.nav`
     font-weight: 300;
     line-height: 140%; 
     padding:10px;
-    margin-top:25px;
+    
+    margin-top: ${({ isAdmin }) => (isAdmin ? '25px' : '0px')};    
   }
 
   >hr{
     border-bottom:${({ theme }) => theme.COLORS.BACKGROUND_1000};
   }
 `;
-
-
 
 export const Button = styled.button`
     background-color: transparent;
@@ -81,9 +84,9 @@ export const Button = styled.button`
 `;
 
 export const HeaderSideMenu = styled.div`
- width: 428px;
-height: 114px; 
-padding:56px 28px 24px;
+  width: 428px;
+  height: 114px; 
+  padding:56px 28px 24px;
   
 `;
 

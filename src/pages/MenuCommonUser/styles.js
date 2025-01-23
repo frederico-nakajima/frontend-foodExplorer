@@ -84,7 +84,7 @@ export const Banner  = styled.div`
         padding-right:20px;
         position:absolute;
         z-index:-1;
-         top: 125px;
+        top: 125px;
         right: 9px;        
         border-radius: 8px;
         background: linear-gradient(180deg, #091E26 0%, #00131C 100%);

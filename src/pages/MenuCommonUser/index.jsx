@@ -20,6 +20,7 @@ export function MenuCommonUser() {
             <SideMenu
                 menuIsOpen={menuIsOpen}
                 onCloseMenu={() => setMenuIsOpen(false)}
+                isAdmin={false} 
             />
            
 

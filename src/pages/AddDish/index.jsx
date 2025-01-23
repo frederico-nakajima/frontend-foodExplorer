@@ -8,12 +8,22 @@ import UploadSimple from '../../assets/UploadSimple.svg';
 import {Link} from 'react-router-dom'
 import { Footer } from '../../components/Footer'
 import CaretLeft from '../../assets/CaretLeft.svg';
+import { SideMenu } from '../../components/SideMenu';
+import {useState } from "react";
 
 export function AddDish(){
+
+     const [menuIsOpen,setMenuIsOpen] = useState(false);
     return(
         <Container>
+            <SideMenu
+                menuIsOpen={menuIsOpen}
+                onCloseMenu={() => setMenuIsOpen(false)}
+                isAdmin={true}
+            />
+
             <div className="header-mobile">
-                <MobileHeader />
+                <MobileHeader onOpenMenu={()=> setMenuIsOpen(true)}  />
             </div>
             <div className="header-desktop">
                 <DesktopHeader />

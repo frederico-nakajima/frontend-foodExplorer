@@ -4,9 +4,9 @@ import { Search } from '../Search';
 import { Container, Nav, Title, Header, Button,SideMenuContent,HeaderSideMenu,HeaderControls } from "./styles";
 import { Footer } from '../../components/Footer';
 
-export function SideMenu({menuIsOpen, onCloseMenu}) {
+export function SideMenu({menuIsOpen, onCloseMenu, isAdmin }) {
   return (
-    <Container data-menu-is-open = {menuIsOpen}>
+    <Container data-menu-is-open = {menuIsOpen} isAdmin={isAdmin}>
       <HeaderSideMenu>
         <HeaderControls>
         { 
@@ -22,8 +22,12 @@ export function SideMenu({menuIsOpen, onCloseMenu}) {
     <SideMenuContent>
       <Search icon={MagnifyingGlass}  placeholder="No mínimo 6 caracteres"/>
       <Nav>
-        <a href="#" className="NewDishLink">Novo prato</a>
-        <hr className="NewDishLink" />
+        {isAdmin && (
+          <>
+            <a href="#" className="NewDishLink">Novo prato</a>
+            <hr/>
+          </>
+        )}
         <a href="#" className="SignOut">Sair</a>
         <hr />        
       </Nav> 
