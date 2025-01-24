@@ -1,5 +1,5 @@
 import { Container,Banner,Content,FooterWrapper} from './styles';
-import { DesktopHeaderIcon } from '../../components/DesktopHeaderIcon';
+import { DesktopHeader } from '../../components/DesktopHeader';
 import { MobileHeaderIcon } from '../../components/MobileHeaderIcon';
 import { Footer } from '../../components/Footer';
 import Pngegg from '../../assets/pngegg.png';
@@ -26,7 +26,7 @@ export function MenuAdminUser() {
            
 
              <div className="desktop-header">
-                <DesktopHeaderIcon buttonIconContent={buttonIconContent} showButtonIcon={false} />
+                <DesktopHeader/>
             </div>
             <div className="mobile-header-icon">
                 <MobileHeaderIcon onOpenMenu={()=> setMenuIsOpen(true)} />
@@ -52,9 +52,9 @@ export function MenuAdminUser() {
             </div>
             
             <Content>
-                <Slider title = 'Refeições' cardImage={Pencil} alternativeText = "texto alternativo"/>
-                <Slider title = 'Sobremesas' cardImage={Pencil} alternativeText = "texto alternativo"/>
-                <Slider title = 'Bebidas' cardImage={Pencil} alternativeText = "texto alternativo"/>               
+                <Slider title = 'Refeições' cardImage={Pencil} alternativeText = "texto alternativo" showButtonAlignment={false}/>
+                <Slider title = 'Sobremesas' cardImage={Pencil} alternativeText = "texto alternativo" showButtonAlignment={false}/>
+                <Slider title = 'Bebidas' cardImage={Pencil} alternativeText = "texto alternativo" showButtonAlignment={false}/>               
             </Content>
             
             <FooterWrapper>

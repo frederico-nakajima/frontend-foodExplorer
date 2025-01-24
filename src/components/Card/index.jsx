@@ -4,7 +4,7 @@ import Plus from '../../assets/Plus.svg';
 import Minus from '../../assets/Minus.svg';
 import { Button } from '../../components/Button';
 
-export function Card({ image, altText } ){
+export function Card({ image, altText, showButtonAlignment = true  } ){
     return(
         
             <CardWrapper>
@@ -18,16 +18,20 @@ export function Card({ image, altText } ){
                 <p>Massa fresca com camarões e pesto. </p>
                 <span>R$ 79,97</span>
 
-                <ButtonAlignmentCount>
-                    <div className="count">
-                        <img src={Minus} alt="imagem de um sinal de menos" />
-                        <span>01</span>
-                        <img src={Plus} alt="imagem de um sinal de mais" />
-                    </div>
-                    <div className='custom-button'>
-                        <Button title="incluir" />
-                    </div>
-                </ButtonAlignmentCount>              
+                {
+                    showButtonAlignment && (
+                        <ButtonAlignmentCount>
+                            <div className="count">
+                                <img src={Minus} alt="imagem de um sinal de menos" />
+                                <span>01</span>
+                                <img src={Plus} alt="imagem de um sinal de mais" />
+                            </div>
+                            <div className="custom-button">
+                                <Button title="incluir" />
+                            </div>
+                        </ButtonAlignmentCount>
+                    )
+                }          
             </CardWrapper>
         
     )
