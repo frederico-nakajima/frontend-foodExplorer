@@ -33,7 +33,8 @@ export const Container = styled.div`
     }  
     
                      
-    @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {            
+    @media (min-width: ${DEVICE_BREAKPOINTS.LG}) { 
+                  
         .header-mobile {
             display: none; 
         }
@@ -55,7 +56,7 @@ export const Container = styled.div`
        
     
 export const Form = styled.form`  
-    padding-bottom:50px;       
+    padding-bottom: 75px;       
     
     >header{
         .addDish{

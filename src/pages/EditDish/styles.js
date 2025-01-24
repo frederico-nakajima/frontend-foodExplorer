@@ -55,7 +55,7 @@ export const Container = styled.div`
        
     
 export const Form = styled.form`  
-    padding-bottom:50px;       
+    padding-bottom:60px;       
     
     >header{
      
