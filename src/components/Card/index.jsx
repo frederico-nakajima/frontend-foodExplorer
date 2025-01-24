@@ -2,15 +2,14 @@ import { CardWrapper,ButtonAlignmentCount } from './styles';
 import Spaguetti from '../../assets/Spaguetti.png';
 import Plus from '../../assets/Plus.svg';
 import Minus from '../../assets/Minus.svg';
-import Love from '../../assets/love.svg';
 import { Button } from '../../components/Button';
 
-export function Card(){
+export function Card({ image, altText } ){
     return(
         
             <CardWrapper>
                 <div className="favoritar">
-                    <img src={Love} alt="icone de um coração favoritar" />
+                    <img src={image} alt={altText}/>
                 </div>
                 <a href="#">
                     <img src={Spaguetti} alt="Spaguetti Gambe" />

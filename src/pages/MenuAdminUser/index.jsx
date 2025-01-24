@@ -7,9 +7,10 @@ import Pngegg02 from '../../assets/pngegg02.png';
 import { Slider } from '../../components/Slider';
 import { SideMenu } from '../../components/SideMenu';
 import {useState } from "react";
+import Pencil from '../../assets/Pencil.svg';
 
 export function MenuAdminUser() {
-    const buttonIconContent = "Pedidos (0)";
+    const buttonIconContent = "Novo prato";
     
     const [menuIsOpen,setMenuIsOpen] = useState(false);
   
@@ -25,7 +26,7 @@ export function MenuAdminUser() {
            
 
              <div className="desktop-header">
-                <DesktopHeaderIcon buttonIconContent={buttonIconContent}  />
+                <DesktopHeaderIcon buttonIconContent={buttonIconContent} showButtonIcon={false} />
             </div>
             <div className="mobile-header-icon">
                 <MobileHeaderIcon onOpenMenu={()=> setMenuIsOpen(true)} />
@@ -51,9 +52,9 @@ export function MenuAdminUser() {
             </div>
             
             <Content>
-                <Slider title = 'Refeições'/>
-                <Slider title = 'Sobremesas'/>
-                <Slider title = 'Bebidas'/>                
+                <Slider title = 'Refeições' cardImage={Pencil} alternativeText = "texto alternativo"/>
+                <Slider title = 'Sobremesas' cardImage={Pencil} alternativeText = "texto alternativo"/>
+                <Slider title = 'Bebidas' cardImage={Pencil} alternativeText = "texto alternativo"/>               
             </Content>
             
             <FooterWrapper>

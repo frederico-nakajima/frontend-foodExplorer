@@ -5,8 +5,8 @@ import SignOut from '../../assets/SignOut.svg'
 import { ButtonIcon } from '../ButtonIcon'
 import Receipt from '../../assets/Receipt.svg'
 
-export function DesktopHeaderIcon({ buttonIconContent }){   
-    const buttonContent = "Pedidos (0)";
+export function DesktopHeaderIcon({ buttonIconContent,showIcon = false }){   
+    
     
     return(
         <Container>
@@ -23,10 +23,10 @@ export function DesktopHeaderIcon({ buttonIconContent }){
                     <input placeholder="Busque por pratos ou ingredientes" />
                 </Search>               
                 
-                <ButtonIcon icon={Receipt}>
-                    {buttonContent}
+                <ButtonIcon icon={showIcon ? Receipt : null}>
+                    {buttonIconContent}
                 </ButtonIcon>
-                               
+
                 <img src={SignOut} alt="ícone de sair do app" />
            </main>
         </Container>

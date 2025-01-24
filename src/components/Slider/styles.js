@@ -56,12 +56,12 @@ export const StyledSwiper = styled.div`
     
       &::before {
         left: 0;
-        background: linear-gradient(to right, rgba(0, 0, 0, 1), transparent);
+        background: linear-gradient(to right,rgb(2, 11, 15), transparent);
       }
     
       &::after {
         right: 0;
-        background: linear-gradient(to left, rgba(0, 0, 0, 1), transparent);
+        background: linear-gradient(to left,rgb(2, 11, 15), transparent);
       }
     }
 

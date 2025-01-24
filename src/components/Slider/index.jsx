@@ -5,7 +5,7 @@ import 'swiper/css/navigation';
 import { Card } from "../Card"
 import { StyledSwiper } from './styles';
 
-export function Slider({title}){
+export function Slider({title, cardImage,alternativeText }){
 
  return( 
     <StyledSwiper>
@@ -27,12 +27,12 @@ export function Slider({title}){
           }}
                       
         >
-          <SwiperSlide><Card/></SwiperSlide>
-          <SwiperSlide><Card/></SwiperSlide>
-          <SwiperSlide><Card/></SwiperSlide>
-          <SwiperSlide><Card/></SwiperSlide>
-          <SwiperSlide><Card/></SwiperSlide>
-          <SwiperSlide><Card/></SwiperSlide>
+          <SwiperSlide><Card image={cardImage} altText={alternativeText} /></SwiperSlide>
+          <SwiperSlide><Card image={cardImage} altText={alternativeText} /></SwiperSlide>
+          <SwiperSlide><Card image={cardImage} altText={alternativeText} /></SwiperSlide> 
+          <SwiperSlide><Card image={cardImage} altText={alternativeText} /></SwiperSlide>
+          <SwiperSlide><Card image={cardImage} altText={alternativeText} /></SwiperSlide>
+          <SwiperSlide><Card image={cardImage} altText={alternativeText} /></SwiperSlide>        
         </Swiper>
     </StyledSwiper>
  )

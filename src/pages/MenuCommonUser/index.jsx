@@ -7,6 +7,7 @@ import Pngegg02 from '../../assets/pngegg02.png';
 import { Slider } from '../../components/Slider';
 import { SideMenu } from '../../components/SideMenu';
 import {useState } from "react";
+import Love from '../../assets/love.svg';
 
 export function MenuCommonUser() {
     const buttonIconContent = "Pedidos (0)";
@@ -25,7 +26,7 @@ export function MenuCommonUser() {
            
 
              <div className="desktop-header">
-                <DesktopHeaderIcon buttonIconContent={buttonIconContent}  />
+                <DesktopHeaderIcon buttonIconContent={buttonIconContent} showIcon={true}  />
             </div>
             <div className="mobile-header-icon">
                 <MobileHeaderIcon onOpenMenu={()=> setMenuIsOpen(true)} />
@@ -51,9 +52,9 @@ export function MenuCommonUser() {
             </div>
             
             <Content>
-                <Slider title = 'Refeições'/>
-                <Slider title = 'Sobremesas'/>
-                <Slider title = 'Bebidas'/>                
+                <Slider title = 'Refeições' cardImage={Love} alternativeText = "texto alternativo"/>
+                <Slider title = 'Sobremesas' cardImage={Love} alternativeText = "texto alternativo"/>
+                <Slider title = 'Bebidas' cardImage={Love} alternativeText = "texto alternativo"/>                
             </Content>
             
             <FooterWrapper>
