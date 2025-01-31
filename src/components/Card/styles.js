@@ -147,14 +147,13 @@ export const ButtonAlignmentCount = styled.div`
      @media (min-width: ${DEVICE_BREAKPOINTS.LG}) { 
         flex-direction:row;
         justify-content:space-between;
-        width:304px;
-        padding-right:70px;
-        padding-left:20px;
+        width:225px;
+        
        
         .count {
             align-items: center;
             gap:10px;
-            padding-right:0px;
+            
 
             span{
                 font-size: 20px;          

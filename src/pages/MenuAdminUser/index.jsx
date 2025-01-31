@@ -1,6 +1,6 @@
 import { Container,Banner,Content,FooterWrapper} from './styles';
 import { DesktopHeader } from '../../components/DesktopHeader';
-import { MobileHeaderIcon } from '../../components/MobileHeaderIcon';
+import { MobileHeader } from '../../components/MobileHeader';
 import { Footer } from '../../components/Footer';
 import Pngegg from '../../assets/pngegg.png';
 import Pngegg02 from '../../assets/pngegg02.png';
@@ -21,7 +21,7 @@ export function MenuAdminUser() {
             <SideMenu
                 menuIsOpen={menuIsOpen}
                 onCloseMenu={() => setMenuIsOpen(false)}
-                isAdmin={false} 
+                isAdmin={true} 
             />
            
 
@@ -29,7 +29,7 @@ export function MenuAdminUser() {
                 <DesktopHeader/>
             </div>
             <div className="mobile-header-icon">
-                <MobileHeaderIcon onOpenMenu={()=> setMenuIsOpen(true)} />
+                <MobileHeader onOpenMenu={()=> setMenuIsOpen(true)} />
             </div>
             <div className='underHeader'>
                 <Banner>

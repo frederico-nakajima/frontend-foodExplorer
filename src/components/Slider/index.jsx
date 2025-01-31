@@ -12,17 +12,18 @@ export function Slider({title, cardImage,alternativeText, showButtonAlignment = 
         <h2>{title}</h2>
 
         <Swiper        
-          modules={[Navigation]}
-          spaceBetween={50}
+          modules={[Navigation]}          
           navigation
           breakpoints={{
             
             0: { 
               slidesPerView: 1.7,
+              spaceBetween: 20, 
             },
             
             1368: { 
               slidesPerView: 3.5,
+              spaceBetween:30,
             },
           }}
                       

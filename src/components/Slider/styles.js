@@ -5,7 +5,7 @@ export const StyledSwiper = styled.div`
   margin-top:20px;
     >h2{
       margin-bottom:24px;
-      margin-left:20px;
+      margin-left:0px;
       font-family: Poppins;
       font-size: 18px;
       font-style: normal;

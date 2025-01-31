@@ -52,7 +52,7 @@ export function MenuCommonUser() {
             </div>
             
             <Content>
-                <Slider title = 'Refeições' cardImage={Love} alternativeText = "texto alternativo"/>
+                <Slider title = 'Refeições' cardImage={Love} alternativeText = "texto alternativo" />
                 <Slider title = 'Sobremesas' cardImage={Love} alternativeText = "texto alternativo"/>
                 <Slider title = 'Bebidas' cardImage={Love} alternativeText = "texto alternativo"/>                
             </Content>
