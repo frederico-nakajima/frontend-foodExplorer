@@ -25,8 +25,7 @@ export function MenuCommonUser() {
                 menuIsOpen={menuIsOpen}
                 onCloseMenu={() => setMenuIsOpen(false)}
                 isAdmin={false} 
-            />
-           
+            />           
 
              <div className="desktop-header">
                 <DesktopHeaderIcon buttonIconContent={buttonIconContent} showIcon={true}  />

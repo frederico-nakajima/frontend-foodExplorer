@@ -1,10 +1,8 @@
 import { Routes, Route } from 'react-router-dom';
-
-import { Home } from '../pages/Home';
-import { Product } from '../pages/Product';
-import { NotFound } from '../pages/NotFound';
-import { Suppliers } from '../pages/Suppliers';
-import { SalesReport } from '../pages/SalesReport';
+import { AddDish } from '../pages/AddDish'
+import { EditDish } from '../pages/EditDish'
+import { DishAdminUser } from '../pages/DishAdminUser'
+import { MenuAdminUser } from '../pages/MenuAdminUser'
 
 export function AdminRoutes() {
   return (
@@ -12,8 +10,7 @@ export function AdminRoutes() {
       <Route path='/add' element={<AddDish/>}/>
       <Route path='/edit' element={<EditDish/>}/>
       <Route path='/dishadmin' element={<DishAdminUser/>}/>
-      <Route path='/admin' element={<MenuAdminUser/>}/>
-      <Route path="*" exact={true} element={<NotFound />} />
-    </Routes>
+      <Route path='/' element={<MenuAdminUser/>}/>
+     </Routes>
   );
 }
