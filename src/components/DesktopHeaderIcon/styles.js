@@ -17,7 +17,10 @@ export const Container = styled.header`
     align-items: center;
     gap:32px;
     width:1134px;
-  
+
+     >img{
+    cursor:pointer;
+    }
   }
 
 `;

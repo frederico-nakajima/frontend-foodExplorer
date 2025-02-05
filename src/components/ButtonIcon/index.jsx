@@ -9,6 +9,6 @@ export function ButtonIcon({icon:Icon,children, ...rest}){
         
           {children}
         
-    </Container>
+      </Container>
     )
 }

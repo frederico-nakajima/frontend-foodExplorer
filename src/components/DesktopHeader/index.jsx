@@ -3,9 +3,19 @@ import polygonImageHeader from '../../assets/Polygon-header.png';
 import busca from '../../assets/busca.svg';
 import SignOut from '../../assets/SignOut.svg'
 import { ButtonIcon } from '../../components/ButtonIcon'
-
+import { useAuth } from '../../hooks/auth'
+import { Navigate, useNavigate } from 'react-router-dom';
 
 export function DesktopHeader(){
+    const { signOut,user } = useAuth();
+        
+    const navigate = useNavigate();
+
+    function handleSignOut(){
+        navigate("/");
+        signOut();
+
+    }
     return(
         <Container>           
            <main>
@@ -26,7 +36,7 @@ export function DesktopHeader(){
                     Novo prato
                 </ButtonIcon>              
                     
-                <img src={SignOut} alt="ícone de sair do app" />
+                <img src={SignOut} alt="ícone de sair do app" onClick={handleSignOut}/>
            </main>          
         </Container>
     )

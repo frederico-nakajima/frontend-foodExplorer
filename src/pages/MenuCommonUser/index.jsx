@@ -8,6 +8,9 @@ import { Slider } from '../../components/Slider';
 import { SideMenu } from '../../components/SideMenu';
 import {useState } from "react";
 import Love from '../../assets/love.svg';
+import Suco from '../../assets/Suco.png';
+import Peachy from '../../assets/Peachy.png';
+import Spaguetti from '../../assets/Spaguetti.png';
 
 export function MenuCommonUser() {
     const buttonIconContent = "Pedidos (0)";
@@ -52,9 +55,9 @@ export function MenuCommonUser() {
             </div>
             
             <Content>
-                <Slider title = 'Refeições' cardImage={Love} alternativeText = "texto alternativo" />
-                <Slider title = 'Sobremesas' cardImage={Love} alternativeText = "texto alternativo"/>
-                <Slider title = 'Bebidas' cardImage={Love} alternativeText = "texto alternativo"/>                
+                <Slider title = 'Refeições' cardImage={Love} itemImage={Spaguetti} itemName='Spaguetti Gambe' alternativeText = "texto alternativo" description='Massa fresca com camarões e pesto.' price='R$ 79,97'/>
+                <Slider title = 'Sobremesas' cardImage={Love} itemImage={Peachy} itemName = 'Peachy pastrie' alternativeText = "texto alternativo"  description='Delicioso folheado de pêssego com folhas de hortelã.' price='R$ 32,97' />
+                <Slider title = 'Bebidas' cardImage={Love} itemImage={Suco} itemName = 'Suco de maracujá' alternativeText = "texto alternativo" description='Suco de maracujá gelado, cremoso, docinho.' price='R$ 32,97' />                
             </Content>
             
             <FooterWrapper>

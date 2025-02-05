@@ -17,7 +17,8 @@ import { Receipt } from "phosphor-react";
 
 export function DishCommonUser() {
     const [menuIsOpen,setMenuIsOpen] = useState(false);
-    
+    const buttonIconContent = "Pedidos (0)";
+
     return (
         <Container>
               <SideMenu
@@ -30,7 +31,7 @@ export function DishCommonUser() {
                 <MobileHeaderIcon  onOpenMenu={()=> setMenuIsOpen(true)}/>
             </div>
             <div className="desktop-header">
-                <DesktopHeaderIcon />
+                <DesktopHeaderIcon buttonIconContent={buttonIconContent} showIcon={true} />
             </div>
 
            

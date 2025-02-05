@@ -5,7 +5,7 @@ import 'swiper/css/navigation';
 import { Card } from "../Card"
 import { StyledSwiper } from './styles';
 
-export function Slider({title, cardImage,alternativeText, showButtonAlignment = true }){
+export function Slider({title, cardImage, itemImage,alternativeText,itemName,description, price, showButtonAlignment = true }){
 
  return( 
     <StyledSwiper>
@@ -28,12 +28,10 @@ export function Slider({title, cardImage,alternativeText, showButtonAlignment = 
           }}
                       
         >
-          <SwiperSlide><Card image={cardImage} altText={alternativeText} showButtonAlignment={showButtonAlignment}/></SwiperSlide>
-          <SwiperSlide><Card image={cardImage} altText={alternativeText} showButtonAlignment={showButtonAlignment}/></SwiperSlide>
-          <SwiperSlide><Card image={cardImage} altText={alternativeText} showButtonAlignment={showButtonAlignment}/></SwiperSlide> 
-          <SwiperSlide><Card image={cardImage} altText={alternativeText} showButtonAlignment={showButtonAlignment}/></SwiperSlide>
-          <SwiperSlide><Card image={cardImage} altText={alternativeText} showButtonAlignment={showButtonAlignment}/></SwiperSlide>
-          <SwiperSlide><Card image={cardImage} altText={alternativeText} showButtonAlignment={showButtonAlignment}/></SwiperSlide>        
+          <SwiperSlide>
+          <Card itemName = {itemName}  image={cardImage} itemImage={itemImage} altText={alternativeText} description={description} price={price} showButtonAlignment={showButtonAlignment}/>
+            </SwiperSlide>
+                 
         </Swiper>
     </StyledSwiper>
  )

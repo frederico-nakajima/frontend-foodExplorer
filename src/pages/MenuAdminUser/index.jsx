@@ -8,6 +8,9 @@ import { Slider } from '../../components/Slider';
 import { SideMenu } from '../../components/SideMenu';
 import {useState } from "react";
 import Pencil from '../../assets/Pencil.svg';
+import Suco from '../../assets/Suco.png';
+import Peachy from '../../assets/Peachy.png';
+import Spaguetti from '../../assets/Spaguetti.png';
 
 export function MenuAdminUser() {
     const buttonIconContent = "Novo prato";
@@ -52,9 +55,9 @@ export function MenuAdminUser() {
             </div>
             
             <Content>
-                <Slider title = 'Refeições' cardImage={Pencil} alternativeText = "texto alternativo" showButtonAlignment={false}/>
-                <Slider title = 'Sobremesas' cardImage={Pencil} alternativeText = "texto alternativo" showButtonAlignment={false}/>
-                <Slider title = 'Bebidas' cardImage={Pencil} alternativeText = "texto alternativo" showButtonAlignment={false}/>               
+                <Slider title = 'Refeições' cardImage={Pencil} itemImage={Spaguetti} itemName='Spaguetti Gambe' alternativeText = "texto alternativo" description='Massa fresca com camarões e pesto.' price='R$ 79,97' showButtonAlignment={false}/>
+                <Slider title = 'Sobremesas' cardImage={Pencil} itemImage={Peachy} itemName = 'Peachy pastrie' alternativeText = "texto alternativo"  description='Delicioso folheado de pêssego com folhas de hortelã.' price='R$ 32,97' showButtonAlignment={false} />
+                <Slider title = 'Bebidas' cardImage={Pencil} itemImage={Suco} itemName = 'Suco de maracujá' alternativeText = "texto alternativo" description='Suco de maracujá gelado, cremoso, docinho.' price='R$ 32,97' showButtonAlignment={false} />               
             </Content>
             
             <FooterWrapper>

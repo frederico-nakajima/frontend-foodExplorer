@@ -2,21 +2,24 @@ import styled from 'styled-components';
 
 
 export const Container = styled.header`
-    grid-area: header;
-    padding:24px auto;
-    height: 94px;
-    width: 100%;
+  grid-area: header;
+  padding:24px auto;
+  height: 94px;
+  width: 100%;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  background-color:${({theme}) => theme.COLORS.BACKGROUND_600};
+  >main{
     display: flex;
     justify-content:center;
     align-items: center;
-    background-color:${({theme}) => theme.COLORS.BACKGROUND_600};
-    >main{
-      display: flex;
-      justify-content:center;
-      align-items: center;
-      gap:32px;
-      
+    gap:32px;
+    
+    >img{
+    cursor:pointer;
     }
+  }
 
 `;
 

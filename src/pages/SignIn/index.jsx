@@ -11,7 +11,6 @@ export function SignIn(){
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
-
     const { signIn } = useAuth();
 
     function handleSignIn(){
@@ -19,7 +18,6 @@ export function SignIn(){
     }
     return(
         <Container>
-
             <Header>
                 <div className="content">
                     <img src={polygonImage} alt="imagem de um polígono" />
@@ -27,30 +25,23 @@ export function SignIn(){
                 </div>
             </Header>
 
-
             <Form>
                 <h1>Faça login</h1>
-                
-
 
                 <div>
                     <label htmlFor="email">Email:</label>
                     <Input
                     placeholder="Exemplo: exemplo@exemplo.com.br"
-                    type="text"
-                   
+                    type="text"                   
                     onChange = {e => setEmail(e.target.value)}
                     />
                 </div>
-
-
 
                 <div>
                     <label htmlFor="password">Senha:</label>
                     <Input
                     placeholder="No mínimo 6 caracteres"
-                    type="password"
-                   
+                    type="password"                   
                     onChange = {e => setPassword(e.target.value)}
                     />
                 </div>
@@ -62,12 +53,8 @@ export function SignIn(){
                 <Link to="/register">
                     Criar uma conta
                 </Link>
-                    
-                
+
             </Form>
-
-            
-
         </Container>
     )
 }
