@@ -105,21 +105,24 @@ export const Form = styled.form`
                     width:364px;
                     margin-top:-105px;
                 }
-                >img{                   
-                    left: -103px;
-                    position:relative;
-                }
-                >.select-image{                    
-                    left: -87px;
-                    position:relative;
-                    width: 533px;
-                    font-size: 18px;
-                }
-                >.file{
-                    >input{
-                        display:none;                            
+                .label-upload-simple{
+                    >img{
+                       
+                       
+                        position:relative;
+                        
                     }
-                }    
+                    >.select-image{                    
+                        
+                        position:relative;
+                        width: 300px;
+                    }
+                } 
+              
+                >input{
+                    display:none;                            
+                }
+                   
                            
             }
         }                

@@ -8,13 +8,16 @@ import { MobileHeader } from '../../components/MobileHeader'
 import CaretLeft from '../../assets/CaretLeft.svg';
 import { SideMenu } from '../../components/SideMenu';
 import {useState } from "react";
-
-
-
-
+import { useNavigate } from 'react-router-dom';
 
 export function DishAdminUser() {
     const [menuIsOpen,setMenuIsOpen] = useState(false);
+
+    const navigate = useNavigate();
+
+    function handleEditDish() {
+        navigate("/edit");
+    }
     
     return (
         <Container>
@@ -61,7 +64,7 @@ export function DishAdminUser() {
                     </div>                    
                        
                     <div  className="custom-button">
-                        <Button title="Editar prato"/>
+                        <Button title="Editar prato" onClick={handleEditDish}/>
                     </div>                      
                    
                 </div>

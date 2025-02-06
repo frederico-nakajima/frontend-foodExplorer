@@ -109,22 +109,24 @@ export const Form = styled.form`
                     width:364px;
                     margin-top:-105px;
                 }
-                >img{
-                   
-                    left: -157px;
-                    position:relative;
-                    
-                }
-                >.select-image{                    
-                    left: -135px;
-                    position:relative;
-                    width: 300px;
-                }
-                >.file{
-                    >input{
-                        display:none;                            
+                .label-upload-simple{
+                    >img{
+                       
+                       
+                        position:relative;
+                        
+                    }
+                    >.select-image{                    
+                        
+                        position:relative;
+                        width: 300px;
                     }
                 }    
+                
+                >input{
+                    display:none;                            
+                }
+                   
                            
             }
         }                
@@ -309,12 +311,12 @@ export const Form = styled.form`
                     >.dish{
                         margin-left: 48px;
                     }
-                    .img-upload-simple{
+                    .label-upload-simple{
                         left: -121px;
-                    }
-                    >.select-image{
-                        left: -107px;
-                        width: 355px;
+                        >.select-image{
+                            left: -107px;
+                            width: 355px;
+                        }
                     }
                 }
             }

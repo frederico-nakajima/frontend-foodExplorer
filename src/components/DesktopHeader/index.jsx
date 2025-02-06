@@ -11,6 +11,10 @@ export function DesktopHeader(){
         
     const navigate = useNavigate();
 
+    function handleNewDish() {
+        navigate("/add");
+    }
+
     function handleSignOut(){
         navigate("/");
         signOut();
@@ -32,7 +36,7 @@ export function DesktopHeader(){
                     <input placeholder="Busque por pratos ou ingredientes" />
                 </Search>               
                 
-                <ButtonIcon>
+                <ButtonIcon onClick={handleNewDish}>
                     Novo prato
                 </ButtonIcon>              
                     

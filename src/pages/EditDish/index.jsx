@@ -43,13 +43,20 @@ export function EditDish(){
                     <div className='uploadSimple'>
                         <div className='image'>
                             <label className='dish'>Imagem do prato </label>
-                            <img src={UploadSimple} alt="ícone de upload" className='img-upload-simple'/>
-                            <p className='select-image'>Selecione imagem</p>
-                            <label htmlFor="file-upload" className='file'>
-                                <input type='file' id='file-upload'/>
+                            <label htmlFor="file-upload" className='label-upload-simple'>
+                                <img src={UploadSimple} 
+                                    alt="ícone de upload" 
+                                    className='file'
+                                />
+                                <p className='select-image'>selecione imagem</p>
                             </label>                            
+                            <input 
+                                type='file'
+                                id='file-upload'
+                                // onChange={handleChangeImage}
+                            />
                         </div>
-                    </div>
+                    </div>  
                        
 
                     <div className="inputs">

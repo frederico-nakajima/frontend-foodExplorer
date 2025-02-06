@@ -14,8 +14,11 @@ export function SideMenu({menuIsOpen, onCloseMenu, isAdmin }) {
   function handleSignOut(){
       navigate("/");
       signOut();
-
   }
+  function handleNewDish() {
+    navigate("/add"); 
+  }
+
   return (
     <Container data-menu-is-open = {menuIsOpen} $isAdmin={isAdmin}>
       <HeaderSideMenu>
@@ -35,7 +38,7 @@ export function SideMenu({menuIsOpen, onCloseMenu, isAdmin }) {
       <Nav>
         {isAdmin && (
           <>
-            <a href="#" className="NewDishLink">Novo prato</a>
+            <a href="#"  onClick={handleNewDish} className="NewDishLink">Novo prato</a>
             <hr/>
           </>
         )}
