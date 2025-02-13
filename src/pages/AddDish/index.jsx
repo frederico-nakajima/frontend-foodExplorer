@@ -16,6 +16,7 @@ import Spaguetti from "../../assets/Spaguetti.png"
 
 export function AddDish(){
     const [menuIsOpen,setMenuIsOpen] = useState(false);
+    
     const { user, updateProfile } = useAuth();
     
     const [name, setName] = useState("");
@@ -26,7 +27,9 @@ export function AddDish(){
     const [description, setDescription] = useState("");
 
     const imageUrl = user.image ? `${api.defaults.baseURL}/files/${user.image}` : Spaguetti;
+
     const [ image,setImage ] = useState(imageUrl);
+    const [ imageFile, setImageFile ] = useState(null)
 
     function handleAddTag(){
     setTags(prevState => [...prevState, newTag]);
@@ -59,6 +62,13 @@ export function AddDish(){
         navigate(-1);
     }
 
+    function handleChangeImage(event){
+        const file = event.target.files[0];
+        setImageFile(file);
+
+        // const imagePreview = URL.createObjectURL(file);
+        setImage(imagePreview);
+    }
 
 
     return(
@@ -70,7 +80,7 @@ export function AddDish(){
             />
 
             <div className="header-mobile">
-                <MobileHeader onOpenMenu={()=> setMenuIsOpen(true)}  />
+                <MobileHeader onOpenMenu={()=> setMenuIsOpen(true)}/>
             </div>
             <div className="header-desktop">
                 <DesktopHeader />
@@ -101,7 +111,7 @@ export function AddDish(){
                                 <input 
                                     type='file'
                                     id='file-upload'
-                                    // onChange={handleChangeImage}
+                                    onChange={handleChangeImage}
                                  />
                         </div>
                     </div>                       
@@ -124,8 +134,7 @@ export function AddDish(){
 
                 <div className="section">
                     <div className="ingredients-price">
-                        <Section>
-                            <label htmlFor="ingredients">Ingredientes</label>
+                        <Section title='Ingredientes'>
                             <div className='tags'>
                                 {
                                     tags.map((tag, index) => (

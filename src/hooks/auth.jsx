@@ -36,15 +36,15 @@ function AuthProvider({ children }){
 
     }
 
-    async function updateProfile({ user, avatarFile }){      
+    async function updateImage({ user, imageFile }){      
 
         try {
-            if(avatarFile){
+            if(imageFile){
                 const fileUploadForm = new FormData();
-                fileUploadForm.append("avatar", avatarFile);
+                fileUploadForm.append("image", imageFile);
 
-                const response = await api.patch("/users/avatar", fileUploadForm);
-                user.avatar = response.data.avatar;
+                const response = await api.patch("/users/image", fileUploadForm);
+                user.image = response.data.image;
             }
             await api.put("/users", user);
             localStorage.setItem("@foodexplorer:user", JSON.stringify(user));
@@ -79,7 +79,7 @@ function AuthProvider({ children }){
         <AuthContext.Provider value = {{ 
             signIn,
             signOut,
-            updateProfile,
+            updateImage,
              user:data.user,
               }}
               >
