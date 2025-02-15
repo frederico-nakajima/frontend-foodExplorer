@@ -17,7 +17,7 @@ import Spaguetti from "../../assets/Spaguetti.png"
 export function AddDish(){
     const [menuIsOpen,setMenuIsOpen] = useState(false);
     
-    const { user, updateProfile } = useAuth();
+    const { user} = useAuth();
     
     const [name, setName] = useState("");
     const [category, setCategory] = useState("");
@@ -66,7 +66,7 @@ export function AddDish(){
         const file = event.target.files[0];
         setImageFile(file);
 
-        // const imagePreview = URL.createObjectURL(file);
+        const imagePreview = URL.createObjectURL(file);
         setImage(imagePreview);
     }
 

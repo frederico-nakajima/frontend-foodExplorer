@@ -10,7 +10,7 @@ export function AdminRoutes() {
       <Route path='/add' element={<AddDish/>}/>
       <Route path='/edit' element={<EditDish/>}/>
       <Route path='/dishadmin' element={<DishAdminUser/>}/>
-      <Route path='/' element={<MenuAdminUser/>}/>
-     </Routes>
+      <Route path='/' element={<MenuAdminUser/>}/>      
+    </Routes>
   );
 }
