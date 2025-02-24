@@ -36,29 +36,6 @@ function AuthProvider({ children }){
 
     }
 
-    async function updateImage({ user, imageFile }){      
-
-        try {
-            if(imageFile){
-                const fileUploadForm = new FormData();
-                fileUploadForm.append("image", imageFile);
-
-                const response = await api.patch("/users/image", fileUploadForm);
-                user.image = response.data.image;
-            }
-            await api.put("/users", user);
-            localStorage.setItem("@foodexplorer:user", JSON.stringify(user));
-            setData({ user, token: data.token});
-            alert("Perfil atualizado!");
-            
-        } catch(error){
-            if(error.response){
-                alert(error.response.data.message);
-            }else{
-                alert("Não foi possível atualizar o perfil.");
-            }
-        }
-    }
 
     useEffect(() => {
         const token = localStorage.getItem("@foodexplorer:token");
@@ -79,8 +56,7 @@ function AuthProvider({ children }){
         <AuthContext.Provider value = {{ 
             signIn,
             signOut,
-            updateImage,
-             user:data.user,
+            user:data.user,
               }}
               >
             {children}

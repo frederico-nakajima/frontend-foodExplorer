@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-
 import { api} from "../services/api"
 import { useAuth } from "../hooks/auth";
 import {USER_ROLE} from "../utils/roles"
@@ -36,8 +35,6 @@ export function AppRoutes() {
         return <CustomerRoutes/>
     }
   }
-
-
 
   return (
     <BrowserRouter>

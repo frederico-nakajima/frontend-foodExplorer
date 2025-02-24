@@ -12,8 +12,9 @@ import { SideMenu } from '../../components/SideMenu';
 import {useState } from "react";
 
 export function EditDish(){
-
      const [menuIsOpen,setMenuIsOpen] = useState(false);
+
+     
     return(
         <Container>
             <SideMenu

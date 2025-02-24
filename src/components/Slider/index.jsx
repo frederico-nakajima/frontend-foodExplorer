@@ -2,10 +2,10 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { Card } from "../Card"
+import { Dish } from "../Dish"
 import { StyledSwiper } from './styles';
 
-export function Slider({title, cardImage, itemImage,alternativeText,itemName,description, price, showButtonAlignment = true }){
+export function Slider({ title, dishes, renderItem  }){
 
  return( 
     <StyledSwiper>
@@ -25,13 +25,13 @@ export function Slider({title, cardImage, itemImage,alternativeText,itemName,des
               slidesPerView: 3.5,
               spaceBetween:30,
             },
-          }}
-                      
+          }}                      
         >
-          <SwiperSlide>
-          <Card itemName = {itemName}  image={cardImage} itemImage={itemImage} altText={alternativeText} description={description} price={price} showButtonAlignment={showButtonAlignment}/>
+          {dishes.map((dish) => (
+            <SwiperSlide key={dish.id}>
+              {renderItem ? renderItem(dish) : null}
             </SwiperSlide>
-                 
+          ))}                 
         </Swiper>
     </StyledSwiper>
  )

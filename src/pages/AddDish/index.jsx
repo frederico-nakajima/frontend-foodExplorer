@@ -10,26 +10,25 @@ import { Footer } from '../../components/Footer'
 import CaretLeft from '../../assets/CaretLeft.svg';
 import { SideMenu } from '../../components/SideMenu';
 import {useState } from "react";
-import { useAuth  } from "../../hooks/auth";
-import Spaguetti from "../../assets/Spaguetti.png"
-
+import  { api }  from '../../services/api';
+import { useNavigate} from 'react-router-dom';
 
 export function AddDish(){
     const [menuIsOpen,setMenuIsOpen] = useState(false);
     
-    const { user} = useAuth();
-    
+  
+    const navigate = useNavigate();
+
     const [name, setName] = useState("");
-    const [category, setCategory] = useState("");
+    const [category, setCategory] = useState("Refeição");
     const [tags, setTags] = useState([]);
     const [newTag, setNewTag] = useState("");
     const [price, setPrice] = useState("");
     const [description, setDescription] = useState("");
 
-    const imageUrl = user.image ? `${api.defaults.baseURL}/files/${user.image}` : Spaguetti;
+  
 
-    const [ image,setImage ] = useState(imageUrl);
-    const [ imageFile, setImageFile ] = useState(null)
+   
 
     function handleAddTag(){
     setTags(prevState => [...prevState, newTag]);
@@ -40,26 +39,29 @@ export function AddDish(){
         setTags(prevState => prevState.filter(tag => tag !== deleted));
     }
 
+    
+
     async function handleNewItem(){
         if(!name){
             return alert("Digite o nome do item");
         }
-        if(price){
+        if(!price){
             return alert("Digite o preço");
         }
         if(newTag){
             return alert("Você deixou uma tag no campo para adicionar, mas não clickou em adicionar ");
         }     
 
-        await api.post("/item", {
+        await api.post("/dishes", {
             name,
             category,
             tags,
             price,
             description
         });
-        alert("Item criada com sucesso!");
-        navigate(-1);
+        
+        alert("Item criado com sucesso!");
+        navigate('/');
     }
 
     function handleChangeImage(event){
@@ -124,9 +126,9 @@ export function AddDish(){
                         <div className="data">
                             <label htmlFor="category">Categoria</label>
                             <select  id="category" value={category} onChange={e => setCategory(e.target.value)}>
-                                <option value="meal">Refeição</option>
-                                <option value="Dessert">Sobremesa</option>
-                                <option value="Drink">Bebida</option>
+                                <option value="Refeição">Refeição</option>
+                                <option value="Sobremesa">Sobremesa</option>
+                                <option value="Bebida">Bebida</option>
                             </select>
                         </div>
                     </div>
@@ -173,7 +175,7 @@ export function AddDish(){
                 </div>
 
                 <div className="buttons">
-                    <button onClick= {handleNewItem}>Salvar alterações</button>
+                    <button type='button' onClick={handleNewItem}>Salvar alterações</button>
                 </div>
             </Form>
 

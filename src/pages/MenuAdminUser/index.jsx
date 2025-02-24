@@ -4,19 +4,39 @@ import { MobileHeader } from '../../components/MobileHeader';
 import { Footer } from '../../components/Footer';
 import Pngegg from '../../assets/pngegg.png';
 import Pngegg02 from '../../assets/pngegg02.png';
+import Pencil from '../../assets/Pencil.svg';
 import { Slider } from '../../components/Slider';
 import { SideMenu } from '../../components/SideMenu';
-import {useState } from "react";
-import Pencil from '../../assets/Pencil.svg';
-import Suco from '../../assets/Suco.png';
-import Peachy from '../../assets/Peachy.png';
-import Spaguetti from '../../assets/Spaguetti.png';
+import { useState, useEffect } from 'react'
+import {api} from "../../services/api";
+import { Dish } from "../../components/Dish";
+import { useParams } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+
 
 export function MenuAdminUser() {
+    const { id } = useParams();
     const buttonIconContent = "Novo prato";
+    const location = useLocation(); // 🔥 Captura o estado passado pelo navigate
+    const [dishes, setDishes] = useState([]); 
     
     const [menuIsOpen,setMenuIsOpen] = useState(false);
-  
+            
+    const meals = Array.isArray(dishes) ? dishes.filter(dish => dish.category === "Refeições") : [];
+    const desserts = Array.isArray(dishes) ? dishes.filter(dish => dish.category === "Sobremesas") : [];
+    const drinks = Array.isArray(dishes) ? dishes.filter(dish => dish.category === "Bebidas") : [];
+
+
+
+
+    useEffect(() => {
+        async function fetchDishes(){
+            const response = await api.get(`/dishes/${id}`);
+            setDishes(response.data);
+        }
+
+        fetchDishes();
+    },[id, location.state?.newDishAdded]);
 
     return (
         <Container>
@@ -55,15 +75,61 @@ export function MenuAdminUser() {
             </div>
             
             <Content>
-                <Slider title = 'Refeições' cardImage={Pencil} itemImage={Spaguetti} itemName='Spaguetti Gambe' alternativeText = "texto alternativo" description='Massa fresca com camarões e pesto.' price='R$ 79,97' showButtonAlignment={false}/>
-                <Slider title = 'Sobremesas' cardImage={Pencil} itemImage={Peachy} itemName = 'Peachy pastrie' alternativeText = "texto alternativo"  description='Delicioso folheado de pêssego com folhas de hortelã.' price='R$ 32,97' showButtonAlignment={false} />
-                <Slider title = 'Bebidas' cardImage={Pencil} itemImage={Suco} itemName = 'Suco de maracujá' alternativeText = "texto alternativo" description='Suco de maracujá gelado, cremoso, docinho.' price='R$ 32,97' showButtonAlignment={false} />               
+                       
+            <Slider 
+                title="Refeições" 
+                dishes={meals} 
+                renderItem={(dish) => (
+                    <Dish                    
+                        itemName={dish.name}
+                        image={dish.image}
+                        itemImage={dish.image}
+                        altText={dish.name}
+                        description={dish.description}
+                        price={dish.price}
+                        showButtonAlignment={false}
+                    />
+                )}
+            />
+
+            <Slider 
+                title="Sobremesas" 
+                dishes={desserts} 
+                renderItem={(dish) => (
+                    <Dish
+                    itemName={dish.name}
+                    image={dish.image}
+                    itemImage={dish.image}
+                    altText={dish.name}
+                    description={dish.description}
+                    price={dish.price}
+                    showButtonAlignment={false}
+                    />
+                )}
+            />
+
+            <Slider 
+                title="Bebidas" 
+                dishes={drinks} 
+                renderItem={(dish) => (
+                    <Dish
+                        itemName={dish.name}
+                        image={dish.image}
+                        itemImage={dish.image}
+                        altText={dish.name}
+                        description={dish.description}
+                        price={dish.price}
+                        showButtonAlignment={false}
+                    />
+                )}
+            />
+
+
             </Content>
             
             <FooterWrapper>
                 <Footer />
             </FooterWrapper>
-
         </Container>
     );
 } 

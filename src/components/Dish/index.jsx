@@ -5,8 +5,8 @@ import { Button } from '../../components/Button';
 import { useAuth } from '../../hooks/auth';
 import { Link } from "react-router-dom"
 
-export function Card({image,altText,itemImage,description,price,itemName, showButtonAlignment = true, ...rest } ){
-    const { user, updateProfile } = useAuth();
+export function Dish({image,altText,itemImage,description,price,itemName, showButtonAlignment = true, ...rest } ){
+    const { user } = useAuth();
     const linkTo = user.role === 'admin' ? '/dishadmin' : '/dishuser';
     
     return(        
@@ -20,7 +20,8 @@ export function Card({image,altText,itemImage,description,price,itemName, showBu
             
                 <h6>{itemName}<i className="fas fa-chevron-right"></i> </h6>
                 <p>{description}</p>
-                <span>{price}</span>
+                <span>{Number(price).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</span>
+
 
                 {
                     showButtonAlignment && (
