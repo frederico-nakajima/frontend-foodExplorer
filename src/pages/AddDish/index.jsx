@@ -20,14 +20,14 @@ export function AddDish(){
     const navigate = useNavigate();
 
     const [name, setName] = useState("");
-    const [category, setCategory] = useState("Refeição");
+    const [category, setCategory] = useState("Refeições");
     const [tags, setTags] = useState([]);
     const [newTag, setNewTag] = useState("");
     const [price, setPrice] = useState("");
     const [description, setDescription] = useState("");
 
   
-
+    
    
 
     function handleAddTag(){
@@ -61,7 +61,7 @@ export function AddDish(){
         });
         
         alert("Item criado com sucesso!");
-        navigate('/');
+        navigate('/', { state: { newDishAdded: true } });
     }
 
     function handleChangeImage(event){
@@ -126,9 +126,9 @@ export function AddDish(){
                         <div className="data">
                             <label htmlFor="category">Categoria</label>
                             <select  id="category" value={category} onChange={e => setCategory(e.target.value)}>
-                                <option value="Refeição">Refeição</option>
-                                <option value="Sobremesa">Sobremesa</option>
-                                <option value="Bebida">Bebida</option>
+                                <option value="Refeições">Refeições</option>
+                                <option value="Sobremesas">Sobremesas</option>
+                                <option value="Bebidas">Bebidas</option>
                             </select>
                         </div>
                     </div>

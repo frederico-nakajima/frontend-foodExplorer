@@ -9,34 +9,49 @@ import { Slider } from '../../components/Slider';
 import { SideMenu } from '../../components/SideMenu';
 import { useState, useEffect } from 'react'
 import {api} from "../../services/api";
-import { Dish } from "../../components/Dish";
+import { Item } from "../../components/Item";
 import { useParams } from 'react-router-dom';
-import { useLocation } from 'react-router-dom';
+
 
 
 export function MenuAdminUser() {
     const { id } = useParams();
-    const buttonIconContent = "Novo prato";
-    const location = useLocation(); // 🔥 Captura o estado passado pelo navigate
-    const [dishes, setDishes] = useState([]); 
+    const iconAltText = ' ícone de um lapiz';
+    const itemAltText = 'imagem de uma comida'
+    const [dishes, setDishes] = useState([]);
+    
+    const [searchName, setSearchName] = useState(""); // Nome do prato
+    const [searchCategory, setSearchCategory] = useState(""); // Categoria (Refeições, Sobremesas, Bebidas)
+    const [searchPrice, setSearchPrice] = useState(""); // Preço
+    const [searchDescription, setSearchDescription] = useState(""); // Descrição
+
     
     const [menuIsOpen,setMenuIsOpen] = useState(false);
             
     const meals = Array.isArray(dishes) ? dishes.filter(dish => dish.category === "Refeições") : [];
     const desserts = Array.isArray(dishes) ? dishes.filter(dish => dish.category === "Sobremesas") : [];
     const drinks = Array.isArray(dishes) ? dishes.filter(dish => dish.category === "Bebidas") : [];
-
-
-
-
+    
     useEffect(() => {
-        async function fetchDishes(){
-            const response = await api.get(`/dishes/${id}`);
-            setDishes(response.data);
-        }
+        async function fetchDishes() {
+            try {
+                const response = await api.get(`/dishes`, {
+                    params: {
+                        name: searchName || "", // Se for vazio, envia uma string vazia
+                        category: searchCategory || "",
+                        price: searchPrice || "",
+                        description: searchDescription || ""
+                    }
+                });
+                setDishes(response.data); // Atualiza o estado com os pratos filtrados
+            } catch (error) {
+                console.error("Erro ao buscar pratos:", error);
+            }
+        }        
 
         fetchDishes();
-    },[id, location.state?.newDishAdded]);
+
+    },[searchName, searchCategory, searchPrice, searchDescription]);
 
     return (
         <Container>
@@ -80,11 +95,12 @@ export function MenuAdminUser() {
                 title="Refeições" 
                 dishes={meals} 
                 renderItem={(dish) => (
-                    <Dish                    
-                        itemName={dish.name}
-                        image={dish.image}
+                    <Item                    
+                        iconImage={Pencil}
+                        iconAltText={iconAltText}
                         itemImage={dish.image}
-                        altText={dish.name}
+                        itemAltText={itemAltText}
+                        itemName = {dish.name}
                         description={dish.description}
                         price={dish.price}
                         showButtonAlignment={false}
@@ -96,14 +112,15 @@ export function MenuAdminUser() {
                 title="Sobremesas" 
                 dishes={desserts} 
                 renderItem={(dish) => (
-                    <Dish
-                    itemName={dish.name}
-                    image={dish.image}
-                    itemImage={dish.image}
-                    altText={dish.name}
-                    description={dish.description}
-                    price={dish.price}
-                    showButtonAlignment={false}
+                    <Item
+                        iconImage={Pencil}
+                        iconAltText={iconAltText}
+                        itemImage={dish.image}
+                        itemAltText={itemAltText}
+                        itemName = {dish.name}
+                        description={dish.description}
+                        price={dish.price}
+                        showButtonAlignment={false}
                     />
                 )}
             />
@@ -112,18 +129,18 @@ export function MenuAdminUser() {
                 title="Bebidas" 
                 dishes={drinks} 
                 renderItem={(dish) => (
-                    <Dish
-                        itemName={dish.name}
-                        image={dish.image}
+                    <Item
+                        iconImage={Pencil}
+                        iconAltText={iconAltText}
                         itemImage={dish.image}
-                        altText={dish.name}
+                        itemAltText={itemAltText}
+                        itemName = {dish.name}
                         description={dish.description}
                         price={dish.price}
                         showButtonAlignment={false}
                     />
                 )}
             />
-
 
             </Content>
             

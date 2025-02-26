@@ -2,7 +2,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { Dish } from "../Dish"
+
 import { StyledSwiper } from './styles';
 
 export function Slider({ title, dishes, renderItem  }){
