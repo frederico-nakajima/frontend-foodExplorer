@@ -4,11 +4,13 @@ import { DEVICE_BREAKPOINTS } from '../../styles/deviceBreakpoints';
 
 
 
-export const CardWrapper = styled.div`
+export const CardWrapper = styled.button`
     width:210px;
     height:292px;
     padding:24px;
     position:relative;
+    background:${({ theme }) => theme.COLORS.BACKGROUND_1000};
+    color:${({ theme }) => theme.COLORS.WHITE};
     border:1px solid ${({ theme }) => theme.COLORS.WHITE};
     display:flex;
         flex-direction:column;
@@ -23,7 +25,7 @@ export const CardWrapper = styled.div`
         z-index: 1;
     }
 
-    a{
+   .itemImage{
         display:flex;
         flex-direction:column;
         align-items:center;
@@ -72,33 +74,33 @@ export const CardWrapper = styled.div`
         width:304px;
         height:462px;
                       
-        a{
+        .itemImage{
             >img{
                 width:176px;
                 height:176px;
             }
         }
        .alignment {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between; /* 🔹 Alinha o título e a seta */
-    gap: 8px;
-    white-space: nowrap;  /* 🔹 Impede quebra de linha */
-    overflow: hidden;  /* 🔹 Esconde texto extra */
-    text-overflow: ellipsis; /* 🔹 Adiciona "..." para texto longo */
-}
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between; /* 🔹 Alinha o título e a seta */
+            gap: 8px;
+            white-space: nowrap;  /* 🔹 Impede quebra de linha */
+            overflow: hidden;  /* 🔹 Esconde texto extra */
+            text-overflow: ellipsis; /* 🔹 Adiciona "..." para texto longo */
+        }
 
-.alignment h6 {
-    font-size: 16px;
-    font-weight: 700;
-    margin: 0;
-}
+        .alignment h6 {
+            font-size: 16px;
+            font-weight: 700;
+            margin: 0;
+        }
 
-.alignment i {
-    font-size: 15px;
-    margin-left: auto; /* 🔹 Empurra o ícone para a direita */
-}
+        .alignment i {
+            font-size: 15px;
+            margin-left: auto; /* 🔹 Empurra o ícone para a direita */
+        }
 
         >p{
             color: ${({ theme }) => theme.COLORS.WHITE};

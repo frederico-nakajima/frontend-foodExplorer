@@ -15,8 +15,7 @@ import { useNavigate} from 'react-router-dom';
 
 export function AddDish(){
     const [menuIsOpen,setMenuIsOpen] = useState(false);
-    
-  
+      
     const navigate = useNavigate();
 
     const [name, setName] = useState("");
@@ -25,11 +24,7 @@ export function AddDish(){
     const [newTag, setNewTag] = useState("");
     const [price, setPrice] = useState("");
     const [description, setDescription] = useState("");
-
-  
     
-   
-
     function handleAddTag(){
     setTags(prevState => [...prevState, newTag]);
     setNewTag("");
@@ -38,9 +33,7 @@ export function AddDish(){
     function handleRemoveTag(deleted){
         setTags(prevState => prevState.filter(tag => tag !== deleted));
     }
-
     
-
     async function handleNewItem(){
         if(!name){
             return alert("Digite o nome do item");
@@ -61,7 +54,7 @@ export function AddDish(){
         });
         
         alert("Item criado com sucesso!");
-        navigate('/', { state: { newDishAdded: true } });
+        navigate('/');
     }
 
     function handleChangeImage(event){

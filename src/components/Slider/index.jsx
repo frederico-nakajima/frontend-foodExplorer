@@ -5,7 +5,7 @@ import 'swiper/css/navigation';
 
 import { StyledSwiper } from './styles';
 
-export function Slider({ title, dishes, renderItem  }){
+export function Slider({ title, children,...rest  }){
 
  return( 
     <StyledSwiper>
@@ -27,11 +27,7 @@ export function Slider({ title, dishes, renderItem  }){
             },
           }}                      
         >
-          {dishes.map((dish) => (
-            <SwiperSlide key={dish.id}>
-              {renderItem ? renderItem(dish) : null}
-            </SwiperSlide>
-          ))}                 
+          {children}                
         </Swiper>
     </StyledSwiper>
  )

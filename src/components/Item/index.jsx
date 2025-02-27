@@ -14,9 +14,11 @@ export function Item({iconImage,iconAltText,itemImage,itemAltText,description,pr
                 <div className="favoritar">
                     <img src={iconImage} alt={iconAltText }/>
                 </div>
-                <Link to={linkTo}>
+                
+                <div className='itemImage'>
                     <img src={itemImage} alt={itemAltText}/>
-                </Link>            
+                </div>
+                           
                 <div className="alignment">
                     <h6>{itemName}</h6>
                     <i className="fas fa-chevron-right"></i>

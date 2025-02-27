@@ -27,13 +27,13 @@ export const Container = styled.div`
         margin-bottom: 60px;
         width: 300px;        
     
-        >.restaurantDish {
-            width: 264px;
-            height: 264px;
-            margin-bottom:20px;
-        }    
-        
         .dish{        
+            >.restaurantDish {
+                width: 264px;
+                height: 264px;
+                margin-bottom:20px;
+            }    
+        
             .salad-ingredients{
                 display: flex;
                 flex-direction: column;
@@ -43,6 +43,7 @@ export const Container = styled.div`
                 margin-bottom:24px;
             
                 h1{
+                 color: ${({theme}) => theme.COLORS.WHITE};
                 font-family: Poppins;
                 font-weight: 500;
                 text-align: justify;
@@ -50,6 +51,7 @@ export const Container = styled.div`
                 }
 
                 p{
+                 color: ${({theme}) => theme.COLORS.WHITE};
                 font-family: Poppins;
                 font-weight: 400;
                 text-align: justify;               
@@ -114,24 +116,28 @@ export const Container = styled.div`
             margin-bottom: 145px;   
 
         
-            >.restaurantDish {
-                width: 390px;
-                height: 390px;
-            }
+            >.dish { 
+                display:flex;
+                               
+                >.restaurantDish {
+                    width: 390px;
+                    height: 390px;
+                }
 
-            >.dish {                
                 .salad-ingredients{                    
                     align-items: flex-start; 
                     margin-bottom: 10px;
                    
 
-                    >h1 {                        
+                    >h1 {  
+                          color: ${({theme}) => theme.COLORS.WHITE};                     
                         font-size: 40px;             
                         line-height: 140%; 
                         margin-bottom: 24px;
                     }
 
                     >p {
+                        color: ${({theme}) => theme.COLORS.WHITE};
                         font-size: 24px;                       
                         line-height: 140%; 
                         margin-bottom: 24px;
@@ -144,13 +150,12 @@ export const Container = styled.div`
                     gap: 20px;
                 }             
                     
-                .custom-button{
-                    width:150px; 
-                    height: 48px;
-                    position:relative;
-                    left:20px;
-                } 
             }
+            .custom-button{
+                width:150px; 
+                height: 48px;
+                    
+            } 
         }
             
     }
@@ -181,10 +186,10 @@ export const ReturnLink = styled(Link)`
     @media (min-width: ${DEVICE_BREAKPOINTS.LG}) { 
     grid-area: link;
     
-    margin:50px auto  ;    
+    margin:-90px auto auto auto   ;    
     flex-direction:row;
     gap: 5px;
-    width: 1137px;
+    
     
     
         >img{
