@@ -9,10 +9,42 @@ import {Link} from 'react-router-dom'
 import { Footer } from '../../components/Footer'
 import CaretLeft from '../../assets/CaretLeft.svg';
 import { SideMenu } from '../../components/SideMenu';
-import {useState } from "react";
+import { useState, useEffect } from 'react'
+import {api} from "../../services/api";
+import { useParams } from 'react-router-dom';
+
 
 export function EditDish(){
-     const [menuIsOpen,setMenuIsOpen] = useState(false);
+    const [menuIsOpen,setMenuIsOpen] = useState(false);
+    const [data, setData] = useState(null);
+    const params = useParams();
+
+
+    const [name, setName] = useState("");
+    const [category, setCategory] = useState("");
+    const [price, setPrice] = useState("");
+    const [description, setDescription] = useState("");
+
+    
+
+    useEffect(() => {
+        async function fetchDish(){
+            const response = await api.get(`/dishes/${params.id}`);
+            setData(response.data);
+        }
+
+        fetchDish();
+    },[params.id]);
+
+       useEffect(() => {
+        if (data) {
+            setName(data.name || "");
+            setCategory(data.category || "");
+            setPrice(data.price || "");
+            setDescription(data.description || "");
+        }
+    }, [data]);
+
 
      
     return(
@@ -63,11 +95,20 @@ export function EditDish(){
                     <div className="inputs">
                         <div className='name'>
                             <label htmlFor="name">Nome</label>
-                            <input placeholder="Ex.: Salada Ceasar" id="name"/>
+                            <input 
+                                placeholder="Ex.: Salada Ceasar" 
+                                id="name"
+                                value={name}   
+                                onChange = {e => setName(e.target.value)}
+                            />
                         </div>
                         <div className="data">
                             <label htmlFor="category">Categoria</label>
-                            <select id="category">
+                            <select 
+                                id="category"
+                                value={category}  // 🔹 Mantém o select sincronizado
+                                onChange={(e) => setCategory(e.target.value)}
+                            >
                                 <option value="meal">Refeição</option>
                                 <option value="Dessert">Sobremesa</option>
                                 <option value="Drink">Bebida</option>
@@ -89,13 +130,24 @@ export function EditDish(){
                     
                     <div className='price'>
                         <label htmlFor="price">Preço</label>
-                        <input placeholder="R$ 00,00" id="price"/>
+                        <input 
+                            placeholder="R$ 00,00"
+                            id="price"
+                            value={price}  // 🔹 Mantém o input sincronizado
+                            onChange={(e) => setPrice(e.target.value)}
+                         
+                         />
                     </div>
                 </div>
 
                 <div className="description">
                     <label htmlFor="description">Descrição</label>
-                    <Textarea placeholder="A Salada César é uma opção refrescante para o verão." id="description"/>
+                    <Textarea 
+                        placeholder="A Salada César é uma opção refrescante para o verão." 
+                        id="description"
+                        value={description}  
+                        onChange={(e) => setDescription(e.target.value)} 
+                    />
                 </div>
 
                 <div className='buttons'>

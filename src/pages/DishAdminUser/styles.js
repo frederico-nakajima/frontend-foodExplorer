@@ -18,6 +18,7 @@ export const Container = styled.div`
     align-items: center;
     
     width: 100%;
+    height:918px;
     
 
     >main{
@@ -32,6 +33,8 @@ export const Container = styled.div`
                 width: 264px;
                 height: 264px;
                 margin-bottom:20px;
+                position:relative;
+                left:30px;
             }    
         
             .salad-ingredients{
@@ -48,6 +51,7 @@ export const Container = styled.div`
                 font-weight: 500;
                 text-align: justify;
                 font-size: 27.041px;
+                margin-bottom:-10px; 
                 }
 
                 p{
@@ -65,19 +69,22 @@ export const Container = styled.div`
                 justify-content: space-between;
                 flex-wrap: wrap;
                 gap: 10px;
-                margin-bottom:40px; 
+                margin-bottom:0px; 
                 padding:0 15px;
             }
         
             .custom-button{
                 width: 300px; 
                 height: 48px;
+                margin-bottom:40px;
                 >button{
                     font-size: 16px;
                 }
             } 
         }       
     }
+
+    
    
     
        
@@ -118,6 +125,11 @@ export const Container = styled.div`
         
             >.dish { 
                 display:flex;
+                gap:50px;
+                position:relative;
+                left:-450px;
+                top:40px;
+                align-items:center;
                                
                 >.restaurantDish {
                     width: 390px;
@@ -151,13 +163,17 @@ export const Container = styled.div`
                 }             
                     
             }
-            .custom-button{
+            button{
                 width:150px; 
                 height: 48px;
                     
             } 
         }
             
+    }
+
+     footer{
+        margin-top:1465px;
     }
 `;
  
@@ -186,7 +202,7 @@ export const ReturnLink = styled(Link)`
     @media (min-width: ${DEVICE_BREAKPOINTS.LG}) { 
     grid-area: link;
     
-    margin:-90px auto auto auto   ;    
+    margin:-50px auto auto auto   ;    
     flex-direction:row;
     gap: 5px;
     

@@ -41,13 +41,13 @@ export function MenuAdminUser() {
             try {
                 const response = await api.get(`/dishes`, {
                     params: {
-                        name: searchName || "", // Se for vazio, envia uma string vazia
+                        name: searchName || "", 
                         category: searchCategory || "",
                         price: searchPrice || "",
                         description: searchDescription || ""
                     }
                 });
-                setDishes(response.data); // Atualiza o estado com os pratos filtrados
+                setDishes(response.data); 
             } catch (error) {
                 console.error("Erro ao buscar pratos:", error);
             }

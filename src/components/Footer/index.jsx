@@ -4,9 +4,9 @@ import polygonImageFooter from '../../assets/Polygon 1-footer.svg';
 
 
 
-export function Footer(){
+export function Footer({...rest}){
     return(
-        <Container>
+        <Container {...rest}>
            
            <main>
                <Brand>

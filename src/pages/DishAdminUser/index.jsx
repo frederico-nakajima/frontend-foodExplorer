@@ -3,7 +3,7 @@ import { DesktopHeader } from '../../components/DesktopHeader';
 import { Tag } from '../../components/Tag'; 
 import Dish from '../../assets/Dish.png';
 import { Button } from '../../components/Button';
-import { FooterDesktop } from '../../components/FooterDesktop';
+import { Footer } from '../../components/Footer';
 import { MobileHeader } from '../../components/MobileHeader'
 import CaretLeft from '../../assets/CaretLeft.svg';
 import { SideMenu } from '../../components/SideMenu';
@@ -16,12 +16,16 @@ export function DishAdminUser() {
     const [menuIsOpen,setMenuIsOpen] = useState(false);
     const [data, setData] = useState(null);
 
+    
+
     const params = useParams();
     const navigate = useNavigate();
 
-    function handleEditDish() {
-        navigate("/edit");
+    function handleEditDish(id){
+        navigate(`/edit/${id}`);
     }
+
+
 
     useEffect(() => {
         async function fetchDish(){
@@ -80,14 +84,14 @@ export function DishAdminUser() {
                             }
 
                             <div  className="custom-button">
-                                <Button title="Editar prato" onClick={handleEditDish}/>
+                                <Button title="Editar prato" onClick={handleEditDish(data.id)}/>
                             </div>                   
                         </div>                            
                     </div>
                         
                 </main>
             }   
-            <FooterDesktop />
+            <Footer onClick = {handleEditDish} />
             
         </Container>
     );

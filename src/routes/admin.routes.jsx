@@ -8,7 +8,7 @@ export function AdminRoutes() {
   return (
     <Routes>
       <Route path='/add' element={<AddDish/>}/>
-      <Route path='/edit' element={<EditDish/>}/>
+      <Route path='/edit/:id' element={<EditDish/>}/>
       <Route path='/dishadmin/:id' element={<DishAdminUser/>}/>
       <Route path='/' element={<MenuAdminUser/>}/>      
     </Routes>
