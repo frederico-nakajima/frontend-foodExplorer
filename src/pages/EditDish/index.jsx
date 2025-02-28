@@ -109,9 +109,9 @@ export function EditDish(){
                                 value={category}  // 🔹 Mantém o select sincronizado
                                 onChange={(e) => setCategory(e.target.value)}
                             >
-                                <option value="meal">Refeição</option>
-                                <option value="Dessert">Sobremesa</option>
-                                <option value="Drink">Bebida</option>
+                                <option value="Refeições">Refeições</option>
+                                <option value="Sobremesas">Sobremesas</option>
+                                <option value="Bebidas">Bebidas</option>
                             </select>
                         </div>
                     </div>
