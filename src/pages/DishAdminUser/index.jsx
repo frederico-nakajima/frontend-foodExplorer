@@ -84,14 +84,14 @@ export function DishAdminUser() {
                             }
 
                             <div  className="custom-button">
-                                <Button title="Editar prato" onClick={handleEditDish(data.id)}/>
+                                <Button title="Editar prato" onClick={() => handleEditDish(data.id)}/>
                             </div>                   
                         </div>                            
                     </div>
                         
                 </main>
             }   
-            <Footer onClick = {handleEditDish} />
+            <Footer/>
             
         </Container>
     );

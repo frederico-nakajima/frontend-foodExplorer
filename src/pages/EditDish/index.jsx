@@ -12,18 +12,21 @@ import { SideMenu } from '../../components/SideMenu';
 import { useState, useEffect } from 'react'
 import {api} from "../../services/api";
 import { useParams } from 'react-router-dom';
+import { useNavigate} from 'react-router-dom';
 
 
 export function EditDish(){
     const [menuIsOpen,setMenuIsOpen] = useState(false);
     const [data, setData] = useState(null);
     const params = useParams();
-
+    const navigate = useNavigate();
 
     const [name, setName] = useState("");
     const [category, setCategory] = useState("");
     const [price, setPrice] = useState("");
     const [description, setDescription] = useState("");
+    const [tags, setTags] = useState([]);
+    const [newTag, setNewTag] = useState("");
 
     
 
@@ -42,8 +45,61 @@ export function EditDish(){
             setCategory(data.category || "");
             setPrice(data.price || "");
             setDescription(data.description || "");
+            setTags(data.tags || []);
         }
     }, [data]);
+
+    function handleAddTag(){
+        setTags(prevState => [...prevState, newTag]);
+        setNewTag("");
+        } 
+
+    async function handleDeleteDish() {
+        const confirmDelete = window.confirm("Tem certeza que deseja excluir este prato?");
+        
+        if (confirmDelete) {
+            try {
+                await api.delete(`/dishes/${params.id}`);
+
+                  
+                setData(null);
+                setName("");
+                setCategory("");
+                setPrice("");
+                setDescription("");
+
+                alert("Prato excluído com sucesso!");
+                navigate("/"); 
+            } catch (error) {
+                console.error("Erro ao excluir o prato:", error);
+                alert("Erro ao excluir o prato. Tente novamente.");
+            }
+        }
+    }
+
+    async function handleUpdateDish() {
+        const confirmUpdate = window.confirm("Deseja realmente salvar as alterações deste prato?");
+        
+        if (confirmUpdate) {
+            try {
+                const updatedDish = {
+                    name,
+                    category,
+                    price,
+                    description,
+                    tags, // 🔹 Envia as tags diretamente como array de strings
+                };
+
+                await api.put(`/dishes/${params.id}`, updatedDish);
+                alert("Prato atualizado com sucesso!");
+                navigate("/");
+            } catch (error) {
+                console.error("Erro ao atualizar o prato:", error);
+                alert("Erro ao salvar alterações. Tente novamente.");
+            }
+        }
+    }
+
 
 
      
@@ -106,7 +162,7 @@ export function EditDish(){
                             <label htmlFor="category">Categoria</label>
                             <select 
                                 id="category"
-                                value={category}  // 🔹 Mantém o select sincronizado
+                                value={category}  
                                 onChange={(e) => setCategory(e.target.value)}
                             >
                                 <option value="Refeições">Refeições</option>
@@ -122,8 +178,22 @@ export function EditDish(){
                         <Section>
                             <label htmlFor="ingredients">Ingredientes</label>
                             <div className='tags'>
-                                <NoteItem  placeholder="Pão Naan"/>
-                                <NoteItem isnew placeholder="Adicionar"/>
+                                {
+                                    tags.map((tag, index) => (
+                                        <NoteItem
+                                            key={String(index)}
+                                            value= {tag}
+                                            onClick={() => handleRemoveTag(tag)}
+                                        />
+                                    ))
+                                }
+                                <NoteItem 
+                                    isnew 
+                                    placeholder="Adicionar"
+                                    onChange={e => setNewTag(e.target.value)}
+                                    value={ newTag }
+                                    onClick={handleAddTag}
+                                />
                             </div>
                         </Section>
                     </div>
@@ -133,7 +203,7 @@ export function EditDish(){
                         <input 
                             placeholder="R$ 00,00"
                             id="price"
-                            value={price}  // 🔹 Mantém o input sincronizado
+                            value={price}  
                             onChange={(e) => setPrice(e.target.value)}
                          
                          />
@@ -152,10 +222,10 @@ export function EditDish(){
 
                 <div className='buttons'>
                     <div className="remove">
-                        <button>Excluir prato</button>
+                    <button type='button' onClick={handleDeleteDish}>Excluir prato</button>
                     </div>
                     <div className="saveChanges">
-                        <button>Salvar alterações</button>
+                        <button type='button' onClick={handleUpdateDish}>Salvar alterações</button>
                     </div>
                 </div>
             </Form>      
