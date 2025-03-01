@@ -10,6 +10,8 @@ import { MobileHeaderIcon } from '../../components/MobileHeaderIcon'
 import CaretLeft from '../../assets/CaretLeft.svg';
 import { SideMenu } from '../../components/SideMenu';
 import {useState } from "react";
+import { useParams, useNavigate } from 'react-router-dom';
+import  { api }  from '../../services/api';
 import { Receipt } from "phosphor-react";
 
 
@@ -18,67 +20,80 @@ import { Receipt } from "phosphor-react";
 export function DishCommonUser() {
     const [menuIsOpen,setMenuIsOpen] = useState(false);
     const buttonIconContent = "Pedidos (0)";
+        
+    const [data, setData] = useState(null);    
 
+    const params = useParams();
+    const navigate = useNavigate();
+
+  
+
+    useEffect(() => {
+        async function fetchDish(){
+            const response = await api.get(`/dishes/${params.id}`);
+            setData(response.data);
+        }
+
+        fetchDish();
+    },[]);
     return (
-        <Container>
-              <SideMenu
-                menuIsOpen={menuIsOpen}
-                onCloseMenu={() => setMenuIsOpen(false)}
-                isAdmin={false} 
-            />
-
-            <div className="mobile-header">
-                <MobileHeaderIcon  onOpenMenu={()=> setMenuIsOpen(true)}/>
-            </div>
-            <div className="desktop-header">
-                <DesktopHeaderIcon buttonIconContent={buttonIconContent} showIcon={true} />
-            </div>
-
-           
-            <ReturnLink to="/">
-                <img src={CaretLeft} alt="imagem de uma seta apontando para esquerda"  />
-                <p>Voltar</p>
-            </ReturnLink>
-           
-
-            <main>
-            
-                <img className='restaurantDish' src={Dish} alt="imagem de um prato de comida de um restaurante" />
-
-                <div className='dish'>
-                    <div className="salad-ingredients">
-                        <h1>Salada Ravanello</h1>
-                        <p>
-                            Rabanetes, folhas verdes e molho agridoce salpicados
-                            com gergelim. O pão naan dá um toque especial.
-                        </p>
-                    </div>
-
-                    <div className='tags'>
-                        <Tag title="alface" />
-                        <Tag title="cebola" />
-                        <Tag title="pão naan" />
-                        <Tag title="pepino" />
-                        <Tag title="rabanete" />
-                        <Tag title="tomate" />
-                    </div>
-
-                    <AlinhamentoCountButton>
-                        <div className="count">
-                            <img className='operadorMatemático' src={Minus} alt="imagem de um sinal de menos" />
-                            <span>01</span>
-                            <img className='operadorMatemático' src={Plus} alt="imagem de um sinal de mais" />
-                        </div>
-                        <div  className="custom-button">
-                            <Button icon={Receipt} title="incluir ∙ R$ 25,00"/>
-                        </div>                      
-                    </AlinhamentoCountButton>
-                </div>
-            </main>
-
-            <Footer />
-            
-        </Container>
+           <Container>
+                  <SideMenu
+                      menuIsOpen={menuIsOpen}
+                      onCloseMenu={() => setMenuIsOpen(false)}
+                      isAdmin={true} 
+                  />
+      
+                  <div className="mobile-header">
+                      <MobileHeaderIcon onOpenMenu={()=> setMenuIsOpen(true)}  />
+                  </div>
+                  <div className="desktop-header">
+                      <DesktopHeaderIcon />
+                  </div>
+      
+                  { 
+                      data && 
+                      <main>
+                          <ReturnLink to="/">
+                              <img src={CaretLeft} alt="imagem de uma seta apontando para esquerda"  />
+                              <p>Voltar</p>
+                          </ReturnLink>
+      
+                          <div className='dish'>
+      
+                              <img className='restaurantDish' src={Dish} alt="imagem de um prato de comida de um restaurante" />
+      
+                              <div className="salad-ingredients">
+                                  <h1>{data.name}</h1>
+                                  <p>
+                                      {data.description}
+                                  </p>
+      
+                                  {
+                                      data.tags &&
+                                      <div className='tags'>
+                                          {   
+                                              data.tags.map(tag => (
+                                                  <Tag 
+                                                  key={String(tag.id)}
+                                                  title={tag.name}
+                                                  />
+                                              ))
+                                          }
+                                      </div>
+                                  }
+      
+                                  <div  className="custom-button">
+                                      <Button title="Editar prato" onClick={() => handleEditDish(data.id)}/>
+                                  </div>                   
+                              </div>                            
+                          </div>
+                              
+                      </main>
+                  }   
+                  <Footer/>
+                  
+              </Container>
     );
 }
                                 

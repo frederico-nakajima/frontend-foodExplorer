@@ -8,7 +8,7 @@ export function CustomerRoutes(){
     return(
         <Routes>            
             <Route path='/' element={<MenuCommonUser/>}/>
-            <Route path='/dishuser' element={<DishCommonUser/>}/>
+            <Route path='/dishuser/:id' element={<DishCommonUser/>}/>
         </Routes>
     )
 }
