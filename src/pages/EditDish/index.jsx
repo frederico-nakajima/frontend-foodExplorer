@@ -41,11 +41,11 @@ export function EditDish(){
 
        useEffect(() => {
         if (data) {
-            setName(data.name || "");
-            setCategory(data.category || "");
-            setPrice(data.price || "");
-            setDescription(data.description || "");
-            setTags(data.tags || []);
+            setName(data.name);
+            setCategory(data.category);
+            setPrice(data.price);
+            setDescription(data.description);
+            setTags(data.tags);
         }
     }, [data]);
 
@@ -54,19 +54,22 @@ export function EditDish(){
         setNewTag("");
         } 
 
+        function handleRemoveTag(deleted){
+            setTags(prevState => prevState.filter(tag => tag !== deleted));
+        }
+
     async function handleDeleteDish() {
         const confirmDelete = window.confirm("Tem certeza que deseja excluir este prato?");
         
         if (confirmDelete) {
             try {
-                await api.delete(`/dishes/${params.id}`);
-
-                  
+                await api.delete(`/dishes/${params.id}`);                  
                 setData(null);
                 setName("");
                 setCategory("");
                 setPrice("");
                 setDescription("");
+                setTags([]);
 
                 alert("Prato excluído com sucesso!");
                 navigate("/"); 
@@ -87,7 +90,7 @@ export function EditDish(){
                     category,
                     price,
                     description,
-                    tags, // 🔹 Envia as tags diretamente como array de strings
+                    tags // 🔹 Envia as tags diretamente como array de strings
                 };
 
                 await api.put(`/dishes/${params.id}`, updatedDish);
@@ -181,8 +184,8 @@ export function EditDish(){
                                 {
                                     tags.map((tag, index) => (
                                         <NoteItem
-                                            key={String(index)}
-                                            value= {tag}
+                                            key={String(tag.id)}
+                                            value= {tag.name}
                                             onClick={() => handleRemoveTag(tag)}
                                         />
                                     ))
@@ -197,6 +200,7 @@ export function EditDish(){
                             </div>
                         </Section>
                     </div>
+                            
                     
                     <div className='price'>
                         <label htmlFor="price">Preço</label>

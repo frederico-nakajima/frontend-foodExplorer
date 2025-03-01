@@ -20,12 +20,6 @@ export function MenuAdminUser() {
     const [dishes, setDishes] = useState([]);
     const navigate = useNavigate();
     
-    const [searchName, setSearchName] = useState(""); 
-    const [searchCategory, setSearchCategory] = useState(""); 
-    const [searchPrice, setSearchPrice] = useState(""); 
-    const [searchDescription, setSearchDescription] = useState(""); 
-
-    
     const [menuIsOpen,setMenuIsOpen] = useState(false);
             
     const meals = Array.isArray(dishes) ? dishes.filter(dish => dish.category === "Refeições") : [];
@@ -39,14 +33,7 @@ export function MenuAdminUser() {
     useEffect(() => {
         async function fetchDishes() {
             try {
-                const response = await api.get(`/dishes`, {
-                    params: {
-                        name: searchName || "", 
-                        category: searchCategory || "",
-                        price: searchPrice || "",
-                        description: searchDescription || ""
-                    }
-                });
+                const response = await api.get(`/dishes`);
                 setDishes(response.data); 
             } catch (error) {
                 console.error("Erro ao buscar pratos:", error);
@@ -55,7 +42,7 @@ export function MenuAdminUser() {
 
         fetchDishes();
 
-    },[searchName, searchCategory, searchPrice, searchDescription]);
+    },[]);
 
     return (
         <Container>

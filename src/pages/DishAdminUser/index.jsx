@@ -14,9 +14,7 @@ import  { api }  from '../../services/api';
 
 export function DishAdminUser() {
     const [menuIsOpen,setMenuIsOpen] = useState(false);
-    const [data, setData] = useState(null);
-
-    
+    const [data, setData] = useState(null);    
 
     const params = useParams();
     const navigate = useNavigate();
@@ -24,8 +22,6 @@ export function DishAdminUser() {
     function handleEditDish(id){
         navigate(`/edit/${id}`);
     }
-
-
 
     useEffect(() => {
         async function fetchDish(){

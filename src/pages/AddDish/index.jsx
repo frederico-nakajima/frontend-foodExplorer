@@ -26,8 +26,8 @@ export function AddDish(){
     const [description, setDescription] = useState("");
     
     function handleAddTag(){
-    setTags(prevState => [...prevState, newTag]);
-    setNewTag("");
+        setTags(prevState => [...prevState, newTag]);
+        setNewTag("");
     }
 
     function handleRemoveTag(deleted){

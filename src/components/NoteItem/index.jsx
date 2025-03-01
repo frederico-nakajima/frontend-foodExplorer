@@ -3,7 +3,7 @@ import { FiPlus,FiX} from 'react-icons/fi';
 
 
 
-export function NoteItem({isnew=false, value, onClick,onChange, ...rest}){
+export function NoteItem({isnew=false, value, onClick, ...rest}){
     return(
         <Container
         $isnew={isnew}>
