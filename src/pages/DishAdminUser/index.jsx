@@ -56,7 +56,6 @@ export function DishAdminUser() {
                     </ReturnLink>
 
                     <div className='dish'>
-
                         <img className='restaurantDish' src={Dish} alt="imagem de um prato de comida de um restaurante" />
 
                         <div className="salad-ingredients">

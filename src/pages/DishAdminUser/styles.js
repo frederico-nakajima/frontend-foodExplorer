@@ -6,20 +6,18 @@ import  { Link } from 'react-router-dom';
 
 export const Container = styled.div`    
     .mobile-header {
-    display: flex; 
+        display: flex; 
     }
     .desktop-header {
-    display: none; 
+        display: none; 
     }
 
     margin:0 auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    
+    align-items: center;    
     width: 100%;
-    height:918px;
-    
+    height:918px;    
 
     >main{
         display: flex;
@@ -82,25 +80,20 @@ export const Container = styled.div`
                 }
             } 
         }       
-    }
-
-    
-   
-    
-       
+    }       
     
     @media (min-width: ${DEVICE_BREAKPOINTS.LG}) { 
         
         height:800px;
-        .mobile-header {
+            .mobile-header {
             display: none; 
         }
 
         .desktop-header {
             display: flex;
             gap:10px;
+        }
 
-        } 
         .icon {
             display: none; 
         }    
@@ -120,14 +113,13 @@ export const Container = styled.div`
             flex-direction: row;
             margin:0 auto;
             gap:40px;
-            margin-bottom: 145px;   
-
+            margin-bottom: 145px;
         
             >.dish { 
                 display:flex;
-                gap:50px;
+                gap:90px;
                 position:relative;
-                left:-450px;
+                left:-300px;
                 top:40px;
                 align-items:center;
                                
@@ -138,14 +130,13 @@ export const Container = styled.div`
 
                 .salad-ingredients{                    
                     align-items: flex-start; 
-                    margin-bottom: 10px;
-                   
+                    margin-bottom: 10px;                   
 
                     >h1 {  
                           color: ${({theme}) => theme.COLORS.WHITE};                     
                         font-size: 40px;             
                         line-height: 140%; 
-                        margin-bottom: 24px;
+                        margin-bottom: 10px;
                     }
 
                     >p {
@@ -156,7 +147,7 @@ export const Container = styled.div`
                     }                    
                 }
 
-                 .tags{                
+                .tags{                
                     justify-content: flex-start;                
                     margin-bottom:40px;             
                     gap: 20px;
@@ -166,13 +157,12 @@ export const Container = styled.div`
             button{
                 width:150px; 
                 height: 48px;
-                    
             } 
         }
             
     }
 
-     footer{
+    footer{
         margin-top:1465px;
     }
 `;
@@ -194,29 +184,24 @@ export const ReturnLink = styled(Link)`
             color: ${({theme}) => theme.COLORS.WHITE};
             font-family: Poppins;
             font-size: 16px;       
-            font-weight: 500;   
-    
-        }    
-
+            font-weight: 500;    
+        }
    
     @media (min-width: ${DEVICE_BREAKPOINTS.LG}) { 
-    grid-area: link;
-    
+    grid-area: link;    
     margin:-50px auto auto auto   ;    
     flex-direction:row;
-    gap: 5px;
-    
-    
+    gap: 5px;    
     
         >img{
-        width: 32px;
-        height: 32px;
+            width: 32px;
+            height: 32px;
         }
 
         >p{
-        font-size: 24px;
-        font-weight: 700;
-        line-height: 140%; 
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 140%; 
         }                  
        
     }

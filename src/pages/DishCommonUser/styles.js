@@ -6,19 +6,18 @@ import  { Link } from 'react-router-dom';
 
 export const Container = styled.div`    
     .mobile-header {
-    display: flex; 
+        display: flex; 
     }
     .desktop-header {
-    display: none; 
+        display: none; 
     }
 
     margin:0 auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    height:100vh;
+    align-items: center;    
     width: 100%;
-    
+    height:918px;    
 
     >main{
         display: flex;
@@ -27,13 +26,15 @@ export const Container = styled.div`
         margin-bottom: 60px;
         width: 300px;        
     
-        >.restaurantDish {
-            width: 264px;
-            height: 264px;
-            margin-bottom:20px;
-        }    
-        
         .dish{        
+            >.restaurantDish {
+                width: 264px;
+                height: 264px;
+                margin-bottom:20px;
+                position:relative;
+                left:40px;
+            }    
+        
             .salad-ingredients{
                 display: flex;
                 flex-direction: column;
@@ -43,13 +44,16 @@ export const Container = styled.div`
                 margin-bottom:24px;
             
                 h1{
+                 color: ${({theme}) => theme.COLORS.WHITE};
                 font-family: Poppins;
                 font-weight: 500;
                 text-align: justify;
                 font-size: 27.041px;
+                margin-bottom:-10px; 
                 }
 
                 p{
+                 color: ${({theme}) => theme.COLORS.WHITE};
                 font-family: Poppins;
                 font-weight: 400;
                 text-align: justify;               
@@ -63,32 +67,33 @@ export const Container = styled.div`
                 justify-content: space-between;
                 flex-wrap: wrap;
                 gap: 10px;
-                margin-bottom:40px; 
+                margin-bottom:0px; 
                 padding:0 15px;
             }
         
+            .custom-button{
+                width: 300px; 
+                height: 48px;
+                margin-bottom:40px;
+                >button{
+                    font-size: 16px;
+                }
+            } 
         }       
-    
-    }
-   
-    .icon {
-        display: block; 
-              
-    }
-       
+    }       
     
     @media (min-width: ${DEVICE_BREAKPOINTS.LG}) { 
         
         height:800px;
-        .mobile-header {
+            .mobile-header {
             display: none; 
         }
 
         .desktop-header {
             display: flex;
             gap:10px;
+        }
 
-        } 
         .icon {
             display: none; 
         }    
@@ -108,90 +113,60 @@ export const Container = styled.div`
             flex-direction: row;
             margin:0 auto;
             gap:40px;
-            margin-bottom: 145px;   
-
+            margin-bottom: 145px;
         
-            >.restaurantDish {
-                width: 390px;
-                height: 390px;
-            }
+            >.dish { 
+                display:flex;
+                gap:90px;
+                position:relative;
+                left:-300px;
+                top:40px;
+                align-items:center;
+                               
+                >.restaurantDish {
+                    width: 390px;
+                    height: 390px;
+                }
 
-            >.dish {                
                 .salad-ingredients{                    
                     align-items: flex-start; 
-                    margin-bottom: 10px;
-                   
+                    margin-bottom: 10px;                   
 
-                    >h1 {                        
+                    >h1 {  
+                          color: ${({theme}) => theme.COLORS.WHITE};                     
                         font-size: 40px;             
                         line-height: 140%; 
-                        margin-bottom: 24px;
+                        margin-bottom: 10px;
                     }
 
                     >p {
+                        color: ${({theme}) => theme.COLORS.WHITE};
                         font-size: 24px;                       
                         line-height: 140%; 
                         margin-bottom: 24px;
                     }                    
                 }
 
-                 .tags{                
+                .tags{                
                     justify-content: flex-start;                
                     margin-bottom:40px;             
                     gap: 20px;
                 }             
                     
-            }  
+            }
+            button{
+                width:150px; 
+                height: 48px;
+            } 
         }
+            
+    }
+
+    footer{
+        margin-top:1465px;
     }
 `;
-           
-          
-            
-            
-    
-    
-export const AlinhamentoCountButton = styled.div`
-    display: flex;
-    gap:20px;    
-    
-        .count {
-            display: flex;
-            align-items: center;
-            gap:10px;
-            flex-direction: row;
-
-            .operadorMatemático {
-                width: 20px; 
-                height: 20px;                 
-                }
-
-                span{                    
-                font-family: Roboto;
-                font-size: 20px;
-                font-weight: 700;
-                line-height: 160%; 
-                }
-            }
-          
-            .custom-button{
-               width:200px; 
-                height: 40px;
-              
-            } 
-          
-        }   
-
-    
-    @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {    
-        align-items: center;
-        gap:50px; 
-          
-    }
-`;                
-
-        
-
+ 
 export const ReturnLink = styled(Link)`
     height: 60px;
     display:flex;
@@ -209,34 +184,94 @@ export const ReturnLink = styled(Link)`
             color: ${({theme}) => theme.COLORS.WHITE};
             font-family: Poppins;
             font-size: 16px;       
-            font-weight: 500;   
-    
-        }    
-
+            font-weight: 500;    
+        }
    
     @media (min-width: ${DEVICE_BREAKPOINTS.LG}) { 
-    grid-area: link;
-    
-    margin:50px auto  ;    
+    grid-area: link;    
+    margin:-50px auto auto auto   ;    
     flex-direction:row;
-    gap: 5px;
-    width: 1137px;
-    
+    gap: 5px;    
     
         >img{
-        width: 32px;
-        height: 32px;
+            width: 32px;
+            height: 32px;
         }
 
         >p{
-        font-size: 24px;
-        font-weight: 700;
-        line-height: 140%; 
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 140%; 
         }                  
        
     }
 `;
-    
+
+export const ButtonAlignmentCount = styled.div`
+    display: flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items: center;
+    gap:10px;
+    width: 300px;
+   
+   
+
+
+    .count {
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        gap:10px;
+        position:relative;
+        top:-20px;
+        
+        span{
+            color: ${({ theme }) => theme.COLORS.WHITE};
+            font-family: Roboto;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 160%; /* 32px */
+        }
+    }
+
+    .custom-button{
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        width: 170px;
+        height: 32px;
+         
+    }
+     
+
+     @media (min-width: ${DEVICE_BREAKPOINTS.LG}) { 
+        flex-direction:row;        
+        width:325px;
+        gap:10px;
+        
+       
+        .count {
+            align-items: center;
+            gap:10px;
+            
+
+            span{
+                font-size: 20px;          
+            }
+        }
+
+        .custom-button {
+           button{
+            width:200px;
+                height: 48px;
+           }
+                
+        }    
+
+    }
+`;   
     
     
     
