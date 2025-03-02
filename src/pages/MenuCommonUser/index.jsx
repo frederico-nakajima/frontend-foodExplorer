@@ -33,7 +33,7 @@ export function MenuCommonUser() {
     useEffect(() => {
         async function fetchDishes() {
             try {
-                const response = await api.get(`/dishes`);
+                const response = await api.get(`/dishescustomer`);
                 setDishes(response.data); 
             } catch (error) {
                 console.error("Erro ao buscar pratos:", error);
@@ -91,7 +91,7 @@ export function MenuCommonUser() {
                         itemName={dish.name}
                         description={dish.description}
                         price={dish.price}
-                        showButtonAlignment={false}
+                        showButtonAlignment={true}
                         onClick = {() => handleDishCustomerUser(dish.id)}
                     />
                     </SwiperSlide>
@@ -109,7 +109,7 @@ export function MenuCommonUser() {
                         itemName={dish.name}
                         description={dish.description}
                         price={dish.price}
-                        showButtonAlignment={false}
+                        showButtonAlignment={true}
                         onClick = {() => handleDishCustomerUser(dish.id)}
                     />
                     </SwiperSlide>
@@ -127,7 +127,7 @@ export function MenuCommonUser() {
                         itemName={dish.name}
                         description={dish.description}
                         price={dish.price}
-                        showButtonAlignment={false}
+                        showButtonAlignment={true}
                         onClick = {() => handleDishCustomerUser(dish.id)}
                     />
                     </SwiperSlide>

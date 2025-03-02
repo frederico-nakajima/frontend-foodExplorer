@@ -9,7 +9,7 @@ import { Footer } from '../../components/Footer';
 import { MobileHeaderIcon } from '../../components/MobileHeaderIcon'
 import CaretLeft from '../../assets/CaretLeft.svg';
 import { SideMenu } from '../../components/SideMenu';
-import {useState } from "react";
+import { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom';
 import  { api }  from '../../services/api';
 import { Receipt } from "phosphor-react";
@@ -30,7 +30,7 @@ export function DishCommonUser() {
 
     useEffect(() => {
         async function fetchDish(){
-            const response = await api.get(`/dishes/${params.id}`);
+            const response = await api.get(`/dishescustomer/${params.id}`);
             setData(response.data);
         }
 
@@ -48,7 +48,7 @@ export function DishCommonUser() {
                       <MobileHeaderIcon onOpenMenu={()=> setMenuIsOpen(true)}  />
                   </div>
                   <div className="desktop-header">
-                      <DesktopHeaderIcon />
+                        <DesktopHeaderIcon buttonIconContent={buttonIconContent} showIcon={true}  />
                   </div>
       
                   { 

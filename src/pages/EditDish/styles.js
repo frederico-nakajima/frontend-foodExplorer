@@ -55,19 +55,19 @@ export const Container = styled.div`
        
     
 export const Form = styled.form`  
-    padding-bottom:60px;       
-    
-    >header{
-     
-         .newDish{
-            font-family: Poppins;
-            font-size: 32px;
-            font-weight: 500;
-            line-height: 140%; 
-            margin-bottom:45px;
-            width: 364px;
+        padding-bottom:60px;       
+        
+        >header{
+        
+            .newDish{
+                font-family: Poppins;
+                font-size: 32px;
+                font-weight: 500;
+                line-height: 140%; 
+                margin-bottom:45px;
+                width: 364px;
+            }
         }
-    }
             
         .image-salad-category{                
             width: 364px;
@@ -305,7 +305,7 @@ export const Form = styled.form`
 
         }
     }
-
+}
 
     @media (min-width: ${DEVICE_BREAKPOINTS.LG}) { 
         .image-salad-category{

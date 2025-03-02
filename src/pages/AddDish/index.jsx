@@ -14,8 +14,7 @@ import  { api }  from '../../services/api';
 import { useNavigate} from 'react-router-dom';
 
 export function AddDish(){
-    const [menuIsOpen,setMenuIsOpen] = useState(false);
-      
+    const [menuIsOpen,setMenuIsOpen] = useState(false);      
     const navigate = useNavigate();
 
     const [name, setName] = useState("");
@@ -43,28 +42,17 @@ export function AddDish(){
         }
         if(newTag){
             return alert("Você deixou uma tag no campo para adicionar, mas não clickou em adicionar ");
-        }     
-
+        }
         await api.post("/dishes", {
             name,
             category,
             tags,
             price,
             description
-        });
-        
+        });        
         alert("Item criado com sucesso!");
         navigate('/');
     }
-
-    function handleChangeImage(event){
-        const file = event.target.files[0];
-        setImageFile(file);
-
-        const imagePreview = URL.createObjectURL(file);
-        setImage(imagePreview);
-    }
-
 
     return(
         <Container>
@@ -84,8 +72,8 @@ export function AddDish(){
             <Link to="/">
                 <img src={CaretLeft} alt="imagem de uma seta apontando para esquerda" />
                 Voltar
-            </Link>                        
-            
+            </Link>
+
             <Form>                    
                 <header>
                     <h1 className='addDish'>Adicionar prato</h1>
@@ -103,11 +91,11 @@ export function AddDish(){
                                 />
                                 <p className='select-image'>selecione imagem</p>
                             </label>                            
-                                <input 
-                                    type='file'
-                                    id='file-upload'
-                                    onChange={handleChangeImage}
-                                 />
+                            <input 
+                                type='file'
+                                id='file-upload'
+                                // onChange={handleChangeImage}
+                            />
                         </div>
                     </div>                       
 
@@ -164,7 +152,8 @@ export function AddDish(){
                     <label htmlFor="description">Descrição</label>
                     <Textarea 
                         placeholder="Fale brevemente sobre o prato, seus ingredientes e composição"  
-                        onChange = {e => setDescription(e.target.value)}/>
+                        onChange = {e => setDescription(e.target.value)}
+                    />
                 </div>
 
                 <div className="buttons">

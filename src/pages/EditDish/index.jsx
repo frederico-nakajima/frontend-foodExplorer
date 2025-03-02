@@ -14,7 +14,6 @@ import {api} from "../../services/api";
 import { useParams } from 'react-router-dom';
 import { useNavigate} from 'react-router-dom';
 
-
 export function EditDish(){
     const [menuIsOpen,setMenuIsOpen] = useState(false);
     const [data, setData] = useState(null);
@@ -26,10 +25,63 @@ export function EditDish(){
     const [price, setPrice] = useState("");
     const [description, setDescription] = useState("");
     const [tags, setTags] = useState([]);
-    const [newTag, setNewTag] = useState("");
+    const [newTag, setNewTag] = useState("");    
 
     
-
+    function handleAddTag(){
+        setTags(prevState => [...prevState, newTag]);
+        setNewTag("");
+    } 
+    
+    function handleRemoveTag(deleted){
+        setTags(prevState => prevState.filter(tag => tag !== deleted));
+    }
+    
+    async function handleDeleteDish() {
+        const confirmDelete = window.confirm("Tem certeza que deseja excluir este prato?");
+        
+        if (confirmDelete) {
+            try {
+                await api.delete(`/dishes/${params.id}`);                  
+                setData(null);
+                setName("");
+                setCategory("");
+                setPrice("");
+                setDescription("");
+                setTags([]);
+                
+                alert("Prato excluído com sucesso!");
+                navigate("/"); 
+            } catch (error) {
+                console.error("Erro ao excluir o prato:", error);
+                alert("Erro ao excluir o prato. Tente novamente.");
+            }
+        }
+    }
+    
+    async function handleUpdateDish() {
+        const confirmUpdate = window.confirm("Deseja realmente salvar as alterações deste prato?");
+        
+        if (confirmUpdate) {
+            try {
+                const updatedDish = {
+                    name,
+                    category,
+                    price,
+                    description,
+                    tags 
+                };
+                
+                await api.put(`/dishes/admin/${params.id}`, updatedDish);
+                alert("Prato atualizado com sucesso!");
+                navigate("/");
+            } catch (error) {
+                console.error("Erro ao atualizar o prato:", error);
+                alert("Erro ao salvar alterações. Tente novamente.");
+            }
+        }
+    }
+    
     useEffect(() => {
         async function fetchDish(){
             const response = await api.get(`/dishes/${params.id}`);
@@ -48,62 +100,7 @@ export function EditDish(){
             setTags(data.tags);
         }
     }, [data]);
-
-    function handleAddTag(){
-        setTags(prevState => [...prevState, newTag]);
-        setNewTag("");
-        } 
-
-        function handleRemoveTag(deleted){
-            setTags(prevState => prevState.filter(tag => tag !== deleted));
-        }
-
-    async function handleDeleteDish() {
-        const confirmDelete = window.confirm("Tem certeza que deseja excluir este prato?");
-        
-        if (confirmDelete) {
-            try {
-                await api.delete(`/dishes/${params.id}`);                  
-                setData(null);
-                setName("");
-                setCategory("");
-                setPrice("");
-                setDescription("");
-                setTags([]);
-
-                alert("Prato excluído com sucesso!");
-                navigate("/"); 
-            } catch (error) {
-                console.error("Erro ao excluir o prato:", error);
-                alert("Erro ao excluir o prato. Tente novamente.");
-            }
-        }
-    }
-
-    async function handleUpdateDish() {
-        const confirmUpdate = window.confirm("Deseja realmente salvar as alterações deste prato?");
-        
-        if (confirmUpdate) {
-            try {
-                const updatedDish = {
-                    name,
-                    category,
-                    price,
-                    description,
-                    tags // 🔹 Envia as tags diretamente como array de strings
-                };
-
-                await api.put(`/dishes/admin/${params.id}`, updatedDish);
-                alert("Prato atualizado com sucesso!");
-                navigate("/");
-            } catch (error) {
-                console.error("Erro ao atualizar o prato:", error);
-                alert("Erro ao salvar alterações. Tente novamente.");
-            }
-        }
-    }
-
-
+    
 
      
     return(
@@ -199,8 +196,7 @@ export function EditDish(){
                                 />
                             </div>
                         </Section>
-                    </div>
-                            
+                    </div>                            
                     
                     <div className='price'>
                         <label htmlFor="price">Preço</label>
@@ -232,8 +228,7 @@ export function EditDish(){
                         <button type='button' onClick={handleUpdateDish}>Salvar alterações</button>
                     </div>
                 </div>
-            </Form>      
-            
+            </Form>           
                         
             <Footer/>           
         </Container>
