@@ -72,7 +72,7 @@ export function EditDish(){
                     tags 
                 };
                 
-                await api.put(`/dishes/admin/${params.id}`, updatedDish);
+                await api.put(`/dishes/${params.id}`, updatedDish);
                 alert("Prato atualizado com sucesso!");
                 navigate("/");
             } catch (error) {
