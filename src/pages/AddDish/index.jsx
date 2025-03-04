@@ -23,6 +23,8 @@ export function AddDish(){
     const [newTag, setNewTag] = useState("");
     const [price, setPrice] = useState("");
     const [description, setDescription] = useState("");
+    const [imageFile, setImageFile] = useState(null);
+
     
     function handleAddTag(){
         setTags(prevState => [...prevState, newTag]);
@@ -43,16 +45,34 @@ export function AddDish(){
         if(newTag){
             return alert("Você deixou uma tag no campo para adicionar, mas não clickou em adicionar ");
         }
-        await api.post("/dishes", {
+        
+        const response =await api.post("/dishes", {
             name,
             category,
             tags,
             price,
             description
-        });        
+        });
+        const dish_id = response.data.id;
+        
+        if(imageFile){
+            const fileUploadForm = new FormData();
+            fileUploadForm.append("image", imageFile);
+
+            await api.patch(`/dishes/image/${dish_id}`, fileUploadForm);
+            // o servidor retorna a URL ou nome do novo avatar (response.data.avatar)
+            
+        }
+        
         alert("Item criado com sucesso!");
         navigate('/');
     }
+
+    function handleChangeImage(event) {
+        const file = event.target.files[0];  // Pega o primeiro arquivo selecionado
+        setImageFile(file);
+    }
+    
 
     return(
         <Container>
@@ -94,7 +114,7 @@ export function AddDish(){
                             <input 
                                 type='file'
                                 id='file-upload'
-                                // onChange={handleChangeImage}
+                                onChange={handleChangeImage}
                             />
                         </div>
                     </div>                       
