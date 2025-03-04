@@ -60,7 +60,11 @@ export function DishCommonUser() {
                         </ReturnLink>
         
                         <div className='dish'>      
-                            <img className='restaurantDish' src={Dish} alt="imagem de um prato de comida de um restaurante" />
+                            <img 
+                                className='restaurantDish' 
+                                src={`${api.defaults.baseURL}/files/${data.image}`} 
+                                alt={`Imagem do prato ${data.name}`} 
+                            />
 
                             <div className="salad-ingredients">
                                 <h1>{data.name}</h1>

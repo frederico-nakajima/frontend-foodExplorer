@@ -81,58 +81,68 @@ export function MenuCommonUser() {
             
             <Content>
             <SliderCustomer title="Refeições">
-                {meals.map((dish) => (
-                    <SwiperSlide key={dish.id}>
-                    <ItemCustomer
-                        iconImage={Love}
-                        iconAltText={iconAltText}
-                        itemImage={dish.image}
-                        itemAltText={itemAltText}
-                        itemName={dish.name}
-                        description={dish.description}
-                        price={dish.price}
-                        showButtonAlignment={true}
-                        onClick = {() => handleDishCustomerUser(dish.id)}
-                    />
-                    </SwiperSlide>
-                ))}
-            </SliderCustomer>
+    {meals.map((dish) => {
+        const imageUrl = `${api.defaults.baseURL}/files/${dish.image}`; // 🔥 Construindo a URL da imagem corretamente
+        return (
+            <SwiperSlide key={dish.id}>
+                <ItemCustomer
+                    iconImage={Love}
+                    iconAltText={iconAltText}
+                    itemImage={imageUrl}  // 🔥 Agora a imagem será carregada corretamente
+                    itemAltText={itemAltText}
+                    itemName={dish.name}
+                    description={dish.description}
+                    price={dish.price}
+                    showButtonAlignment={true}
+                    onClick={() => handleDishCustomerUser(dish.id)}
+                />
+            </SwiperSlide>
+        );
+    })}
+</SliderCustomer>
 
-                <SliderCustomer title="Sobremesas">
-                {desserts.map((dish) => (
-                    <SwiperSlide key={dish.id}>
-                    <ItemCustomer
-                        iconImage={Love}
-                        iconAltText={iconAltText}
-                        itemImage={dish.image}
-                        itemAltText={itemAltText}
-                        itemName={dish.name}
-                        description={dish.description}
-                        price={dish.price}
-                        showButtonAlignment={true}
-                        onClick = {() => handleDishCustomerUser(dish.id)}
-                    />
-                    </SwiperSlide>
-                ))}
-            </SliderCustomer>
+<SliderCustomer title="Sobremesas">
+    {desserts.map((dish) => {
+        const imageUrl = `${api.defaults.baseURL}/files/${dish.image}`; // 🔥 Agora a URL está correta para sobremesas
+        return (
+            <SwiperSlide key={dish.id}>
+                <ItemCustomer
+                    iconImage={Love}
+                    iconAltText={iconAltText}
+                    itemImage={imageUrl}  
+                    itemAltText={itemAltText}
+                    itemName={dish.name}
+                    description={dish.description}
+                    price={dish.price}
+                    showButtonAlignment={true}
+                    onClick={() => handleDishCustomerUser(dish.id)}
+                />
+            </SwiperSlide>
+        );
+    })}
+</SliderCustomer>
 
-            <SliderCustomer title="Bebidas">
-                {drinks.map((dish) => (
-                    <SwiperSlide key={dish.id}>
-                    <ItemCustomer
-                        iconImage={Love}
-                        iconAltText={iconAltText}
-                        itemImage={dish.image}
-                        itemAltText={itemAltText}
-                        itemName={dish.name}
-                        description={dish.description}
-                        price={dish.price}
-                        showButtonAlignment={true}
-                        onClick = {() => handleDishCustomerUser(dish.id)}
-                    />
-                    </SwiperSlide>
-                ))}
-            </SliderCustomer>
+<SliderCustomer title="Bebidas">
+    {drinks.map((dish) => {
+        const imageUrl = `${api.defaults.baseURL}/files/${dish.image}`; // 🔥 Agora a URL está correta para bebidas
+        return (
+            <SwiperSlide key={dish.id}>
+                <ItemCustomer
+                    iconImage={Love}
+                    iconAltText={iconAltText}
+                    itemImage={imageUrl}  
+                    itemAltText={itemAltText}
+                    itemName={dish.name}
+                    description={dish.description}
+                    price={dish.price}
+                    showButtonAlignment={true}
+                    onClick={() => handleDishCustomerUser(dish.id)}
+                />
+            </SwiperSlide>
+        );
+    })}
+</SliderCustomer>
+
                 
             </Content>
             

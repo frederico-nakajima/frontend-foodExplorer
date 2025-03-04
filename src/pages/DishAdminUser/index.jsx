@@ -1,7 +1,6 @@
 import { Container,  ReturnLink } from './styles';
 import { DesktopHeader } from '../../components/DesktopHeader';
 import { Tag } from '../../components/Tag'; 
-import Dish from '../../assets/Dish.png';
 import { Button } from '../../components/Button';
 import { Footer } from '../../components/Footer';
 import { MobileHeader } from '../../components/MobileHeader'
@@ -14,15 +13,14 @@ import  { api }  from '../../services/api';
 
 export function DishAdminUser() {
     const [menuIsOpen,setMenuIsOpen] = useState(false);
-    const [data, setData] = useState(null);    
-
+    const [data, setData] = useState(null);
     const params = useParams();
     const navigate = useNavigate();
 
     function handleEditDish(id){
         navigate(`/edit/${id}`);
     }
-
+    
     useEffect(() => {
         async function fetchDish(){
             const response = await api.get(`/dishes/${params.id}`);
@@ -56,8 +54,11 @@ export function DishAdminUser() {
                     </ReturnLink>
 
                     <div className='dish'>
-                        <img className='restaurantDish' src={Dish} alt="imagem de um prato de comida de um restaurante" />
-
+                        <img 
+                            className='restaurantDish' 
+                            src={`${api.defaults.baseURL}/files/${data.image}`} // 🔥 Agora a imagem real do prato será carregada
+                            alt={`Imagem do prato ${data.name}`}
+                        />
                         <div className="salad-ingredients">
                             <h1>{data.name}</h1>
                             <p>
@@ -82,12 +83,10 @@ export function DishAdminUser() {
                                 <Button title="Editar prato" onClick={() => handleEditDish(data.id)}/>
                             </div>                   
                         </div>                            
-                    </div>
-                        
+                    </div>                        
                 </main>
             }   
-            <Footer/>
-            
+            <Footer/>            
         </Container>
     );
 }

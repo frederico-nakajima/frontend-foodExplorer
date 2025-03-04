@@ -18,8 +18,7 @@ export function MenuAdminUser() {
     const iconAltText = ' ícone de um lapiz';
     const itemAltText = 'imagem de uma comida'
     const [dishes, setDishes] = useState([]);
-    const navigate = useNavigate();
-    
+    const navigate = useNavigate();    
     const [menuIsOpen,setMenuIsOpen] = useState(false);
             
     const meals = Array.isArray(dishes) ? dishes.filter(dish => dish.category === "Refeições") : [];
@@ -45,14 +44,12 @@ export function MenuAdminUser() {
     },[]);
 
     return (
-        <Container>
-           
+        <Container>           
             <SideMenu
                 menuIsOpen={menuIsOpen}
                 onCloseMenu={() => setMenuIsOpen(false)}
                 isAdmin={true} 
-            />
-           
+            />           
 
              <div className="desktop-header">
                 <DesktopHeader/>
@@ -82,62 +79,67 @@ export function MenuAdminUser() {
             
             <Content>
                        
-            <Slider title="Refeições">
-                {meals.map((dish) => (
-                    <SwiperSlide key={dish.id}>
-                    <Item
-                        iconImage={Pencil}
-                        iconAltText={iconAltText}
-                        itemImage={dish.image}
-                        itemAltText={itemAltText}
-                        itemName={dish.name}
-                        description={dish.description}
-                        price={dish.price}
-                        showButtonAlignment={false}
-                        onClick = {() => handleDishAdminUser(dish.id)}
-                    />
-                    </SwiperSlide>
-                ))}
-            </Slider>
-
+                <Slider title="Refeições">
+                    {meals.map((dish) => {
+                        const imageUrl = `${api.defaults.baseURL}/files/${dish.image}`; // 🔥 Construindo a URL da imagem corretamente
+                        return (
+                            <SwiperSlide key={dish.id}>
+                                <Item
+                                    iconImage={Pencil}
+                                    iconAltText={iconAltText}
+                                    itemImage={imageUrl}  // 🔥 Agora a imagem será carregada corretamente
+                                    itemAltText={itemAltText}
+                                    itemName={dish.name}
+                                    description={dish.description}
+                                    price={dish.price}
+                                    showButtonAlignment={false}
+                                    onClick={() => handleDishAdminUser(dish.id)}
+                                />
+                            </SwiperSlide>
+                        );
+                    })}
+                </Slider>
                 <Slider title="Sobremesas">
-                {desserts.map((dish) => (
-                    <SwiperSlide key={dish.id}>
-                    <Item
-                        iconImage={Pencil}
-                        iconAltText={iconAltText}
-                        itemImage={dish.image}
-                        itemAltText={itemAltText}
-                        itemName={dish.name}
-                        description={dish.description}
-                        price={dish.price}
-                        showButtonAlignment={false}
-                        onClick = {() => handleDishAdminUser(dish.id)}
-                    />
-                    </SwiperSlide>
-                ))}
-            </Slider>
-
-            <Slider title="Bebidas">
-                {drinks.map((dish) => (
-                    <SwiperSlide key={dish.id}>
-                    <Item
-                        iconImage={Pencil}
-                        iconAltText={iconAltText}
-                        itemImage={dish.image}
-                        itemAltText={itemAltText}
-                        itemName={dish.name}
-                        description={dish.description}
-                        price={dish.price}
-                        showButtonAlignment={false}
-                        onClick = {() => handleDishAdminUser(dish.id)}
-                    />
-                    </SwiperSlide>
-                ))}
-            </Slider>
-
-            </Content>
-            
+                    {desserts.map((dish) => {
+                        const imageUrl = `${api.defaults.baseURL}/files/${dish.image}`; // 🔥 Corrigindo a URL para sobremesas
+                        return (
+                            <SwiperSlide key={dish.id}>
+                                <Item
+                                    iconImage={Pencil}
+                                    iconAltText={iconAltText}
+                                    itemImage={imageUrl} 
+                                    itemAltText={itemAltText}
+                                    itemName={dish.name}
+                                    description={dish.description}
+                                    price={dish.price}
+                                    showButtonAlignment={false}
+                                    onClick={() => handleDishAdminUser(dish.id)}
+                                />
+                            </SwiperSlide>
+                        );
+                    })}
+                </Slider>
+                <Slider title="Bebidas">
+                    {drinks.map((dish) => {
+                        const imageUrl = `${api.defaults.baseURL}/files/${dish.image}`; // 🔥 Corrigindo a URL para bebidas
+                        return (
+                            <SwiperSlide key={dish.id}>
+                                <Item
+                                    iconImage={Pencil}
+                                    iconAltText={iconAltText}
+                                    itemImage={imageUrl} 
+                                    itemAltText={itemAltText}
+                                    itemName={dish.name}
+                                    description={dish.description}
+                                    price={dish.price}
+                                    showButtonAlignment={false}
+                                    onClick={() => handleDishAdminUser(dish.id)}
+                                />
+                            </SwiperSlide>
+                        );
+                    })}
+                </Slider>
+            </Content>            
             <FooterWrapper>
                 <Footer />
             </FooterWrapper>

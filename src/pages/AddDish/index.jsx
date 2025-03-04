@@ -22,7 +22,7 @@ export function AddDish(){
     const [tags, setTags] = useState([]);
     const [newTag, setNewTag] = useState("");
     const [price, setPrice] = useState("");
-    const [description, setDescription] = useState("");
+    const [description, setDescription] = useState("");   
     const [imageFile, setImageFile] = useState(null);
 
     
