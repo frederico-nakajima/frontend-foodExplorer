@@ -56,7 +56,7 @@ export function DishAdminUser() {
                     <div className='dish'>
                         <img 
                             className='restaurantDish' 
-                            src={`${api.defaults.baseURL}/files/${data.image}`} // 🔥 Agora a imagem real do prato será carregada
+                            src={`${api.defaults.baseURL}/files/${data.image}`} 
                             alt={`Imagem do prato ${data.name}`}
                         />
                         <div className="salad-ingredients">

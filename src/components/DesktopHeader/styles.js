@@ -65,14 +65,18 @@ export const Search  = styled.div`
   width:700px;
   height: 48px;
   border-radius: 5px;
-  padding: 12px 200px;
+  padding: 12px 140px;
   color:${({theme}) => theme.COLORS.WHITE};
   background-color:${({theme}) => theme.COLORS.BACKGROUND_900};
   
   > img {
     margin-right: 8px;
+    position:relative;
+    margin-left:-100px;
   }
   >input {
+        width: 400px;
+   
     height: 100%;
     border: none;
     background: none;
@@ -86,8 +90,8 @@ export const Search  = styled.div`
       color: ${({ theme }) => theme.COLORS.GRAY_300};
       font-family: "Roboto", serif;
       font-size: 16px;
-      font-weight: 400;
-      text-align:center;
+      font-weight: 400;     
+      
     }
 
     &:focus {

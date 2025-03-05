@@ -80,7 +80,7 @@ export function MenuCommonUser() {
             </div>
             
             <Content>
-            <SliderCustomer title="Refeições">
+           <SliderCustomer title="Refeições">
     {meals.map((dish) => {
         const imageUrl = `${api.defaults.baseURL}/files/${dish.image}`; // 🔥 Construindo a URL da imagem corretamente
         return (

@@ -77,17 +77,16 @@ export function MenuAdminUser() {
                 </Banner>
             </div>
             
-            <Content>
-                       
+            <Content>                       
                 <Slider title="Refeições">
                     {meals.map((dish) => {
-                        const imageUrl = `${api.defaults.baseURL}/files/${dish.image}`; // 🔥 Construindo a URL da imagem corretamente
+                        const imageUrl = `${api.defaults.baseURL}/files/${dish.image}`; 
                         return (
                             <SwiperSlide key={dish.id}>
                                 <Item
                                     iconImage={Pencil}
                                     iconAltText={iconAltText}
-                                    itemImage={imageUrl}  // 🔥 Agora a imagem será carregada corretamente
+                                    itemImage={imageUrl}  
                                     itemAltText={itemAltText}
                                     itemName={dish.name}
                                     description={dish.description}
@@ -101,7 +100,7 @@ export function MenuAdminUser() {
                 </Slider>
                 <Slider title="Sobremesas">
                     {desserts.map((dish) => {
-                        const imageUrl = `${api.defaults.baseURL}/files/${dish.image}`; // 🔥 Corrigindo a URL para sobremesas
+                        const imageUrl = `${api.defaults.baseURL}/files/${dish.image}`; 
                         return (
                             <SwiperSlide key={dish.id}>
                                 <Item
@@ -121,7 +120,7 @@ export function MenuAdminUser() {
                 </Slider>
                 <Slider title="Bebidas">
                     {drinks.map((dish) => {
-                        const imageUrl = `${api.defaults.baseURL}/files/${dish.image}`; // 🔥 Corrigindo a URL para bebidas
+                        const imageUrl = `${api.defaults.baseURL}/files/${dish.image}`; 
                         return (
                             <SwiperSlide key={dish.id}>
                                 <Item
