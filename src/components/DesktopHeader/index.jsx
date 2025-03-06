@@ -22,7 +22,7 @@ export function DesktopHeader({ setSearchTerm }){
     }
     return(
         <Container>           
-           <main>
+            <main>
                <Brand>
                     <img src={polygonImageHeader} alt="imagem de um polígono" />
                     <div>
@@ -45,7 +45,7 @@ export function DesktopHeader({ setSearchTerm }){
                 </ButtonIcon>              
                     
                 <img src={SignOut} alt="ícone de sair do app" onClick={handleSignOut}/>
-           </main>          
+            </main>          
         </Container>
     )
 }

@@ -20,24 +20,22 @@ export function MenuAdminUser() {
     const [dishes, setDishes] = useState([]);
     const navigate = useNavigate();    
     const [menuIsOpen,setMenuIsOpen] = useState(false);
-    const [searchTerm, setSearchTerm] = useState("");
-            
+    const [searchTerm, setSearchTerm] = useState("");  
    
 
     function handleDishAdminUser(id){
         navigate(`/dishadmin/${id}`);
     }
-
-    // 🔍 Filtrando pratos pela busca
+    
     const filteredDishes = dishes.filter(dish =>
-        dish.name.toLowerCase().includes(searchTerm.toLowerCase()) // 🔹 Busca no nome do prato
+        dish.name.toLowerCase().includes(searchTerm.toLowerCase()) 
     );
     
     useEffect(() => {
         async function fetchDishes() {
             try {
                 const response = await api.get(`/dishes`, {
-                    params: { name: searchTerm } // 🔹 Envia o termo de busca para o back-end
+                    params: { name: searchTerm } 
                 });
                 setDishes(response.data);
             } catch (error) {
@@ -45,7 +43,7 @@ export function MenuAdminUser() {
             }
         }
         fetchDishes();
-    }, [searchTerm]); // 🔹 Atualiza os pratos sempre que o searchTerm mudar
+    }, [searchTerm]); 
 
     return (
         <Container>           
@@ -55,7 +53,7 @@ export function MenuAdminUser() {
                 isAdmin={true} 
             />           
 
-             <div className="desktop-header">
+            <div className="desktop-header">
                 <DesktopHeader setSearchTerm={setSearchTerm} />
             </div>
             <div className="mobile-header-icon">
@@ -82,81 +80,80 @@ export function MenuAdminUser() {
             </div>
             
             <Content>                       
-            <Slider title="Refeições">
-    {filteredDishes
-        .filter(dish => dish.category === "Refeições")
-        .map((dish) => {
-            const imageUrl = `${api.defaults.baseURL}/files/${dish.image}`; // 🔹 Definição correta da variável
-            
-            return (
-                <SwiperSlide key={dish.id}>
-                    <Item
-                        iconImage={Pencil}
-                        iconAltText={iconAltText}
-                        itemImage={imageUrl}  
-                        itemAltText={itemAltText}
-                        itemName={dish.name}
-                        description={dish.description}
-                        price={dish.price}
-                        showButtonAlignment={false}
-                        onClick={() => handleDishAdminUser(dish.id)}
-                    />
-                </SwiperSlide>
-            );
-        })
-    }
-</Slider>
+                <Slider title="Refeições">
+                    {filteredDishes
+                        .filter(dish => dish.category === "Refeições")
+                        .map((dish) => {
+                            const imageUrl = `${api.defaults.baseURL}/files/${dish.image}`; 
+                            
+                            return (
+                                <SwiperSlide key={dish.id}>
+                                    <Item
+                                        iconImage={Pencil}
+                                        iconAltText={iconAltText}
+                                        itemImage={imageUrl}  
+                                        itemAltText={itemAltText}
+                                        itemName={dish.name}
+                                        description={dish.description}
+                                        price={dish.price}
+                                        showButtonAlignment={false}
+                                        onClick={() => handleDishAdminUser(dish.id)}
+                                    />
+                                </SwiperSlide>
+                            );
+                        })
+                    }
+                </Slider>
 
-<Slider title="Sobremesas">
-    {filteredDishes
-        .filter(dish => dish.category === "Sobremesas")
-        .map((dish) => {
-            const imageUrl = `${api.defaults.baseURL}/files/${dish.image}`; // 🔹 Definição correta da variável
-            
-            return (
-                <SwiperSlide key={dish.id}>
-                    <Item
-                        iconImage={Pencil}
-                        iconAltText={iconAltText}
-                        itemImage={imageUrl}  
-                        itemAltText={itemAltText}
-                        itemName={dish.name}
-                        description={dish.description}
-                        price={dish.price}
-                        showButtonAlignment={false}
-                        onClick={() => handleDishAdminUser(dish.id)}
-                    />
-                </SwiperSlide>
-            );
-        })
-    }
-</Slider>
+                <Slider title="Sobremesas">
+                    {filteredDishes
+                        .filter(dish => dish.category === "Sobremesas")
+                        .map((dish) => {
+                            const imageUrl = `${api.defaults.baseURL}/files/${dish.image}`; 
+                            
+                            return (
+                                <SwiperSlide key={dish.id}>
+                                    <Item
+                                        iconImage={Pencil}
+                                        iconAltText={iconAltText}
+                                        itemImage={imageUrl}  
+                                        itemAltText={itemAltText}
+                                        itemName={dish.name}
+                                        description={dish.description}
+                                        price={dish.price}
+                                        showButtonAlignment={false}
+                                        onClick={() => handleDishAdminUser(dish.id)}
+                                    />
+                                </SwiperSlide>
+                            );
+                        })
+                    }
+                </Slider>
 
-<Slider title="Bebidas">
-    {filteredDishes
-        .filter(dish => dish.category === "Bebidas")
-        .map((dish) => {
-            const imageUrl = `${api.defaults.baseURL}/files/${dish.image}`; // 🔹 Definição correta da variável
-            
-            return (
-                <SwiperSlide key={dish.id}>
-                    <Item
-                        iconImage={Pencil}
-                        iconAltText={iconAltText}
-                        itemImage={imageUrl}  
-                        itemAltText={itemAltText}
-                        itemName={dish.name}
-                        description={dish.description}
-                        price={dish.price}
-                        showButtonAlignment={false}
-                        onClick={() => handleDishAdminUser(dish.id)}
-                    />
-                </SwiperSlide>
-            );
-        })
-    }
-</Slider>
-
+                <Slider title="Bebidas">
+                    {filteredDishes
+                        .filter(dish => dish.category === "Bebidas")
+                        .map((dish) => {
+                            const imageUrl = `${api.defaults.baseURL}/files/${dish.image}`; 
+                            
+                            return (
+                                <SwiperSlide key={dish.id}>
+                                    <Item
+                                        iconImage={Pencil}
+                                        iconAltText={iconAltText}
+                                        itemImage={imageUrl}  
+                                        itemAltText={itemAltText}
+                                        itemName={dish.name}
+                                        description={dish.description}
+                                        price={dish.price}
+                                        showButtonAlignment={false}
+                                        onClick={() => handleDishAdminUser(dish.id)}
+                                    />
+                                </SwiperSlide>
+                            );
+                        })
+                    }
+                </Slider>
             </Content>            
             <FooterWrapper>
                 <Footer />

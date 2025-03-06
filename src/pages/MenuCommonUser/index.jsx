@@ -19,30 +19,32 @@ export function MenuCommonUser() {
     const itemAltText = 'imagem de uma comida'
     const [dishes, setDishes] = useState([]);    
     const [menuIsOpen,setMenuIsOpen] = useState(false);
+    const [searchTerm, setSearchTerm] = useState(""); 
 
     const navigate = useNavigate();
-
-    const meals = Array.isArray(dishes) ? dishes.filter(dish => dish.category === "Refeições") : [];
-    const desserts = Array.isArray(dishes) ? dishes.filter(dish => dish.category === "Sobremesas") : [];
-    const drinks = Array.isArray(dishes) ? dishes.filter(dish => dish.category === "Bebidas") : [];
-    
+       
     function handleDishCustomerUser(id){
         navigate(`/dishuser/${id}`);
     }
+
+    const filteredDishes = dishes.filter(dish =>
+        dish.name.toLowerCase().includes(searchTerm.toLowerCase()) 
+    );
     
+   
     useEffect(() => {
         async function fetchDishes() {
             try {
-                const response = await api.get(`/dishescustomer`);
-                setDishes(response.data); 
+                const response = await api.get(`/dishescustomer`, {
+                    params: { name: searchTerm } 
+                });
+                setDishes(response.data);
             } catch (error) {
                 console.error("Erro ao buscar pratos:", error);
             }
-        }        
-
+        }
         fetchDishes();
-
-    },[]);
+    }, [searchTerm]); 
 
     return (
         <Container>
@@ -54,7 +56,7 @@ export function MenuCommonUser() {
             />           
 
              <div className="desktop-header">
-                <DesktopHeaderIcon buttonIconContent={buttonIconContent} showIcon={true}  />
+                <DesktopHeaderIcon buttonIconContent={buttonIconContent} showIcon={true} setSearchTerm={setSearchTerm} />
             </div>
             <div className="mobile-header-icon">
                 <MobileHeaderIcon onOpenMenu={()=> setMenuIsOpen(true)} />
@@ -79,72 +81,82 @@ export function MenuCommonUser() {
                 </Banner>
             </div>
             
-            <Content>
-           <SliderCustomer title="Refeições">
-    {meals.map((dish) => {
-        const imageUrl = `${api.defaults.baseURL}/files/${dish.image}`; // 🔥 Construindo a URL da imagem corretamente
-        return (
-            <SwiperSlide key={dish.id}>
-                <ItemCustomer
-                    iconImage={Love}
-                    iconAltText={iconAltText}
-                    itemImage={imageUrl}  // 🔥 Agora a imagem será carregada corretamente
-                    itemAltText={itemAltText}
-                    itemName={dish.name}
-                    description={dish.description}
-                    price={dish.price}
-                    showButtonAlignment={true}
-                    onClick={() => handleDishCustomerUser(dish.id)}
-                />
-            </SwiperSlide>
-        );
-    })}
-</SliderCustomer>
+            <Content>                       
+                <SliderCustomer title="Refeições">
+                    {filteredDishes
+                        .filter(dish => dish.category === "Refeições")
+                        .map((dish) => {
+                            const imageUrl = `${api.defaults.baseURL}/files/${dish.image}`; 
+                            
+                            return (
+                                <SwiperSlide key={dish.id}>
+                                    <ItemCustomer
+                                        iconImage={Love}
+                                        iconAltText={iconAltText}
+                                        itemImage={imageUrl}  
+                                        itemAltText={itemAltText}
+                                        itemName={dish.name}
+                                        description={dish.description}
+                                        price={dish.price}
+                                        showButtonAlignment={false}
+                                        onClick={() => handleDishCustomerUser(dish.id)}
+                                    />
+                                </SwiperSlide>
+                            );
+                        })
+                    }
+                </SliderCustomer>
 
-<SliderCustomer title="Sobremesas">
-    {desserts.map((dish) => {
-        const imageUrl = `${api.defaults.baseURL}/files/${dish.image}`; // 🔥 Agora a URL está correta para sobremesas
-        return (
-            <SwiperSlide key={dish.id}>
-                <ItemCustomer
-                    iconImage={Love}
-                    iconAltText={iconAltText}
-                    itemImage={imageUrl}  
-                    itemAltText={itemAltText}
-                    itemName={dish.name}
-                    description={dish.description}
-                    price={dish.price}
-                    showButtonAlignment={true}
-                    onClick={() => handleDishCustomerUser(dish.id)}
-                />
-            </SwiperSlide>
-        );
-    })}
-</SliderCustomer>
+                <SliderCustomer title="Sobremesas">
+                    {filteredDishes
+                        .filter(dish => dish.category === "Sobremesas")
+                        .map((dish) => {
+                            const imageUrl = `${api.defaults.baseURL}/files/${dish.image}`; 
+                            
+                            return (
+                                <SwiperSlide key={dish.id}>
+                                    <ItemCustomer
+                                        iconImage={Love}
+                                        iconAltText={iconAltText}
+                                        itemImage={imageUrl}  
+                                        itemAltText={itemAltText}
+                                        itemName={dish.name}
+                                        description={dish.description}
+                                        price={dish.price}
+                                        showButtonAlignment={false}
+                                        onClick={() => handleDishCustomerUser(dish.id)}
+                                    />
+                                </SwiperSlide>
+                            );
+                        })
+                    }
+                </SliderCustomer>
 
-<SliderCustomer title="Bebidas">
-    {drinks.map((dish) => {
-        const imageUrl = `${api.defaults.baseURL}/files/${dish.image}`; // 🔥 Agora a URL está correta para bebidas
-        return (
-            <SwiperSlide key={dish.id}>
-                <ItemCustomer
-                    iconImage={Love}
-                    iconAltText={iconAltText}
-                    itemImage={imageUrl}  
-                    itemAltText={itemAltText}
-                    itemName={dish.name}
-                    description={dish.description}
-                    price={dish.price}
-                    showButtonAlignment={true}
-                    onClick={() => handleDishCustomerUser(dish.id)}
-                />
-            </SwiperSlide>
-        );
-    })}
-</SliderCustomer>
-
-                
-            </Content>
+                <SliderCustomer title="Bebidas">
+                    {filteredDishes
+                        .filter(dish => dish.category === "Bebidas")
+                        .map((dish) => {
+                            const imageUrl = `${api.defaults.baseURL}/files/${dish.image}`; 
+                            
+                            return (
+                                <SwiperSlide key={dish.id}>
+                                    <ItemCustomer
+                                        iconImage={Love}
+                                        iconAltText={iconAltText}
+                                        itemImage={imageUrl}  
+                                        itemAltText={itemAltText}
+                                        itemName={dish.name}
+                                        description={dish.description}
+                                        price={dish.price}
+                                        showButtonAlignment={false}
+                                        onClick={() => handleDishCustomerUser(dish.id)}
+                                    />
+                                </SwiperSlide>
+                            );
+                        })
+                    }
+                </SliderCustomer>
+            </Content>            
             
             <FooterWrapper>
                 <Footer />

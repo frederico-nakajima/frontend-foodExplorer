@@ -7,7 +7,7 @@ import Receipt from '../../assets/Receipt.svg'
 import { Navigate, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../hooks/auth';
 
-export function DesktopHeaderIcon({ buttonIconContent,showButtonIcon = true }){  
+export function DesktopHeaderIcon({setSearchTerm, buttonIconContent,showButtonIcon = true }){  
     const { signOut,user } = useAuth();
     const navigate = useNavigate();
 
@@ -28,7 +28,10 @@ export function DesktopHeaderIcon({ buttonIconContent,showButtonIcon = true }){
 
                 <Search>
                     <img src={busca} alt="ícone de busca" /> 
-                    <input placeholder="Busque por pratos ou ingredientes" />
+                    <input 
+                        placeholder="Busque por pratos ou ingredientes"
+                        onChange={(e) => setSearchTerm(e.target.value)}  
+                    />
                 </Search>               
                 
                 {
