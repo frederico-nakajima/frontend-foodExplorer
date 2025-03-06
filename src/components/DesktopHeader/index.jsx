@@ -6,7 +6,7 @@ import { ButtonIcon } from '../../components/ButtonIcon'
 import { useAuth } from '../../hooks/auth'
 import { Navigate, useNavigate } from 'react-router-dom';
 
-export function DesktopHeader(){
+export function DesktopHeader({ setSearchTerm }){
     const { signOut,user } = useAuth();
         
     const navigate = useNavigate();
@@ -33,7 +33,11 @@ export function DesktopHeader(){
 
                 <Search>
                     <img src={busca} alt="ícone de busca" /> 
-                    <input placeholder="Busque por pratos ou ingredientes" />
+                    <input 
+                        placeholder="Busque por pratos ou ingredientes"
+                        onChange={(e) => setSearchTerm(e.target.value)} 
+                    />
+
                 </Search>               
                 
                 <ButtonIcon onClick={handleNewDish}>
