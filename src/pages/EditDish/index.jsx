@@ -25,8 +25,11 @@ export function EditDish(){
     const [price, setPrice] = useState("");
     const [description, setDescription] = useState("");
     const [tags, setTags] = useState([]);
-    const [newTag, setNewTag] = useState("");    
-
+    const [newTag, setNewTag] = useState("");
+    const [imageFile, setImageFile] = useState(null);
+    
+    
+    
     
     function handleAddTag(){
         setTags(prevState => [...prevState, newTag]);
@@ -87,11 +90,11 @@ export function EditDish(){
             const response = await api.get(`/dishes/${params.id}`);
             setData(response.data);
         }
-
+        
         fetchDish();
     },[params.id]);
-
-       useEffect(() => {
+    
+    useEffect(() => {
         if (data) {
             setName(data.name);
             setCategory(data.category);
@@ -101,8 +104,30 @@ export function EditDish(){
         }
     }, [data]);
     
-
-     
+    
+    // async function handleChangeImage(event) {
+    //     const file = event.target.files[0]; // Obtém o primeiro arquivo selecionado
+    
+    //     if (!file) {
+    //         alert("Nenhuma imagem selecionada.");
+    //         return;
+    //     }
+    
+    //     const formData = new FormData();
+    //     formData.append("image", file); // Adiciona a imagem ao FormData
+    
+    //     try {
+    //         const response = await api.patch(`/dishes/image/${dish_id}`, formData, {
+    //             headers: { "Content-Type": "multipart/form-data" }
+    //         });
+    
+    //         alert("Imagem atualizada com sucesso!");
+    //     } catch (error) {
+    //         console.error("Erro ao atualizar imagem:", error);
+    //         alert("Erro ao atualizar imagem. Tente novamente.");
+    //     }
+    // }
+    
     return(
         <Container>
             <SideMenu
@@ -222,7 +247,7 @@ export function EditDish(){
 
                 <div className='buttons'>
                     <div className="remove">
-                    <button type='button' onClick={handleDeleteDish}>Excluir prato</button>
+                        <button type='button' onClick={handleDeleteDish}>Excluir prato</button>
                     </div>
                     <div className="saveChanges">
                         <button type='button' onClick={handleUpdateDish}>Salvar alterações</button>
