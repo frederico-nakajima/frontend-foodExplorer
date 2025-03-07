@@ -118,7 +118,12 @@ export const Banner  = styled.div`
         } 
         .imgBannerDesktop {
             display: block;
+            transition:  0.5s ;
         }
+        .imgBannerDesktop:hover {
+            display: block;
+            transform:scale(1.1);
+        }    
         .imgBannerMobile {
             display: none;
         }

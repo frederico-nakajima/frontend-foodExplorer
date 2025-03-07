@@ -64,10 +64,15 @@ export const Banner  = styled.div`
      .imgBannerDesktop {
         display: none;
     }
-    .imgBannerMobile {
+    .imgBannerDesktop {
         display: block;
-         grid-area: banner;
+        grid-area: banner;
+        transition:  0.5s ;
     }
+    .imgBannerDesktop:hover {
+        display: block;
+        transform:scale(1.1);
+    }  
 
     >.textBoxDesktop{
         display: none;

@@ -32,10 +32,26 @@ export const CardWrapper = styled.button`
         justify-content:center;
         gap:15px;
            
-        >img{
+     
+
+        >img {
             width: 88px;
             height: 88px;
+            transition: transform 0.3s ease;
         }
+
+        img:hover {
+            animation: tremor 0.2s ease-in-out 3; /* 3 repetições da tremidinha */
+        }
+
+        @keyframes tremor {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(-3px); }
+            50% { transform: translateX(3px); }
+            75% { transform: translateX(-3px); }
+            100% { transform: translateX(0); }
+        }
+
     }
 
     >h6{

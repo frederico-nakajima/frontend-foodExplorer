@@ -74,8 +74,19 @@ export function EditDish(){
                     description,
                     tags 
                 };
-                
+    
                 await api.put(`/dishes/${params.id}`, updatedDish);
+    
+                // 🔹 Agora, verificamos se uma imagem foi selecionada antes de tentar fazer o upload
+                if (imageFile) {
+                    const fileUploadForm = new FormData();
+                    fileUploadForm.append("image", imageFile);
+    
+                    await api.patch(`/dishes/image/${params.id}`, fileUploadForm, {
+                        headers: { "Content-Type": "multipart/form-data" }
+                    });
+                }
+    
                 alert("Prato atualizado com sucesso!");
                 navigate("/");
             } catch (error) {
@@ -84,6 +95,7 @@ export function EditDish(){
             }
         }
     }
+    
     
     useEffect(() => {
         async function fetchDish(){
@@ -105,28 +117,20 @@ export function EditDish(){
     }, [data]);
     
     
-    // async function handleChangeImage(event) {
-    //     const file = event.target.files[0]; // Obtém o primeiro arquivo selecionado
+    function handleChangeImage(event) {
+        const file = event.target.files[0];
     
-    //     if (!file) {
-    //         alert("Nenhuma imagem selecionada.");
-    //         return;
-    //     }
+        if (!file) {
+            alert("Nenhuma imagem selecionada.");
+            return;
+        }
     
-    //     const formData = new FormData();
-    //     formData.append("image", file); // Adiciona a imagem ao FormData
+        setImageFile(file);
     
-    //     try {
-    //         const response = await api.patch(`/dishes/image/${dish_id}`, formData, {
-    //             headers: { "Content-Type": "multipart/form-data" }
-    //         });
+        // Exibe o nome da imagem para feedback visual
+        alert(`Imagem selecionada: ${file.name}`);
+    }
     
-    //         alert("Imagem atualizada com sucesso!");
-    //     } catch (error) {
-    //         console.error("Erro ao atualizar imagem:", error);
-    //         alert("Erro ao atualizar imagem. Tente novamente.");
-    //     }
-    // }
     
     return(
         <Container>
@@ -167,7 +171,7 @@ export function EditDish(){
                             <input 
                                 type='file'
                                 id='file-upload'
-                                // onChange={handleChangeImage}
+                                onChange={handleChangeImage}
                             />
                         </div>
                     </div>  
