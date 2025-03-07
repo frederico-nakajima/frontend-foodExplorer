@@ -20,6 +20,7 @@ export const Container = styled.div`
 
      @media (min-width: ${DEVICE_BREAKPOINTS.LG}) { 
       text-align: center;
+      cursor:pointer;
           
      }
 

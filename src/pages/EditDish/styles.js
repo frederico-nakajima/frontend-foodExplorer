@@ -263,6 +263,7 @@ export const Form = styled.form`
         justify-content: space-between;
         align-items:center;
         margin-top:13px;
+        
         .remove{
             >button{
                 width: 164px;
@@ -382,9 +383,9 @@ export const Form = styled.form`
         .buttons{
             width:177px;
             position:relative;
-            left:960px;
-
-
+            left:807px;
+            margin-bottom:30px;
+        
         }
     }
 
