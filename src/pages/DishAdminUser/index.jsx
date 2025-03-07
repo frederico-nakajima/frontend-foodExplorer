@@ -69,10 +69,10 @@ export function DishAdminUser() {
                                 data.tags &&
                                 <div className='tags'>
                                     {   
-                                        data.tags.map(tag => (
+                                        data.tags.map((tag, index) => (
                                             <Tag 
-                                            key={String(tag.id)}
-                                            title={tag.name}
+                                            key={index} // 🔹 Usa o índice, pois `tag` agora é apenas um nome
+                                            title={tag} // ✅ Agora `tag` é apenas uma string
                                             />
                                         ))
                                     }

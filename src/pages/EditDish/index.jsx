@@ -210,8 +210,8 @@ export function EditDish(){
                                 {
                                     tags.map((tag, index) => (
                                         <NoteItem
-                                            key={String(tag.id)}
-                                            value= {tag.name}
+                                        key={index} // 🔹 Usa o índice como chave, pois `tag` agora é uma string
+                                        value={tag} 
                                             onClick={() => handleRemoveTag(tag)}
                                         />
                                     ))
