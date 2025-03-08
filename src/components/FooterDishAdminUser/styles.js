@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { DEVICE_BREAKPOINTS } from '../../styles/deviceBreakpoints';
 
 export const Container = styled.footer`
- 
+
   height: 77px;
   width: 428px;
   display: flex;

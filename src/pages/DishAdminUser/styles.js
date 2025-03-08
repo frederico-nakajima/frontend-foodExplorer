@@ -17,15 +17,18 @@ export const Container = styled.div`
     flex-direction: column;
     align-items: center;    
     width: 100%;
-    height:918px;    
+    
+   
+   
+    
 
     >main{
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-bottom: 60px;
+       
         width: 300px;        
-    
+        
         .dish{        
             >.restaurantDish {
                 width: 264px;
@@ -80,7 +83,9 @@ export const Container = styled.div`
                 }
             } 
         }       
-    }       
+    } 
+        
+  
     
     @media (min-width: ${DEVICE_BREAKPOINTS.LG}) { 
         
@@ -113,7 +118,7 @@ export const Container = styled.div`
             flex-direction: row;
             margin:0 auto;
             gap:40px;
-            margin-bottom: 145px;
+           
         
             >.dish { 
                 display:flex;
@@ -159,12 +164,13 @@ export const Container = styled.div`
                 height: 48px;
             } 
         }
+
+          footer{
+         margin-top:1465px;
+    }
             
     }
 
-    footer{
-        margin-top:1465px;
-    }
 `;
  
 export const ReturnLink = styled(Link)`

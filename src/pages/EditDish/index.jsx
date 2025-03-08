@@ -77,7 +77,7 @@ export function EditDish(){
     
                 await api.put(`/dishes/${params.id}`, updatedDish);
     
-                // 🔹 Agora, verificamos se uma imagem foi selecionada antes de tentar fazer o upload
+                
                 if (imageFile) {
                     const fileUploadForm = new FormData();
                     fileUploadForm.append("image", imageFile);
@@ -127,7 +127,7 @@ export function EditDish(){
     
         setImageFile(file);
     
-        // Exibe o nome da imagem para feedback visual
+        
         alert(`Imagem selecionada: ${file.name}`);
     }
     

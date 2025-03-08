@@ -71,8 +71,8 @@ export function DishAdminUser() {
                                     {   
                                         data.tags.map((tag, index) => (
                                             <Tag 
-                                            key={index} // 🔹 Usa o índice, pois `tag` agora é apenas um nome
-                                            title={tag} // ✅ Agora `tag` é apenas uma string
+                                            key={index} 
+                                            title={tag} 
                                             />
                                         ))
                                     }
