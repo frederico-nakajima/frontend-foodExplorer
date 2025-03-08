@@ -68,12 +68,25 @@ export const StyledSwiper = styled.div`
     .swiper-button-next,
     .swiper-button-prev {
       display: block;
-      background-color: ${({ theme }) => theme.COLORS.BACKGROUND_1000};
+     
       color: ${({ theme }) => theme.COLORS.WHITE};
-      width: 10px;
-      height: 10px;
+      width:60px;
+      height:60px;
+      position: absolute;
+      z-index: 20;
+     
       
-      z-index: 10;
+    }
+
+    .swiper-button-next::after, .swiper-button-prev::after {
+      font-size: 24px; /* Ajuste para melhor clique */
+      background: transparent; /* Fundo escuro para melhor visibilidade */
+      padding: 10px; /* Aumenta a área clicável */
+       width:60px;
+      height:60px;
+       position: absolute;
+      z-index: 20;
+      pointer-events: auto; /* Permite interação */
     }
   }
 

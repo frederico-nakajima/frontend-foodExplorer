@@ -21,8 +21,8 @@ export const Container = styled.div`
         align-items:center;
         color: ${({theme}) => theme.COLORS.WHITE};;
         font-family: Poppins;
-        font-size: 19px;
-        font-weight: 700;
+        font-size: 16px; 
+        font-weight: 500; 
         line-height: 140%;
         padding-bottom:30px;
         >svg{
@@ -47,7 +47,8 @@ export const Container = styled.div`
         >a{
             margin-top:40px;
             width:1150px;
-            padding-bottom:24px;     
+            padding-bottom:24px;
+            font-weight: 700;      
         }
       
     }

@@ -9,26 +9,26 @@ export function Slider({ title, children,...rest  }){
 
  return( 
     <StyledSwiper>
-      <h2>{title}</h2>
+        <h2>{title}</h2>
 
-      <Swiper        
-        modules={[Navigation]}          
-        navigation
-        breakpoints={{
-          
-          0: { 
-            slidesPerView: 1.7,
-            spaceBetween: 20, 
-          },
-          
-          1368: { 
-            slidesPerView: 3.5,
-            spaceBetween:30,
-          },
-        }}                      
-      >
-        {children}                
-      </Swiper>
+        <Swiper        
+          modules={[Navigation]}          
+          navigation
+          breakpoints={{
+            
+            0: { 
+              slidesPerView: 1.7,
+              spaceBetween: 20, 
+            },
+            
+            1368: { 
+              slidesPerView: 3.5,
+              spaceBetween:30,
+            },
+          }}                      
+        >
+          {children}                
+        </Swiper>
     </StyledSwiper>
  )
 }

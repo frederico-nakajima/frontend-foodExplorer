@@ -54,21 +54,28 @@ export const CardWrapper = styled.button`
 
     }
 
-    >h6{
-        display:flex;
-        align-items:center;
-        color: ${({ theme }) => theme.COLORS.WHITE};
-        text-align: center;
-        font-family: Poppins;
-        font-size: 14px;
-        font-weight: 700;
-        line-height: 140%; 
 
-        >i{
-            font-size: 14px;
-            margin-left: 8px;
+         .alignment {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between; 
+            gap: 8px;
+            white-space: nowrap;  
+            overflow: hidden;  
+            text-overflow: ellipsis; 
         }
-    }
+
+        .alignment h6 {
+            font-size: 16px;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .alignment i {
+            font-size: 15px;
+            margin-left: auto; 
+        }
 
     >p{
         
@@ -100,11 +107,11 @@ export const CardWrapper = styled.button`
             display: flex;
             flex-direction: row;
             align-items: center;
-            justify-content: space-between; /* 🔹 Alinha o título e a seta */
+            justify-content: space-between; 
             gap: 8px;
-            white-space: nowrap;  /* 🔹 Impede quebra de linha */
-            overflow: hidden;  /* 🔹 Esconde texto extra */
-            text-overflow: ellipsis; /* 🔹 Adiciona "..." para texto longo */
+            white-space: nowrap;  
+            overflow: hidden;  
+            text-overflow: ellipsis; 
         }
 
         .alignment h6 {
@@ -115,7 +122,7 @@ export const CardWrapper = styled.button`
 
         .alignment i {
             font-size: 15px;
-            margin-left: auto; /* 🔹 Empurra o ícone para a direita */
+            margin-left: auto; 
         }
 
         >p{
