@@ -64,15 +64,10 @@ export const Banner  = styled.div`
      .imgBannerDesktop {
         display: none;
     }
-    .imgBannerDesktop {
+    .imgBannerMobile {
         display: block;
-        grid-area: banner;
-        transition:  0.5s ;
+         grid-area: banner;
     }
-    .imgBannerDesktop:hover {
-        display: block;
-        transform:scale(1.1);
-    }  
 
     >.textBoxDesktop{
         display: none;
@@ -123,7 +118,12 @@ export const Banner  = styled.div`
         } 
         .imgBannerDesktop {
             display: block;
+            transition:  0.5s ;
         }
+        .imgBannerDesktop:hover {
+            display: block;
+            transform:scale(1.1);
+        }    
         .imgBannerMobile {
             display: none;
         }

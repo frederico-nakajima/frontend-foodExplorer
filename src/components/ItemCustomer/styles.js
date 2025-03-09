@@ -51,20 +51,26 @@ export const CardWrapper = styled.button`
         }
     }
 
-    >h6{
-        display:flex;
-        align-items:center;
-        color: ${({ theme }) => theme.COLORS.WHITE};
-        text-align: center;
-        font-family: Poppins;
-        font-size: 14px;
-        font-weight: 700;
-        line-height: 140%; 
+  .alignment {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between; 
+        gap: 8px;
+        white-space: nowrap;  
+        overflow: hidden;  
+        text-overflow: ellipsis; 
+    }
 
-        >i{
-            font-size: 14px;
-            margin-left: 8px;
-        }
+    .alignment h6 {
+        font-size: 16px;
+        font-weight: 700;
+        margin: 0;
+    }
+
+    .alignment i {
+        font-size: 15px;
+        margin-left: auto; 
     }
 
     >p{

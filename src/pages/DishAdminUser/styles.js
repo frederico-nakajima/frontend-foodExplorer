@@ -17,7 +17,7 @@ export const Container = styled.div`
     flex-direction: column;
     align-items: center;    
     width: 100%;
-    
+    height:100vh; 
    
    
     
@@ -27,7 +27,8 @@ export const Container = styled.div`
         flex-direction: column;
         align-items: center;
        
-        width: 300px;        
+        width: 300px;
+        height:100vh;         
         
         .dish{        
             >.restaurantDish {
@@ -35,7 +36,7 @@ export const Container = styled.div`
                 height: 264px;
                 margin-bottom:20px;
                 position:relative;
-                left:30px;
+                left:35px;
             }    
         
             .salad-ingredients{
@@ -124,7 +125,7 @@ export const Container = styled.div`
                 display:flex;
                 gap:90px;
                 position:relative;
-                left:-300px;
+                left:-200px;
                 top:40px;
                 align-items:center;
                                
@@ -165,9 +166,9 @@ export const Container = styled.div`
             } 
         }
 
-          footer{
-         margin-top:1465px;
-    }
+        footer{
+            margin-top:1465px;
+        }
             
     }
 
@@ -189,8 +190,10 @@ export const ReturnLink = styled(Link)`
             align-items:center;
             color: ${({theme}) => theme.COLORS.WHITE};
             font-family: Poppins;
-            font-size: 16px;       
-            font-weight: 500;    
+            font-size: 19px;       
+            font-weight: 500;
+            text-transform: uppercase;
+    
         }
    
     @media (min-width: ${DEVICE_BREAKPOINTS.LG}) { 

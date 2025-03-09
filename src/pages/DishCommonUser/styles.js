@@ -17,13 +17,13 @@ export const Container = styled.div`
     flex-direction: column;
     align-items: center;    
     width: 100%;
-    height:918px;    
+    height:100vh; 
 
     >main{
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-bottom: 60px;
+       
         width: 300px;        
     
         .dish{        
@@ -32,7 +32,7 @@ export const Container = styled.div`
                 height: 264px;
                 margin-bottom:20px;
                 position:relative;
-                left:40px;
+                left:35px;
             }    
         
             .salad-ingredients{
@@ -74,11 +74,13 @@ export const Container = styled.div`
             .custom-button{
                 width: 300px; 
                 height: 48px;
-                margin-bottom:40px;
+                margin-bottom:25px;
                 >button{
                     font-size: 16px;
                 }
-            } 
+            }
+                
+          
         }       
     }       
     
@@ -119,7 +121,7 @@ export const Container = styled.div`
                 display:flex;
                 gap:90px;
                 position:relative;
-                left:-300px;
+                left:-200px;
                 top:40px;
                 align-items:center;
                                
@@ -159,12 +161,14 @@ export const Container = styled.div`
                 height: 48px;
             } 
         }
+
+        footer{
+            margin-top:1465px;
+        }
             
     }
 
-    footer{
-        margin-top:1465px;
-    }
+ 
 `;
  
 export const ReturnLink = styled(Link)`
@@ -183,8 +187,10 @@ export const ReturnLink = styled(Link)`
             align-items:center;
             color: ${({theme}) => theme.COLORS.WHITE};
             font-family: Poppins;
-            font-size: 16px;       
-            font-weight: 500;    
+            font-size: 19px;       
+            font-weight: 500;
+            text-transform: uppercase;
+    
         }
    
     @media (min-width: ${DEVICE_BREAKPOINTS.LG}) { 
@@ -224,7 +230,7 @@ export const ButtonAlignmentCount = styled.div`
         align-items: center;
         gap:10px;
         position:relative;
-        top:-20px;
+        top:-10px;
         
         span{
             color: ${({ theme }) => theme.COLORS.WHITE};

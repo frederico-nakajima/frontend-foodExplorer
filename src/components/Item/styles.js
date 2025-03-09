@@ -55,27 +55,27 @@ export const CardWrapper = styled.button`
     }
 
 
-         .alignment {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between; 
-            gap: 8px;
-            white-space: nowrap;  
-            overflow: hidden;  
-            text-overflow: ellipsis; 
-        }
+    .alignment {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between; 
+        gap: 8px;
+        white-space: nowrap;  
+        overflow: hidden;  
+        text-overflow: ellipsis; 
+    }
 
-        .alignment h6 {
-            font-size: 16px;
-            font-weight: 700;
-            margin: 0;
-        }
+    .alignment h6 {
+        font-size: 16px;
+        font-weight: 700;
+        margin: 0;
+    }
 
-        .alignment i {
-            font-size: 15px;
-            margin-left: auto; 
-        }
+    .alignment i {
+        font-size: 15px;
+        margin-left: auto; 
+    }
 
     >p{
         
