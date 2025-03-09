@@ -7,7 +7,7 @@ export const Container = styled.div`
     justify-content:center;
     align-items:center;
     gap:10px;
-    width:100w;
+    width:100vw;
     heigth:114px;
     padding:40px 10px 15px 10px;
     background-color:${({theme}) => theme.COLORS.BACKGROUND_700};

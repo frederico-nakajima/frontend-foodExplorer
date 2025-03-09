@@ -60,7 +60,7 @@ export function AddDish(){
             fileUploadForm.append("image", imageFile);
 
             await api.patch(`/dishes/image/${dish_id}`, fileUploadForm);
-            // o servidor retorna a URL ou nome do novo avatar (response.data.avatar)
+          
             
         }
         
@@ -69,7 +69,7 @@ export function AddDish(){
     }
 
     function handleChangeImage(event) {
-        const file = event.target.files[0];  // Pega o primeiro arquivo selecionado
+        const file = event.target.files[0];  
         setImageFile(file);
     }
     
@@ -101,13 +101,16 @@ export function AddDish(){
                 </header>                        
 
                 <div className="image-salad-category">
+                    <p className='dish'>Imagem do prato </p>
                     <div className='uploadSimple'>
                         <div className='image'>
-                            <label className='dish'>Imagem do prato </label>
-                            <label htmlFor="file-upload" className='label-upload-simple'>
-                                <img src={UploadSimple} 
+                            <label
+                            className='label-upload-simple'
+                            htmlFor="file-upload" 
+                            >
+                                <img 
+                                    src={UploadSimple} 
                                     alt="ícone de upload" 
-                                    className='file'
                                 />
                                 <p className='select-image'>selecione imagem</p>
                             </label>                            

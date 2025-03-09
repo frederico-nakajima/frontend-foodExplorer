@@ -158,13 +158,12 @@ export function EditDish(){
                 </header>                        
 
                 <div className="image-salad-category">
+                    <p className='dish'>Imagem do prato </p>
                     <div className='uploadSimple'>
                         <div className='image'>
-                            <label className='dish'>Imagem do prato </label>
                             <label htmlFor="file-upload" className='label-upload-simple'>
                                 <img src={UploadSimple} 
                                     alt="ícone de upload" 
-                                    className='file'
                                 />
                                 <p className='select-image'>selecione imagem</p>
                             </label>                            
@@ -210,7 +209,7 @@ export function EditDish(){
                                 {
                                     tags.map((tag, index) => (
                                         <NoteItem
-                                        key={index} // 🔹 Usa o índice como chave, pois `tag` agora é uma string
+                                        key={index}
                                         value={tag} 
                                             onClick={() => handleRemoveTag(tag)}
                                         />

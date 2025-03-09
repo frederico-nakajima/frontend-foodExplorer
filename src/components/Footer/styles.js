@@ -4,7 +4,7 @@ import { DEVICE_BREAKPOINTS } from '../../styles/deviceBreakpoints';
 export const Container = styled.footer`
  
   height: 77px;
-  width: 428px;
+  width: 100vw;
   display: flex;
   justify-content:center;
   align-items: center;
@@ -30,7 +30,7 @@ export const Container = styled.footer`
 
   @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
     height: 77px;
-    width: 100%;
+    width: 100vw;
     position:relative;
     >main{
     display: flex;

@@ -5,7 +5,7 @@ export const Container = styled.header`
   grid-area: header;
   padding:24px auto;
   height: 94px;
-  width: 100%;
+  width: 100vw;
   display: flex;
   justify-content:center;
   align-items: center;

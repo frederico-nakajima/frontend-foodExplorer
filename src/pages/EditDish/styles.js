@@ -79,7 +79,13 @@ export const Form = styled.form`
         height: 300px;
         display: flex;
         flex-direction: column;
-                
+        
+        >.dish{          
+            
+           
+            margin-top:-10px;
+            margin-bottom:10px;
+        }
         
         .uploadSimple{
             display:flex;
@@ -91,7 +97,7 @@ export const Form = styled.form`
             border-radius: 8px;
             background-color:${({theme}) => theme.COLORS.BACKGROUND_800};   
             border-radius: 8px;
-            width: 364px;            
+                        
             height: 48px;                         
             border:0;
             margin-left:-5px;
@@ -103,14 +109,10 @@ export const Form = styled.form`
                 align-items:center;
                 height: 46px;
                 width:364px;
-                
-                >.dish{          
-                    margin-top:-90px;  
-                    margin-left:-10px;
-                    width:364px;
-                    margin-top:-105px;
-                }
+                margin-left:10px;
                 .label-upload-simple{
+                    display:flex;
+                    gap:10px;
                     >img{
                        
                        
@@ -118,15 +120,14 @@ export const Form = styled.form`
                         
                     }
                     >.select-image{                    
-                        
-                        position:relative;
+                        margin-top:5px;
                         width: 300px;
                     }
                 }    
-                
                 >input{
                     display:none;                            
                 }
+                
                    
                            
             }
@@ -157,7 +158,6 @@ export const Form = styled.form`
                
             }
         }
-                      
         .data{
             display: flex;
             flex-direction:column;
@@ -192,6 +192,7 @@ export const Form = styled.form`
                 outline:none;
             }
         }
+                      
     
             
            
@@ -305,14 +306,7 @@ export const Form = styled.form`
     
     @media (min-width: ${DEVICE_BREAKPOINTS.LG}) { 
         
-        header{
-            .newDish{
-                display:none;
-            }                
-            .addDish{
-                display:block;
-            }
-        }
+      
         
         .image-salad-category{
             width: 1137px;
@@ -320,21 +314,29 @@ export const Form = styled.form`
             flex-direction: row; 
             justify-content:end;          
             margin-top:65px;
-           
+            position:relative;
+            
+            >.dish{
+               left:0px;
+                height:10px;
+                top:-5px;
+                position:absolute;
+
+            }
+
             >.uploadSimple{
                 margin-right:20px;
                 width: 250px;
                 height: 50px;
                 position:relative;
-                top:9px;
+                top:4px;
                 >.image{
-                    >.dish{
-                        margin-left: 48px;
-                    }
+                    margin-left:200px;
                     .label-upload-simple{
-                        left: -121px;
+                        
                         >.select-image{
-                            left: -107px;
+                            position:relative;
+                            top:5px;
                             width: 355px;
                         }
                     }
@@ -382,9 +384,11 @@ export const Form = styled.form`
         }
 
         .buttons{
+            display:flex;
+            gap:20px;
             width:177px;
             position:relative;
-            left:807px;
+            left:790px;
             margin-bottom:30px;
         
         }
