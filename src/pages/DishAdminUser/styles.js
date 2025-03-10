@@ -48,10 +48,9 @@ export const Container = styled.div`
                 margin-bottom:24px;
             
                 h1{
-                 color: ${({theme}) => theme.COLORS.WHITE};
+                color: ${({theme}) => theme.COLORS.WHITE};
                 font-family: Poppins;
-                font-weight: 500;
-                text-align: justify;
+                font-weight: 500;                
                 font-size: 27.041px;
                 margin-bottom:-10px; 
                 }
@@ -160,9 +159,8 @@ export const Container = styled.div`
                 }             
                     
             }
-            button{
-                width:150px; 
-                height: 48px;
+            .custom-button{
+                padding-right:180px;             
             } 
         }
 

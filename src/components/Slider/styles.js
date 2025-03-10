@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import {DEVICE_BREAKPOINTS} from "../../styles/deviceBreakpoints"
 
 export const StyledSwiper = styled.div`
+  
   margin-top:20px;
     >h2{
       margin-bottom:24px;

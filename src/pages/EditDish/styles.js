@@ -19,16 +19,18 @@ export const Container = styled.div`
         width: 364px;
         display:flex;
         align-items:center;
-        color: ${({theme}) => theme.COLORS.WHITE};;
+       color: ${({theme}) => theme.COLORS.WHITE};         
         font-family: Poppins;
-        font-size: 16px; 
-        font-weight: 500; 
-        line-height: 140%;
+        font-size: 16px;       
+        font-weight: 500;
+        text-transform: uppercase; 
         padding-bottom:30px;
+        position:relative;
+        left:-10px;
         >svg{
             width: 8px;
             height: 15px;
-        }   
+        }    
     
     }  
     
@@ -48,7 +50,11 @@ export const Container = styled.div`
             margin-top:40px;
             width:1150px;
             padding-bottom:24px;
-            font-weight: 700;      
+            color: ${({theme}) => theme.COLORS.WHITE};
+            font-family: Poppins;
+            font-size: 19px;       
+            font-weight: 500;
+            text-transform: uppercase;     
         }
       
     }
@@ -81,7 +87,7 @@ export const Form = styled.form`
         flex-direction: column;
         
         >.dish{          
-            
+         
            
             margin-top:-10px;
             margin-bottom:10px;
@@ -96,8 +102,6 @@ export const Form = styled.form`
             padding-left:25px;            
             border-radius: 8px;
             background-color:${({theme}) => theme.COLORS.BACKGROUND_800};   
-            border-radius: 8px;
-                        
             height: 48px;                         
             border:0;
             margin-left:-5px;
@@ -113,9 +117,7 @@ export const Form = styled.form`
                 .label-upload-simple{
                     display:flex;
                     gap:10px;
-                    >img{
-                       
-                       
+                    >img{                      
                         position:relative;
                         
                     }
@@ -125,7 +127,7 @@ export const Form = styled.form`
                     }
                 }    
                 >input{
-                    display:none;                            
+                    display:none;                           
                 }
                 
                    
@@ -336,7 +338,7 @@ export const Form = styled.form`
                         
                         >.select-image{
                             position:relative;
-                            top:5px;
+                            top:0px;
                             width: 355px;
                         }
                     }

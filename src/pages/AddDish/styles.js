@@ -19,12 +19,14 @@ export const Container = styled.div`
         width: 364px;
         display:flex;
         align-items:center;
-        color: ${({theme}) => theme.COLORS.WHITE};;
+        color: ${({theme}) => theme.COLORS.WHITE};         
         font-family: Poppins;
-        font-size: 16px; 
-        font-weight: 500; 
-        line-height: 140%;
+        font-size: 16px;       
+        font-weight: 500;
+        text-transform: uppercase; 
         padding-bottom:30px;
+        position:relative;
+        left:-10px;
         >svg{
             width: 8px;
             height: 15px;
@@ -288,7 +290,7 @@ export const Form = styled.form`
 
     
     @media (min-width: ${DEVICE_BREAKPOINTS.LG}) { 
-        
+        margin-bottom:-15px;
       
         
         .image-salad-category{
@@ -319,7 +321,7 @@ export const Form = styled.form`
                         
                         >.select-image{
                             position:relative;
-                            top:5px;
+                            top:0px;
                             width: 355px;
                         }
                     }

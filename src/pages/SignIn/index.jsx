@@ -31,18 +31,18 @@ export function SignIn(){
                 <div>
                     <label htmlFor="email">Email:</label>
                     <Input
-                    placeholder="Exemplo: exemplo@exemplo.com.br"
-                    type="text"                   
-                    onChange = {e => setEmail(e.target.value)}
+                        placeholder="Exemplo: exemplo@exemplo.com.br"
+                        type="text"                   
+                        onChange = {e => setEmail(e.target.value)}
                     />
                 </div>
 
                 <div>
                     <label htmlFor="password">Senha:</label>
                     <Input
-                    placeholder="No mínimo 6 caracteres"
-                    type="password"                   
-                    onChange = {e => setPassword(e.target.value)}
+                        placeholder="No mínimo 6 caracteres"
+                        type="password"                   
+                        onChange = {e => setPassword(e.target.value)}
                     />
                 </div>
 

@@ -3,17 +3,19 @@ import {DEVICE_BREAKPOINTS} from "../../styles/deviceBreakpoints"
 
 
 export const Container = styled.div`
+    
     .desktop-header {
         display: none;
     }
     .mobile-header-icon {
         display: block;
         grid-area: header;
+       
     } 
 
-    >.underHeader{
+    .underHeader{
         width: 100%;
-        height:150px;
+       
         
             
     }
@@ -24,6 +26,7 @@ export const Container = styled.div`
     .imgBannerMobile {
         display: block;
         margin-top:10px;
+        
     } 
 
     .textBoxMobile{
@@ -33,7 +36,7 @@ export const Container = styled.div`
     width: 100%;
     height: 100vh;
     display: grid;
-    grid-template-rows: 94px 174px auto 94px;
+    grid-template-rows: 94px 174px 1fr 94px;
     grid-template-areas:
     "header"
     "banner"
@@ -41,26 +44,32 @@ export const Container = styled.div`
     "footer";   
 
     @media (min-width: ${DEVICE_BREAKPOINTS.LG}) { 
-    .desktop-header {
-        display: block;
-    }
-    .mobile-header-icon {
-        display: none;
-    }
+        .desktop-header {
+            display: block;
+            grid-area: header;
+            margin-bottom:150px;
+        }
+        .mobile-header-icon {
+            display: none;
+        }
 
-    grid-template-rows: 94px 460px auto 94px;    
-
-    >.underHeader{
-        display:flex;
-        justify-content:center;
-    }
+        grid-template-rows: 94px 460px auto 94px;
+       
+        
+        >.underHeader{
+            
+            display:flex;
+            justify-content:center;
+        }
   
-}  
+    }  
 `;
 
 
 
 export const Banner  = styled.div`
+
+    grid-area: banner;
      .imgBannerDesktop {
         display: none;
     }
@@ -136,7 +145,7 @@ export const Banner  = styled.div`
         >.imgBanner{
             width:632px;
             height:406px;
-            border:1px solid ${({ theme }) => theme.COLORS.WHITE};
+           
         }
 
         >.textBoxMobile{
@@ -146,7 +155,6 @@ export const Banner  = styled.div`
         >.textBoxDesktop{
             display:flex;
             flex-direction:column;
-            align-items:flex-start;
             justify-content:center;
             width:1120px;
             height:260px;
@@ -179,8 +187,8 @@ export const Banner  = styled.div`
 export const Content  = styled.div`         
     grid-area:content;
     width: 380px;
-    margin:0 auto;
- 
+    margin:0 auto 50px auto;
+    
  
     @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {  
         width:1120px;
@@ -189,12 +197,3 @@ export const Content  = styled.div`
     }
 `;
 
-export const FooterWrapper = styled.footer`
-  margin-top: 25px;
-  
-  @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {   
-    margin-top: 46px;
-
-  } 
-
-`;

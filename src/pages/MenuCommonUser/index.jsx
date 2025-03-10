@@ -98,7 +98,7 @@ export function MenuCommonUser() {
                                         itemName={dish.name}
                                         description={dish.description}
                                         price={dish.price}
-                                        showButtonAlignment={false}
+                                        showButtonAlignment={true}
                                         onClick={() => handleDishCustomerUser(dish.id)}
                                     />
                                 </SwiperSlide>
@@ -123,7 +123,7 @@ export function MenuCommonUser() {
                                         itemName={dish.name}
                                         description={dish.description}
                                         price={dish.price}
-                                        showButtonAlignment={false}
+                                        showButtonAlignment={true}
                                         onClick={() => handleDishCustomerUser(dish.id)}
                                     />
                                 </SwiperSlide>
@@ -148,7 +148,7 @@ export function MenuCommonUser() {
                                         itemName={dish.name}
                                         description={dish.description}
                                         price={dish.price}
-                                        showButtonAlignment={false}
+                                        showButtonAlignment={true}
                                         onClick={() => handleDishCustomerUser(dish.id)}
                                     />
                                 </SwiperSlide>

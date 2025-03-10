@@ -11,12 +11,12 @@ export const CardWrapper = styled.button`
     position:relative;
     background:${({ theme }) => theme.COLORS.BACKGROUND_1000};
     color:${({ theme }) => theme.COLORS.WHITE};
-    border:1px solid ${({ theme }) => theme.COLORS.WHITE};
     display:flex;
-        flex-direction:column;
-        align-items:center;
-        justify-content:center;
-        gap:10px;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    border:0;
     
     .favoritar{
         position:absolute;
@@ -67,8 +67,9 @@ export const CardWrapper = styled.button`
     }
 
     .alignment h6 {
-        font-size: 16px;
-        font-weight: 700;
+        font-family: Poppins;
+        font-size: 14px;
+        font-weight: 500;
         margin: 0;
     }
 
