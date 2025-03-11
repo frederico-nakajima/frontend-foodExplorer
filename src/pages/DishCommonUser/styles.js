@@ -109,19 +109,18 @@ export const Container = styled.div`
         
         > main {
             grid-area: content;     
-            width: 1300px;
+            width: 1100px;
             height:500px;
             flex-direction: row;
-            margin:0 auto;
+            margin:30px auto auto 380px;
             gap:40px;
            
         
-            >.dish { 
+           >.dish { 
                 display:flex;
                 gap:90px;
-                position:relative;
-                left:-300px;
-                top:40px;
+               
+               
                 align-items:center;
                                
                 >.restaurantDish {
@@ -162,7 +161,7 @@ export const Container = styled.div`
         }
 
         footer{
-            margin-top:1465px;
+              margin-top:230px;
         }
             
     }
@@ -171,12 +170,13 @@ export const Container = styled.div`
 `;
  
 export const ReturnLink = styled(Link)`
+    grid-area: link;  
     height: 60px;
     display:flex;
     justify-content: flex-start;
     align-items: center;
     width: 320px;
-    
+    margin:5px auto auto 30px; 
         >img{
             width: 31px;
             height: 28px;
@@ -193,8 +193,8 @@ export const ReturnLink = styled(Link)`
         }
    
     @media (min-width: ${DEVICE_BREAKPOINTS.LG}) { 
-    grid-area: link;    
-    margin:-50px auto auto auto   ;    
+      
+    margin:50px auto auto 400px;    
     flex-direction:row;
     gap: 5px;    
     
@@ -211,7 +211,6 @@ export const ReturnLink = styled(Link)`
        
     }
 `;
-
 export const ButtonAlignmentCount = styled.div`
     display: flex;
     flex-direction:row;

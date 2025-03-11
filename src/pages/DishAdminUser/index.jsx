@@ -45,13 +45,14 @@ export function DishAdminUser() {
                 <DesktopHeader />
             </div>
 
+            <ReturnLink to="/">
+                <img src={CaretLeft} alt="imagem de uma seta apontando para esquerda"  />
+                <p>Voltar</p>
+            </ReturnLink>
+            
             { 
                 data && 
                 <main>
-                    <ReturnLink to="/">
-                        <img src={CaretLeft} alt="imagem de uma seta apontando para esquerda"  />
-                        <p>Voltar</p>
-                    </ReturnLink>
 
                     <div className='dish'>
                         <img 
