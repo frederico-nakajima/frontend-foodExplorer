@@ -161,7 +161,7 @@ export function EditDish(){
                     <p className='dish'>Imagem do prato </p>
                     <div className='uploadSimple'>
                         <div className='image'>
-                            <label htmlFor="file-upload" className='label-upload-simple'>
+                            <label htmlFor="file-upload">
                                 <img src={UploadSimple} 
                                     alt="ícone de upload" 
                                 />
@@ -203,8 +203,7 @@ export function EditDish(){
 
                 <div className="section">
                     <div className="ingredients-price">
-                        <Section>
-                            <label htmlFor="ingredients">Ingredientes</label>
+                        <Section title='Ingredientes'>
                             <div className='tags'>
                                 {
                                     tags.map((tag, index) => (

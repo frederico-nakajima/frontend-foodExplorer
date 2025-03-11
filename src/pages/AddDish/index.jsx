@@ -105,7 +105,6 @@ export function AddDish(){
                     <div className='uploadSimple'>
                         <div className='image'>
                             <label
-                            className='label-upload-simple'
                             htmlFor="file-upload" 
                             >
                                 <img 

@@ -15,14 +15,10 @@ import  { api }  from '../../services/api';
 import  Receipt  from '../../assets/Receipt.svg';
 
 
-
-
 export function DishCommonUser() {
     const [menuIsOpen,setMenuIsOpen] = useState(false);
-    const buttonIconContent = "Pedidos (0)";
-        
-    const [data, setData] = useState(null);    
-
+    const buttonIconContent = "Pedidos (0)";        
+    const [data, setData] = useState(null);
     const params = useParams();
     const navigate = useNavigate();
 
@@ -37,75 +33,74 @@ export function DishCommonUser() {
         fetchDish();
     },[]);
     return (
-           <Container>
-                  <SideMenu
-                      menuIsOpen={menuIsOpen}
-                      onCloseMenu={() => setMenuIsOpen(false)}
-                      isAdmin={true} 
-                  />
-      
-                  <div className="mobile-header">
-                      <MobileHeaderIcon onOpenMenu={()=> setMenuIsOpen(true)}  />
-                  </div>
-                  <div className="desktop-header">
-                        <DesktopHeaderIcon buttonIconContent={buttonIconContent} showIcon={true}  />
-                  </div>
-      
-                  { 
-                    data && 
-                    <main>
-                        <ReturnLink to="/">
-                            <img src={CaretLeft} alt="imagem de uma seta apontando para esquerda"  />
-                            <p>Voltar</p>
-                        </ReturnLink>
-        
-                        <div className='dish'>      
-                            <img 
-                                className='restaurantDish' 
-                                src={`${api.defaults.baseURL}/files/${data.image}`} 
-                                alt={`Imagem do prato ${data.name}`} 
-                            />
+        <Container>
+            <SideMenu
+                menuIsOpen={menuIsOpen}
+                onCloseMenu={() => setMenuIsOpen(false)}
+                isAdmin={true} 
+            />
 
-                            <div className="salad-ingredients">
-                                <h1>{data.name}</h1>
-                                <p>
-                                    {data.description}
-                                </p>
+            <div className="mobile-header">
+                <MobileHeaderIcon onOpenMenu={()=> setMenuIsOpen(true)}  />
+            </div>
+            <div className="desktop-header">
+                <DesktopHeaderIcon buttonIconContent={buttonIconContent} showIcon={true}  />
+            </div>
 
-                                {
-                                    data.tags &&
-                                    <div className='tags'>
-                                        {   
-                                            data.tags.map(tag => (
-                                                <Tag 
-                                                key={String(tag.id)}
-                                                title={tag.name}
-                                                />
-                                            ))
-                                        }
-                                    </div>
+            { 
+            data && 
+            <main>
+                <ReturnLink to="/">
+                    <img src={CaretLeft} alt="imagem de uma seta apontando para esquerda"  />
+                    <p>Voltar</p>
+                </ReturnLink>
+
+                <div className='dish'>      
+                    <img 
+                        className='restaurantDish' 
+                        src={`${api.defaults.baseURL}/files/${data.image}`} 
+                        alt={`Imagem do prato ${data.name}`} 
+                    />
+
+                    <div className="salad-ingredients">
+                        <h1>{data.name}</h1>
+                        <p>
+                            {data.description}
+                        </p>
+
+                        {
+                            data.tags &&
+                            <div className='tags'>
+                                {   
+                                    data.tags.map(tag => (
+                                        <Tag 
+                                        key={String(tag.id)}
+                                        title={tag.name}
+                                        />
+                                    ))
                                 }
+                            </div>
+                        }
 
-                                 <ButtonAlignmentCount>
-                                    <div className="count">
-                                        <img src={Minus} alt="imagem de um sinal de menos" />
-                                        <span>01</span>
-                                        <img src={Plus} alt="imagem de um sinal de mais" />
-                                    </div>
-                                    <div className="custom-button">
-                                        <ButtonIcon icon={Receipt}>
-                                            incluir ∙ R$ 25,00
-                                        </ButtonIcon>
-                                    </div>
-                                </ButtonAlignmentCount>                 
-                            </div>                            
-                        </div>
-                            
-                    </main>
-                  }   
-                  <Footer/>
-                  
-              </Container>
+                            <ButtonAlignmentCount>
+                            <div className="count">
+                                <img src={Minus} alt="imagem de um sinal de menos" />
+                                <span>01</span>
+                                <img src={Plus} alt="imagem de um sinal de mais" />
+                            </div>
+                            <div className="custom-button">
+                                <ButtonIcon icon={Receipt}>
+                                    incluir ∙ R$ 25,00
+                                </ButtonIcon>
+                            </div>
+                        </ButtonAlignmentCount>                 
+                    </div>                            
+                </div>                    
+            </main>
+            }
+
+            <Footer/>                
+        </Container>
     );
 }
                                 

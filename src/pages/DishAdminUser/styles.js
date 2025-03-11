@@ -11,22 +11,17 @@ export const Container = styled.div`
     .desktop-header {
         display: none; 
     }
-
     margin:0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;    
     width: 100%;
-    height:100vh; 
-   
-   
-    
+    height:100vh;    
 
     >main{
         display: flex;
         flex-direction: column;
-        align-items: center;
-       
+        align-items: center;       
         width: 300px;
         height:100vh;         
         
@@ -83,12 +78,9 @@ export const Container = styled.div`
                 }
             } 
         }       
-    } 
-        
-  
+    }  
     
-    @media (min-width: ${DEVICE_BREAKPOINTS.LG}) { 
-        
+    @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {        
         height:800px;
             .mobile-header {
             display: none; 
@@ -113,7 +105,7 @@ export const Container = styled.div`
         
         > main {
             grid-area: content;     
-            width: 1200px;
+            width: 1100px;
             height:500px;
             flex-direction: row;
             margin:0 auto;
@@ -138,7 +130,7 @@ export const Container = styled.div`
                     margin-bottom: 10px;                   
 
                     >h1 {  
-                          color: ${({theme}) => theme.COLORS.WHITE};                     
+                        color: ${({theme}) => theme.COLORS.WHITE};                     
                         font-size: 40px;             
                         line-height: 140%; 
                         margin-bottom: 10px;

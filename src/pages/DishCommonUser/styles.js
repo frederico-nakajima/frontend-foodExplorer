@@ -47,7 +47,6 @@ export const Container = styled.div`
                  color: ${({theme}) => theme.COLORS.WHITE};
                 font-family: Poppins;
                 font-weight: 500;
-                text-align: justify;
                 font-size: 27.041px;
                 margin-bottom:-10px; 
                 }
@@ -110,18 +109,18 @@ export const Container = styled.div`
         
         > main {
             grid-area: content;     
-            width: 1200px;
+            width: 1300px;
             height:500px;
             flex-direction: row;
             margin:0 auto;
             gap:40px;
-            margin-bottom: 145px;
+           
         
             >.dish { 
                 display:flex;
                 gap:90px;
                 position:relative;
-                left:-200px;
+                left:-300px;
                 top:40px;
                 align-items:center;
                                
@@ -135,7 +134,7 @@ export const Container = styled.div`
                     margin-bottom: 10px;                   
 
                     >h1 {  
-                          color: ${({theme}) => theme.COLORS.WHITE};                     
+                        color: ${({theme}) => theme.COLORS.WHITE};                     
                         font-size: 40px;             
                         line-height: 140%; 
                         margin-bottom: 10px;
