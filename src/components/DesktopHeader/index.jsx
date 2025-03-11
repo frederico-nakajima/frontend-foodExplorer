@@ -5,9 +5,15 @@ import SignOut from '../../assets/SignOut.svg'
 import { ButtonIcon } from '../../components/ButtonIcon'
 import { useAuth } from '../../hooks/auth'
 import { Navigate, useNavigate } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
 export function DesktopHeader({ setSearchTerm }){
     const { signOut,user } = useAuth();
+    const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(() => {
+      setIsVisible(true);
+    }, []);
         
     const navigate = useNavigate();
 
@@ -21,7 +27,7 @@ export function DesktopHeader({ setSearchTerm }){
 
     }
     return(
-        <Container>           
+        <Container className={isVisible ? 'show' : ''}>           
             <main>
                <Brand>
                     <img src={polygonImageHeader} alt="imagem de um polígono" />

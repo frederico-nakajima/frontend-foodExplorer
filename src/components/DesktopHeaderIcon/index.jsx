@@ -6,9 +6,15 @@ import { ButtonIcon } from '../ButtonIcon'
 import Receipt from '../../assets/Receipt.svg'
 import { Navigate, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../hooks/auth';
+import { useEffect, useState } from 'react';
 
 export function DesktopHeaderIcon({setSearchTerm, buttonIconContent,showButtonIcon = true }){  
     const { signOut,user } = useAuth();
+       const [isVisible, setIsVisible] = useState(false);
+    
+        useEffect(() => {
+          setIsVisible(true);
+        }, []);
     const navigate = useNavigate();
 
     function handleSignOut(){
@@ -17,7 +23,7 @@ export function DesktopHeaderIcon({setSearchTerm, buttonIconContent,showButtonIc
 
     }
     return(
-        <Container>
+        <Container className={isVisible ? 'show' : ''}>
             <main>
                <Brand>
                     <img src={polygonImageHeader} alt="imagem de um polígono" />

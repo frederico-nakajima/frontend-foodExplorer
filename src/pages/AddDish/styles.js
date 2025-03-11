@@ -42,6 +42,7 @@ export const Container = styled.div`
         .header-desktop {
             display: block;
             width:100%;
+            margin-bottom:90px;
         }        
         >a{
             margin-top:40px;

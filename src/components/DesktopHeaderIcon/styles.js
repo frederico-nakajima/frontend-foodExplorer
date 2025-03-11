@@ -11,6 +11,18 @@ export const Container = styled.header`
   align-items: center;
   background-color:${({theme}) => theme.COLORS.BACKGROUND_600};
 
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: all 0.5s ease-out;
+
+  &.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
   >main{
     display: flex;
     justify-content:center;

@@ -11,19 +11,19 @@ export const Container = styled.div`
     .desktop-header {
         display: none; 
     }
-    margin:0 auto;
+    
     display: flex;
     flex-direction: column;
     align-items: center;    
     width: 100%;
-    height:100vh;    
+      
 
     >main{
         display: flex;
         flex-direction: column;
         align-items: center;       
         width: 300px;
-        height:100vh;         
+                 
         
         .dish{        
             >.restaurantDish {
@@ -72,7 +72,7 @@ export const Container = styled.div`
             .custom-button{
                 width: 300px; 
                 height: 48px;
-                margin-bottom:40px;
+                margin-bottom:28px;
                 >button{
                     font-size: 16px;
                 }
