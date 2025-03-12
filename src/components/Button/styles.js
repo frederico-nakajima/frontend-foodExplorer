@@ -7,15 +7,15 @@ export const Container = styled.div`
     height: 100%;
     background-color:${({theme}) => theme.COLORS.RED_300} ;
     color:${({theme}) => theme.COLORS.WHITE} ;
-    border-radius: 5px;
+    border-radius: .5rem;
     border: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 8px; 
+    gap: .8rem; 
     font-family: Poppins;
     font-weight: 500;
-    line-height: 24px;     
+    line-height: 2.4rem;     
     
 
      @media (min-width: ${DEVICE_BREAKPOINTS.LG}) { 

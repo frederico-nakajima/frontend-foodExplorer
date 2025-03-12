@@ -16,48 +16,44 @@ export const Container = styled.div`
 `;
 
 export const Header = styled.div`
- 
-   
-    
-
     > .content {
         display: flex;
         align-items: center;
-        gap: 30px;
+        gap: 3.0rem;
 
         p {
             color: ${({ theme }) => theme.COLORS.WHITE};
             font-family: 'Roboto', serif;
-            font-size: 38px;  
+            font-size: 3.8rem;  
             font-weight: 700;
         }
     }
 
     img {
-        width: 40px;
-        height: 40px;
+        width: 4.0rem;
+        height: 4.0rem;
     }
 
     @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
         position: absolute;
-        top: 341px;
-        left: 222px;
+        top: 34.1rem;
+        left: 22.2rem;
 
         > .content p {
-            font-size: 42px;  
+            font-size: 4.2rem;  
         }
     }
 `;
 
 export const Form = styled.form`
-    padding: 65px;
-    width: 476px;
-    height: 541px;
+    padding: 6.5rem;
+    width: 47.6rem;
+    height: 54.1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 2.0rem;
    
     
 
@@ -68,7 +64,7 @@ export const Form = styled.form`
     > a {
         color: ${({ theme }) => theme.COLORS.WHITE};
         font-family: Poppins;
-        font-size: 14px;
+        font-size: 1.4rem;
         font-weight: 500;
     
     }
@@ -77,18 +73,18 @@ export const Form = styled.form`
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        gap:8px;
-        width: 476px;
-        padding: 0 64px;
+        gap:.8rem;
+        width: 47.6rem;
+        padding: 0 6.4rem;
     }
 
     .custom-buttom{
         display: flex;
-        width: 480px;
-        height:48px;
+        width: 48.0rem;
+        height:4.8rem;
         justify-content: center;
         align-items: center;
-        margin-top:5px;
+        margin-top:.5rem;
         
     }
 
@@ -96,13 +92,13 @@ export const Form = styled.form`
 
     @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
         position: absolute;
-        top: 142px;
-        right: 108px;
-        padding: 64px;
-        height: 650px;
+        top: 14.2rem;
+        right: 10.8rem;
+        padding: 6.4rem;
+        height: 65.0rem;
         background-color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
-        border-radius:16px;
-        gap: 29px;
+        border-radius:1.6rem;
+        gap: 2.9rem;
 
          > h1 {
             display: block;

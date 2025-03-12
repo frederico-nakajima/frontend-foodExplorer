@@ -22,32 +22,32 @@ export const Container = styled.div`
         display: flex;
         flex-direction: column;
         align-items: center;       
-        width: 300px;
+        width: 30.0rem;
                  
         
         .dish{        
             >.restaurantDish {
-                width: 264px;
-                height: 264px;
-                margin-bottom:20px;
+                width: 26.4rem;
+                height: 26.4rem;
+                margin-bottom:2.0rem;
                 position:relative;
-                left:35px;
+                left:3.5rem;
             }    
         
             .salad-ingredients{
                 display: flex;
                 flex-direction: column;
                 align-items: center; 
-                gap:24px;
-                padding:0 15px;
-                margin-bottom:24px;
+                gap:2.4rem;
+                padding:0 1.5rem;
+                margin-bottom:2.4rem;
             
                 h1{
                 color: ${({theme}) => theme.COLORS.WHITE};
                 font-family: Poppins;
                 font-weight: 500;                
-                font-size: 27.041px;
-                margin-bottom:-10px; 
+                font-size: 2.7rem;
+                margin-bottom:-1.0rem; 
                 }
 
                 p{
@@ -55,7 +55,7 @@ export const Container = styled.div`
                 font-family: Poppins;
                 font-weight: 400;
                 text-align: justify;               
-                font-size: 16px;
+                font-size: 1.6rem;
                 }
                 
             }
@@ -64,31 +64,31 @@ export const Container = styled.div`
                 display:flex;
                 justify-content: space-between;
                 flex-wrap: wrap;
-                gap: 10px;
-                margin-bottom:0px; 
-                padding:0 15px;
+                gap: 1.0rem;
+                margin-bottom:0rem; 
+                padding:0 1.5rem;
             }
         
             .custom-button{
-                width: 300px; 
-                height: 48px;
-                margin-bottom:28px;
+                width: 30.0rem; 
+                height: 4.8rem;
+                margin-bottom:2.8rem;
                 >button{
-                    font-size: 16px;
+                    font-size: 1.6rem;
                 }
             } 
         }       
     }  
     
     @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {        
-        height:800px;
+        height:80.0rem;
             .mobile-header {
             display: none; 
         }
 
         .desktop-header {
             display: flex;
-            gap:10px;
+            gap:1.0rem;
         }
 
         .icon {
@@ -96,7 +96,7 @@ export const Container = styled.div`
         }    
 
         display: grid;
-        grid-template-rows: 94px 85px auto 94px;
+        grid-template-rows: 9.4rem 8.5rem auto 9.4rem;
         grid-template-areas:
         "header"
         "link"
@@ -105,58 +105,60 @@ export const Container = styled.div`
         
         > main {
             grid-area: content;     
-            width: 1100px;
-            height:500px;
+            width: 110.0rem;
+            height:50.0rem;
             flex-direction: row;
-            margin:30px auto auto 380px;
-            gap:40px;
+            margin:3.0rem auto auto 38.0rem;
+            gap:4.0rem;
            
         
             >.dish { 
                 display:flex;
-                gap:90px;
+                gap:9.0rem;
                
                
                 align-items:center;
                                
                 >.restaurantDish {
-                    width: 390px;
-                    height: 390px;
+                    width: 39.0rem;
+                    height: 39.0rem;
                 }
 
                 .salad-ingredients{                    
                     align-items: flex-start; 
-                    margin-bottom: 10px;                   
+                    margin-bottom: 1.0rem;                   
 
                     >h1 {  
                         color: ${({theme}) => theme.COLORS.WHITE};                     
-                        font-size: 40px;             
+                        font-size: 4.0rem;             
                         line-height: 140%; 
-                        margin-bottom: 10px;
+                        margin-bottom: 1.0rem;
                     }
 
                     >p {
                         color: ${({theme}) => theme.COLORS.WHITE};
-                        font-size: 24px;                       
+                        font-size: 2.4rem;                       
                         line-height: 140%; 
-                        margin-bottom: 24px;
+                        margin-bottom: 2.4rem;
                     }                    
+                    .tags{                
+                        justify-content: flex-start;                
+                        margin-bottom:4.0rem;             
+                        gap: 2.0rem;
+                    }             
+                    .custom-button{
+                        padding-right:17.0rem;
+                        font-size: 1.4rem; 
+                        button{
+                             
+                        }            
+                    } 
                 }
-
-                .tags{                
-                    justify-content: flex-start;                
-                    margin-bottom:40px;             
-                    gap: 20px;
-                }             
-                    
             }
-            .custom-button{
-                padding-right:180px;             
-            } 
         }
 
         footer{
-            margin-top:225px;
+            margin-top:22.5rem;
         }
             
     }
@@ -164,22 +166,22 @@ export const Container = styled.div`
 `;
  
 export const ReturnLink = styled(Link)`
-    height: 60px;
+    height: 6.0rem;
     display:flex;
     justify-content: flex-start;
     align-items: center;
-    width: 320px;
-    margin:5px auto auto 40px;
+    width: 32.0rem;
+    margin:.5rem auto auto 4.0rem;
         >img{
-            width: 31px;
-            height: 28px;
+            width: 3.1rem;
+            height: 2.8rem;
         }
         >p{
             display:flex;        
             align-items:center;
             color: ${({theme}) => theme.COLORS.WHITE};
             font-family: Poppins;
-            font-size: 19px;       
+            font-size: 1.9rem;       
             font-weight: 500;
             text-transform: uppercase;
     
@@ -187,17 +189,17 @@ export const ReturnLink = styled(Link)`
    
     @media (min-width: ${DEVICE_BREAKPOINTS.LG}) { 
     grid-area: link;    
-    margin:50px auto auto 400px   ;    
+    margin:5.0rem auto auto 40.0rem;    
     flex-direction:row;
-    gap: 5px;    
+    gap: .5rem;    
     
         >img{
-            width: 32px;
-            height: 32px;
+            width: 3.2rem;
+            height: 3.2rem;
         }
 
         >p{
-            font-size: 24px;
+            font-size: 2.4rem;
             font-weight: 700;
             line-height: 140%; 
         }                  

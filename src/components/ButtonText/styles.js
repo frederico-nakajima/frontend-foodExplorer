@@ -7,7 +7,7 @@ export const Container = styled.button`
     color:${({theme,isactive}) => isactive==="true" ?  theme.COLORS.PINK : theme.COLORS.GRAY_100 };
 
     border: none;
-    font-size: 16px;
+    font-size: 1.6rem;
 
 
 `;

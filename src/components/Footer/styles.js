@@ -3,7 +3,7 @@ import { DEVICE_BREAKPOINTS } from '../../styles/deviceBreakpoints';
 
 export const Container = styled.footer` 
   width: 100vw;
-  height: 77px;
+  height: 7.7rem;
   display: flex;
   justify-content:center;
   align-items: center;
@@ -17,7 +17,7 @@ export const Container = styled.footer`
     p{
       color:${({theme}) => theme.COLORS.WHITE_200} ;
       font-family: "Roboto",serif;
-      font-size: 12px;
+      font-size: 1.2rem;
       font-weight: 400;
       line-height: 160%;    
     }    
@@ -25,10 +25,10 @@ export const Container = styled.footer`
 
   @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {   
     >main{
-      gap:715px;    
+      gap:71.5rem;    
       p{
         color:${({theme}) => theme.COLORS.WHITE_200} ;
-        font-size: 14px;
+        font-size: 1.4rem;
       }
     }
   
@@ -40,8 +40,8 @@ export const Brand = styled.div`
   display:flex;
   align-items:center;
   >img{
-    width: 22px;
-    height: 18px;
+    width: 2.2rem;
+    height: 1.8rem;
   }
   >div{
     display:flex;
@@ -49,10 +49,10 @@ export const Brand = styled.div`
     align-items:flex-start;  
     h2{
       font-family: "Roboto", serif;
-      font-size: 15px;
+      font-size: 1.5rem;
       font-weight: 700;
       line-height: normal;
-      width:150px;
+      width:15.0rem;
       color:${({theme}) => theme.COLORS.GRAY_700};
     }
     
@@ -60,12 +60,12 @@ export const Brand = styled.div`
     
   @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {  
     >img{
-      width: 30px;
-      height: 30px;
+      width: 3.0rem;
+      height: 3.0rem;
     }
     >div{      
       >h2{
-        font-size: 24px;
+        font-size: 2.4rem;
       }      
     }
   }        

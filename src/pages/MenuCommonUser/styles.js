@@ -13,7 +13,7 @@ export const Container = styled.div`
 
     >.underHeader{
         width: 100%;
-        height:150px;
+        height:15.0rem;
         
             
     }
@@ -23,17 +23,17 @@ export const Container = styled.div`
     }
     .imgBannerMobile {
         display: block;
-        margin-top:10px;
+        margin-top:1.0rem;
     } 
 
     .textBoxMobile{
-        margin-top:10px;
+        margin-top:1.0rem;
     }
 
     width: 100%;
     height: 100vh;
     display: grid;
-    grid-template-rows: 94px 174px auto 94px;
+    grid-template-rows: 9.4rem 17.4rem auto 9.4rem;
     grid-template-areas:
     "header"
     "banner"
@@ -48,7 +48,7 @@ export const Container = styled.div`
         display: none;
     }
 
-    grid-template-rows: 94px 460px auto 94px;    
+    grid-template-rows: 9.4rem 46.0rem auto 9.4rem;    
 
     >.underHeader{
         display:flex;
@@ -78,31 +78,31 @@ export const Banner  = styled.div`
         flex-direction:column;
         align-items:flex-start;
         justify-content:center;
-        width: 350px;
-        height: 120px;
+        width: 35.0rem;
+        height: 12.0rem;
         align-items:flex-end;
-        padding-right:20px;
+        padding-right:2.0rem;
         position:absolute;
         z-index:-1;
-        top: 125px;
-        right: 9px;        
-        border-radius: 8px;
+        top: 12.5rem;
+        right: .9rem;        
+        border-radius: .8rem;
         background: linear-gradient(180deg, #091E26 0%, #00131C 100%);
-        padding-right: 13px;
+        padding-right: 1.3rem;
                
         h1{
             position:relative;
-            right:25px;
+            right:2.5rem;
             font-family: Poppins;
-            font-size: 18px;            
+            font-size: 1.8rem;            
             font-weight: 500;
             line-height: 140%;
         }
         p{
             position:relative;
-            right:40px;
+            right:4.0rem;
             font-family: Roboto;
-            font-size: 12px;            
+            font-size: 1.2rem;            
             font-weight: 400;
             line-height: 100%; 
         }
@@ -129,14 +129,14 @@ export const Banner  = styled.div`
         }
 
         grid-area: banner;
-        margin-top: 32px;
-        width:1120px;
-        height:406px;
+        margin-top: 3.2rem;
+        width:112.0rem;
+        height:40.6rem;
            
         >.imgBanner{
-            width:632px;
-            height:406px;
-            border:1px solid ${({ theme }) => theme.COLORS.WHITE};
+            width:63.2rem;
+            height:40.6rem;
+            border:.1rem solid ${({ theme }) => theme.COLORS.WHITE};
         }
 
         >.textBoxMobile{
@@ -148,26 +148,26 @@ export const Banner  = styled.div`
             flex-direction:column;
             align-items:flex-start;
             justify-content:center;
-            width:1120px;
-            height:260px;
+            width:112.0rem;
+            height:26.0rem;
             align-items:flex-end;
-            padding-right:70px;
+            padding-right:7.0rem;
             position:absolute;
             z-index:-1;
-            top: 272px;
-            border-radius: 8px;
+            top: 27.2rem;
+            border-radius: .8rem;
             background: linear-gradient(180deg, #091E26 0%, #00131C 100%);
         
             
             h1{
                 font-family: Poppins;
-                font-size: 40px;
+                font-size: 4.0rem;
                 font-weight: 500;
                 line-height: 140%;
             }
             p{
                 font-family: Roboto;
-                font-size: 16px;
+                font-size: 1.6rem;
                 font-weight: 400;
                 line-height: 100%; 
             }
@@ -178,22 +178,22 @@ export const Banner  = styled.div`
 
 export const Content  = styled.div`         
     grid-area:content;
-    width: 380px;
+    width: 38.0rem;
     margin:0 auto;
  
  
     @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {  
-        width:1120px;
+        width:112.0rem;
         margin:0 auto;
 
     }
 `;
 
 export const FooterWrapper = styled.footer`
-  margin-top: 25px;
+  margin-top: 2.5rem;
   
   @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {   
-    margin-top: 46px;
+    margin-top: 4.6rem;
 
   } 
 

@@ -9,11 +9,11 @@ export default createGlobalStyle`
     }
     
     :root{
-        font-size: 62.5%;
+        font-size:50%;
         --swiper-navigation-size: 27px;
 
-        @media(max-width:${DEVICE_BREAKPOINTS.LG}) {
-         font-size: 62.5%;
+        @media(min-width:${DEVICE_BREAKPOINTS.LG}) {
+         font-size:50%;
         
         
         }
@@ -43,7 +43,7 @@ export default createGlobalStyle`
     }
 
     button:hover,a:hover{
-        filter: brightness(0.9);
+        filter: brightness(.9);
 
     }
 

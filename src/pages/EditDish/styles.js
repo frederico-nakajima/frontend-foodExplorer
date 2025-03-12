@@ -15,20 +15,20 @@ export const Container = styled.div`
     margin:0 auto;    
               
     >a{
-        width: 364px;
+        width: 36.4rem;
         display:flex;
         align-items:center;
         color: ${({theme}) => theme.COLORS.WHITE};         
         font-family: Poppins;
-        font-size: 16px;       
+        font-size: 1.6rem;       
         font-weight: 500;
         text-transform: uppercase; 
-        padding-bottom:30px;
+        padding-bottom:3.0rem;
         position:relative;
-        left:-10px;
+        left:-1.0rem;
         >svg{
-            width: 8px;
-            height: 15px;
+            width: .8rem;
+            height: 1.5rem;
         }    
     
     }    
@@ -40,15 +40,15 @@ export const Container = styled.div`
         .header-desktop {
             display: block;
             width:100%;
-            margin-bottom:120px;
+            margin-bottom:12.0rem;
         }        
         >a{
-            margin-top:40px;
-            width:1150px;
-            padding-bottom:24px;
+            margin-top:4.0rem;
+            width:115.0rem;
+            padding-bottom:2.4rem;
             color: ${({theme}) => theme.COLORS.WHITE};
             font-family: Poppins;
-            font-size: 19px;       
+            font-size: 1.9rem;       
             font-weight: 500;
             text-transform: uppercase;     
         }      
@@ -58,7 +58,7 @@ export const Container = styled.div`
        
     
 export const Form = styled.form`  
-    padding-bottom: 75px;       
+    padding-bottom: 7.5rem;       
     
     >header{
         .addDish{
@@ -67,25 +67,25 @@ export const Form = styled.form`
          .newDish{
             display:block;
             font-family: Poppins;
-            font-size: 32px;
+            font-size: 3.2rem;
             font-weight: 500;
             line-height: 140%; 
-            margin-bottom:45px;
-            width: 364px;
+            margin-bottom:4.5rem;
+            width: 36.4rem;
         }
     }
             
      .image-salad-category{                
-        width: 364px;
-        height: 300px;
+        width: 36.4rem;
+        height: 30.0rem;
         display: flex;
         flex-direction: column;
         
         >.dish{          
-            margin-top:-10px;
-            margin-bottom:10px;
+            margin-top:-1.0rem;
+            margin-bottom:1.0rem;
             font-family: Roboto;
-            font-size: 16px;
+            font-size: 1.6rem;
             font-weight: 400;
             line-height: 100%;
              
@@ -95,36 +95,36 @@ export const Form = styled.form`
             display:flex;
             flex-direction:column;
             justify-content: start;
-            border:1px solid ${({theme}) => theme.COLORS.WHITE};           
+            border:.1rem solid ${({theme}) => theme.COLORS.WHITE};           
             align-items:center;            
-            padding-left:25px;            
-            border-radius: 8px;
+            padding-left:2.5rem;            
+            border-radius: .8rem;
             background-color:${({theme}) => theme.COLORS.BACKGROUND_800};   
-            border-radius: 8px;
-            height: 48px;                         
+            border-radius: .8rem;
+            height: 4.8rem;                         
             border:0;
-            margin-left:-5px;
-            margin-top:10px;              
+            margin-left:-.5rem;
+            margin-top:1.0rem;              
             outline:none;
             >.image{
                 display:flex;               
                 align-items:center;
-                height: 46px;
-                width:364px;
-                margin-left:10px;
+                height: 4.6rem;
+                width:36.4rem;
+                margin-left:1.0rem;
                 label{
                     display:flex;
-                    gap:10px;
+                    gap:1.0rem;
                     >img{                      
                         position:relative;                        
                     }
                     >.select-image{                    
-                        margin-top:0px;
-                        width: 300px;
+                        margin-top:0rem;
+                        width: 30.0rem;
                         font-family: Poppins;
-                        font-size: 14px;
+                        font-size: 1.4rem;
                         font-weight: 500;
-                        line-height: 24px;                       
+                        line-height: 2.4rem;                       
                     }
                 }    
                 >input{
@@ -134,28 +134,28 @@ export const Form = styled.form`
         }                
         
         .inputs{            
-            height: 541px;
+            height: 54.1rem;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            gap:32px;
+            gap:3.2rem;
             .name{
                 display: flex;
                 flex-direction: column;
-                gap:16px;
+                gap:1.6rem;
                 >label{
                     font-family: Roboto;
-                    font-size: 16px;
+                    font-size: 1.6rem;
                     font-weight: 400;
                     line-height: 100%; 
                 }
                 >input{
-                    height: 48px;
+                    height: 4.8rem;
                     width: 100%;
-                    border-radius: 8px;
-                    padding: 12px;
+                    border-radius: .8rem;
+                    padding: 1.2rem;
                     font-family: "Roboto", serif;
-                    font-size: 16px;
+                    font-size: 1.6rem;
                     font-weight: 400;
                     line-height: 100%; 
                     color:${({theme}) => theme.COLORS.WHITE};
@@ -168,21 +168,21 @@ export const Form = styled.form`
                 display: flex;
                 flex-direction:column;
                 align-items: flex-start;
-                gap:16px;
+                gap:1.6rem;
                 
                 >label{
-                    margin-top:-8px;
+                    margin-top:-.8rem;
                     font-family: Roboto;
-                    font-size: 16px;
+                    font-size: 1.6rem;
                     font-weight: 400;
                     line-height: 100%; 
                     
                 }
                     
                 >select{
-                    border-radius:8px;
-                    width: 364px;
-                    height: 46px;
+                    border-radius:.8rem;
+                    width: 36.4rem;
+                    height: 4.6rem;
                     background-color:${({theme}) => theme.COLORS.BACKGROUND_800};
                     appearance: none;
                     -webkit-appearance: none;
@@ -190,15 +190,15 @@ export const Form = styled.form`
                     background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1_54)'%3E%3Cpath d='M8 10L12 14L16 10' stroke='%239C98A6' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1_54'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
             
                     background-repeat:no-repeat;
-                    background-position: right 24px top 50%;
+                    background-position: right 2.4rem top 50%;
                     color: #C1BCCC;
                     font-family: Poppins;
-                    font-size: 16px;
+                    font-size: 1.6rem;
                     font-weight: 400;
-                    line-height: 26px; 
-                    padding:0 24px;
+                    line-height: 2.6rem; 
+                    padding:0 2.4rem;
                     border:0;
-                    margin-top:0px; 
+                    margin-top:0rem; 
                     
                 }
             }      
@@ -206,49 +206,49 @@ export const Form = styled.form`
         } 
     }
         .section{
-            width: 364px;            
+            width: 36.4rem;            
             display: flex;
             flex-direction: column;
             justify-content: center;
-            margin-bottom:15px;       
+            margin-bottom:1.5rem;       
             >.ingredients-price{
                 display: flex;
                 flex-direction:row;
                 justify-content: center;                
                 >section{
-                height:100px;
+                height:10.0rem;
                 position:relative;                
                     .tags{
                         display: flex;
                         align-items: center;
-                        height: 51px;
-                        gap: 15px;
-                        width: 364px; 
+                        height: 5.1rem;
+                        gap: 1.5rem;
+                        width: 36.4rem; 
                         background-color: ${({theme}) => theme.COLORS.BACKGROUND_800};                
-                        border-radius: 8px;
-                        margin-bottom:20px;
-                        margin-top:16px;                             
+                        border-radius: .8rem;
+                        margin-bottom:2.0rem;
+                        margin-top:1.6rem;                             
                     }
                 }
             }
             .price{
                 display: flex;
                 flex-direction: column;
-                gap:16px;
+                gap:1.6rem;
                 label{
                     font-family: Roboto;
-                    font-size: 16px;
+                    font-size: 1.6rem;
                     font-weight: 400;
                     line-height: 100%; 
                 }
                 
                 >input{
-                    height: 48px;
+                    height: 4.8rem;
                     width: 100%;
-                    border-radius: 8px;
-                    padding: 12px;
+                    border-radius: .8rem;
+                    padding: 1.2rem;
                     font-family: "Roboto", serif;
-                    font-size: 16px;
+                    font-size: 1.6rem;
                     font-weight: 400;
                     line-height: 100%; 
                     color:${({theme}) => theme.COLORS.WHITE};
@@ -261,10 +261,10 @@ export const Form = styled.form`
         .description{
             display: flex;
             flex-direction: column;
-            gap:16px;
+            gap:1.6rem;
             label{
                 font-family: Roboto;
-                font-size: 16px;
+                font-size: 1.6rem;
                 font-weight: 400;
                 line-height: 100%; 
             }
@@ -273,72 +273,72 @@ export const Form = styled.form`
             display: flex;
             justify-content: space-between;
             align-items:center;
-            margin-top:13px;            
+            margin-top:1.3rem;            
             .remove{
                 >button{
-                    width: 164px;
-                    height: 48px;
-                    padding-right:15px;
-                    padding-left:15px;
-                    border-radius: 5px;
+                    width: 16.4rem;
+                    height: 4.8rem;
+                    padding-right:1.5rem;
+                    padding-left:1.5rem;
+                    border-radius: .5rem;
                     color:${({theme}) => theme.COLORS.WHITE} ;
                     background-color:${({theme}) => theme.COLORS.BACKGROUND_800};
                     border:0;
                     text-align: center;
                     font-family: Poppins;
-                    font-size: 14px;
+                    font-size: 1.4rem;
                     font-weight: 500;
-                    line-height: 24px;
+                    line-height: 2.4rem;
                 }
             }
 
             .saveChanges{
                 >button{
-                    width: 164px;
-                    height: 48px;
-                    padding-right:15px;
-                    padding-left:15px;
-                    border-radius: 5px;
+                    width: 16.4rem;
+                    height: 4.8rem;
+                    padding-right:1.5rem;
+                    padding-left:1.5rem;
+                    border-radius: .5rem;
                     color:${({theme}) => theme.COLORS.WHITE} ;
                     background-color: ${({ theme }) => theme.COLORS.RED_200};
                     border:0;
                     text-align: center;
                     font-family: Poppins;
-                    font-size: 14px;
+                    font-size: 1.4rem;
                     font-weight: 500;
-                    line-height: 24px;
+                    line-height: 2.4rem;
                 }
             }        
         }
     
         @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
-            margin-bottom:-46px;            
+            margin-bottom:-4.6rem;            
             .image-salad-category{
-                width: 1137px;
-                height: 100px;
+                width: 113.7rem;
+                height: 10.0rem;
                 flex-direction: row; 
                 justify-content:end;          
-                margin-top:65px;
+                margin-top:6.5rem;
                 position:relative;                
                 >.dish{
-                    left:0px;
-                    height:10px;
-                    top:-5px;
+                    left:0rem;
+                    height:1.0rem;
+                    top:-.5rem;
                     position:absolute;
                 }
                 >.uploadSimple{
-                    margin-right:20px;
-                    width: 250px;
-                    height: 48px;
+                    margin-right:2.0rem;
+                    width: 25.0rem;
+                    height: 4.8rem;
                     position:relative;
-                    top:6px;
+                    top:.6rem;
                     >.image{
-                        margin-left:170px;
+                        margin-left:17.0rem;
                         label{                            
                             >.select-image{
                                 position:relative;
-                                top:0px;
-                                width: 355px;
+                                top:0rem;
+                                width: 35.5rem;
                             }
                         }
                     }
@@ -348,41 +348,41 @@ export const Form = styled.form`
                     flex-direction: row;
                     align-items:center;
                     justify-content:space-between;
-                    gap:20px;
-                    height: 50px;
-                    width:871px;
+                    gap:2.0rem;
+                    height: 5.0rem;
+                    width:87.1rem;
                     .name{
-                        width:600px;
+                        width:60.0rem;
                         position:relative;
-                        top:-1px;
+                        top:-.1rem;
                     }
                 }                    
             }
             .section{
-                width: 1137px;
+                width: 113.7rem;
                 flex-direction: row;
                 justify-content: flex-start;
-                gap:20px;
+                gap:2.0rem;
                 position:relative;               
                 >.ingredients-price{
                     >section{
                         .tags{
-                            width: 834px;
+                            width: 83.4rem;
                         }
                     }                
                 }
                 >.price{
                     position:relative;
-                    margin-top:2px;
-                    width:400px;
+                    margin-top:.2rem;
+                    width:40.0rem;
                 }
             }
             .buttons{
                 display:flex;
-                gap:20px;
-                width:177px;
+                gap:2.0rem;
+                width:17.7rem;
                 position:relative;
-                left:790px;
+                left:79.0rem;
                           
             }
         }

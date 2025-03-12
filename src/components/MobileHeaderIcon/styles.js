@@ -6,59 +6,48 @@ export const Container = styled.div`
     display:flex;
     justify-content:center;
     align-items:center;
-    gap:11px;
-    width:100w;
-    heigth:114px;
-    padding:40px 10px 15px 10px;
+    gap:1.1rem;
+    width:100vw;
+    heigth:11.4rem;
+    padding:4.0rem 1.0rem 1.5rem 1.0rem;
     background-color:${({theme}) => theme.COLORS.BACKGROUND_700};
-    margin-left:-5px;
-    margin-bottom:10px;
-
+    margin-left:-.5rem;
+    margin-bottom:-.9rem;
      >.list{
-        margin-right:60px;
-       
+        margin-right:6.0rem;       
      }
-
     >img{
-        width: 25px;
-        height: 25px;
+        width: 2.5rem;
+        height: 2.5rem;
     }
     >div{
         display:flex;
-        align-items:center;
-       
-        
-       h2{
-        font-family: "Roboto", serif;
-        font-size: 21px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
-        margin-right:60px;
+        align-items:center;        
+        h2{
+            font-family: "Roboto", serif;
+            font-size: 2.1rem;
+            font-style: normal;
+            font-weight: 700;
+            margin-right:6.0rem;
         }
-
         div.positionZero{
-        position:relative;
-        width: 38px;
-        height: 38px;
+            position:relative;
+            width: 3.8rem;
+            height: 3.8rem;
         }
-
         >.smallZero{
-        position:absolute;
-        top:33px;
-        right:25px;
-        background-color:${({theme}) => theme.COLORS.RED_300};
-        display: flex;
-        width: 20px;
-        height: 20px;
-        padding: 10px 10px;
-        justify-content: center;
-        align-items: center;
-        border-radius: 99px;
+            position:absolute;
+            top:3.3rem;
+            right:2.5rem;
+            background-color:${({theme}) => theme.COLORS.RED_300};
+            display: flex;
+            width: 2.0rem;
+            height: 2.0rem;
+            padding: 1.0rem 1.0rem;
+            justify-content: center;
+            align-items: center;
+            border-radius: 9.9rem;
         }
-       
-
     }
-
   
 `;

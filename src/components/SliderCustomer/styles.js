@@ -2,44 +2,38 @@ import styled from 'styled-components';
 import {DEVICE_BREAKPOINTS} from "../../styles/deviceBreakpoints"
 
 export const StyledSwiper = styled.div`
-  margin-top:20px;
-    >h2{
-      margin-bottom:24px;
-      margin-left:0px;
-      font-family: Poppins;
-      font-size: 18px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 140%;
-    }
-    .swiper {
-      width: 100%;
-      height:100%;
-    }
-
-    .swiper-slide {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .swiper-button-next,
-    .swiper-button-prev {
-      display:none;
-    
-    }
+  margin-top:2.0rem;
+  >h2{
+    margin-bottom:2.4rem;
+    margin-left:0rem;
+    font-family: Poppins;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+  }
+  .swiper {
+    width: 100%;
+    height:100%;
+  }
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    display:none;    
+  }
 
   @media (min-width: ${DEVICE_BREAKPOINTS.LG}) { 
     position: relative;
     overflow: hidden;
-    padding: 20px 0; 
-
-    h2 {
-          
-      font-size: 32px;
-      margin-left: 10px;
+    padding: 2.0rem 0;
+    h2 {          
+      font-size: 3.2rem;
+      margin-left: 1.0rem;
     }
-
     .swiper {
       position: relative;
     
@@ -49,7 +43,7 @@ export const StyledSwiper = styled.div`
         position: absolute;
         top: 0;
         bottom: 0;
-        width: 130px; 
+        width: 13.0rem; 
         pointer-events: none;
         z-index: 2;
       }
@@ -67,27 +61,24 @@ export const StyledSwiper = styled.div`
 
     .swiper-button-next,
     .swiper-button-prev {
-      display: block;
-     
+      display: block;     
       color: ${({ theme }) => theme.COLORS.WHITE};
-      width:60px;
-      height:60px;
+      width:6.0rem;
+      height:6.0rem;
       position: absolute;
       z-index: 20;
     }
 
     .swiper-button-next::after, .swiper-button-prev::after {
-      font-size: 24px; 
+      font-size: 2.4rem; 
       background: transparent; 
-      padding: 10px; 
-      width:60px;
-      height:60px;
+      padding: 1.0rem; 
+      width:6.0rem;
+      height:6.0rem;
       position: absolute;
       z-index: 20;
       pointer-events: auto;
     }
   }
-
-
 
 `;

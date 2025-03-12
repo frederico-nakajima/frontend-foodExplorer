@@ -3,8 +3,8 @@ import styled from 'styled-components';
 
 export const Container = styled.header`
   grid-area: header;
-  padding:24px auto;
-  height: 94px;
+  padding:2.4rem auto;
+  height: 9.4rem;
   width: 100vw;
   display: flex;
   justify-content:center;
@@ -27,7 +27,7 @@ export const Container = styled.header`
     display: flex;
     justify-content:center;
     align-items: center;
-    gap:32px;
+    gap:3.2rem;
     
     >img{
     cursor:pointer;
@@ -39,11 +39,11 @@ export const Container = styled.header`
 export const Brand = styled.div`
   display:flex;
   align-items:flex-start;
-  gap:10px;
+  gap:1.0rem;
 
   >img{
-    width: 30px;
-    height: 30px;
+    width: 3.0rem;
+    height: 3.0rem;
   }
   >div{
     display:flex;
@@ -52,16 +52,16 @@ export const Brand = styled.div`
       
     h2{
       font-family: "Roboto", serif;
-      font-size: 24px;
+      font-size: 2.4rem;
       font-weight: 700;
       line-height: normal;
-      width:150px;
+      width:15.0rem;
     }
     
     p{
       color:${({theme}) => theme.COLORS.CIANO};
       font-family: "Roboto",serif;
-      font-size: 12px;
+      font-size: 1.2rem;
       font-weight: 400;
       line-height: 160%; 
 
@@ -75,34 +75,33 @@ export const Search  = styled.div`
   display:flex;
   align-items:center;
   justify-content:center;
-  width:700px;
-  height: 48px;
-  border-radius: 5px;
-  padding: 12px 140px;
+  width:70.0rem;
+  height: 4.8rem;
+  border-radius: .5rem;
+  padding: 1.2rem 14.0rem;
   color:${({theme}) => theme.COLORS.WHITE};
   background-color:${({theme}) => theme.COLORS.BACKGROUND_900};
   
   > img {
-    margin-right: 8px;
+    margin-right: .8rem;
     position:relative;
-    margin-left:-100px;
+    margin-left:-10.0rem;
   }
   >input {
-        width: 400px;
-   
+    width: 40.0rem;   
     height: 100%;
     border: none;
     background: none;
     color: ${({ theme }) => theme.COLORS.WHITE};
     font-family: Roboto;
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: 400;
     line-height: 100%; 
     
     &::placeholder {
       color: ${({ theme }) => theme.COLORS.GRAY_300};
       font-family: "Roboto", serif;
-      font-size: 16px;
+      font-size: 1.6rem;
       font-weight: 400;     
       
     }

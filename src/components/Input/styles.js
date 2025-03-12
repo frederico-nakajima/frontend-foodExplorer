@@ -6,17 +6,16 @@ export const Container = styled.div`
     align-items: center;
     background-color:${({theme}) => theme.COLORS.BACKGROUND_900};
     color:${({theme}) => theme.COLORS.GRAY_300};   
-    border-radius: 10px;
-    margin-top:6px;
+    border-radius: 1.0rem;
+    margin-top:.6px;
     
     >input{
-        height: 48px;
+        height: 4.8rem;
         width: 100%;
-        border-radius: 8px;
-        padding: 12px;
+        border-radius: .8rem;
+        padding: 1.2rem;
         font-family: "Roboto", serif;
-        font-size: 16px;
-        font-style: normal;
+        font-size: 1.6rem;
         font-weight: 400;
         line-height: 100%; 
         color:${({theme}) => theme.COLORS.WHITE};
@@ -28,12 +27,12 @@ export const Container = styled.div`
         &::placeholder {
             color:${({theme}) => theme.COLORS.GRAY_300};
             font-family: "Roboto", serif;
-            font-size: 16px;
+            font-size: 1.6rem;
             font-weight: 400;
             line-height: 100%;
         }        
         >svg{
-            margin-left:16px;
+            margin-left:1.6rem;
         }
     }
 

@@ -6,40 +6,39 @@ export const Container = styled.aside`
 
   background-color: ${({ theme }) => theme.COLORS.BACKGROUND_1000};
   width: 101%;
-  height: 1454px;
+  height: 145.4rem;
   position:absolute;
-  z-index:9999;
- 
+  z-index:9999; 
   transform:translateX(-100%);
   transition:transform .3s ease-in-out;
 
   &[data-menu-is-open="true"] {
-      transform:translateX(0);
+    transform:translateX(0);
   }
+
   @media (min-width: ${DEVICE_BREAKPOINTS.LG}) { 
-    display:none;
-    
+    display:none;    
   }
 
 `;
 
 export const SideMenuContent = styled.div`
-padding:28px;
-margin-bottom: 1043px;
+padding:2.8rem;
+margin-bottom: 104.3rem;
 
 `
 
 export const Header = styled.header`  
-  padding: 32px 24px;
-  height:114px;
+  padding: 3.2rem 2.4rem;
+  height:11.4rem;
 `;
 
 export const Title = styled.h1`
   display: flex;
   align-items: center;
-  gap: 7px;
+  gap: .7rem;
   color: ${({ theme }) => theme.COLORS.BACKGROUND_1000};
-  font-size: 24px;
+  font-size: 2.4rem;
 `;
 
 export const Nav = styled.nav`
@@ -49,10 +48,10 @@ export const Nav = styled.nav`
   >.NewDishLink {
     color: ${({ theme }) => theme.COLORS.WHITE};
     font-family: Poppins;
-    font-size: 24px;
+    font-size: 2.4rem;
     font-weight: 300;
     line-height: 140%; 
-    padding:10px;
+    padding:1.0rem;
    
     
   }
@@ -60,12 +59,12 @@ export const Nav = styled.nav`
   >.SignOut {
     color: ${({ theme }) => theme.COLORS.WHITE};
     font-family: Poppins;
-    font-size: 24px;
+    font-size: 2.4rem;
     font-weight: 300;
     line-height: 140%; 
-    padding:10px;
+    padding:1.0rem;
     
-    margin-top: ${({ isAdmin }) => (isAdmin ? '25px' : '0px')};    
+    margin-top: ${({ isAdmin }) => (isAdmin ? '2.5rem' : '0px')};    
   }
 
   >hr{
@@ -78,31 +77,31 @@ export const Button = styled.button`
     border: none;
 
   > svg {
-    font-size: 28px;
+    font-size: 2.8rem;
     color: ${({ theme }) => theme.COLORS.WHITE};
   }
 `;
 
 export const HeaderSideMenu = styled.div`
-  width: 428px;
-  height: 114px; 
-  padding:56px 28px 24px;
+  width: 42.8rem;
+  height: 11.4rem; 
+  padding:5.6rem 2.8rem 2.4rem;
   
 `;
 
 export const HeaderControls = styled.div`
   display: flex;
-  width: 372px;
-  height: 34px;
+  width: 37.2rem;
+  height: 3.4rem;
   align-items: center;
-  gap: 16px;
+  gap: 1.6rem;
 
   >span{
     font-family: Roboto;
-    font-size: 21px;
+    font-size: 2.1rem;
     font-weight: 400;
     position:relative;
-    top:-3px;
+    top:-.3rem;
    
   }
 
