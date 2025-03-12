@@ -24,10 +24,8 @@ export function SignIn(){
                     <p>food explorer</p>
                 </div>
             </Header>
-
             <Form>
                 <h1>Faça login</h1>
-
                 <div>
                     <label htmlFor="email">Email:</label>
                     <Input
@@ -36,7 +34,6 @@ export function SignIn(){
                         onChange = {e => setEmail(e.target.value)}
                     />
                 </div>
-
                 <div>
                     <label htmlFor="password">Senha:</label>
                     <Input
@@ -45,7 +42,6 @@ export function SignIn(){
                         onChange = {e => setPassword(e.target.value)}
                     />
                 </div>
-
                 <div className='custom-buttom'>
                     <Button title="Entrar" onClick = { handleSignIn }/>
                 </div>
@@ -53,7 +49,6 @@ export function SignIn(){
                 <Link to="/register">
                     Criar uma conta
                 </Link>
-
             </Form>
         </Container>
     )

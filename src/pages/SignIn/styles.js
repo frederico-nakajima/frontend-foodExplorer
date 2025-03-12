@@ -7,9 +7,7 @@ export const Container = styled.div`
     justify-content: center;
     align-items: center;
     height: 100vh;
-    width: 100%;
-    
-   
+    width: 100%;   
 
     @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
         height: 100vh;  
@@ -21,7 +19,7 @@ export const Header = styled.div`
         display: flex;
         align-items: center;
         gap: 3.0rem;
-
+        margin-left:1.5rem;
         p {
             color: ${({ theme }) => theme.COLORS.WHITE};
             font-family: 'Roboto', serif;
@@ -29,7 +27,6 @@ export const Header = styled.div`
             font-weight: 700;
         }
     }
-
     img {
         width: 4.0rem;
         height: 4.0rem;
@@ -39,7 +36,6 @@ export const Header = styled.div`
         position: absolute;
         top: 34.1rem;
         left: 22.2rem;
-
         > .content p {
             font-size: 4.2rem;  
         }
@@ -55,12 +51,10 @@ export const Form = styled.form`
     justify-content: center;
     align-items: center;
     gap: 3.2rem;
-    
-
+    margin-left:2.7rem;
     > h1 {
         display: none;
     }
-
     > a {
         color: ${({ theme }) => theme.COLORS.WHITE};
         align-self: center;
@@ -70,7 +64,6 @@ export const Form = styled.form`
         font-weight: 500;
         line-height: 2.4rem;
     }
-
     > div {
         display: flex;
         flex-direction: column;
@@ -78,8 +71,20 @@ export const Form = styled.form`
         gap: 1.0rem;
         width: 47.6rem;
         padding: 0 6.4rem;
-    }
+        label{
+            font-family: Roboto;
+            font-size: 1.6rem;
+            font-weight: 400;
+            line-height: 100%;
+        }
 
+        &::placeholder{
+            font-family: Roboto;
+            font-size: 1.6rem;
+            font-weight: 400;
+            line-height: 100%;
+        }
+    }
     .custom-buttom{
         display: flex;
         width: 48.0rem;
@@ -87,7 +92,10 @@ export const Form = styled.form`
         justify-content: center;
         align-items: center;
         margin-top:.5rem;
-        
+        font-family: Poppins;
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 24px; 
     }
 
     @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
@@ -99,10 +107,12 @@ export const Form = styled.form`
         background-color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
         border-radius:1.6rem;
         gap: 2.9rem;
-
         > h1 {
             display: block;
-            
+            font-family: Poppins;
+            font-size: 3.2rem;
+            font-weight: 500;
+            line-height: 140%;
         }
     }
 `;
