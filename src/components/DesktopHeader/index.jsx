@@ -9,36 +9,34 @@ import { useEffect, useState } from 'react';
 import { useSearch } from '../../contexts/SearchContext';
 
 export function DesktopHeader() {
-  const { signOut, user } = useAuth();
-  const [isVisible, setIsVisible] = useState(false);
-  const { searchTerm, setSearchTerm } = useSearch();
-  const location = useLocation();
-  const navigate = useNavigate();
+    const { signOut, user } = useAuth();
+    const [isVisible, setIsVisible] = useState(false);
+    const { searchTerm, setSearchTerm } = useSearch();
+    const location = useLocation();
+    const navigate = useNavigate();
 
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
-  function handleNewDish() {
-    navigate("/add");
-  }
-
-  function handleSignOut() {
-    navigate("/");
-    signOut();
-  }
-
-  function handleSearchChange(e) {
-    const searchValue = e.target.value;
-    setSearchTerm(searchValue);
-  }
-
-  function handleSearchClick() {
-    if (location.pathname !== "/") {
-      navigate("/");
+  
+    function handleNewDish() {
+        navigate("/add");
+    }    
+    function handleSignOut() {
+        navigate("/");
+        signOut();
+    }    
+    function handleSearchChange(e) {
+        const searchValue = e.target.value;
+        setSearchTerm(searchValue);
+    }    
+    function handleSearchClick() {
+        if (location.pathname !== "/") {
+            navigate("/");
+        }
     }
-  }
+    useEffect(() => {
+      setIsVisible(true);
 
+    }, []);
+    
   return (
     <Container className={isVisible ? 'show' : ''}>
       <main>
@@ -51,12 +49,11 @@ export function DesktopHeader() {
         </Brand>
 
         <Search>
-          {/* Ícone clicável agora */}
-          <img
+           <img
             src={busca}
             alt="ícone de busca"
-            onClick={handleSearchClick} // ✅ Função chamada ao clicar
-            style={{ cursor: "pointer" }} // ✅ Cursor muda para indicar que é clicável
+            onClick={handleSearchClick} 
+            style={{ cursor: "pointer" }} 
           />
 
           <input

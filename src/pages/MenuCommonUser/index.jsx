@@ -12,6 +12,7 @@ import { SwiperSlide } from 'swiper/react';
 import { useNavigate } from "react-router-dom";
 import Love from '../../assets/love.svg';
 import  { api }  from '../../services/api';
+import { useSearch } from '../../contexts/SearchContext';
 
 export function MenuCommonUser() {
     const buttonIconContent = "Pedidos (0)";
@@ -19,10 +20,10 @@ export function MenuCommonUser() {
     const itemAltText = 'imagem de uma comida'
     const [dishes, setDishes] = useState([]);    
     const [menuIsOpen,setMenuIsOpen] = useState(false);
-    const [searchTerm, setSearchTerm] = useState(""); 
-
+    
     const navigate = useNavigate();
-       
+    const { searchTerm } = useSearch(); 
+
     function handleDishCustomerUser(id){
         navigate(`/dishuser/${id}`);
     }
@@ -54,7 +55,7 @@ export function MenuCommonUser() {
             />           
 
              <div className="desktop-header">
-                <DesktopHeaderIcon buttonIconContent={buttonIconContent} showIcon={true} setSearchTerm={setSearchTerm} />
+                <DesktopHeaderIcon buttonIconContent={buttonIconContent} showIcon={true} />
             </div>
             <div className="mobile-header-icon">
                 <MobileHeaderIcon onOpenMenu={()=> setMenuIsOpen(true)} />
