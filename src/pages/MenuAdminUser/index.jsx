@@ -12,6 +12,8 @@ import {api} from "../../services/api";
 import { Item } from "../../components/Item";
 import { SwiperSlide } from 'swiper/react';
 import { useNavigate } from "react-router-dom";
+import { useSearch } from '../../contexts/SearchContext';
+
 
 
 export function MenuAdminUser() {
@@ -20,7 +22,7 @@ export function MenuAdminUser() {
     const [dishes, setDishes] = useState([]);
     const navigate = useNavigate();    
     const [menuIsOpen,setMenuIsOpen] = useState(false);
-    const [searchTerm, setSearchTerm] = useState("");  
+    const { searchTerm } = useSearch(); 
    
 
     function handleDishAdminUser(id){
@@ -53,7 +55,7 @@ export function MenuAdminUser() {
             />           
 
             <div className="desktop-header">
-                <DesktopHeader setSearchTerm={setSearchTerm} />
+                <DesktopHeader/>
             </div>
             <div className="mobile-header-icon">
                 <MobileHeader onOpenMenu={()=> setMenuIsOpen(true)} />
