@@ -43,7 +43,7 @@ export const Container = styled.div`
         >a{
             margin-top:4.0rem;
             width:115.0rem;
-            padding-bottom:2.4rem;
+            padding-bottom:2.7rem;
             color: ${({theme}) => theme.COLORS.WHITE};
             font-family: Poppins;
             font-size: 1.9rem;       
@@ -217,7 +217,8 @@ export const Form = styled.form`
                         background-color: ${({theme}) => theme.COLORS.BACKGROUND_800};                
                         border-radius: .8rem;
                         margin-bottom:2.0rem;
-                        margin-top:1.6rem;                             
+                        margin-top:1.6rem;
+                        padding-left:1rem;                             
                     }
                 }
             }

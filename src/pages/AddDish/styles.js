@@ -212,7 +212,8 @@ export const Form = styled.form`
                         background-color: ${({theme}) => theme.COLORS.BACKGROUND_800};                
                         border-radius: .8rem;
                         margin-bottom:2.0rem;
-                        margin-top:1.6rem;                             
+                        margin-top:1.6rem;
+                        padding-left:1rem;                             
                     }
                 }
             }
