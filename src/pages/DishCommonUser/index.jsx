@@ -37,7 +37,7 @@ export function DishCommonUser() {
             <SideMenu
                 menuIsOpen={menuIsOpen}
                 onCloseMenu={() => setMenuIsOpen(false)}
-                isAdmin={true} 
+                isAdmin={false}
             />
 
             <div className="mobile-header">

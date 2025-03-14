@@ -27,9 +27,7 @@ export function MenuCommonUser() {
         navigate(`/dishuser/${id}`);
     }
 
-    const filteredDishes = dishes.filter(dish =>
-        dish.name.toLowerCase().includes(searchTerm.toLowerCase()) 
-    );
+    const filteredDishes = dishes;
     
    
     useEffect(() => {
