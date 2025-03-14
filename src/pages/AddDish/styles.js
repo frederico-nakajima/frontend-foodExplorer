@@ -24,7 +24,7 @@ export const Container = styled.div`
         font-size: 1.6rem;       
         font-weight: 500;
         text-transform: uppercase; 
-        padding-bottom:3.0remn;
+       
         position:relative;
         left:-1.0rem;
         >svg{
@@ -56,20 +56,22 @@ export const Container = styled.div`
        
     
 export const Form = styled.form`  
-    padding-bottom: 7.5rem;       
+    padding-bottom: 5.7rem;       
     
     >header{
         .addDish{
-            display:none;
-        }
-         .newDish{
             display:block;
             font-family: Poppins;
             font-size: 3.2rem;
             font-weight: 500;
             line-height: 140%; 
             margin-bottom:4.5rem;
+            margin-top:2rem; 
             width: 36.4rem;
+           
+        }
+         .newDish{
+             display:none;
         }
     }
             
