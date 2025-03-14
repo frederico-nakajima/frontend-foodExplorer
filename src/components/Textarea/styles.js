@@ -1,7 +1,5 @@
 import styled from 'styled-components';
 
-
-
 export const Container = styled.textarea`
     width: 100%;
     height: 15.0rem;
@@ -18,8 +16,7 @@ export const Container = styled.textarea`
     font-family: Roboto;
     font-size: 1.6rem;
     font-weight: 400;
-    line-height: 100%; 
-
+    line-height: 100%;
     
     &::placeholder{
         color: ${({theme}) => theme.COLORS.GRAY_300};
@@ -28,5 +25,4 @@ export const Container = styled.textarea`
         font-weight: 400;
         line-height: 100%; 
     }
-
 `;

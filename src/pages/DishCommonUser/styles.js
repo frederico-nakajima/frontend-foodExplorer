@@ -2,8 +2,6 @@ import styled from 'styled-components';
 import { DEVICE_BREAKPOINTS } from '../../styles/deviceBreakpoints';
 import  { Link } from 'react-router-dom';
 
-
-
 export const Container = styled.div`    
     .mobile-header {
         display: flex; 
@@ -155,7 +153,6 @@ export const ReturnLink = styled(Link)`
         font-size: 1.9rem;       
         font-weight: 500;
         text-transform: uppercase;
-
     }
    
     @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {      
@@ -173,6 +170,7 @@ export const ReturnLink = styled(Link)`
         }        
     }
 `;
+
 export const ButtonAlignmentCount = styled.div`
     display: flex;
     flex-direction:row;
@@ -204,8 +202,7 @@ export const ButtonAlignmentCount = styled.div`
         font-family: Poppins;
         font-size: .9rem;
         font-weight: 500;         
-    }
-     
+    }     
 
     @media (min-width: ${DEVICE_BREAKPOINTS.LG}) { 
         flex-direction:row;        
@@ -221,8 +218,7 @@ export const ButtonAlignmentCount = styled.div`
         .custom-button {
             width:20.0rem;
             height: 4.8rem;                
-        }    
-
+        }
     }
 `;   
     

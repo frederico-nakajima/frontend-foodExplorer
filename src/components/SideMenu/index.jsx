@@ -1,14 +1,13 @@
 import { X } from "@phosphor-icons/react";
 import { MagnifyingGlass } from "@phosphor-icons/react";
 import { Search } from '../Search';
-import { Container, Nav, Title, Header, Button,SideMenuContent,HeaderSideMenu,HeaderControls } from "./styles";
+import { Container, Nav, Button,SideMenuContent,HeaderSideMenu,HeaderControls } from "./styles";
 import { Footer } from '../../components/Footer';
 import { useAuth } from '../../hooks/auth'
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 export function SideMenu({menuIsOpen, onCloseMenu, isAdmin }) {
-  const { signOut,user } = useAuth();
-        
+  const { signOut } = useAuth();        
   const navigate = useNavigate();
 
   function handleSignOut(){

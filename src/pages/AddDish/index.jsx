@@ -16,7 +16,6 @@ import { useNavigate} from 'react-router-dom';
 export function AddDish(){
     const [menuIsOpen,setMenuIsOpen] = useState(false);      
     const navigate = useNavigate();
-
     const [name, setName] = useState("");
     const [category, setCategory] = useState("Refeições");
     const [tags, setTags] = useState([]);
@@ -24,17 +23,14 @@ export function AddDish(){
     const [price, setPrice] = useState("");
     const [description, setDescription] = useState("");   
     const [imageFile, setImageFile] = useState(null);
-
     
     function handleAddTag(){
         setTags(prevState => [...prevState, newTag]);
         setNewTag("");
     }
-
     function handleRemoveTag(deleted){
         setTags(prevState => prevState.filter(tag => tag !== deleted));
-    }
-    
+    }    
     async function handleNewItem(){
         if(!name){
             return alert("Digite o nome do item");
@@ -53,17 +49,14 @@ export function AddDish(){
             price,
             description
         });
-        const dish_id = response.data.id;
-        
+        const dish_id = response.data.id;        
         if(imageFile){
             const fileUploadForm = new FormData();
             fileUploadForm.append("image", imageFile);
 
-            await api.patch(`/dishes/image/${dish_id}`, fileUploadForm);
-          
+            await api.patch(`/dishes/image/${dish_id}`, fileUploadForm);          
             
-        }
-        
+        }        
         alert("Item criado com sucesso!");
         navigate('/');
     }
@@ -71,8 +64,7 @@ export function AddDish(){
     function handleChangeImage(event) {
         const file = event.target.files[0];  
         setImageFile(file);
-    }
-    
+    }    
 
     return(
         <Container>
@@ -105,7 +97,7 @@ export function AddDish(){
                     <div className='uploadSimple'>
                         <div className='image'>
                             <label
-                            htmlFor="file-upload" 
+                                htmlFor="file-upload" 
                             >
                                 <img 
                                     src={UploadSimple} 
@@ -119,8 +111,7 @@ export function AddDish(){
                                 onChange={handleChangeImage}
                             />
                         </div>
-                    </div>                       
-
+                    </div>
                     <div className="inputs">
                         <div className='name'>
                             <label htmlFor="name">Nome</label>
@@ -136,7 +127,6 @@ export function AddDish(){
                         </div>
                     </div>
                 </div>
-
                 <div className="section">
                     <div className="ingredients-price">
                         <Section title='Ingredientes'>
@@ -159,8 +149,7 @@ export function AddDish(){
                                 />
                             </div>
                         </Section>
-                    </div>
-                    
+                    </div>                    
                     <div className='price'>
                         <label htmlFor="price">Preço</label>
                         <input 
@@ -169,7 +158,6 @@ export function AddDish(){
                         />
                     </div>
                 </div>
-
                 <div className="description">
                     <label htmlFor="description">Descrição</label>
                     <Textarea 
@@ -177,7 +165,6 @@ export function AddDish(){
                         onChange = {e => setDescription(e.target.value)}
                     />
                 </div>
-
                 <div className="buttons">
                     <button type='button' onClick={handleNewItem}>Salvar alterações</button>
                 </div>

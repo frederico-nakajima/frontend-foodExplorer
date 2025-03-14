@@ -14,16 +14,13 @@ import { SwiperSlide } from 'swiper/react';
 import { useNavigate } from "react-router-dom";
 import { useSearch } from '../../contexts/SearchContext';
 
-
-
 export function MenuAdminUser() {
     const iconAltText = ' ícone de um lapiz';
     const itemAltText = 'imagem de uma comida'
     const [dishes, setDishes] = useState([]);
     const navigate = useNavigate();    
     const [menuIsOpen,setMenuIsOpen] = useState(false);
-    const { searchTerm } = useSearch(); 
-   
+    const { searchTerm } = useSearch();   
 
     function handleDishAdminUser(id){
         navigate(`/dishadmin/${id}`);

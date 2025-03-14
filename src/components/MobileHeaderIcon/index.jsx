@@ -11,8 +11,7 @@ export function MobileHeaderIcon({onOpenMenu}) {
         <img src={Polygon} alt="imagem de um polígono" />
         <div>
             <h2>food explorer</h2>
-        </div>
-            
+        </div>            
         <div className="positionZero">
             <div className='receiptWithZero'>
                 <img src={Receipt} alt="Receipt"/>

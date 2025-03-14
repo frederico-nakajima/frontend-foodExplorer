@@ -1,6 +1,5 @@
 import styled from 'styled-components';
-import {DEVICE_BREAKPOINTS} from "../../styles/deviceBreakpoints"
-
+import {DEVICE_BREAKPOINTS} from "../../styles/deviceBreakpoints";
 
 export const Container = styled.div`
     .desktop-header {
@@ -9,27 +8,21 @@ export const Container = styled.div`
     .mobile-header-icon {
         display: block;
         grid-area: header;
-    } 
-
+    }
     >.underHeader{
         width: 100%;
-        height:15.0rem;
-        
-            
+        height:15.0rem;            
     }
-
     .imgBannerDesktop {
         display: none;
     }
     .imgBannerMobile {
         display: block;
         margin-top:1.0rem;
-    } 
-
+    }
     .textBoxMobile{
         margin-top:1.0rem;
     }
-
     width: 100%;
     height: 100vh;
     display: grid;
@@ -41,21 +34,21 @@ export const Container = styled.div`
     "footer";   
 
     @media (min-width: ${DEVICE_BREAKPOINTS.LG}) { 
-    .desktop-header {
-        display: block;
-    }
-    .mobile-header-icon {
-        display: none;
-    }
+        .desktop-header {
+            display: block;
+        }
+        .mobile-header-icon {
+            display: none;
+        }
 
-    grid-template-rows: 9.4rem 46.0rem auto 9.4rem;    
+        grid-template-rows: 9.4rem 46.0rem auto 9.4rem;    
 
-    >.underHeader{
-        display:flex;
-        justify-content:center;
-    }
-  
-}  
+        >.underHeader{
+            display:flex;
+            justify-content:center;
+        }
+    
+    }  
 `;
 
 
@@ -68,11 +61,9 @@ export const Banner  = styled.div`
         display: block;
          grid-area: banner;
     }
-
     >.textBoxDesktop{
         display: none;
     }
-
     >.textBoxMobile{
         display:flex;
         flex-direction:column;
@@ -88,8 +79,7 @@ export const Banner  = styled.div`
         right: .9rem;        
         border-radius: .8rem;
         background: linear-gradient(180deg, #091E26 0%, #00131C 100%);
-        padding-right: 1.3rem;
-               
+        padding-right: 1.3rem;               
         h1{
             position:relative;
             right:2.5rem;
@@ -127,22 +117,18 @@ export const Banner  = styled.div`
         .imgBannerMobile {
             display: none;
         }
-
         grid-area: banner;
         margin-top: 3.2rem;
         width:112.0rem;
-        height:40.6rem;
-           
+        height:40.6rem;           
         >.imgBanner{
             width:63.2rem;
             height:40.6rem;
             border:.1rem solid ${({ theme }) => theme.COLORS.WHITE};
         }
-
         >.textBoxMobile{
             display: none;
-        }
-        
+        }        
         >.textBoxDesktop{
             display:flex;
             flex-direction:column;
@@ -156,9 +142,7 @@ export const Banner  = styled.div`
             z-index:-1;
             top: 27.2rem;
             border-radius: .8rem;
-            background: linear-gradient(180deg, #091E26 0%, #00131C 100%);
-        
-            
+            background: linear-gradient(180deg, #091E26 0%, #00131C 100%);            
             h1{
                 font-family: Poppins;
                 font-size: 4.0rem;
@@ -170,8 +154,7 @@ export const Banner  = styled.div`
                 font-size: 1.6rem;
                 font-weight: 400;
                 line-height: 100%; 
-            }
-            
+            }            
         }
     }
 `;
@@ -179,20 +162,18 @@ export const Banner  = styled.div`
 export const Content  = styled.div`         
     grid-area:content;
     width: 38.0rem;
-    margin:0 auto;
- 
+    margin:0 auto; 
  
     @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {  
         width:112.0rem;
         margin:0 auto;
-
     }
 `;
 
 export const FooterWrapper = styled.footer`
   margin-top: 2.5rem;
   
-  @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {   
+  @media (min-width: ${DEVICE_BREAKPOINTS.LG}){   
     margin-top: 4.6rem;
 
   } 

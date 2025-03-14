@@ -1,9 +1,7 @@
 import styled from 'styled-components';
-import {DEVICE_BREAKPOINTS} from "../../styles/deviceBreakpoints"
+import {DEVICE_BREAKPOINTS} from "../../styles/deviceBreakpoints";
 
-
-export const Container = styled.div`
-    
+export const Container = styled.div`    
     .desktop-header {
         display: none;
     }
@@ -44,35 +42,30 @@ export const Container = styled.div`
             display: none;
         }
 
-        grid-template-rows: 9.4rem 46.0rem auto 9.4rem;
-       
+        grid-template-rows: 9.4rem 46.0rem auto 9.4rem;       
         
         >.underHeader{
             
             display:flex;
             justify-content:center;
-        }
-  
+        }  
     }  
 `;
 
 
 
 export const Banner  = styled.div`
-
     grid-area: banner;
-     .imgBannerDesktop {
+    .imgBannerDesktop {
         display: none;
     }
     .imgBannerMobile {
         display: block;
          grid-area: banner;
     }
-
     >.textBoxDesktop{
         display: none;
     }
-
     >.textBoxMobile{
         display:flex;
         flex-direction:column;
@@ -129,22 +122,17 @@ export const Banner  = styled.div`
         .imgBannerMobile {
             display: none;
         }
-
         grid-area: banner;
         margin-top: 3.2rem;
         width:112.0rem;
-        height:40.6rem;
-           
+        height:40.6rem;           
         >.imgBanner{
             width:63.2rem;
-            height:40.6rem;
-           
+            height:40.6rem;           
         }
-
         >.textBoxMobile{
             display: none;
-        }
-        
+        }        
         >.textBoxDesktop{
             display:flex;
             flex-direction:column;
@@ -157,9 +145,7 @@ export const Banner  = styled.div`
             z-index:-1;
             top: 27.2rem;
             border-radius: .8rem;
-            background: linear-gradient(180deg, #091E26 0%, #00131C 100%);
-        
-            
+            background: linear-gradient(180deg, #091E26 0%, #00131C 100%);           
             h1{
                 font-family: Poppins;
                 font-size: 4.0rem;
@@ -171,8 +157,7 @@ export const Banner  = styled.div`
                 font-size: 1.6rem;
                 font-weight: 400;
                 line-height: 100%; 
-            }
-            
+            }            
         }
     }
 `;
@@ -180,8 +165,7 @@ export const Banner  = styled.div`
 export const Content  = styled.div`         
     grid-area:content;
     width: 38.0rem;
-    margin:0 auto 5.0rem auto;
-    
+    margin:0 auto 5.0rem auto;    
  
     @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {  
         width:112.0rem;

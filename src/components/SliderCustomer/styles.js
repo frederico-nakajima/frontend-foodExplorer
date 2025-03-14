@@ -46,19 +46,16 @@ export const StyledSwiper = styled.div`
         width: 13.0rem; 
         pointer-events: none;
         z-index: 2;
-      }
-    
+      }    
       &::before {
         left: 0;
         background: linear-gradient(to right,rgb(2, 11, 15), transparent);
-      }
-    
+      }    
       &::after {
         right: 0;
         background: linear-gradient(to left,rgb(2, 11, 15), transparent);
       }
     }
-
     .swiper-button-next,
     .swiper-button-prev {
       display: block;     

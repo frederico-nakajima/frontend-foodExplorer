@@ -42,5 +42,4 @@ export const Container = styled.div`
             line-height: 100%;
         }
     }
-
 `;

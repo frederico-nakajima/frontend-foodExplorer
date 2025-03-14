@@ -3,7 +3,7 @@ import Plus from '../../assets/Plus.svg';
 import Minus from '../../assets/Minus.svg';
 import { Button } from '../../components/Button';
 import { useAuth } from '../../hooks/auth';
-import { Link } from "react-router-dom"
+
 
 export function ItemCustomer({iconImage,iconAltText,itemImage,itemAltText,description,price,itemName, showButtonAlignment = false, ...rest } ){
     const { user } = useAuth();

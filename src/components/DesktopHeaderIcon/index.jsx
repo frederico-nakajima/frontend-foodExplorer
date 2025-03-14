@@ -18,8 +18,7 @@ export function DesktopHeaderIcon({buttonIconContent,showButtonIcon = true }){
     
     function handleSignOut(){
         navigate("/");
-        signOut();
-        
+        signOut();        
     }
     function handleSearchChange(e) {
         const searchValue = e.target.value;
@@ -33,6 +32,7 @@ export function DesktopHeaderIcon({buttonIconContent,showButtonIcon = true }){
     useEffect(() => {
         setIsVisible(true);
     }, []);
+    
     return(
         <Container className={isVisible ? 'show' : ''}>
             <main>

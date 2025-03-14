@@ -14,7 +14,6 @@ export function DesktopHeader() {
     const { searchTerm, setSearchTerm } = useSearch();
     const location = useLocation();
     const navigate = useNavigate();
-
   
     function handleNewDish() {
         navigate("/add");
@@ -32,6 +31,7 @@ export function DesktopHeader() {
             navigate("/");
         }
     }
+    
     useEffect(() => {
       setIsVisible(true);
 

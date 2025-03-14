@@ -19,17 +19,13 @@ export function EditDish(){
     const [data, setData] = useState(null);
     const params = useParams();
     const navigate = useNavigate();
-
     const [name, setName] = useState("");
     const [category, setCategory] = useState("");
     const [price, setPrice] = useState("");
     const [description, setDescription] = useState("");
     const [tags, setTags] = useState([]);
     const [newTag, setNewTag] = useState("");
-    const [imageFile, setImageFile] = useState(null);
-    
-    
-    
+    const [imageFile, setImageFile] = useState(null);    
     
     function handleAddTag(){
         setTags(prevState => [...prevState, newTag]);
@@ -123,14 +119,10 @@ export function EditDish(){
         if (!file) {
             alert("Nenhuma imagem selecionada.");
             return;
-        }
-    
-        setImageFile(file);
-    
-        
+        }    
+        setImageFile(file);       
         alert(`Imagem selecionada: ${file.name}`);
-    }
-    
+    }    
     
     return(
         <Container>
@@ -155,7 +147,7 @@ export function EditDish(){
             <Form>                    
                 <header>
                     <h1 className='newDish'>Editar prato</h1>
-                </header>                        
+                </header>                   
 
                 <div className="image-salad-category">
                     <p className='dish'>Imagem do prato </p>
@@ -173,9 +165,7 @@ export function EditDish(){
                                 onChange={handleChangeImage}
                             />
                         </div>
-                    </div>  
-                       
-
+                    </div>
                     <div className="inputs">
                         <div className='name'>
                             <label htmlFor="name">Nome</label>
@@ -200,7 +190,6 @@ export function EditDish(){
                         </div>
                     </div>
                 </div>
-
                 <div className="section">
                     <div className="ingredients-price">
                         <Section title='Ingredientes'>
@@ -223,20 +212,17 @@ export function EditDish(){
                                 />
                             </div>
                         </Section>
-                    </div>                            
-                    
+                    </div>                   
                     <div className='price'>
                         <label htmlFor="price">Preço</label>
                         <input 
                             placeholder="R$ 00,00"
                             id="price"
                             value={price}  
-                            onChange={(e) => setPrice(e.target.value)}
-                         
-                         />
+                            onChange={(e) => setPrice(e.target.value)}                         
+                        />
                     </div>
                 </div>
-
                 <div className="description">
                     <label htmlFor="description">Descrição</label>
                     <Textarea 
@@ -246,7 +232,6 @@ export function EditDish(){
                         onChange={(e) => setDescription(e.target.value)} 
                     />
                 </div>
-
                 <div className='buttons'>
                     <div className="remove">
                         <button type='button' onClick={handleDeleteDish}>Excluir prato</button>

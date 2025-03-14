@@ -6,8 +6,6 @@ export const Container = styled.section`
         font-family: Roboto;
         font-size: 1.6rem;
         font-weight: 400;
-        line-height: 100%;
-       
+        line-height: 100%;       
     }
-
 `;

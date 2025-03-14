@@ -8,13 +8,11 @@ export const Container = styled.div`
     .header-desktop {
         display: none;
     }
-
     display: flex;
     flex-direction: column;
     align-items: center;    
     width:100%;
-    margin:0 auto;    
-              
+    margin:0 auto;              
     >a{
         width: 36.4rem;
         display:flex;
@@ -23,17 +21,14 @@ export const Container = styled.div`
         font-family: Poppins;
         font-size: 1.6rem;       
         font-weight: 500;
-        text-transform: uppercase; 
-       
+        text-transform: uppercase;       
         position:relative;
         left:-1.0rem;
         >svg{
             width: .8rem;
             height: 1.5rem;
-        }   
-    
-    }  
-    
+        }    
+    }    
                      
     @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {                   
         .header-mobile {
@@ -49,8 +44,7 @@ export const Container = styled.div`
             width:115.0rem;
             padding-bottom:2.4rem;
             font-weight: 700;      
-        }
-      
+        }      
     }
 `;        
        
@@ -70,32 +64,27 @@ export const Form = styled.form`
             width: 36.4rem;
            
         }
-         .newDish{
-             display:none;
+        .newDish{
+            display:none;
         }
-    }
-            
+    }            
     .image-salad-category{                
         width: 36.4rem;
         height: 30.0rem;
         display: flex;
-        flex-direction: column;
-        
+        flex-direction: column;        
         >.dish{          
             margin-top:-1.0rem;
             margin-bottom:1.0rem;
             font-family: Roboto;
             font-size: 1.6rem;
             font-weight: 400;
-            line-height: 100%;
-             
-        }
-        
+            line-height: 100%;             
+        }        
         .uploadSimple{
             display:flex;
             flex-direction:column;
-            justify-content: start;
-                      
+            justify-content: start;                      
             align-items:center;            
             padding-left:2.5rem;            
             border-radius: .8rem;
@@ -131,8 +120,7 @@ export const Form = styled.form`
                     display:none;                            
                 }                           
             }
-        }                
-        
+        }        
         .inputs{            
             height: 54.1rem;
             display: flex;
@@ -168,17 +156,14 @@ export const Form = styled.form`
                 display: flex;
                 flex-direction:column;
                 align-items: flex-start;
-                gap:1.6rem;
-                
+                gap:1.6rem;                
                 >label{
                     margin-top:-.8rem;
                     font-family: Roboto;
                     font-size: 1.6rem;
                     font-weight: 400;
-                    line-height: 100%; 
-                    
-                }
-                    
+                    line-height: 100%;                    
+                }                    
                 >select{
                     border-radius:.8rem;
                     width: 36.4rem;
@@ -201,8 +186,7 @@ export const Form = styled.form`
                     margin-top:0px; 
                     
                 }
-            }      
-        
+            }        
         } 
     }
         .section{
@@ -232,7 +216,6 @@ export const Form = styled.form`
                     }
                 }
             }
-
             .price{
                 display: flex;
                 flex-direction: column;
@@ -242,8 +225,7 @@ export const Form = styled.form`
                     font-size: 1.6rem;
                     font-weight: 400;
                     line-height: 100%; 
-                }
-                
+                }                
                 >input{
                     height: 4.8rem;
                     width: 100%;
@@ -257,10 +239,8 @@ export const Form = styled.form`
                     background-color:${({theme}) => theme.COLORS.BACKGROUND_800};
                     border:0;
                 }
-            }
-                    
-        }
-        
+            }                    
+        }        
         .description{
             display: flex;
             flex-direction: column;
@@ -272,7 +252,6 @@ export const Form = styled.form`
                 line-height: 100%; 
             }
         }
-
         .buttons{
             display: flex;
             justify-content: flex-end;
@@ -294,12 +273,10 @@ export const Form = styled.form`
                 font-weight: 500;
                 line-height: 2.4rem;
             }
-
         }
         
         @media (min-width: ${DEVICE_BREAKPOINTS.LG}) { 
-            margin-bottom:-1.5rem;      
-            
+            margin-bottom:-1.5rem;            
             .image-salad-category{
                 width: 113.7rem;
                 height: 10.0rem;
@@ -330,7 +307,6 @@ export const Form = styled.form`
                         }
                     }
                 }
-
                 .inputs{
                     flex-direction: row;
                     align-items:center;
@@ -345,7 +321,6 @@ export const Form = styled.form`
                     }                
                 }                    
             }
-
             .section{
                 width: 113.7rem;
                 flex-direction: row;

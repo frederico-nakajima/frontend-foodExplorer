@@ -1,7 +1,5 @@
 import styled from 'styled-components';
 
-
-
 export const Container = styled.button`
     display:flex;
     justify-content:center;
@@ -14,11 +12,7 @@ export const Container = styled.button`
     border: 0;
     padding:1.2rem;
     border-radius: .5rem;
-    color:${({theme}) => theme.COLORS.WHITE};
-    
-
-   
-  
+    color:${({theme}) => theme.COLORS.WHITE}; 
  
 
 `;

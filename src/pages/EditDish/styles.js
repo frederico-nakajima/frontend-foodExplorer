@@ -12,8 +12,7 @@ export const Container = styled.div`
     flex-direction: column;
     align-items: center;    
     width:100%;
-    margin:0 auto;    
-              
+    margin:0 auto;              
     >a{
         width: 36.4rem;
         display:flex;
@@ -30,7 +29,6 @@ export const Container = styled.div`
             width: .8rem;
             height: 1.5rem;
         }    
-    
     }    
                      
     @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {                  
@@ -73,8 +71,7 @@ export const Form = styled.form`
             margin-bottom:4.5rem;
             width: 36.4rem;
         }
-    }
-            
+    }            
      .image-salad-category{                
         width: 36.4rem;
         height: 30.0rem;
@@ -87,10 +84,8 @@ export const Form = styled.form`
             font-family: Roboto;
             font-size: 1.6rem;
             font-weight: 400;
-            line-height: 100%;
-             
-        }
-        
+            line-height: 100%;             
+        }        
         .uploadSimple{
             display:flex;
             flex-direction:column;
@@ -124,15 +119,14 @@ export const Form = styled.form`
                         font-family: Poppins;
                         font-size: 1.4rem;
                         font-weight: 500;
-                        line-height: 2.4rem;                       
+                        line-height: 2.4rem;     
                     }
                 }    
                 >input{
                     display:none;                            
                 }                           
             }
-        }                
-        
+        }       
         .inputs{            
             height: 54.1rem;
             display: flex;
@@ -160,25 +154,21 @@ export const Form = styled.form`
                     line-height: 100%; 
                     color:${({theme}) => theme.COLORS.WHITE};
                     background-color:${({theme}) => theme.COLORS.BACKGROUND_800};
-                    border:0;
-               
+                    border:0;               
                 }
             }
             .data{
                 display: flex;
                 flex-direction:column;
                 align-items: flex-start;
-                gap:1.6rem;
-                
+                gap:1.6rem;                
                 >label{
                     margin-top:-.8rem;
                     font-family: Roboto;
                     font-size: 1.6rem;
                     font-weight: 400;
-                    line-height: 100%; 
-                    
-                }
-                    
+                    line-height: 100%;                    
+                }                    
                 >select{
                     border-radius:.8rem;
                     width: 36.4rem;
@@ -255,8 +245,7 @@ export const Form = styled.form`
                     background-color:${({theme}) => theme.COLORS.BACKGROUND_800};
                     border:0;
                 }
-            }
-                    
+            }                    
         }        
         .description{
             display: flex;
@@ -291,7 +280,6 @@ export const Form = styled.form`
                     line-height: 2.4rem;
                 }
             }
-
             .saveChanges{
                 >button{
                     width: 16.4rem;
@@ -343,7 +331,6 @@ export const Form = styled.form`
                         }
                     }
                 }
-
                 .inputs{
                     flex-direction: row;
                     align-items:center;
@@ -382,8 +369,7 @@ export const Form = styled.form`
                 gap:2.0rem;
                 width:17.7rem;
                 position:relative;
-                left:79.0rem;
-                          
+                left:79.0rem;                          
             }
         }
 

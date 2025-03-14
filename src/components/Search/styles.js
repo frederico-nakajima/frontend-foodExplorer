@@ -21,8 +21,7 @@ export const Container = styled.div`
     color:${({theme}) => theme.COLORS.WHITE};
     background-color:${({theme}) => theme.COLORS.BACKGROUND_900};
     border:0;
-    outline:none;
-  
+    outline:none;  
         
     &::placeholder {
       color:${({theme}) => theme.COLORS.GRAY_300};
@@ -39,6 +38,5 @@ export const Container = styled.div`
     margin-left:1.6rem;
     background-color:${({theme}) => theme.COLORS.BACKGROUND_900};
   }
-
 
 `;

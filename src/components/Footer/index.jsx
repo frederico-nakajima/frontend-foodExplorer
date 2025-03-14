@@ -1,13 +1,9 @@
 import { Container,Brand } from './styles';
 import polygonImageFooter from '../../assets/Polygon 1-footer.svg';
 
-
-
-
 export function Footer({...rest}){
     return(
-        <Container {...rest}>
-           
+        <Container {...rest}>           
            <main>
                <Brand>
                     <img src={polygonImageFooter} alt="imagem de um polígono" />
@@ -18,7 +14,6 @@ export function Footer({...rest}){
                         
                 <p>© 2023 - Todos os direitos reservados.</p>
            </main>
-
         </Container>
     )
 }

@@ -4,12 +4,10 @@ import { useState } from 'react';
 
 export const AuthContext = createContext({});
 
-
 function AuthProvider({ children }){
     const [data,setData] = useState({});
 
     async  function signIn({ email, password }){
-
         try{
             const response = await api.post("/sessions", { email, password });
             const { user, token } = response.data;
@@ -33,7 +31,6 @@ function AuthProvider({ children }){
         localStorage.removeItem("@foodexplorer:token");
         localStorage.removeItem("@foodexplorer:user");
         setData({});
-
     }
 
 
@@ -51,20 +48,17 @@ function AuthProvider({ children }){
         }
     },[]);
 
-
     return(
         <AuthContext.Provider value = {{ 
             signIn,
             signOut,
             user:data.user,
-              }}
+            }}
               >
             {children}
         </AuthContext.Provider>
     )
-}
-        
-   
+}   
 
 function useAuth(){
     const context = useContext(AuthContext);

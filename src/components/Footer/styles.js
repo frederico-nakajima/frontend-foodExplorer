@@ -7,13 +7,11 @@ export const Container = styled.footer`
   display: flex;
   justify-content:center;
   align-items: center;
-  background-color:${({theme}) => theme.COLORS.BACKGROUND_600};
-  
+  background-color:${({theme}) => theme.COLORS.BACKGROUND_600};  
   >main{
     display: flex;
     justify-content:center;
-    align-items: center;
-   
+    align-items: center;   
     p{
       color:${({theme}) => theme.COLORS.WHITE_200} ;
       font-family: "Roboto",serif;
@@ -30,8 +28,7 @@ export const Container = styled.footer`
         color:${({theme}) => theme.COLORS.WHITE_200} ;
         font-size: 1.4rem;
       }
-    }
-  
+    }  
   }   
 `;
       
@@ -54,8 +51,7 @@ export const Brand = styled.div`
       line-height: normal;
       width:15.0rem;
       color:${({theme}) => theme.COLORS.GRAY_700};
-    }
-    
+    }    
   }
     
   @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {  

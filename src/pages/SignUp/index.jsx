@@ -11,14 +11,12 @@ export function SignUp(){
     const [name,setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-
     const navigate = useNavigate();
 
     function handleSignUp(){
         if(!name || !email || !password){
             return alert("Preencha todos os campos!");
-        }
-        
+        }        
         api.post("/users", {name, email, password})
         .then(() => {
             alert("Usuário cadastrado com sucesso|"); 
@@ -32,6 +30,7 @@ export function SignUp(){
             }
         });
     }
+    
     return(
         <Container>
             <Header>

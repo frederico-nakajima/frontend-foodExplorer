@@ -30,7 +30,7 @@ export const Container = styled.header`
     gap:3.2rem;
     
     >img{
-    cursor:pointer;
+      cursor:pointer;
     }
   }
 
@@ -66,7 +66,6 @@ export const Brand = styled.div`
       line-height: 160%; 
 
     }
-
   }
 `;
 
@@ -105,7 +104,6 @@ export const Search  = styled.div`
       font-weight: 400;     
       
     }
-
     &:focus {
       outline: none;
     }

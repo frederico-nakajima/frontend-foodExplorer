@@ -10,7 +10,6 @@ export const Container = styled.header`
   justify-content:center;
   align-items: center;
   background-color:${({theme}) => theme.COLORS.BACKGROUND_600};
-
   position: fixed;
   top: 0;
   z-index: 999;
@@ -67,10 +66,8 @@ export const Brand = styled.div`
     font-size: 1.2rem;
     font-style: normal;
     font-weight: 400;
-    line-height: 160%; 
-
+    line-height: 160%;
   }
-
 `;
 
 export const Search  = styled.div`
@@ -83,16 +80,14 @@ export const Search  = styled.div`
   border-radius: .5rem;
   padding: 1.2rem 14.0rem;
   color:${({theme}) => theme.COLORS.WHITE};
-  background-color:${({theme}) => theme.COLORS.BACKGROUND_900};
-  
-  > img {
+  background-color:${({theme}) => theme.COLORS.BACKGROUND_900};  
+  >img {
     margin-right: .8rem;
     position:relative;
     margin-left:-10.0rem;
   }
   >input {
-        width: 40.0rem;
-   
+    width: 40.0rem;   
     height: 100%;
     border: none;
     background: none;
@@ -109,7 +104,6 @@ export const Search  = styled.div`
       font-weight: 400;     
       
     }
-
     &:focus {
       outline: none;
     }

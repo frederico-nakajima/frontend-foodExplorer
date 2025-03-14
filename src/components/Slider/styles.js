@@ -22,8 +22,7 @@ export const StyledSwiper = styled.div`
     }
     .swiper-button-next,
     .swiper-button-prev {
-      display:none;
-    
+      display:none;    
     }
 
   @media (min-width: ${DEVICE_BREAKPOINTS.LG}) { 

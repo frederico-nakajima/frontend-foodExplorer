@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
-
 export const Container = styled.span`
     display: flex;
     padding: .4rem .8rem;

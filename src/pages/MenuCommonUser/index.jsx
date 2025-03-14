@@ -19,8 +19,7 @@ export function MenuCommonUser() {
     const iconAltText = ' ícone de um coração';
     const itemAltText = 'imagem de uma comida'
     const [dishes, setDishes] = useState([]);    
-    const [menuIsOpen,setMenuIsOpen] = useState(false);
-    
+    const [menuIsOpen,setMenuIsOpen] = useState(false);    
     const navigate = useNavigate();
     const { searchTerm } = useSearch(); 
 
@@ -28,8 +27,7 @@ export function MenuCommonUser() {
         navigate(`/dishuser/${id}`);
     }
 
-    const filteredDishes = dishes;
-    
+    const filteredDishes = dishes;    
    
     useEffect(() => {
         async function fetchDishes() {
@@ -46,8 +44,7 @@ export function MenuCommonUser() {
     }, [searchTerm]); 
 
     return (
-        <Container>
-           
+        <Container>           
             <SideMenu
                 menuIsOpen={menuIsOpen}
                 onCloseMenu={() => setMenuIsOpen(false)}
@@ -82,7 +79,8 @@ export function MenuCommonUser() {
             
             <Content>                       
                 <SliderCustomer title="Refeições">
-                    {filteredDishes
+                    {   
+                        filteredDishes
                         .filter(dish => dish.category === "Refeições")
                         .map((dish) => {
                             const imageUrl = `${api.defaults.baseURL}/files/${dish.image}`; 
@@ -107,7 +105,8 @@ export function MenuCommonUser() {
                 </SliderCustomer>
 
                 <SliderCustomer title="Sobremesas">
-                    {filteredDishes
+                    {
+                        filteredDishes
                         .filter(dish => dish.category === "Sobremesas")
                         .map((dish) => {
                             const imageUrl = `${api.defaults.baseURL}/files/${dish.image}`; 
@@ -132,7 +131,8 @@ export function MenuCommonUser() {
                 </SliderCustomer>
 
                 <SliderCustomer title="Bebidas">
-                    {filteredDishes
+                    {
+                        filteredDishes
                         .filter(dish => dish.category === "Bebidas")
                         .map((dish) => {
                             const imageUrl = `${api.defaults.baseURL}/files/${dish.image}`; 
@@ -160,7 +160,6 @@ export function MenuCommonUser() {
             <FooterWrapper>
                 <Footer />
             </FooterWrapper>
-
         </Container>
     );
 } 

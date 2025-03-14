@@ -18,11 +18,11 @@ export const Container = styled.div`
     line-height: 2.4rem;     
     
 
-     @media (min-width: ${DEVICE_BREAKPOINTS.LG}) { 
-      text-align: center;
-      cursor:pointer;
-          
-     }
+    @media (min-width: ${DEVICE_BREAKPOINTS.LG}) { 
+    text-align: center;
+    cursor:pointer;
+        
+    }
 
 `;
 
