@@ -19,7 +19,7 @@ export const Header = styled.div`
         display: flex;
         align-items: center;
         gap: 3.0rem;
-        margin-left:1.5rem;
+        
         p {
             color: ${({ theme }) => theme.COLORS.WHITE};
             font-family: 'Roboto', serif;
@@ -51,7 +51,7 @@ export const Form = styled.form`
     justify-content: center;
     align-items: center;
     gap: 3.2rem;
-    margin-left:2.7rem;
+    
     > h1 {
         display: none;
     }

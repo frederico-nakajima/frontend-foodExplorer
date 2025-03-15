@@ -47,6 +47,10 @@ export const Container = styled.div`
             display:flex;
             justify-content:center;
         }
+
+          footer{
+                 width: 190.0rem;
+            }  
     
     }  
 `;
