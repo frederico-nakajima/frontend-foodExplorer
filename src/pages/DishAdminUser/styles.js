@@ -106,7 +106,8 @@ export const Container = styled.div`
                     width: 39.0rem;
                     height: 39.0rem;
                 }
-                .salad-ingredients{                    
+                .salad-ingredients{ 
+                    width:70.0rem;                   
                     align-items: flex-start; 
                     margin-bottom: 1.0rem;
                     >h1 {  
@@ -138,7 +139,7 @@ export const Container = styled.div`
         }
 
         footer{
-            margin-top:22.5rem;
+            margin-top:24.5rem;
         }
             
     }

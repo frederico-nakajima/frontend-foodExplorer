@@ -6,7 +6,7 @@ export const CardWrapper = styled.button`
     height:29.2rem;
     padding:2.4rem;
     position:relative;
-    background:${({ theme }) => theme.COLORS.BACKGROUND_1000};
+    background:${({ theme }) => theme.COLORS.BACKGROUND_2000};
     color:${({ theme }) => theme.COLORS.WHITE};
     display:flex;
     flex-direction:column;
@@ -95,7 +95,7 @@ export const CardWrapper = styled.button`
             text-overflow: ellipsis; 
         }
         .alignment h6 {
-            font-size: 1.6rem;
+            font-size: 2.4rem;
             font-weight: 700;
             margin: 0;
         }

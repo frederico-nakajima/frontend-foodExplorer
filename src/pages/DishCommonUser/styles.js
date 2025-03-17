@@ -31,6 +31,7 @@ export const Container = styled.div`
                 left:3.5rem;
             }        
             .salad-ingredients{
+                width:70.0rem; 
                 display: flex;
                 flex-direction: column;
                 align-items: center; 
