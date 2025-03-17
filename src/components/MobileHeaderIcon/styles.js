@@ -11,9 +11,12 @@ export const Container = styled.div`
     background-color:${({theme}) => theme.COLORS.BACKGROUND_700};
     margin-left:-.5rem;
     margin-bottom:-.9rem;
-     >.list{
-        margin-right:6.0rem;       
-     }
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    >.list{
+    margin-right:6.0rem;       
+    }
     >img{
         width: 2.5rem;
         height: 2.5rem;

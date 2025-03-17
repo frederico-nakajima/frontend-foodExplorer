@@ -54,7 +54,7 @@ export function MenuAdminUser() {
             <div className="desktop-header">
                 <DesktopHeader/>
             </div>
-            <div className="mobile-header-icon">
+            <div className="mobile-header">
                 <MobileHeader onOpenMenu={()=> setMenuIsOpen(true)} />
             </div>
             <div className='underHeader'>

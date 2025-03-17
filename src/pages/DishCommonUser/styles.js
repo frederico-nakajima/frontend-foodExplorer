@@ -4,7 +4,9 @@ import  { Link } from 'react-router-dom';
 
 export const Container = styled.div`    
     .mobile-header {
-        display: flex; 
+        display: flex;
+         margin-bottom:10rem;
+        width:100vw;  
     }
     .desktop-header {
         display: none; 

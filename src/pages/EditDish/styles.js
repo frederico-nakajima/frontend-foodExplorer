@@ -3,7 +3,9 @@ import { DEVICE_BREAKPOINTS } from '../../styles/deviceBreakpoints';
 
 export const Container = styled.div`
     .header-mobile {
-        display: flex;         
+        display: flex;
+        margin-bottom:10rem;
+        width:100vw;          
     }
     .header-desktop {
         display: none;

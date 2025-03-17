@@ -5,9 +5,10 @@ export const Container = styled.div`
     .desktop-header {
         display: none;
     }
-    .mobile-header-icon {
+    .mobile-header {
         display: block;
         grid-area: header;
+       
     }
     .underHeader{
         width: 100%;
@@ -25,7 +26,7 @@ export const Container = styled.div`
     width: 100%;
     height: 100vh;
     display: grid;
-    grid-template-rows: 9.4rem 17.4rem 1fr 9.4rem;
+    grid-template-rows: 9.4rem 17.4rem auto 9.4rem;
     grid-template-areas:
     "header"
     "banner"
@@ -38,7 +39,7 @@ export const Container = styled.div`
             grid-area: header;
             margin-bottom:15.0rem;
         }
-        .mobile-header-icon {
+        .mobile-header{
             display: none;
         }
 

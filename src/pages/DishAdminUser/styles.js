@@ -4,7 +4,9 @@ import  { Link } from 'react-router-dom';
 
 export const Container = styled.div`    
     .mobile-header {
-        display: flex; 
+        display: flex;
+        margin-bottom:10rem;
+        width:100vw; 
     }
     .desktop-header {
         display: none; 
@@ -13,6 +15,7 @@ export const Container = styled.div`
     flex-direction: column;
     align-items: center;    
     width: 100%;
+    height:100vh;
     >main{
         display: flex;
         flex-direction: column;

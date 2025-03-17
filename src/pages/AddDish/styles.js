@@ -3,7 +3,9 @@ import { DEVICE_BREAKPOINTS } from '../../styles/deviceBreakpoints';
 
 export const Container = styled.div`
     .header-mobile {
-        display: flex;         
+        display: flex; 
+        margin-bottom:10rem;
+        width:100vw;        
     }
     .header-desktop {
         display: none;
@@ -50,7 +52,7 @@ export const Container = styled.div`
        
     
 export const Form = styled.form`  
-    padding-bottom: 5.7rem;       
+     margin-bottom:6rem;      
     
     >header{
         .addDish{
@@ -275,8 +277,11 @@ export const Form = styled.form`
                 line-height: 2.4rem;
             }
         }
+       
+
         
         @media (min-width: ${DEVICE_BREAKPOINTS.LG}) { 
+            padding-bottom: 5.5rem; 
             margin-bottom:-1.5rem;            
             .image-salad-category{
                 width: 113.7rem;
