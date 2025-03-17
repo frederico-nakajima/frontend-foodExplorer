@@ -31,7 +31,7 @@ export const Container = styled.div`
                 left:3.5rem;
             }        
             .salad-ingredients{
-                width:70.0rem; 
+                
                 display: flex;
                 flex-direction: column;
                 align-items: center; 
@@ -107,7 +107,8 @@ export const Container = styled.div`
                     width: 39.0rem;
                     height: 39.0rem;
                 }
-                .salad-ingredients{                    
+                .salad-ingredients{ 
+                    width:70.0rem;                    
                     align-items: flex-start; 
                     margin-bottom: 1.0rem;
                     >h1 {  
