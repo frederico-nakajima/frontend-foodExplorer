@@ -24,7 +24,7 @@ export const Container = styled.div`
         margin-top:1.0rem;
     }
     width: 100%;
-    height: 100vh;
+    
     display: grid;
     grid-template-rows: 9.4rem 17.4rem auto 9.4rem;
     grid-template-areas:
@@ -48,9 +48,7 @@ export const Container = styled.div`
             justify-content:center;
         }
 
-          footer{
-                 width: 190.0rem;
-            }  
+        
     
     }  
 `;
@@ -175,7 +173,7 @@ export const Content  = styled.div`
 `;
 
 export const FooterWrapper = styled.footer`
-  margin-top: 2.5rem;
+  margin-top: 23rem;
   
   @media (min-width: ${DEVICE_BREAKPOINTS.LG}){   
     margin-top: 4.6rem;

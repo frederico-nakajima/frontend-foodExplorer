@@ -169,7 +169,7 @@ export const Banner  = styled.div`
 export const Content  = styled.div`         
     grid-area:content;
     width: 38.0rem;
-    margin:0 auto 5.0rem auto;    
+    margin:0 auto 28.5rem auto;    
  
     @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {  
         width:112.0rem;
@@ -177,4 +177,5 @@ export const Content  = styled.div`
 
     }
 `;
+
 
