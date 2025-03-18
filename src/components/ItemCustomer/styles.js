@@ -95,7 +95,7 @@ export const CardWrapper = styled.button`
             text-overflow: ellipsis; 
         }
         .alignment h6 {
-            font-size: 2.4rem;
+           font-size: 2.4rem;
             font-weight: 700;
             margin: 0;
         }
