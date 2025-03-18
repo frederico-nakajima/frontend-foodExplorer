@@ -196,6 +196,7 @@ export const Form = styled.form`
             display: flex;
             flex-direction: column;
             justify-content: center;
+            gap:-1rem;
             margin-bottom:1.5rem;        
         
             >.ingredients-price{
@@ -203,25 +204,28 @@ export const Form = styled.form`
                 flex-direction:row;
                 justify-content: center;                
                 >section{
-                height:10.0rem;
+                
                 position:relative;                
                     .tags{
                         display: flex;
                         align-items: center;
-                        height: 5.1rem;
+                        flex-wrap:wrap;
+                        
                         gap: 1.5rem;
                         width: 36.4rem; 
                         background-color: ${({theme}) => theme.COLORS.BACKGROUND_800};                
                         border-radius: .8rem;
                         margin-bottom:2.0rem;
                         margin-top:1.6rem;
-                        padding-left:1rem;                             
+                        padding:1rem 1rem;
+                                                     
                     }
                 }
             }
             .price{
                 display: flex;
                 flex-direction: column;
+                
                 gap:1.6rem;
                 label{
                     font-family: Roboto;
