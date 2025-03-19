@@ -132,7 +132,7 @@ export function AddDish(){
                         <Section title='Ingredientes'>
                             <div className='tags'>
                                 {
-                                    tags.map((tag, index) => (
+                                    tags.map(tag => (
                                         <NoteItem
                                             key={tag}
                                             value= {tag}

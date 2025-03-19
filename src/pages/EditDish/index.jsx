@@ -195,9 +195,9 @@ export function EditDish(){
                         <Section title='Ingredientes'>
                             <div className='tags'>
                                 {
-                                    tags.map((tag, index) => (
+                                    tags.map(tag => (
                                         <NoteItem
-                                        key={index}
+                                        key={tag}
                                         value={tag} 
                                             onClick={() => handleRemoveTag(tag)}
                                         />
