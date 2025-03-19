@@ -64,16 +64,22 @@ export const Container = styled.div`
                 width: 30.0rem; 
                 height: 4.8rem;
                 margin-bottom:2.8rem;
+                font-family: Poppins;
+                font-size: 1.4rem;
+                font-weight: 500;
+                line-height: 2.4rem;
                 >button{
-                    font-size: 1.6rem;
+                    
                 }
             } 
         }       
-    }  
+    } 
+        
+   
     
     @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {        
         height:80.0rem;
-            .mobile-header {
+        .mobile-header {
             display: none; 
         }
         .desktop-header {
@@ -96,7 +102,7 @@ export const Container = styled.div`
             width: 110.0rem;
             height:50.0rem;
             flex-direction: row;
-            margin:3.0rem auto auto 38.0rem;
+            margin:3.0rem auto 11.3rem 38.0rem;
             gap:4.0rem;        
             >.dish { 
                 display:flex;
@@ -126,22 +132,18 @@ export const Container = styled.div`
                         justify-content: flex-start;                
                         margin-bottom:4.0rem;             
                         gap: 2.0rem;
+                        
                     }             
                     .custom-button{
                         padding-right:17.0rem;
-                        font-size: 1.4rem; 
+                        font-size: 1.4rem;
                         button{
                              
-                    }            
+                        }            
                     } 
                 }
-            }
-        }
-
-        footer{
-            margin-top:24.5rem;
-        }
-            
+            }        
+        }            
     }
 
 `;

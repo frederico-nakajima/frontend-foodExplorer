@@ -173,7 +173,7 @@ export const Content  = styled.div`
 `;
 
 export const FooterWrapper = styled.footer`
-  margin-top: 23rem;
+  margin-top: 8rem;
   
   @media (min-width: ${DEVICE_BREAKPOINTS.LG}){   
     margin-top: 4.6rem;

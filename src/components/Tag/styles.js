@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.span`
     display: flex;
-    padding: .4rem .8rem;
+    padding: .4rem 1rem;
     justify-content: center;
     align-items: center;
     height:3.2rem;   
@@ -15,4 +15,5 @@ export const Container = styled.span`
     color: ${({ theme }) => theme.COLORS.WHITE};
     background-color:${({theme}) => theme.COLORS.BACKGROUND_900};
 
+   
 `;
