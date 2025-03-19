@@ -47,7 +47,10 @@ export const Container = styled.div`
             width:115.0rem;
             padding-bottom:2.4rem;
             font-weight: 700;      
-        }      
+        } 
+        footer{
+            width:190rem;
+        }     
     }
 `;        
        

@@ -52,7 +52,10 @@ export const Container = styled.div`
             font-size: 1.9rem;       
             font-weight: 500;
             text-transform: uppercase;     
-        }      
+        }
+        footer{
+            width:190rem;
+        }           
     }
 `;    
         
