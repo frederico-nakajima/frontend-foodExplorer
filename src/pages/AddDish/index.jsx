@@ -134,7 +134,7 @@ export function AddDish(){
                                 {
                                     tags.map((tag, index) => (
                                         <NoteItem
-                                            key={String(index)}
+                                            key={tag}
                                             value= {tag}
                                             onClick={() => handleRemoveTag(tag)}
                                         />
