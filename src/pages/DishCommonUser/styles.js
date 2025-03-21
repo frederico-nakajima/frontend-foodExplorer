@@ -97,7 +97,7 @@ export const Container = styled.div`
             width: 110.0rem;
             height:50.0rem;
             flex-direction: row;
-            margin:3.0rem auto auto 38.0rem;
+            margin:3.0rem auto 14.3rem auto;
             gap:4.0rem;       
            >.dish { 
                 display:flex;
@@ -131,9 +131,7 @@ export const Container = styled.div`
                 }                    
             }         
         }
-        footer{
-            margin-top:23.0rem;
-        }            
+              
     } 
 `;
  
@@ -160,8 +158,13 @@ export const ReturnLink = styled(Link)`
     }
    
     @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {      
-        margin:5.0rem auto auto 40.0rem;    
+        grid-area: link;  
+        width:113.0rem;  
+        margin:3.0rem auto auto auto;    
         flex-direction:row;
+        display:flex;  
+        flex-direction:row;
+        justify-content:start;
         gap: .5rem;        
         >img{
             width: 3.2rem;

@@ -44,25 +44,23 @@ export const Container = styled.div`
             margin-bottom:12.0rem;
         }        
         >a{
-            margin-top:4.0rem;
+            margin-top:0rem;
             width:115.0rem;
-            padding-bottom:2.7rem;
+            padding-bottom:1rem;
             color: ${({theme}) => theme.COLORS.WHITE};
             font-family: Poppins;
             font-size: 1.9rem;       
             font-weight: 500;
             text-transform: uppercase;     
         }
-        footer{
-            width:190rem;
-        }           
+                 
     }
 `;    
         
        
     
 export const Form = styled.form`  
-    padding-bottom: 7.5rem;       
+    padding-bottom: 3.0rem;       
     
     >header{
         .addDish{
@@ -75,10 +73,11 @@ export const Form = styled.form`
             font-weight: 500;
             line-height: 140%; 
             margin-bottom:4.5rem;
+            margin-top:2rem; 
             width: 36.4rem;
         }
     }            
-     .image-salad-category{                
+    .image-salad-category{                
         width: 36.4rem;
         height: 30.0rem;
         display: flex;
@@ -218,8 +217,7 @@ export const Form = styled.form`
                     .tags{
                         display: flex;
                         align-items: center;
-                        flex-wrap:wrap;
-                       
+                        flex-wrap:wrap;                       
                         gap: 1.5rem;
                         width: 36.4rem; 
                         background-color: ${({theme}) => theme.COLORS.BACKGROUND_800};                
@@ -310,13 +308,14 @@ export const Form = styled.form`
         }
     
         @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
-            margin-bottom:-4.6rem;            
+             margin-bottom:6rem;  
+                     
             .image-salad-category{
                 width: 113.7rem;
                 height: 10.0rem;
                 flex-direction: row; 
                 justify-content:end;          
-                margin-top:6.5rem;
+                margin-top:4.5rem;
                 position:relative;                
                 >.dish{
                     left:0rem;
@@ -365,6 +364,16 @@ export const Form = styled.form`
                     >section{
                         .tags{
                             width: 83.4rem;
+                            display: flex;
+                            align-items: center;
+                            flex-wrap:wrap;                       
+                            gap: 1.5rem;
+                            
+                            background-color: ${({theme}) => theme.COLORS.BACKGROUND_800};                
+                            border-radius: .8rem;
+                            margin-bottom:2.0rem;
+                            margin-top:1.6rem;
+                            padding:0.5rem .5rem; 
                         }
                     }                
                 }

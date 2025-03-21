@@ -34,25 +34,30 @@ export const Container = styled.div`
     "footer";   
 
     @media (min-width: ${DEVICE_BREAKPOINTS.LG}) { 
+        padding:0 auto;
         .desktop-header {
-            display: block;
+            width:100vw;
+            display: flex;
+            justify-content:center;
             grid-area: header;
             margin-bottom:15.0rem;
+            margin-left:auto;
+            margin-right:auto;
+            padding:0 auto;
         }
         .mobile-header{
             display: none;
         }
 
-        grid-template-rows: 9.4rem 46.0rem auto 9.4rem;       
+        grid-template-rows: 9.4rem 46.0rem auto 9.4rem;
+        justify-content:center;       
         
         >.underHeader{
             
             display:flex;
             justify-content:center;
         }
-        footer{
-                width: 190.0rem;
-        }  
+     
     }  
 `;
 
@@ -60,6 +65,11 @@ export const Container = styled.div`
 
 export const Banner  = styled.div`
     grid-area: banner;
+    max-width: 425px;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 1rem;
+    position: relative;
     .imgBannerDesktop {
         display: none;
     }
@@ -81,8 +91,8 @@ export const Banner  = styled.div`
         padding-right:2.0rem;
         position:absolute;
         z-index:-1;
-        top: 12.5rem;
-        right: .9rem;        
+        top: 2.5rem;
+        right: 2rem;        
         border-radius: .8rem;
         background: linear-gradient(180deg, #091E26 0%, #00131C 100%);
         padding-right: 1.3rem;
@@ -106,7 +116,9 @@ export const Banner  = styled.div`
            
     }
 
-    @media (min-width: ${DEVICE_BREAKPOINTS.LG}) { 
+    @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
+        display:flex;
+        justify-content:center;      
         .desktop-header-icon {
             display: block;
         }
@@ -118,6 +130,8 @@ export const Banner  = styled.div`
             width: 63.2rem;
             height: 40.7rem;
             transition:  0.5s ;
+            position:relative;
+            left:-25rem;
         }
         .imgBannerDesktop:hover {
             display: block;
@@ -127,7 +141,7 @@ export const Banner  = styled.div`
             display: none;
         }
         grid-area: banner;
-        margin-top: 3.2rem;
+        margin: 3.2rem auto 0 auto;
         width:112.0rem;
         height:40.6rem;           
         >.imgBanner{
@@ -147,7 +161,7 @@ export const Banner  = styled.div`
             padding-right:7.0rem;
             position:absolute;
             z-index:-1;
-            top: 27.2rem;
+            top: 15.2rem;
             border-radius: .8rem;
             background: linear-gradient(180deg, #091E26 0%, #00131C 100%);           
             h1{
@@ -173,7 +187,7 @@ export const Content  = styled.div`
  
     @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {  
         width:112.0rem;
-        
+        margin:0 auto;
 
     }
 `;

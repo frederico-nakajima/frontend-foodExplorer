@@ -40,27 +40,29 @@ export const Container = styled.div`
         .header-desktop {
             display: block;
             width:100%;
-            margin-bottom:9.0rem;
+            margin-bottom:12.0rem;
         }        
         >a{
-            margin-top:4.0rem;
+              margin-top:0rem;
             width:115.0rem;
-            padding-bottom:2.4rem;
-            font-weight: 700;      
+            padding-bottom:1rem;
+            color: ${({theme}) => theme.COLORS.WHITE};
+            font-family: Poppins;
+            font-size: 1.9rem;       
+            font-weight: 500;
+            text-transform: uppercase;      
         } 
-        footer{
-            width:190rem;
-        }     
+           
     }
 `;        
        
     
 export const Form = styled.form`  
-     margin-bottom:6rem;      
-    
+          
+     padding-bottom: 3.0rem;
     >header{
         .addDish{
-            display:block;
+             display:block;
             font-family: Poppins;
             font-size: 3.2rem;
             font-weight: 500;
@@ -213,8 +215,7 @@ export const Form = styled.form`
                     .tags{
                         display: flex;
                         align-items: center;
-                        flex-wrap:wrap;
-                        
+                        flex-wrap:wrap;                        
                         gap: 1.5rem;
                         width: 36.4rem; 
                         background-color: ${({theme}) => theme.COLORS.BACKGROUND_800};                
@@ -289,8 +290,7 @@ export const Form = styled.form`
 
         
         @media (min-width: ${DEVICE_BREAKPOINTS.LG}) { 
-            padding-bottom: 5.5rem; 
-            margin-bottom:-1.5rem;            
+            margin-bottom:6rem;            
             .image-salad-category{
                 width: 113.7rem;
                 height: 10.0rem;
@@ -343,8 +343,17 @@ export const Form = styled.form`
                 position:relative;                
                 >.ingredients-price{
                     >section{
-                        .tags{
+                        .tags{                            
                             width: 83.4rem;
+                            display: flex;
+                            align-items: center;
+                            flex-wrap:wrap;                       
+                            gap: 1.5rem;                            
+                            background-color: ${({theme}) => theme.COLORS.BACKGROUND_800};                
+                            border-radius: .8rem;
+                            margin-bottom:2.0rem;
+                            margin-top:1.6rem;
+                            padding:0.8rem .5rem; 
                         }
                     }                
                 }
