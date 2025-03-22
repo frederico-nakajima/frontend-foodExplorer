@@ -63,14 +63,14 @@ export const Form = styled.form`
             display:none;
         }
          .newDish{
-            display:block;
+           display:block;
             font-family: Poppins;
             font-size: 3.2rem;
             font-weight: 500;
             line-height: 140%; 
             margin-bottom:4.5rem;
-            margin-top:0rem; 
-            width: 36.4rem;
+            margin-top:2rem; 
+            width: 36.4rem; 
         }
     }            
     .image-salad-category{                

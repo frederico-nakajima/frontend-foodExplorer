@@ -23,23 +23,23 @@ export const Container = styled.div`
     }
     >div{
         display:flex;
-        align-items:center;        
+        align-items:center; 
+        position:relative;    
         h2{
             font-family: "Roboto", serif;
             font-size: 2.1rem;
-            font-style: normal;
             font-weight: 700;
             margin-right:6.0rem;
         }
-        div.positionZero{
+        .positionZero{
             position:relative;
             width: 3.8rem;
             height: 3.8rem;
         }
         >.smallZero{
             position:absolute;
-            top:3.3rem;
-            right:2.5rem;
+            top:-.5rem;
+            right:-.5rem;
             background-color:${({theme}) => theme.COLORS.RED_300};
             display: flex;
             width: 2.0rem;

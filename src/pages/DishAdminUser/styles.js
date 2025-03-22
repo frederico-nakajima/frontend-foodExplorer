@@ -158,7 +158,7 @@ export const ReturnLink = styled(Link)`
     justify-content: flex-start;
     align-items: center;
     width: 32.0rem;
-    margin:.5rem auto auto 4.0rem;
+    margin:.5rem auto auto auto;
     >img{
         width: 3.1rem;
         height: 2.8rem;

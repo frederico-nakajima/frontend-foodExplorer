@@ -15,8 +15,7 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;    
-    width: 100%;
-    
+    width: 100%;    
     >main{
         display: flex;
         flex-direction: column;
@@ -30,8 +29,7 @@ export const Container = styled.div`
                 position:relative;
                 left:3.5rem;
             }        
-            .salad-ingredients{
-                
+            .salad-ingredients{                
                 display: flex;
                 flex-direction: column;
                 align-items: center; 
@@ -51,8 +49,7 @@ export const Container = styled.div`
                 font-weight: 400;
                 text-align: justify;               
                 font-size: 1.6rem;
-                }
-                
+                }                
             }
             .tags{
                 display:flex;
@@ -142,7 +139,7 @@ export const ReturnLink = styled(Link)`
     justify-content: flex-start;
     align-items: center;
     width: 32.0rem;
-    margin:.5rem auto auto 3.0rem; 
+    margin:.5rem auto auto auto; 
     >img{
         width: 3.1rem;
         height: 2.8rem;
