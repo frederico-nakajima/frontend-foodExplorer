@@ -33,8 +33,7 @@ export const Container = styled.div`
         }    
     }    
                      
-    @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
-                         
+    @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {                         
         .header-mobile {
             display: none; 
         }
@@ -52,16 +51,13 @@ export const Container = styled.div`
             font-size: 1.9rem;       
             font-weight: 500;
             text-transform: uppercase;     
-        }
-                 
+        }                 
     }
-`;    
-        
+`;        
        
     
 export const Form = styled.form`  
-    padding-bottom: 3.0rem;       
-    
+    padding-bottom: 3.0rem;    
     >header{
         .addDish{
             display:none;
@@ -81,8 +77,7 @@ export const Form = styled.form`
         width: 36.4rem;
         height: 30.0rem;
         display: flex;
-        flex-direction: column;
-        
+        flex-direction: column;        
         >.dish{          
             margin-top:-1.0rem;
             margin-bottom:1.0rem;
@@ -166,9 +161,8 @@ export const Form = styled.form`
                 display: flex;
                 flex-direction:column;
                 align-items: flex-start;
-                gap:1.6rem;                
+                gap:1.4rem;                
                 >label{
-                    margin-top:-.8rem;
                     font-family: Roboto;
                     font-size: 1.6rem;
                     font-weight: 400;
@@ -177,7 +171,7 @@ export const Form = styled.form`
                 >select{
                     border-radius:.8rem;
                     width: 36.4rem;
-                    height: 4.6rem;
+                    height: 4.8rem;
                     background-color:${({theme}) => theme.COLORS.BACKGROUND_800};
                     appearance: none;
                     -webkit-appearance: none;
@@ -192,12 +186,9 @@ export const Form = styled.form`
                     font-weight: 400;
                     line-height: 2.6rem; 
                     padding:0 2.4rem;
-                    border:0;
-                    margin-top:0rem; 
-                    
+                    border:0;                    
                 }
-            }      
-        
+            }        
         } 
     }
         .section{
@@ -206,14 +197,13 @@ export const Form = styled.form`
             flex-direction: column;
             justify-content: center;
             margin-bottom:1.5rem;
-             gap:-1rem;       
-            >.ingredients-price{
+            gap:-1rem;       
+            >.ingredients{
                 display: flex;
                 flex-direction:row;
                 justify-content: center;                
-                >section{
-                
-                position:relative;                
+                >section{                
+                    position:relative;                
                     .tags{
                         display: flex;
                         align-items: center;
@@ -230,16 +220,14 @@ export const Form = styled.form`
             }
             .price{
                 display: flex;
-                flex-direction: column;
-                
+                flex-direction: column;                
                 gap:1.6rem;
                 label{
                     font-family: Roboto;
                     font-size: 1.6rem;
                     font-weight: 400;
                     line-height: 100%; 
-                }
-                
+                }                
                 >input{
                     height: 4.8rem;
                     width: 100%;
@@ -308,8 +296,7 @@ export const Form = styled.form`
         }
     
         @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
-             margin-bottom:6rem;  
-                     
+            margin-bottom:6rem;                     
             .image-salad-category{
                 width: 113.7rem;
                 height: 10.0rem;
@@ -360,20 +347,19 @@ export const Form = styled.form`
                 justify-content: flex-start;
                 gap:2.0rem;
                 position:relative;               
-                >.ingredients-price{
+                >.ingredients{
                     >section{
                         .tags{
                             width: 83.4rem;
                             display: flex;
                             align-items: center;
                             flex-wrap:wrap;                       
-                            gap: 1.5rem;
-                            
+                            gap: 1.5rem;                            
                             background-color: ${({theme}) => theme.COLORS.BACKGROUND_800};                
                             border-radius: .8rem;
                             margin-bottom:2.0rem;
                             margin-top:1.6rem;
-                            padding:0.5rem .5rem; 
+                            padding:0.8rem .5rem; 
                         }
                     }                
                 }

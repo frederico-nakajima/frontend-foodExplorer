@@ -32,8 +32,7 @@ export const Container = styled.div`
         }    
     }    
                      
-    @media (min-width: ${DEVICE_BREAKPOINTS.LG}) { 
-                         
+    @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {                         
         .header-mobile {
             display: none; 
         }
@@ -43,7 +42,7 @@ export const Container = styled.div`
             margin-bottom:12.0rem;
         }        
         >a{
-              margin-top:0rem;
+            margin-top:0rem;
             width:115.0rem;
             padding-bottom:1rem;
             color: ${({theme}) => theme.COLORS.WHITE};
@@ -51,15 +50,13 @@ export const Container = styled.div`
             font-size: 1.9rem;       
             font-weight: 500;
             text-transform: uppercase;      
-        } 
-           
+        }           
     }
 `;        
        
     
-export const Form = styled.form`  
-          
-     padding-bottom: 3.0rem;
+export const Form = styled.form`          
+    padding-bottom: 3.0rem;
     >header{
         .addDish{
              display:block;
@@ -69,8 +66,7 @@ export const Form = styled.form`
             line-height: 140%; 
             margin-bottom:4.5rem;
             margin-top:2rem; 
-            width: 36.4rem;
-           
+            width: 36.4rem;           
         }
         .newDish{
             display:none;
@@ -156,26 +152,24 @@ export const Form = styled.form`
                     line-height: 100%; 
                     color:${({theme}) => theme.COLORS.WHITE};
                     background-color:${({theme}) => theme.COLORS.BACKGROUND_800};
-                    border:0;
-               
+                    border:0;               
                 }
             }
             .data{
                 display: flex;
                 flex-direction:column;
                 align-items: flex-start;
-                gap:1.6rem;                
+                gap:1.4rem;                
                 >label{
-                    margin-top:-.8rem;
                     font-family: Roboto;
                     font-size: 1.6rem;
                     font-weight: 400;
-                    line-height: 100%;                    
+                    line-height: 100%;                     
                 }                    
                 >select{
                     border-radius:.8rem;
                     width: 36.4rem;
-                    height: 4.6rem;
+                    height: 4.8rem;
                     background-color:${({theme}) => theme.COLORS.BACKGROUND_800};
                     appearance: none;
                     -webkit-appearance: none;
@@ -190,9 +184,7 @@ export const Form = styled.form`
                     font-weight: 400;
                     line-height: 2.6rem; 
                     padding:0 2.4rem;
-                    border:0;
-                    margin-top:0px; 
-                    
+                    border:0;                                      
                 }
             }        
         } 
@@ -204,14 +196,12 @@ export const Form = styled.form`
             justify-content: center;
             gap:-1rem;
             margin-bottom:1.5rem;        
-        
-            >.ingredients-price{
+            >.ingredients{
                 display: flex;
                 flex-direction:row;
                 justify-content: center;                
-                >section{
-                
-                position:relative;                
+                >section{                
+                    position:relative;                
                     .tags{
                         display: flex;
                         align-items: center;
@@ -222,15 +212,13 @@ export const Form = styled.form`
                         border-radius: .8rem;
                         margin-bottom:2.0rem;
                         margin-top:1.6rem;
-                        padding:1rem 1rem;
-                                                     
+                        padding:1rem 1rem;                                          
                     }
                 }
             }
             .price{
                 display: flex;
-                flex-direction: column;
-                
+                flex-direction: column;                
                 gap:1.6rem;
                 label{
                     font-family: Roboto;
@@ -269,7 +257,6 @@ export const Form = styled.form`
             justify-content: flex-end;
             align-items:center;
             margin-top:1.3rem;
-
             >button{
                 width: 36.4rem;
                 height: 4.8rem;
@@ -286,8 +273,6 @@ export const Form = styled.form`
                 line-height: 2.4rem;
             }
         }
-       
-
         
         @media (min-width: ${DEVICE_BREAKPOINTS.LG}) { 
             margin-bottom:6rem;            
@@ -341,7 +326,7 @@ export const Form = styled.form`
                 justify-content: flex-start;
                 gap:2.0rem;
                 position:relative;                
-                >.ingredients-price{
+                >.ingredients{
                     >section{
                         .tags{                            
                             width: 83.4rem;
@@ -368,9 +353,7 @@ export const Form = styled.form`
                 position:relative;
                 left:96.0rem;
             }
-        }
-
-     
+        }     
 `;
         
         

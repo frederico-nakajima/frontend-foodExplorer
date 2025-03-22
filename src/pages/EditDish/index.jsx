@@ -191,7 +191,7 @@ export function EditDish(){
                     </div>
                 </div>
                 <div className="section">
-                    <div className="ingredients-price">
+                    <div className="ingredients">
                         <Section title='Ingredientes'>
                             <div className='tags'>
                                 {
