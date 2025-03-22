@@ -5,12 +5,11 @@ export const Container = styled.header`
   grid-area: header;
   padding:2.4rem auto;
   height: 9.4rem;
-  width: 100vw;
+  width: 100%;
   display: flex;
   justify-content:center;
   align-items: center;
-  background-color:${({theme}) => theme.COLORS.BACKGROUND_600};
- 
+  background-color:${({theme}) => theme.COLORS.BACKGROUND_600}; 
   position: fixed;
   top: 0;
   z-index: 999;
@@ -21,26 +20,23 @@ export const Container = styled.header`
   &.show {
     opacity: 1;
     transform: translateY(0);
-  }
-    
+  }    
   >main{
     display: flex;
     justify-content:center;
     align-items: center;
     gap:3.2rem;
-    
+    width:113.4rem;    
     >img{
       cursor:pointer;
     }
   }
-
 `;
 
 export const Brand = styled.div`
   display:flex;
   align-items:flex-start;
   gap:1.0rem;
-
   >img{
     width: 3.0rem;
     height: 3.0rem;
@@ -48,23 +44,20 @@ export const Brand = styled.div`
   >div{
     display:flex;
     flex-direction:column;
-    align-items:flex-end;
-      
+    align-items:flex-end;      
     h2{
       font-family: "Roboto", serif;
       font-size: 2.4rem;
       font-weight: 700;
       line-height: normal;
       width:15.0rem;
-    }
-    
+    }    
     p{
       color:${({theme}) => theme.COLORS.CIANO};
       font-family: "Roboto",serif;
       font-size: 1.2rem;
       font-weight: 400;
-      line-height: 160%; 
-
+      line-height: 160%;
     }
   }
 `;
@@ -79,8 +72,7 @@ export const Search  = styled.div`
   border-radius: .5rem;
   padding: 1.2rem 14.0rem;
   color:${({theme}) => theme.COLORS.WHITE};
-  background-color:${({theme}) => theme.COLORS.BACKGROUND_900};
-  
+  background-color:${({theme}) => theme.COLORS.BACKGROUND_900};  
   > img {
     margin-right: .8rem;
     position:relative;
@@ -101,8 +93,7 @@ export const Search  = styled.div`
       color: ${({ theme }) => theme.COLORS.GRAY_300};
       font-family: "Roboto", serif;
       font-size: 1.6rem;
-      font-weight: 400;     
-      
+      font-weight: 400;      
     }
     &:focus {
       outline: none;

@@ -21,16 +21,14 @@ export const Container = styled.header`
     opacity: 1;
     transform: translateY(0);
   }
-
   >main{
     display: flex;
     justify-content:center;
     align-items: center;
     gap:3.2rem;
     width:113.4rem;
-
-     >img{
-    cursor:pointer;
+    >img{
+      cursor:pointer;
     }
   }
 
