@@ -24,7 +24,7 @@ export const Container = styled.div`
         font-size: 1.6rem;       
         font-weight: 500;
         text-transform: uppercase; 
-        padding-bottom:3.0rem;
+        padding-bottom:1.0rem;
         position:relative;
         left:-1.0rem;
         >svg{

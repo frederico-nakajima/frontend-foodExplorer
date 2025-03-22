@@ -1,73 +1,55 @@
 import styled from 'styled-components';
 import {DEVICE_BREAKPOINTS} from "../../styles/deviceBreakpoints";
 
-export const Container = styled.div`
-    .desktop-header {
-        display: none;
-    }
-    .mobile-header-icon {
-        display: block;
-        grid-area: header;
-    }
-    >.underHeader{
-        width: 100%;
-        height:15.0rem;            
-    }
-    .imgBannerDesktop {
-        display: none;
-    }
-    .imgBannerMobile {
-        display: block;
-        margin-top:1.0rem;
-    }
-    .textBoxMobile{
-        margin-top:1.0rem;
-    }
-    width: 100%;
-    
+export const Container = styled.div`    
+    width: 100%;    
     display: grid;
     grid-template-rows: 9.4rem 17.4rem auto 9.4rem;
     grid-template-areas:
     "header"
     "banner"
     "content"
-    "footer";   
+    "footer"; 
+    .desktop-header-icon {
+        display: none;
+    }
+    .mobile-header-icon {
+        display: block;
+        grid-area: header;
+    } 
+    .banner{
+        grid-area: banner;
+    } 
 
     @media (min-width: ${DEVICE_BREAKPOINTS.LG}) { 
-        .desktop-header {
+        grid-template-rows: 9.4rem 46.0rem auto 9.4rem;         
+        .desktop-header-icon {
+            grid-area:header;
             display: block;
         }
         .mobile-header-icon {
+            grid-area: header;
             display: none;
         }
-
-        grid-template-rows: 9.4rem 46.0rem auto 9.4rem;    
-
-        >.underHeader{
-            display:flex;
-            justify-content:center;
-        }
-
-        
-    
+        .banner{
+            grid-area: banner;
+            max-width:112.0rem;            
+            margin:2rem auto;
+        }         
     }  
 `;
-
-
 
 export const Banner  = styled.div`
     grid-area: banner;
     max-width: 425px;
     margin: 0 auto;
     position: relative;
-    padding: 0 1rem;
-    position: relative;
+    padding: 0 1rem;   
      .imgBannerDesktop {
         display: none;
     }
     .imgBannerMobile {
-        display: block;
-         grid-area: banner;
+        display: block;        
     }
     >.textBoxDesktop{
         display: none;
@@ -106,21 +88,14 @@ export const Banner  = styled.div`
         }           
     }
 
-    @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
-        grid-area: banner;
-        margin-top: 3.2rem;
-        width:112.0rem;
-        height:40.6rem;  
+    @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {      
+        max-width:112.0rem;         
         display:flex;
-        justify-content:center;   
-        .desktop-header-icon {
-            display: block;
-        }
-        .mobile-header-icon {
-            display: none;
-        } 
+        justify-content:center;     
         .imgBannerDesktop {
             display: block;
+            width:63.2rem;
+            height:40.6rem;
             transition:  0.5s ;
             position:relative;
             left:-25rem;
@@ -131,12 +106,7 @@ export const Banner  = styled.div`
         }    
         .imgBannerMobile {
             display: none;
-        }                 
-        >.imgBanner{
-            width:63.2rem;
-            height:40.6rem;
-            border:.1rem solid ${({ theme }) => theme.COLORS.WHITE};
-        }
+        }       
         >.textBoxMobile{
             display: none;
         }        
@@ -173,7 +143,7 @@ export const Banner  = styled.div`
 export const Content  = styled.div`         
     grid-area:content;
     width: 38.0rem;
-    margin:0 auto; 
+    margin:0 auto 2rem auto; 
  
     @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {  
         width:112.0rem;
@@ -182,9 +152,11 @@ export const Content  = styled.div`
 `;
 
 export const FooterWrapper = styled.footer`
-  margin-top: 8rem;
+    grid-area:footer; 
   
-  @media (min-width: ${DEVICE_BREAKPOINTS.LG}){   
-    margin-top: 4.6rem;
-  }
+    
+    @media (min-width: ${DEVICE_BREAKPOINTS.LG}){
+        
+    
+    }
 `;

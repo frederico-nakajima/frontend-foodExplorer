@@ -2,25 +2,25 @@ import styled from 'styled-components';
 import { DEVICE_BREAKPOINTS } from '../../styles/deviceBreakpoints';
 import  { Link } from 'react-router-dom';
 
-export const Container = styled.div`    
-    .mobile-header {
-        display: flex;
-        margin-bottom:10rem;
-        width:100vw; 
-    }
-    .desktop-header {
-        display: none; 
-    }    
+export const Container = styled.div`
+    margin:0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;    
-    width: 100%;
-   
+    width: 100%;     
+    .mobile-header {
+        display: flex;
+        margin-bottom:10rem;
+        width:100vw;  
+    }
+    .desktop-header {
+        display: none; 
+    }      
     >main{
         display: flex;
         flex-direction: column;
         align-items: center;       
-        width: 30.0rem;        
+        width: 30.0rem;    
         .dish{        
             >.restaurantDish {
                 width: 26.4rem;
@@ -29,7 +29,7 @@ export const Container = styled.div`
                 position:relative;
                 left:3.5rem;
             }        
-            .salad-ingredients{
+            .salad-ingredients{                
                 display: flex;
                 flex-direction: column;
                 align-items: center; 
@@ -37,18 +37,18 @@ export const Container = styled.div`
                 padding:0 1.5rem;
                 margin-bottom:2.4rem;            
                 h1{
-                    color: ${({theme}) => theme.COLORS.WHITE};
-                    font-family: Poppins;
-                    font-weight: 500;                
-                    font-size: 2.7rem;
-                    margin-bottom:-1.0rem; 
+                 color: ${({theme}) => theme.COLORS.WHITE};
+                font-family: Poppins;
+                font-weight: 500;
+                font-size: 2.7rem;
+                margin-bottom:-1.0rem; 
                 }
                 p{
-                    color: ${({theme}) => theme.COLORS.WHITE};
-                    font-family: Poppins;
-                    font-weight: 400;
-                    text-align: justify;               
-                    font-size: 1.6rem;
+                 color: ${({theme}) => theme.COLORS.WHITE};
+                font-family: Poppins;
+                font-weight: 400;
+                text-align: justify;               
+                font-size: 1.6rem;
                 }                
             }
             .tags{
@@ -58,66 +58,54 @@ export const Container = styled.div`
                 gap: 1.0rem;
                 margin-bottom:0rem; 
                 padding:0 1.5rem;
-            }
-        
+            }        
             .custom-button{
                 width: 30.0rem; 
                 height: 4.8rem;
-                margin-bottom:2.8rem;
-                font-family: Poppins;
-                font-size: 1.4rem;
-                font-weight: 500;
-                line-height: 2.4rem;
+                margin-bottom:2.4rem;
                 >button{
-                    
+                    font-size: 1.6rem;
                 }
-            } 
+            }         
         }       
-    } 
-        
-   
+    }       
     
-    @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {        
-        height:80.0rem;
-        .mobile-header {
-            display: none; 
-        }
-        .desktop-header {
-            display: flex;
-            justify-content:center;
-            gap:1.0rem;
-        }
-        .icon {
-            display: none; 
-        }
+    @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
         display: grid;
-        justify-content:center;
         grid-template-rows: 9.4rem 8.5rem auto 9.4rem;
         grid-template-areas:
         "header"
         "link"
         "content"
-        "footer";
-        
-        > main {
+        "footer";         
+        height:100vh;
+        .mobile-header {
+            display: none; 
+        }
+        .desktop-header {
+            display: flex;
+            gap:1.0rem;
+        }
+        .icon {
+            display: none; 
+        }               
+        >main {
             grid-area: content;     
             width: 110.0rem;
             height:50.0rem;
-            display:flex;
             flex-direction: row;
-            justify-content:center;
-            margin: 0rem auto 14.3rem auto;
-            gap:4.0rem;        
-            >.dish { 
+            margin:3.0rem auto 10.84rem auto;
+            gap:4.0rem;       
+           >.dish { 
                 display:flex;
-                gap:9.0rem;               
+                gap:9.0rem;              
                 align-items:center;                               
                 >.restaurantDish {
                     width: 39.0rem;
                     height: 39.0rem;
                 }
                 .salad-ingredients{ 
-                    width:70.0rem;                   
+                    width:70.0rem;                    
                     align-items: flex-start; 
                     margin-bottom: 1.0rem;
                     >h1 {  
@@ -132,33 +120,30 @@ export const Container = styled.div`
                         line-height: 140%; 
                         margin-bottom: 2.4rem;
                     }                    
-                    .tags{                
-                        justify-content: flex-start;                
-                        margin-bottom:4.0rem;             
-                        gap: 2.0rem;
-                        
-                    }             
-                    .custom-button{
-                        padding-right:17.0rem;
-                        font-size: 1.4rem;
-                        button{
-                             
-                        }            
-                    } 
                 }
-            }        
-        }            
-    }
-
+                .tags{                
+                    justify-content: flex-start;                
+                    margin-bottom:4.0rem;             
+                    gap: 2.0rem;
+                }
+                .custom-button{
+                    padding-right:17.0rem;
+                    font-size: 1.4rem;    
+                }
+            }         
+        }
+              
+    } 
 `;
  
 export const ReturnLink = styled(Link)`
+    grid-area: link;  
     height: 6.0rem;
     display:flex;
     justify-content: flex-start;
     align-items: center;
     width: 32.0rem;
-    margin:.5rem auto auto auto;
+    margin:.5rem auto auto auto; 
     >img{
         width: 3.1rem;
         height: 2.8rem;
@@ -170,18 +155,18 @@ export const ReturnLink = styled(Link)`
         font-family: Poppins;
         font-size: 1.9rem;       
         font-weight: 500;
-        text-transform: uppercase;    
+        text-transform: uppercase;
     }
    
-    @media (min-width: ${DEVICE_BREAKPOINTS.LG}) { 
+    @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {      
         grid-area: link;  
         width:113.0rem;  
         margin:3.0rem auto auto auto;    
         flex-direction:row;
-         display:flex;  
+        display:flex;  
         flex-direction:row;
         justify-content:start;
-        gap: .5rem;    
+        gap: .5rem;        
         >img{
             width: 3.2rem;
             height: 3.2rem;
@@ -190,9 +175,13 @@ export const ReturnLink = styled(Link)`
             font-size: 2.4rem;
             font-weight: 700;
             line-height: 140%; 
-        }      
+        }
+            
+        
     }
 `;
+
+
     
     
     

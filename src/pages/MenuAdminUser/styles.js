@@ -1,58 +1,41 @@
 import styled from 'styled-components';
 import {DEVICE_BREAKPOINTS} from "../../styles/deviceBreakpoints";
 
-export const Container = styled.div`
-    width: 100%;
-    height: 100vh;
+export const Container = styled.div`    
+    width: 100%;    
     display: grid;
     grid-template-rows: 9.4rem 17.4rem auto 9.4rem;
     grid-template-areas:
     "header"
     "banner"
     "content"
-    "footer";     
+    "footer"; 
     .desktop-header {
         display: none;
     }
     .mobile-header {
         display: block;
-        grid-area: header;       
-    }
-    .underHeader{
-        width: 100%;
-    }
-    .imgBannerDesktop {
-        display: none;
-    }
-    .imgBannerMobile {
-        display: block;
-        margin-top:1.0rem;
-    }
-    .textBoxMobile{
-        margin-top:1.0rem;
-    }     
+        grid-area: header;
+    } 
+    .banner{
+        grid-area: banner;
+    } 
 
-    @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
-        grid-template-rows: 9.4rem 46.0rem auto 9.4rem;
-        justify-content:center;    
-        padding:0 auto;
+    @media (min-width: ${DEVICE_BREAKPOINTS.LG}) { 
+        grid-template-rows: 9.4rem 46.0rem auto 9.4rem;         
         .desktop-header {
-            width:100vw;
-            display: flex;
-            justify-content:center;
-            grid-area: header;
-            margin-bottom:15.0rem;
-            margin-left:auto;
-            margin-right:auto;
-            padding:0 auto;
+            grid-area:header;
+            display: block;
         }
-        .mobile-header{
+        .mobile-header {
+            grid-area: header;
             display: none;
-        }            
-        >.underHeader{            
-            display:flex;
-            justify-content:center;
-        }     
+        }
+        .banner{
+            grid-area: banner;
+            max-width:112.0rem;            
+            margin:2rem auto;
+        }         
     }  
 `;
 
@@ -61,14 +44,12 @@ export const Banner  = styled.div`
     max-width: 425px;
     margin: 0 auto;
     position: relative;
-    padding: 0 1rem;
-    position: relative;
-    .imgBannerDesktop {
+    padding: 0 1rem;   
+     .imgBannerDesktop {
         display: none;
     }
     .imgBannerMobile {
-        display: block;
-         grid-area: banner;
+        display: block;        
     }
     >.textBoxDesktop{
         display: none;
@@ -107,23 +88,14 @@ export const Banner  = styled.div`
         }           
     }
 
-    @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
+    @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {      
+        max-width:112.0rem;         
         display:flex;
-        justify-content:center;
-        grid-area: banner;
-        margin: 3.2rem auto 0 auto;
-        width:112.0rem;
-        height:40.6rem;       
-        .desktop-header-icon {
-            display: block;
-        }
-        .mobile-header-icon {
-            display: none;
-        } 
+        justify-content:center;     
         .imgBannerDesktop {
             display: block;
-            width: 63.2rem;
-            height: 40.7rem;
+            width:63.2rem;
+            height:40.6rem;
             transition:  0.5s ;
             position:relative;
             left:-25rem;
@@ -134,17 +106,14 @@ export const Banner  = styled.div`
         }    
         .imgBannerMobile {
             display: none;
-        }                 
-        >.imgBanner{
-            width:63.2rem;
-            height:40.6rem;           
-        }
+        }       
         >.textBoxMobile{
             display: none;
         }        
         >.textBoxDesktop{
             display:flex;
             flex-direction:column;
+            align-items:flex-start;
             justify-content:center;
             width:112.0rem;
             height:26.0rem;
@@ -154,7 +123,7 @@ export const Banner  = styled.div`
             z-index:-1;
             top: 15.2rem;
             border-radius: .8rem;
-            background: linear-gradient(180deg, #091E26 0%, #00131C 100%);           
+            background: linear-gradient(180deg, #091E26 0%, #00131C 100%);            
             h1{
                 font-family: Poppins;
                 font-size: 4.0rem;
@@ -174,7 +143,7 @@ export const Banner  = styled.div`
 export const Content  = styled.div`         
     grid-area:content;
     width: 38.0rem;
-    margin:0 auto 6.5rem auto;    
+    margin:0 auto 2rem auto; 
  
     @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {  
         width:112.0rem;
@@ -182,4 +151,12 @@ export const Content  = styled.div`
     }
 `;
 
-
+export const FooterWrapper = styled.footer`
+    grid-area:footer; 
+  
+    
+    @media (min-width: ${DEVICE_BREAKPOINTS.LG}){
+        
+    
+    }
+`;

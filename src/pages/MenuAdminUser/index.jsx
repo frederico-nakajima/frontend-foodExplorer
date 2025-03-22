@@ -1,4 +1,4 @@
-import { Container,Banner,Content} from './styles';
+import { Container,Banner,Content,FooterWrapper} from './styles';
 import { DesktopHeader } from '../../components/DesktopHeader';
 import { MobileHeader } from '../../components/MobileHeader';
 import { Footer } from '../../components/Footer';
@@ -57,7 +57,7 @@ export function MenuAdminUser() {
             <div className="mobile-header">
                 <MobileHeader onOpenMenu={()=> setMenuIsOpen(true)} />
             </div>
-            <div className='underHeader'>
+            <div className='banner'>
                 <Banner>
                     <div className='imgBannerMobile'>
                         <img src={Pngegg02} alt="imagem de biscoitos e frutinhas" />
@@ -156,7 +156,9 @@ export function MenuAdminUser() {
                 </Slider>
             </Content>            
            
-            <Footer />            
+             <FooterWrapper>
+                <Footer />
+            </FooterWrapper>           
         </Container>
     );
 } 

@@ -3,27 +3,27 @@ import {DEVICE_BREAKPOINTS} from "../../styles/deviceBreakpoints"
 
 export const StyledSwiper = styled.div`  
   margin-top:2.0px;
-    >h2{
-      margin-bottom:2.4rem;
-      margin-left:.0rem;
-      font-family: Poppins;
-      font-size: 1.8rem;
-      font-weight: 500;
-      line-height: 140%;
-    }
-    .swiper {
-      width: 100%;
-      height:100%;
-    }
-    .swiper-slide {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .swiper-button-next,
-    .swiper-button-prev {
-      display:none;    
-    }
+  >h2{
+    margin-bottom:2.4rem;
+    margin-left:.0rem;
+    font-family: Poppins;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 140%;
+  }
+  .swiper {
+    width: 100%;
+    height:100%;
+  }
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    display:none;    
+  }
 
   @media (min-width: ${DEVICE_BREAKPOINTS.LG}) { 
     position: relative;

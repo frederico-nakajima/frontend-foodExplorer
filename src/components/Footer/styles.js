@@ -2,8 +2,8 @@ import styled from 'styled-components';
 import { DEVICE_BREAKPOINTS } from '../../styles/deviceBreakpoints';
 
 export const Container = styled.footer` 
-  width: 100vw;
-  height: 7.7rem;
+  width: 100%;
+  height: 9.4rem;
   display: flex;
   justify-content:center;
   align-items: center;
@@ -22,7 +22,7 @@ export const Container = styled.footer`
   }
 
   @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
- margin: 0 auto; 
+    margin: 0 auto; 
     >main{
       gap:71.5rem;    
       p{
@@ -31,8 +31,7 @@ export const Container = styled.footer`
       }
     }  
   }   
-`;
-      
+`;      
 
 export const Brand = styled.div`
   display:flex;

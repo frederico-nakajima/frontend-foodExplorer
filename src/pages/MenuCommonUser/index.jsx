@@ -51,13 +51,13 @@ export function MenuCommonUser() {
                 isAdmin={false} 
             />           
 
-             <div className="desktop-header">
+             <div className="desktop-header-icon">
                 <DesktopHeaderIcon buttonIconContent={buttonIconContent} showIcon={true} />
             </div>
             <div className="mobile-header-icon">
                 <MobileHeaderIcon onOpenMenu={()=> setMenuIsOpen(true)} />
             </div>
-            <div className='underHeader'>
+            <div className='banner'>
                 <Banner>
                     <div className='imgBannerMobile'>
                         <img src={Pngegg02} alt="imagem de biscoitos e frutinhas" />
