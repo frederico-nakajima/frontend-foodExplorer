@@ -1,14 +1,22 @@
 import styled from 'styled-components';
 import {DEVICE_BREAKPOINTS} from "../../styles/deviceBreakpoints";
 
-export const Container = styled.div`    
+export const Container = styled.div`
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 9.4rem 17.4rem auto 9.4rem;
+    grid-template-areas:
+    "header"
+    "banner"
+    "content"
+    "footer";     
     .desktop-header {
         display: none;
     }
     .mobile-header {
         display: block;
-        grid-area: header;
-       
+        grid-area: header;       
     }
     .underHeader{
         width: 100%;
@@ -22,18 +30,11 @@ export const Container = styled.div`
     }
     .textBoxMobile{
         margin-top:1.0rem;
-    }
-    width: 100%;
-    height: 100vh;
-    display: grid;
-    grid-template-rows: 9.4rem 17.4rem auto 9.4rem;
-    grid-template-areas:
-    "header"
-    "banner"
-    "content"
-    "footer";   
+    }     
 
-    @media (min-width: ${DEVICE_BREAKPOINTS.LG}) { 
+    @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
+        grid-template-rows: 9.4rem 46.0rem auto 9.4rem;
+        justify-content:center;    
         padding:0 auto;
         .desktop-header {
             width:100vw;
@@ -47,21 +48,13 @@ export const Container = styled.div`
         }
         .mobile-header{
             display: none;
-        }
-
-        grid-template-rows: 9.4rem 46.0rem auto 9.4rem;
-        justify-content:center;       
-        
-        >.underHeader{
-            
+        }            
+        >.underHeader{            
             display:flex;
             justify-content:center;
-        }
-     
+        }     
     }  
 `;
-
-
 
 export const Banner  = styled.div`
     grid-area: banner;
@@ -95,8 +88,7 @@ export const Banner  = styled.div`
         right: 2rem;        
         border-radius: .8rem;
         background: linear-gradient(180deg, #091E26 0%, #00131C 100%);
-        padding-right: 1.3rem;
-               
+        padding-right: 1.3rem;               
         h1{
             position:relative;
             right:2.5rem;
@@ -112,13 +104,16 @@ export const Banner  = styled.div`
             font-size: 1.2rem;            
             font-weight: 400;
             line-height: 100%; 
-        }
-           
+        }           
     }
 
     @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
         display:flex;
-        justify-content:center;      
+        justify-content:center;
+        grid-area: banner;
+        margin: 3.2rem auto 0 auto;
+        width:112.0rem;
+        height:40.6rem;       
         .desktop-header-icon {
             display: block;
         }
@@ -139,11 +134,7 @@ export const Banner  = styled.div`
         }    
         .imgBannerMobile {
             display: none;
-        }
-        grid-area: banner;
-        margin: 3.2rem auto 0 auto;
-        width:112.0rem;
-        height:40.6rem;           
+        }                 
         >.imgBanner{
             width:63.2rem;
             height:40.6rem;           
@@ -188,7 +179,6 @@ export const Content  = styled.div`
     @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {  
         width:112.0rem;
         margin:0 auto;
-
     }
 `;
 

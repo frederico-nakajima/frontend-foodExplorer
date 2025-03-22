@@ -343,6 +343,7 @@ export const Form = styled.form`
             }
             .section{
                 width: 113.7rem;
+                height:9.7rem;
                 flex-direction: row;
                 justify-content: flex-start;
                 gap:2.0rem;

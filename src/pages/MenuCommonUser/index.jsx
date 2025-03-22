@@ -76,7 +76,7 @@ export function MenuCommonUser() {
                     </div>
                 </Banner>
             </div>
-            
+
             <Content>                       
                 <SliderCustomer title="Refeições">
                     {   
@@ -103,7 +103,6 @@ export function MenuCommonUser() {
                         })
                     }
                 </SliderCustomer>
-
                 <SliderCustomer title="Sobremesas">
                     {
                         filteredDishes
@@ -129,7 +128,6 @@ export function MenuCommonUser() {
                         })
                     }
                 </SliderCustomer>
-
                 <SliderCustomer title="Bebidas">
                     {
                         filteredDishes

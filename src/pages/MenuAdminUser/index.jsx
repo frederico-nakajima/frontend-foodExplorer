@@ -79,7 +79,8 @@ export function MenuAdminUser() {
             
             <Content>                       
                 <Slider title="Refeições">
-                    {filteredDishes
+                    {
+                        filteredDishes
                         .filter(dish => dish.category === "Refeições")
                         .map((dish) => {
                             const imageUrl = `${api.defaults.baseURL}/files/${dish.image}`; 
@@ -104,7 +105,8 @@ export function MenuAdminUser() {
                 </Slider>
 
                 <Slider title="Sobremesas">
-                    {filteredDishes
+                    {
+                        filteredDishes
                         .filter(dish => dish.category === "Sobremesas")
                         .map((dish) => {
                             const imageUrl = `${api.defaults.baseURL}/files/${dish.image}`; 
@@ -127,9 +129,9 @@ export function MenuAdminUser() {
                         })
                     }
                 </Slider>
-
                 <Slider title="Bebidas">
-                    {filteredDishes
+                    {
+                        filteredDishes
                         .filter(dish => dish.category === "Bebidas")
                         .map((dish) => {
                             const imageUrl = `${api.defaults.baseURL}/files/${dish.image}`; 

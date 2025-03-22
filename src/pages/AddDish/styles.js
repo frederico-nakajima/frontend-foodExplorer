@@ -281,7 +281,7 @@ export const Form = styled.form`
                 height: 10.0rem;
                 flex-direction: row; 
                 justify-content:end;          
-                margin-top:6.5rem;
+                margin-top:4.5rem;
                 position:relative;                
                 >.dish{
                 left:0rem;
@@ -336,7 +336,7 @@ export const Form = styled.form`
                             gap: 1.5rem;                            
                             background-color: ${({theme}) => theme.COLORS.BACKGROUND_800};                
                             border-radius: .8rem;
-                            margin-bottom:2.0rem;
+                            margin-bottom:1.3rem;
                             margin-top:1.6rem;
                             padding:0.8rem .5rem; 
                         }

@@ -2,20 +2,20 @@ import styled from 'styled-components';
 import { DEVICE_BREAKPOINTS } from '../../styles/deviceBreakpoints';
 import  { Link } from 'react-router-dom';
 
-export const Container = styled.div`    
-    .mobile-header {
-        display: flex;
-         margin-bottom:10rem;
-        width:100vw;  
-    }
-    .desktop-header {
-        display: none; 
-    }
+export const Container = styled.div`
     margin:0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;    
-    width: 100%;    
+    width: 100%;     
+    .mobile-header {
+        display: flex;
+        margin-bottom:10rem;
+        width:100vw;  
+    }
+    .desktop-header {
+        display: none; 
+    }      
     >main{
         display: flex;
         flex-direction: column;
@@ -70,9 +70,16 @@ export const Container = styled.div`
         }       
     }       
     
-    @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {        
-        height:80.0rem;
-            .mobile-header {
+    @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
+        display: grid;
+        grid-template-rows: 9.4rem 8.5rem auto 9.4rem;
+        grid-template-areas:
+        "header"
+        "link"
+        "content"
+        "footer";         
+        height:100vh;
+        .mobile-header {
             display: none; 
         }
         .desktop-header {
@@ -81,20 +88,13 @@ export const Container = styled.div`
         }
         .icon {
             display: none; 
-        }
-        display: grid;
-        grid-template-rows: 9.4rem 8.5rem auto 9.4rem;
-        grid-template-areas:
-        "header"
-        "link"
-        "content"
-        "footer";        
-        > main {
+        }               
+        >main {
             grid-area: content;     
             width: 110.0rem;
             height:50.0rem;
             flex-direction: row;
-            margin:3.0rem auto 14.3rem auto;
+            margin:3.0rem auto 10.84rem auto;
             gap:4.0rem;       
            >.dish { 
                 display:flex;

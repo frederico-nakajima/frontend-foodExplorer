@@ -56,6 +56,12 @@ export const Container = styled.div`
 
 
 export const Banner  = styled.div`
+    grid-area: banner;
+    max-width: 425px;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 1rem;
+    position: relative;
      .imgBannerDesktop {
         display: none;
     }
@@ -77,8 +83,8 @@ export const Banner  = styled.div`
         padding-right:2.0rem;
         position:absolute;
         z-index:-1;
-        top: 12.5rem;
-        right: .9rem;        
+        top: 2.5rem;
+        right: 2rem;        
         border-radius: .8rem;
         background: linear-gradient(180deg, #091E26 0%, #00131C 100%);
         padding-right: 1.3rem;               
@@ -97,11 +103,16 @@ export const Banner  = styled.div`
             font-size: 1.2rem;            
             font-weight: 400;
             line-height: 100%; 
-        }
-           
+        }           
     }
 
-    @media (min-width: ${DEVICE_BREAKPOINTS.LG}) { 
+    @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
+        grid-area: banner;
+        margin-top: 3.2rem;
+        width:112.0rem;
+        height:40.6rem;  
+        display:flex;
+        justify-content:center;   
         .desktop-header-icon {
             display: block;
         }
@@ -111,6 +122,8 @@ export const Banner  = styled.div`
         .imgBannerDesktop {
             display: block;
             transition:  0.5s ;
+            position:relative;
+            left:-25rem;
         }
         .imgBannerDesktop:hover {
             display: block;
@@ -118,11 +131,7 @@ export const Banner  = styled.div`
         }    
         .imgBannerMobile {
             display: none;
-        }
-        grid-area: banner;
-        margin-top: 3.2rem;
-        width:112.0rem;
-        height:40.6rem;           
+        }                 
         >.imgBanner{
             width:63.2rem;
             height:40.6rem;
@@ -142,7 +151,7 @@ export const Banner  = styled.div`
             padding-right:7.0rem;
             position:absolute;
             z-index:-1;
-            top: 27.2rem;
+            top: 15.2rem;
             border-radius: .8rem;
             background: linear-gradient(180deg, #091E26 0%, #00131C 100%);            
             h1{
@@ -177,7 +186,5 @@ export const FooterWrapper = styled.footer`
   
   @media (min-width: ${DEVICE_BREAKPOINTS.LG}){   
     margin-top: 4.6rem;
-
-  } 
-
+  }
 `;
