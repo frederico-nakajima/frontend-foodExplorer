@@ -59,7 +59,7 @@ export const Form = styled.form`
     padding-bottom: 3.0rem;
     >header{
         .addDish{
-             display:block;
+            display:block;
             font-family: Poppins;
             font-size: 3.2rem;
             font-weight: 500;

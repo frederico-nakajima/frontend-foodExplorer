@@ -69,7 +69,7 @@ export const Form = styled.form`
             font-weight: 500;
             line-height: 140%; 
             margin-bottom:4.5rem;
-            margin-top:2rem; 
+            margin-top:0rem; 
             width: 36.4rem;
         }
     }            
