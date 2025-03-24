@@ -7,7 +7,7 @@ export const Container = styled.div`
     gap:1.1rem;
     width:100vw;
     heigth:11.4rem;
-    padding:4.0rem 1.0rem 1.5rem 1.0rem;
+    padding:4.0rem 1.0rem 2.0rem 1.0rem;
     background-color:${({theme}) => theme.COLORS.BACKGROUND_700};
     margin-left:-.5rem;
     margin-bottom:-.9rem;

@@ -1,9 +1,6 @@
 import styled from 'styled-components';
 import { DEVICE_BREAKPOINTS } from '../../styles/deviceBreakpoints';
 
-
-
-
 export const CardWrapper = styled.button`
     width:21.0rem;
     height:29.2rem;
@@ -17,6 +14,7 @@ export const CardWrapper = styled.button`
     justify-content:center;
     gap:1.0rem;
     border:0;
+    margin-bottom:1.5rem;
     
     .favoritar{
         position:absolute;

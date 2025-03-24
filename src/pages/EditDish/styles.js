@@ -2,6 +2,11 @@ import styled from 'styled-components';
 import { DEVICE_BREAKPOINTS } from '../../styles/deviceBreakpoints';
 
 export const Container = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    width:100%;
+    margin:0 auto; 
     .header-mobile {
         display: flex;
         margin-bottom:10rem;
@@ -9,12 +14,7 @@ export const Container = styled.div`
     }
     .header-desktop {
         display: none;
-    }
-    display: flex;
-    flex-direction: column;
-    align-items: center;    
-    width:100%;
-    margin:0 auto;              
+    }                
     >a{
         width: 36.4rem;
         display:flex;
@@ -378,7 +378,6 @@ export const Form = styled.form`
                 left:79.0rem;                          
             }
         }
-
      
 `;
         

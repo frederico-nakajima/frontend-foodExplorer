@@ -22,7 +22,7 @@ export const Container = styled.aside`
 
 export const SideMenuContent = styled.div`
   padding:2.8rem;
-  margin-bottom: 104.3rem;
+  margin-bottom: 109.3rem;
 
 `;
 
