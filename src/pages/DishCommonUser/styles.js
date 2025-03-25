@@ -78,7 +78,6 @@ export const Container = styled.div`
         "link"
         "content"
         "footer";         
-        min-height: 100vh;
         .mobile-header {
             display: none; 
         }
