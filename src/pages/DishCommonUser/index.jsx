@@ -1,7 +1,6 @@
 import { Container,ReturnLink,ButtonAlignmentCount } from './styles';
 import { DesktopHeaderIcon } from '../../components/DesktopHeaderIcon';
 import { Tag } from '../../components/Tag'; 
-import Dish from '../../assets/Dish.png';
 import Plus from '../../assets/Plus.svg';
 import Minus from '../../assets/Minus.svg';
 import { ButtonIcon } from '../../components/ButtonIcon';
