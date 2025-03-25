@@ -156,7 +156,8 @@ export const ReturnLink = styled(Link)`
    
     @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {      
         grid-area: link;  
-        width:113.0rem;  
+        width:113.0rem;
+        min-height: 100vh;  
         margin:3.0rem auto auto auto;    
         flex-direction:row;
         display:flex;  
