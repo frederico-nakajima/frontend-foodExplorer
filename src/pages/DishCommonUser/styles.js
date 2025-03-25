@@ -93,8 +93,7 @@ export const Container = styled.div`
             grid-area: content;     
             width: 110.0rem;
             height:50.0rem;
-            flex-direction: row;
-            flex: 1;
+            flex-direction: row;           
             margin:3.0rem auto 10.84rem auto;
             gap:4.0rem;       
            >.dish { 
