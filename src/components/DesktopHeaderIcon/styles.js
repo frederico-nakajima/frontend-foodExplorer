@@ -14,8 +14,8 @@ export const Container = styled.header`
   top: 0;
   z-index: 999;
   opacity: 0;
-  // transform: translateY(-100%);
-  // transition: all 0.5s ease-out;
+  transform: translateY(-100%);
+  transition: all 0.5s ease-out;
 
   &.show {
     opacity: 1;
