@@ -78,7 +78,7 @@ export const Container = styled.div`
         "link"
         "content"
         "footer";         
-        height:100vh;
+        min-height: 100vh;
         .mobile-header {
             display: none; 
         }
@@ -94,6 +94,7 @@ export const Container = styled.div`
             width: 110.0rem;
             height:50.0rem;
             flex-direction: row;
+            flex: 1;
             margin:3.0rem auto 10.84rem auto;
             gap:4.0rem;       
            >.dish { 
@@ -156,8 +157,7 @@ export const ReturnLink = styled(Link)`
    
     @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {      
         grid-area: link;  
-        width:113.0rem;
-        min-height: 100vh;  
+        width:113.0rem;  
         margin:3.0rem auto auto auto;    
         flex-direction:row;
         display:flex;  
