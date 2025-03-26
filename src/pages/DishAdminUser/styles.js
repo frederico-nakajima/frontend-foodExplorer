@@ -63,11 +63,12 @@ export const Container = styled.div`
                 width: 30.0rem; 
                 height: 4.8rem;
                 margin-bottom:2.4rem;
+                font-family: Poppins;
+                font-size: 1.6rem;                    
+                font-weight: 500;
+                line-height: 2.4rem;
                 >button{
-                    font-family: Poppins;
-                    font-size: 1.6rem;                    
-                    font-weight: 500;
-                    line-height: 2.4rem;
+                    
                 }
             }         
         }       
