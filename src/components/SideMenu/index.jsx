@@ -33,7 +33,11 @@ export function SideMenu({menuIsOpen, onCloseMenu, isAdmin }) {
       </HeaderSideMenu>        
 
     <SideMenuContent>
-      <Search icon={MagnifyingGlass}  placeholder="No mínimo 6 caracteres"/>
+      <Search 
+        icon={MagnifyingGlass}  
+        placeholder="No mínimo 6 caracteres"
+        onSearchClick={onCloseMenu}
+      />
       <Nav>
         {isAdmin && (
           <>

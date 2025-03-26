@@ -75,6 +75,9 @@ export const Form = styled.form`
             font-weight: 400;
             line-height: 100%;
         }
+        input{
+            outline:none;
+        }
 
         &::placeholder{
             font-family: Roboto;
