@@ -10,7 +10,7 @@ export const Container = styled.div`
     "link"
     "content"
     "footer";         
-        
+    margin:0 auto 1rem auto;    
     .mobile-header {
         display: flex;
         margin-bottom:10rem;
