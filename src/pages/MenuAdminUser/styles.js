@@ -19,6 +19,7 @@ export const Container = styled.div`
     } 
     .banner{
         grid-area: banner;
+         max-width:17.4rem; 
     } 
 
     @media (min-width: ${DEVICE_BREAKPOINTS.LG}) { 
