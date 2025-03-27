@@ -23,7 +23,8 @@ export const Container = styled.div`
         display: flex;
         flex-direction: column;
         align-items: center;       
-        width: 30.0rem;    
+        width: 30.0rem;
+        margin:0 auto;     
         .dish{        
             >.restaurantDish {
                 width: 26.4rem;
