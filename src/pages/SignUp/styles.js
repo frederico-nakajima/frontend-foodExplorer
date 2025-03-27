@@ -115,5 +115,10 @@ export const Form = styled.form`
             font-weight: 500;
             line-height: 140%;            
         }
+        div{
+            input{
+                outline:revert;
+            }
+        }
     }
 `;

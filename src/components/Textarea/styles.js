@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { DEVICE_BREAKPOINTS } from '../../styles/deviceBreakpoints';
 
 export const Container = styled.textarea`
     width: 100%;
@@ -17,6 +18,7 @@ export const Container = styled.textarea`
     font-size: 1.6rem;
     font-weight: 400;
     line-height: 100%;
+    outline:none; 
     
     &::placeholder{
         color: ${({theme}) => theme.COLORS.GRAY_300};
@@ -24,5 +26,9 @@ export const Container = styled.textarea`
         font-size: 1.6rem;
         font-weight: 400;
         line-height: 100%; 
+    }
+
+    @media (min-width: ${DEVICE_BREAKPOINTS.LG}) { 
+      outline: revert;   
     }
 `;

@@ -123,7 +123,8 @@ export const Form = styled.form`
                     }
                 }    
                 >input{
-                    display:none;                            
+                    display:none;
+                    outline:none;                         
                 }                           
             }
         }       
@@ -154,7 +155,8 @@ export const Form = styled.form`
                     line-height: 100%; 
                     color:${({theme}) => theme.COLORS.WHITE};
                     background-color:${({theme}) => theme.COLORS.BACKGROUND_800};
-                    border:0;               
+                    border:0;
+                    outline:none;                
                 }
             }
             .data{
@@ -188,7 +190,8 @@ export const Form = styled.form`
                     font-weight: 400;
                     line-height: 2.6rem; 
                     padding:0 2.4rem;
-                    border:0;                    
+                    border:0;
+                    outline:none;                     
                 }
             }        
         } 
@@ -209,7 +212,7 @@ export const Form = styled.form`
                     .tags{
                         display: flex;
                         align-items: center;
-                        flex-wrap:wrap;                       
+                        flex-wrap:wrap;                   
                         gap: 1.5rem;
                         width: 36.4rem; 
                         background-color: ${({theme}) => theme.COLORS.BACKGROUND_800};                
@@ -242,6 +245,7 @@ export const Form = styled.form`
                     color:${({theme}) => theme.COLORS.WHITE};
                     background-color:${({theme}) => theme.COLORS.BACKGROUND_800};
                     border:0;
+                    outline:none; 
                 }
             }                    
         }        
@@ -340,7 +344,16 @@ export const Form = styled.form`
                         width:60.0rem;
                         position:relative;
                         top:-.1rem;
+                        input{                                         
+                            outline: revert;                      
+                        }
                     }
+                    .data{
+                        >select{
+                            outline: revert;
+                        }
+                    }
+                    
                 }                    
             }
             .section{
@@ -370,6 +383,10 @@ export const Form = styled.form`
                     position:relative;
                     margin-top:.2rem;
                     width:40.0rem;
+                    input{                                         
+                       outline: revert; 
+                    
+                    }
                 }
             }
             .buttons{
