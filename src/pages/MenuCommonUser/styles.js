@@ -2,9 +2,9 @@ import styled from 'styled-components';
 import {DEVICE_BREAKPOINTS} from "../../styles/deviceBreakpoints";
 
 export const Container = styled.div`    
-   width: 100%;    
+    width: 100%;    
     display: grid;
-    grid-template-rows: 9.4rem 17.4rem 113.5rem 7.7rem;
+    grid-template-rows: 9.4rem 17.4rem auto 7.7rem;
     grid-template-areas:
     "header"
     "banner"
