@@ -4,7 +4,7 @@ import  { Link } from 'react-router-dom';
 
 export const Container = styled.div`
     display: grid;
-    grid-template-rows: 9.4rem 6.0rem auto 7.7rem;
+    grid-template-rows: 9.4rem 6.0rem 60.8rem 7.7rem;
     grid-template-areas:
     "header"
     "link"
