@@ -1,4 +1,4 @@
-import { Container,Banner,Content,FooterWrapper} from './styles';
+import { Container,Banner,Content} from './styles';
 import { DesktopHeaderIcon } from '../../components/DesktopHeaderIcon';
 import { MobileHeaderIcon } from '../../components/MobileHeaderIcon';
 import { Footer } from '../../components/Footer';
@@ -153,11 +153,9 @@ export function MenuCommonUser() {
                         })
                     }
                 </SliderCustomer>
-            </Content>            
+            </Content>             
             
-            <FooterWrapper>
-                <Footer />
-            </FooterWrapper>
+            <Footer />           
         </Container>
     );
 } 

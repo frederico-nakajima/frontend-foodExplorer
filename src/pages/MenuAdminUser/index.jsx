@@ -1,4 +1,4 @@
-import { Container,Banner,Content,FooterWrapper} from './styles';
+import { Container,Banner,Content} from './styles';
 import { DesktopHeader } from '../../components/DesktopHeader';
 import { MobileHeader } from '../../components/MobileHeader';
 import { Footer } from '../../components/Footer';
@@ -154,11 +154,9 @@ export function MenuAdminUser() {
                         })
                     }
                 </Slider>
-            </Content>            
-           
-             <FooterWrapper>
-                <Footer />
-            </FooterWrapper>           
+            </Content>          
+            
+            <Footer />                      
         </Container>
     );
 } 
