@@ -89,7 +89,7 @@ export function DishAdminUser() {
             }   
             <Footer/>            
         </Container>
-    );
+    )
 }
                                 
                               

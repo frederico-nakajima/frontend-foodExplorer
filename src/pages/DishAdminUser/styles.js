@@ -3,11 +3,14 @@ import { DEVICE_BREAKPOINTS } from '../../styles/deviceBreakpoints';
 import  { Link } from 'react-router-dom';
 
 export const Container = styled.div`
-    margin:0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;    
-    width: 100%;     
+    display: grid;
+    grid-template-rows: 9.4rem 6.0rem auto 7.7rem;
+    grid-template-areas:
+    "header"
+    "link"
+    "content"
+    "footer";         
+        
     .mobile-header {
         display: flex;
         margin-bottom:10rem;
@@ -17,6 +20,7 @@ export const Container = styled.div`
         display: none; 
     }      
     >main{
+        grid-area: content;
         display: flex;
         flex-direction: column;
         align-items: center;       
