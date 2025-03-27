@@ -8,7 +8,8 @@ export const Container = styled.div`
     background-color:${({theme}) => theme.COLORS.BACKGROUND_900};
     color:${({theme}) => theme.COLORS.GRAY_300};   
     border-radius: 1.0rem;
-    margin-top:.6px;    
+    margin-top:.6px;
+    outline:none;    
     >input{
         height: 4.8rem;
         width: 100%;
@@ -21,7 +22,7 @@ export const Container = styled.div`
         color:${({theme}) => theme.COLORS.WHITE};
         background-color:${({theme}) => theme.COLORS.BACKGROUND_800};
         border:0;
-        outline:none;
+       
             
             
         &::placeholder {
