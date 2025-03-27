@@ -43,7 +43,7 @@ export const Container = styled.div`
 
 export const Banner  = styled.div`
     grid-area: banner;
-    max-width: 425px;
+    max-width: 42.5rem;
     margin: 0 auto;
     position: relative;
     padding: 0 1rem;   
