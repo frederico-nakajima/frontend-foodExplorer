@@ -18,9 +18,7 @@ export const Container = styled.div`
         grid-area: header;
     } 
     .banner{
-        grid-area: banner;
-         max-width:17.4rem;
-         margin:0 auto; 
+        grid-area: banner;        
     } 
 
     @media (min-width: ${DEVICE_BREAKPOINTS.LG}) { 
