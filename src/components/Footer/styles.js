@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import { DEVICE_BREAKPOINTS } from '../../styles/deviceBreakpoints';
 
-export const Container = styled.footer` 
+export const Container = styled.footer`
+  grid-area: footer; 
   width: 100%;
   height: 7.7rem;
   display: flex;

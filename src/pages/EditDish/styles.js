@@ -258,7 +258,7 @@ export const Form = styled.form`
             display: flex;
             justify-content: space-between;
             align-items:center;
-            margin-top:1.3rem;            
+            margin-top:1.3rem;                        
             .remove{
                 >button{
                     width: 16.4rem;
@@ -273,7 +273,7 @@ export const Form = styled.form`
                     font-family: Poppins;
                     font-size: 1.4rem;
                     font-weight: 500;
-                    line-height: 2.4rem;
+                    line-height: 2.4rem;                                    
                 }
             }
             .saveChanges{
@@ -290,7 +290,7 @@ export const Form = styled.form`
                     font-family: Poppins;
                     font-size: 1.4rem;
                     font-weight: 500;
-                    line-height: 2.4rem;
+                    line-height: 2.4rem;                    
                 }
             }        
         }

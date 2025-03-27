@@ -154,11 +154,6 @@ export const Content  = styled.div`
 `;
 
 export const FooterWrapper = styled.footer`
-    grid-area:footer; 
-  
-    
-    @media (min-width: ${DEVICE_BREAKPOINTS.LG}){
-        
-    
-    }
+    grid-area:footer;
+
 `;

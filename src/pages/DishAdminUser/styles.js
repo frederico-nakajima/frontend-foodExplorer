@@ -62,14 +62,7 @@ export const Container = styled.div`
             .custom-button{
                 width: 30.0rem; 
                 height: 4.8rem;
-                margin-bottom:2.4rem;
-                font-family: Poppins;
-                font-size: 1.6rem;                    
-                font-weight: 500;
-                line-height: 2.4rem;
-                >button{
-                    
-                }
+                margin-bottom:2.4rem;            
             }         
         }       
     }       
@@ -131,8 +124,7 @@ export const Container = styled.div`
                     gap: 2.0rem;
                 }
                 .custom-button{
-                    padding-right:17.0rem;
-                    font-size: 1.4rem;    
+                    padding-right:17.0rem;                      
                 }
             }         
         }

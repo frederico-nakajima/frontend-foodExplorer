@@ -14,6 +14,7 @@ export const Container = styled.div`
     align-items: center;
     gap: .8rem; 
     font-family: Poppins;
+    font-size: 1.4rem;
     font-weight: 500;
     line-height: 2.4rem;     
     
