@@ -103,7 +103,7 @@ export function AddDish(){
                                     src={UploadSimple} 
                                     alt="ícone de upload" 
                                 />
-                                <p className='select-image'>selecione imagem</p>
+                                <p className='select-image'>Selecione imagem</p>
                             </label>                            
                             <input 
                                 type='file'

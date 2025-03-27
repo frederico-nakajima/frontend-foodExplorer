@@ -37,10 +37,10 @@ export const Container = styled.footer`
 
 export const Brand = styled.div`
   display:flex;
-  align-items:center;
+  align-items:center;  
   >img{
-    width: 2.2rem;
-    height: 1.8rem;
+    width: 2.5rem;
+    height: 2.3rem;
   }
   >div{
     display:flex;

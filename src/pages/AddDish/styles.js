@@ -21,7 +21,7 @@ export const Container = styled.div`
         align-items:center;
         color: ${({theme}) => theme.COLORS.WHITE};         
         font-family: Poppins;
-        font-size: 1.6rem;       
+        font-size: 1.3rem;       
         font-weight: 500;
         text-transform: uppercase;       
         position:relative;
@@ -62,7 +62,7 @@ export const Form = styled.form`
             display:block;
             font-family: Poppins;
             font-size: 3.2rem;
-            font-weight: 500;
+            font-weight: 400;
             line-height: 140%; 
             margin-bottom:4.5rem;
             margin-top:2rem; 
@@ -116,7 +116,7 @@ export const Form = styled.form`
                         width: 30.0rem;
                         font-family: Poppins;
                         font-size: 1.4rem;
-                        font-weight: 500;
+                        font-weight: 400;
                         line-height: 2.4rem;                       
                     }
                 }    
@@ -130,7 +130,7 @@ export const Form = styled.form`
             display: flex;
             flex-direction: column;
             justify-content: center;
-            gap:3.2rem;
+            gap:2.5rem;
             .name{
                 display: flex;
                 flex-direction: column;
@@ -170,21 +170,23 @@ export const Form = styled.form`
                     border-radius:.8rem;
                     width: 36.4rem;
                     height: 4.8rem;
-                    background-color:${({theme}) => theme.COLORS.BACKGROUND_800};
+                    background-color:${({theme}) => theme.COLORS.BACKGROUND_900};
                     appearance: none;
                     -webkit-appearance: none;
             
-                    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1_54)'%3E%3Cpath d='M8 10L12 14L16 10' stroke='%239C98A6' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1_54'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+                    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1_54)'%3E%3Cpath d='M8 10L12 14L16 10' stroke='%23ffffff' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1_54'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+                    
             
                     background-repeat:no-repeat;
-                    background-position: right 2.4rem top 50%;
-                    color: #C1BCCC;
+                    background-position: right 1rem top 50%;
+                    background-size: 4rem 4rem;
+                    color:${({theme}) => theme.COLORS.GRAY_100};                    
                     font-family: Poppins;
-                    font-size: 1.6rem;
+                    font-size: 1.4rem;
                     font-weight: 400;
                     line-height: 2.6rem; 
                     padding:0 2.4rem;
-                    border:0;                                      
+                    border:0;                    
                 }
             }        
         } 
@@ -212,7 +214,7 @@ export const Form = styled.form`
                         border-radius: .8rem;
                         margin-bottom:2.0rem;
                         margin-top:1.6rem;
-                        padding:1rem 1rem;                                          
+                        padding:.7rem 1rem;                                          
                     }
                 }
             }
