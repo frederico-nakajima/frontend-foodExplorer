@@ -20,6 +20,7 @@ export const Container = styled.div`
         color:${({theme}) => theme.COLORS.WHITE};
         background-color:${({theme}) => theme.COLORS.BACKGROUND_800};
         border:0;
+        outline:none;
             
             
         &::placeholder {
@@ -32,5 +33,10 @@ export const Container = styled.div`
         >svg{
             margin-left:1.6rem;
         }
+    }
+
+    @media (min-width: ${DEVICE_BREAKPOINTS.LG}) { 
+        outline:${({theme}) => theme.COLORS.WHITE};
+    
     }
 `;
