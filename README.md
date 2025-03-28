@@ -45,6 +45,24 @@ A interface foi implementada seguindo os princípios de:
 
 ---
 
+## 💡 Sistema de Medidas
+
+Todo o projeto — incluindo as versões mobile e desktop — foi construído utilizando `rem` ao invés de `px`.
+
+- A base adotada foi: `1rem = 8px` (com `font-size: 50%` definido no `:root`).
+- Essa conversão foi aplicada em todas as medidas do layout, como:
+  - Fontes
+  - Espaçamentos (margin, padding)
+  - Largura e altura de elementos
+  - Dimensões de imagens
+- Os valores foram convertidos diretamente a partir do Figma, mantendo fidelidade ao design original.
+
+> Exemplo: um botão de 160px de largura no Figma se tornou `20rem` no código.
+
+Essa abordagem facilita a responsividade, melhora a escalabilidade e mantém uma hierarquia visual consistente em diferentes tamanhos de tela.
+
+---
+
 ## 🔍 Integração de busca inteligente
 
 A aplicação possui um sistema de busca integrada entre:
@@ -74,7 +92,12 @@ Ambos utilizam um **contexto global (`SearchContext`)** para compartilhar o term
 
 ## 📦 Como executar o projeto localmente
 
-- npm run dev
+```bash
+git clone git@github.com:frederico-nakajima/frontend-foodExplorer.git
+cd frontend-foodExplorer
+npm install
+npm run dev
+```
 
 ## 🌐 Deploy
 
