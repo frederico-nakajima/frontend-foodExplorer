@@ -105,11 +105,6 @@ A aplicação está publicada em:
 
 🔗 https://nakak.netlify.app
 
-### 1. Clonar o repositório
-
-```bash
-git clone git@github.com:frederico-nakajima/frontend-foodExplorer.git
-```
 ---
 
 📄 Licença
