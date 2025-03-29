@@ -13,7 +13,8 @@ export const CardWrapper = styled.button`
     align-items:center;
     justify-content:center;
     gap:1.0rem;
-    border:0;    
+    border:0;
+    outline:none;    
     .favoritar{
         position:absolute;
         top:1.6rem;

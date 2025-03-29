@@ -13,12 +13,15 @@ export const Container = styled.div`
         background: none;
         position:relative;
         top:.3rem;
+        outline:none;
     }
     .button-delete{
         color: ${({theme}) => theme.COLORS.WHITE};
+        outline:none;
     }
     .button-add{
         color: ${({theme}) => theme.COLORS.GRAY_300};
+        outline:none;
     }
     >input{
         height: 3.2rem;

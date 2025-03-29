@@ -15,7 +15,7 @@ export const CardWrapper = styled.button`
     gap:1.0rem;
     border:0;
     margin-bottom:1.5rem;
-    
+    outline:none;    
     .favoritar{
         position:absolute;
         top:1.6rem;
