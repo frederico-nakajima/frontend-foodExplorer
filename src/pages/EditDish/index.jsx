@@ -90,15 +90,13 @@ export function EditDish(){
                 alert("Erro ao salvar alterações. Tente novamente.");
             }
         }
-    }
-    
+    }    
     
     useEffect(() => {
         async function fetchDish(){
             const response = await api.get(`/dishes/${params.id}`);
             setData(response.data);
-        }
-        
+        }        
         fetchDish();
     },[params.id]);
     
@@ -110,8 +108,7 @@ export function EditDish(){
             setDescription(data.description);
             setTags(data.tags);
         }
-    }, [data]);
-    
+    }, [data]);    
     
     function handleChangeImage(event) {
         const file = event.target.files[0];
@@ -147,8 +144,7 @@ export function EditDish(){
             <Form>                    
                 <header>
                     <h1 className='newDish'>Editar prato</h1>
-                </header>                   
-
+                </header>
                 <div className="image-salad-category">
                     <p className='dish'>Imagem do prato </p>
                     <div className='uploadSimple'>
@@ -179,9 +175,9 @@ export function EditDish(){
                         <div className="data">
                             <label htmlFor="category">Categoria</label>
                             <select 
-                                id="category"
-                                value={category}  
-                                onChange={(e) => setCategory(e.target.value)}
+                            id="category"
+                            value={category}  
+                            onChange={(e) => setCategory(e.target.value)}
                             >
                                 <option value="Refeições">Refeições</option>
                                 <option value="Sobremesas">Sobremesas</option>
@@ -199,16 +195,16 @@ export function EditDish(){
                                         <NoteItem
                                         key={tag}
                                         value={tag} 
-                                            onClick={() => handleRemoveTag(tag)}
+                                        onClick={() => handleRemoveTag(tag)}
                                         />
                                     ))
                                 }
                                 <NoteItem 
-                                    isnew 
-                                    placeholder="Adicionar"
-                                    onChange={e => setNewTag(e.target.value)}
-                                    value={ newTag }
-                                    onClick={handleAddTag}
+                                isnew 
+                                placeholder="Adicionar"
+                                onChange={e => setNewTag(e.target.value)}
+                                value={ newTag }
+                                onClick={handleAddTag}
                                 />
                             </div>
                         </Section>
@@ -226,10 +222,10 @@ export function EditDish(){
                 <div className="description">
                     <label htmlFor="description">Descrição</label>
                     <Textarea 
-                        placeholder="A Salada César é uma opção refrescante para o verão." 
-                        id="description"
-                        value={description}  
-                        onChange={(e) => setDescription(e.target.value)} 
+                    placeholder="A Salada César é uma opção refrescante para o verão." 
+                    id="description"
+                    value={description}  
+                    onChange={(e) => setDescription(e.target.value)} 
                     />
                 </div>
                 <div className='buttons'>

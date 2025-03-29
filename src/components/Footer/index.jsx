@@ -10,8 +10,7 @@ export function Footer({...rest}){
                     <div>
                         <h2>food explorer</h2>
                     </div>
-                </Brand>
-                        
+                </Brand>                        
                 <p>© 2023 - Todos os direitos reservados.</p>
            </main>
         </Container>

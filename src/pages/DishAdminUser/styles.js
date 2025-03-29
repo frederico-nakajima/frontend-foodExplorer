@@ -9,8 +9,7 @@ export const Container = styled.div`
     "header"
     "link"
     "content"
-    "footer";         
-     
+    "footer";     
     .mobile-header {
         display: flex;
         margin-bottom:10rem;
@@ -132,8 +131,7 @@ export const Container = styled.div`
                     padding-right:17.0rem;                      
                 }
             }         
-        }
-              
+        }              
     } 
 `;
  
@@ -176,9 +174,7 @@ export const ReturnLink = styled(Link)`
             font-size: 2.4rem;
             font-weight: 700;
             line-height: 140%; 
-        }
-            
-        
+        }        
     }
 `;
 

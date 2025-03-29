@@ -41,18 +41,18 @@ export const Container = styled.div`
                 padding:0 1.5rem;
                 margin-bottom:2.4rem;            
                 h1{
-                 color: ${({theme}) => theme.COLORS.WHITE};
-                font-family: Poppins;
-                font-weight: 500;
-                font-size: 2.7rem;
-                margin-bottom:-1.0rem; 
+                    color: ${({theme}) => theme.COLORS.WHITE};
+                    font-family: Poppins;
+                    font-weight: 500;
+                    font-size: 2.7rem;
+                    margin-bottom:-1.0rem; 
                 }
                 p{
-                 color: ${({theme}) => theme.COLORS.WHITE};
-                font-family: Poppins;
-                font-weight: 400;
-                text-align: justify;               
-                font-size: 1.6rem;
+                    color: ${({theme}) => theme.COLORS.WHITE};
+                    font-family: Poppins;
+                    font-weight: 400;
+                    text-align: justify;               
+                    font-size: 1.6rem;
                 }                
             }
             .tags{

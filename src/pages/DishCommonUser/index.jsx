@@ -13,7 +13,6 @@ import { useParams } from 'react-router-dom';
 import  { api }  from '../../services/api';
 import  Receipt  from '../../assets/Receipt.svg';
 
-
 export function DishCommonUser() {
     const [menuIsOpen,setMenuIsOpen] = useState(false);
     const buttonIconContent = "Pedidos (0)";        

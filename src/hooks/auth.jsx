@@ -2,7 +2,6 @@ import { createContext, useContext, useEffect } from "react";
 import { api } from '../services/api';
 import { useState } from 'react';
 
-
 export const AuthContext = createContext({});
 
 function AuthProvider({ children }){
@@ -16,10 +15,8 @@ function AuthProvider({ children }){
                 { withCredentials:true },
             );
             const { user } = response.data;
-            localStorage.setItem("@foodexplorer:user", JSON.stringify(user));       
-            
-            setData({ user }) 
-
+            localStorage.setItem("@foodexplorer:user", JSON.stringify(user));            
+            setData({ user })
         }catch(error){
             if(error.response){
                 alert(error.response.data.message);
@@ -33,8 +30,7 @@ function AuthProvider({ children }){
         localStorage.removeItem("@foodexplorer:user");
         setData({});
     }
-
-
+    
     useEffect(() => {
         const user = localStorage.getItem("@foodexplorer:user");
 

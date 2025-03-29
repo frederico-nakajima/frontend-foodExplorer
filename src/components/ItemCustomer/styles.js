@@ -35,7 +35,6 @@ export const CardWrapper = styled.button`
         img:hover {
             animation: tremor 0.2s ease-in-out 3; 
         }
-
         @keyframes tremor {
             0% { transform: translateX(0); }
             25% { transform: translateX(-.3rem); }
@@ -44,7 +43,7 @@ export const CardWrapper = styled.button`
             100% { transform: translateX(0); }
         }
     }
-  .alignment {
+    .alignment {
         display: flex;
         flex-direction: row;
         align-items: center;

@@ -21,9 +21,7 @@ export const Container = styled.div`
         line-height: 100%; 
         color:${({theme}) => theme.COLORS.WHITE};
         background-color:${({theme}) => theme.COLORS.BACKGROUND_800};
-        border:0;
-       
-            
+        border:0;            
             
         &::placeholder {
             color:${({theme}) => theme.COLORS.GRAY_300};

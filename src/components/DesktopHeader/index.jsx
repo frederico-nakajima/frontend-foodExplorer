@@ -47,7 +47,6 @@ export function DesktopHeader() {
             <p>admin</p>
           </div>
         </Brand>
-
         <Search>
            <img
             src={busca}
@@ -55,14 +54,12 @@ export function DesktopHeader() {
             onClick={handleSearchClick} 
             style={{ cursor: "pointer" }} 
           />
-
           <input
             placeholder="Busque por pratos ou ingredientes"
             value={searchTerm}
             onChange={handleSearchChange}
           />
         </Search>
-
         <ButtonIcon onClick={handleNewDish}>
           Novo prato
         </ButtonIcon>

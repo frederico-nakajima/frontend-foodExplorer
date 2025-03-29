@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
-
 export const Container = styled.header`
   grid-area: header;
   padding:2.4rem .5rem;
@@ -38,7 +37,6 @@ export const Brand = styled.div`
   display:flex;
   align-items:flex-start;
   gap:1.0rem;
-
   >img{
     width: 3.0rem;
     height: 3.0rem;
@@ -46,8 +44,7 @@ export const Brand = styled.div`
   >div{
     display:flex;
     flex-direction:column;
-    align-items:flex-end;
-    
+    align-items:flex-end;    
     h2{
       font-family: "Roboto", serif;
       font-size: 2.4rem;
@@ -56,8 +53,7 @@ export const Brand = styled.div`
       line-height: normal;
       width:15.0rem;
     }
-  }
-    
+  }    
   p{
     color:${({theme}) => theme.COLORS.CIANO};
     font-family: "Roboto",serif;

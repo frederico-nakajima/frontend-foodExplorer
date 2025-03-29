@@ -40,8 +40,7 @@ export function AddDish(){
         }
         if(newTag){
             return alert("Você deixou uma tag no campo para adicionar, mas não clickou em adicionar ");
-        }
-        
+        }        
         const response =await api.post("/dishes", {
             name,
             category,
@@ -53,9 +52,7 @@ export function AddDish(){
         if(imageFile){
             const fileUploadForm = new FormData();
             fileUploadForm.append("image", imageFile);
-
-            await api.patch(`/dishes/image/${dish_id}`, fileUploadForm);          
-            
+            await api.patch(`/dishes/image/${dish_id}`, fileUploadForm);            
         }        
         alert("Item criado com sucesso!");
         navigate('/');
@@ -90,15 +87,13 @@ export function AddDish(){
                 <header>
                     <h1 className='addDish'>Adicionar prato</h1>
                     <h1 className='newDish'>Novo prato</h1>
-                </header>                        
-
+                </header>
                 <div className="image-salad-category">
                     <p className='dish'>Imagem do prato </p>
                     <div className='uploadSimple'>
                         <div className='image'>
                             <label
-                                htmlFor="file-upload" 
-                            >
+                                htmlFor="file-upload" >
                                 <img 
                                     src={UploadSimple} 
                                     alt="ícone de upload" 

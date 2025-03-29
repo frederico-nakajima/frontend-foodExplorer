@@ -24,8 +24,6 @@ export function Item({iconImage,iconAltText,itemImage,itemAltText,description,pr
             </div>
             <p>{description}</p>
             <span>{Number(price).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</span>
-
-
             {
                 showButtonAlignment && (
                     <ButtonAlignmentCount>
@@ -39,10 +37,8 @@ export function Item({iconImage,iconAltText,itemImage,itemAltText,description,pr
                         </div>
                     </ButtonAlignmentCount>
                 )
-            }
-                        
-        </CardWrapper>
-        
+            }                        
+        </CardWrapper>        
     )
 }
 

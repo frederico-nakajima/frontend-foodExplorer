@@ -97,8 +97,7 @@ export const Form = styled.form`
             height: 4.8rem;                         
             border:0;
             margin-left:-.5rem;
-            margin-top:1.0rem;              
-            
+            margin-top:1.0rem;            
             >.image{
                 display:flex;               
                 align-items:center;
@@ -291,7 +290,7 @@ export const Form = styled.form`
                 margin-top:4.5rem;
                 position:relative;                
                 >.dish{
-                left:0rem;
+                    left:0rem;
                     height:1.0rem;
                     top:-.5rem;
                     position:absolute;                  

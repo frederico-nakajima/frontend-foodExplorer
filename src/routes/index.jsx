@@ -22,8 +22,7 @@ export function AppRoutes() {
 },[user]);
 
   function AccessRoute(){
-    if (!user) return <AuthRoutes />; 
-    
+    if (!user) return <AuthRoutes />;    
     switch(user.role){
       case USER_ROLE.ADMIN:
         return <AdminRoutes/>;

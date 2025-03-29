@@ -13,16 +13,13 @@ export default createGlobalStyle`
         --swiper-navigation-size: 27px;
 
         @media(min-width:${DEVICE_BREAKPOINTS.LG}) {
-         font-size:50%;
-        
-        
+         font-size:50%;        
         }
     }
 
     body{
         background-color: ${({theme}) => theme.COLORS.BACKGROUND_1000};
         color: ${({theme}) => theme.COLORS.WHITE};
-
         -webkit-font-smoothing:antialiased;
     }
 
@@ -40,12 +37,10 @@ export default createGlobalStyle`
     button,a{
         cursor: pointer;
         transition: filter 0.2;
-
     }
 
     button:hover,a:hover{
         filter: brightness(.9);
-
     }
 
 `

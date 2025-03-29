@@ -14,6 +14,5 @@ export const Container = styled.span`
     line-height: 2.4rem;
     color: ${({ theme }) => theme.COLORS.WHITE};
     background-color:${({theme}) => theme.COLORS.BACKGROUND_900};
-
    
 `;

@@ -15,7 +15,7 @@ export const Container = styled.div`
     top: 0;
     z-index: 999;
     >.list{
-    margin-right:6.0rem;       
+        margin-right:6.0rem;       
     }
     >img{
         width: 2.5rem;
@@ -49,6 +49,5 @@ export const Container = styled.div`
             align-items: center;
             border-radius: 9.9rem;
         }
-    }
-  
+    }  
 `;

@@ -28,13 +28,11 @@ export const StyledSwiper = styled.div`
   @media (min-width: ${DEVICE_BREAKPOINTS.LG}) { 
     position: relative;
     overflow: hidden;
-    padding: 2.0rem 0; 
-
+    padding: 2.0rem 0;
     h2 {          
       font-size: 3.2rem;
       margin-left: 1.0rem;
     }
-
     .swiper {
       position: relative;
 

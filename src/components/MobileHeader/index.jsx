@@ -8,8 +8,8 @@ export function MobileHeader({onOpenMenu}) {
         <img src={list} alt="menu sanduiche" className='list' onClick={onOpenMenu} /> 
         <img src={Polygon} alt="imagem de um polígono" />
         <div>
-            <h2>food explorer</h2>
-            <p>admin</p>
+          <h2>food explorer</h2>
+          <p>admin</p>
         </div>
     </Container>
   );

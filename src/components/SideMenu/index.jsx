@@ -30,25 +30,25 @@ export function SideMenu({menuIsOpen, onCloseMenu, isAdmin }) {
         }
         <span>Menu</span>
         </HeaderControls>
-      </HeaderSideMenu>        
-
-    <SideMenuContent>
-      <Search 
-        icon={MagnifyingGlass}  
-        placeholder="No mínimo 6 caracteres"
-        onSearchClick={onCloseMenu}
-      />
-      <Nav>
-        {isAdmin && (
-          <>
-            <a href="#"  onClick={handleNewDish} className="NewDishLink">Novo prato</a>
-            <hr/>
-          </>
-        )}
-        <a href="#" className="SignOut" onClick={handleSignOut}>Sair</a>
-        <hr />        
-      </Nav> 
-    </SideMenuContent>
+      </HeaderSideMenu>
+      <SideMenuContent>
+        <Search 
+          icon={MagnifyingGlass}  
+          placeholder="No mínimo 6 caracteres"
+          onSearchClick={onCloseMenu}
+        />
+        <Nav>
+          {isAdmin && (
+            <>
+              <a href="#"  onClick={handleNewDish} className="NewDishLink">Novo prato</a>
+              <hr/>
+            </>
+          )}
+          <a href="#" className="SignOut" onClick={handleSignOut}>Sair</a>
+          <hr />        
+        </Nav> 
+      </SideMenuContent>
+      
       <Footer />
     </Container>
 
