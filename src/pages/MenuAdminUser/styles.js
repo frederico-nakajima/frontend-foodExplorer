@@ -4,7 +4,7 @@ import {DEVICE_BREAKPOINTS} from "../../styles/deviceBreakpoints";
 export const Container = styled.div`    
     width: 100%;    
     display: grid;
-    grid-template-rows: 9.4rem 17.4rem auto 7.7rem;
+    grid-template-rows: 9.4rem 17.4rem 113.43rem 7.7rem;
     grid-template-areas:
     "header"
     "banner"
@@ -22,7 +22,7 @@ export const Container = styled.div`
     } 
 
     @media (min-width: ${DEVICE_BREAKPOINTS.LG}) { 
-        grid-template-rows: 9.4rem 46.0rem auto 7.7rem;         
+        grid-template-rows: 9.4rem 46.0rem 184.34rem 7.7rem;         
         .desktop-header {
             grid-area:header;
             display: block;
