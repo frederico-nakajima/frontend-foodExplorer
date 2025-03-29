@@ -13,6 +13,7 @@ export const Container = styled.header`
   position: fixed;
   top: 0;
   z-index: 999;
+  outline:revert;
   opacity: 0;
   transform: translateY(-100%);
   transition: all 0.5s ease-out;

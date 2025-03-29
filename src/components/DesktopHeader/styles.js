@@ -88,6 +88,7 @@ export const Search  = styled.div`
     font-size: 1.6rem;
     font-weight: 400;
     line-height: 100%; 
+    outline:revert;
     
     &::placeholder {
       color: ${({ theme }) => theme.COLORS.GRAY_300};

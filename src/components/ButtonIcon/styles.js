@@ -17,7 +17,7 @@ export const Container = styled.button`
     padding:1.2rem;
     border-radius: .5rem;
     color:${({theme}) => theme.COLORS.WHITE}; 
- 
+    outline:none;
 
 `;
   

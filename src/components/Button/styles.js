@@ -16,7 +16,8 @@ export const Container = styled.div`
     font-family: Poppins;
     font-size: 1.4rem;
     font-weight: 500;
-    line-height: 2.4rem;     
+    line-height: 2.4rem;
+    outline:none;     
     
 
     @media (min-width: ${DEVICE_BREAKPOINTS.LG}) { 
