@@ -2,7 +2,11 @@
 
 Interface web da aplicação **Food Explorer**, desenvolvida com **React + Vite**, com foco em uma experiência fluida, responsiva (Mobile First) e intuitiva para usuários comuns e administradores.
 
----
+
+<p align="center">
+  <img alt="" src="src/assets/Capa.png">
+</p>
+
 
 ## 📚 Funcionalidades
 
